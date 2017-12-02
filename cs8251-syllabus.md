@@ -1,5 +1,3 @@
-
-
 **CS8251 PROGRAMMING IN C L T P C 3 0 0 3 OBJECTIVES:**
 
  To develop C Programs using basic programming constructs
@@ -45,8 +43,7 @@ Program: Finding average of numbers stored in sequential access file -
 Random access file - Example Program: Transaction processing using
 random access files – Command line arguments
 
-**OUTCOMES: Upon completion of the course, the students will be able to
-**
+**OUTCOMES**: Upon completion of the course, the students will be able to
 
  Develop simple applications in C using basic constructs
 
@@ -59,7 +56,7 @@ random access files – Command line arguments
  Design applications using sequential and random access file
 processing.
 
-**TEXT BOOKS: **
+**TEXT BOOKS: ** 
 
 1. Reema Thareja, ―Programming in C‖, Oxford University Press, Second
 Edition, 2016.
@@ -67,7 +64,7 @@ Edition, 2016.
 2. Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
 Edition, Pearson Education, 2006
 
-**REFERENCES: **
+**REFERENCES: **  
 
 1. Paul Deitel and Harvey Deitel, ―C How to Program‖, Seventh edition,
 Pearson Publication
