@@ -56,7 +56,7 @@ random access files – Command line arguments
  Design applications using sequential and random access file
 processing.
 
-**TEXT BOOKS: ** 
+**TEXT BOOKS:** 
 
 1. Reema Thareja, ―Programming in C‖, Oxford University Press, Second
 Edition, 2016.
@@ -64,7 +64,7 @@ Edition, 2016.
 2. Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
 Edition, Pearson Education, 2006
 
-**REFERENCES: **  
+**REFERENCES:**  
 
 1. Paul Deitel and Harvey Deitel, ―C How to Program‖, Seventh edition,
 Pearson Publication
