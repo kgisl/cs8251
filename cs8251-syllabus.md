@@ -81,3 +81,7 @@ Programming with C",McGraw-Hill Education, 1996.
 [2]: http://j.mp/swapUsingPointers
 [3]: http://j.mp/pointerKITE 
 [4]: http://bit.ly/pArithmeticV 
+
+
+## Coding practice 
+http://j.mp/clangKITE and http://j.mp/clangKeys 
