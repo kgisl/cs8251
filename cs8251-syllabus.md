@@ -10,7 +10,8 @@ paradigms - Structure of C program - C programming: Data Types – Storage
 classes - Constants – Enumeration Constants - Keywords – Operators:
 Precedence and Associativity - Expressions - Input/Output statements,
 Assignment statements – Decision making statements - Switch statement -
-Looping statements – Pre-processor directives - Compilation process
+Looping statements – Pre-processor directives - Compilation process; 
+*Example Program: [PC-1 problems][0] and [video keys][0keys]*
 
 **UNIT II ARRAYS AND STRINGS 9** Introduction to Arrays: Declaration,
 Initialization – One dimensional array – *Example Program: Computing*
@@ -77,11 +78,9 @@ Asia, 2011.
 Programming with C",McGraw-Hill Education, 1996.
 
 
+[0keys]: http://j.mp/clangKITE 
+[0k]: and http://j.mp/clangKeys 
 [1]: http://j.mp/selectionSortCC
 [2]: http://j.mp/swapUsingPointers
 [3]: http://j.mp/pointerKITE 
 [4]: http://bit.ly/pArithmeticV 
-
-
-## Coding practice 
-http://j.mp/clangKITE and http://j.mp/clangKeys 
