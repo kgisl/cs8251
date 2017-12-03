@@ -78,8 +78,8 @@ Asia, 2011.
 Programming with C",McGraw-Hill Education, 1996.
 
 
-[0keys]: http://j.mp/clangKITE 
-[0k]: and http://j.mp/clangKeys 
+[0]: http://j.mp/clangKITE 
+[0keys]: http://j.mp/clangKeys 
 [1]: http://j.mp/selectionSortCC
 [2]: http://j.mp/swapUsingPointers
 [3]: http://j.mp/pointerKITE 
