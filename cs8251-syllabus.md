@@ -31,8 +31,8 @@ by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
 
 **UNIT IV STRUCTURES 9** Structure - Nested structures – Pointer and
 Structures – Array of structures – *Example Program using structures and*
-*pointers – Self referential structures* – Dynamic memory allocation -
-Singly linked list - typedef
+*pointers* – Self referential structures – Dynamic memory allocation -
+*Example Program: Singly linked list* - typedef
 
 **UNIT V FILE PROCESSING 9** Files – Types of file processing:
 Sequential access, Random access – Sequential access file - *Example*
