@@ -26,7 +26,7 @@ Program: *Computation of Sine series, Scientific calculator using*
 *built-in functions, Binary Search using recursive functions* – Pointers –
 Pointer operators – Pointer arithmetic – Arrays and pointers – Array of
 pointers – *Example Program: Sorting of names* – Parameter passing: Pass
-by value, Pass by reference – *Example Program: Swapping of two numbers*
+by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
 *and changing the value of a variable using pass by reference*
 
 **UNIT IV STRUCTURES 9** Structure - Nested structures – Pointer and
@@ -77,3 +77,4 @@ Programming with C",McGraw-Hill Education, 1996.
 
 
 [1]: http://j.mp/selectionSortCC
+[2]: http://j.mp/swapUsingPointers
