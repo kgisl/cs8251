@@ -16,7 +16,7 @@ Looping statements – Pre-processor directives - Compilation process
 Initialization – One dimensional array – *Example Program: Computing*
 *Mean, Median and Mode* - Two dimensional arrays – *Example Program:*
 *Matrix Operations (Addition, Scaling, Determinant and Transpose)* - String
-operations: length, compare, concatenate, copy – Example Program: 
+operations: length, compare, concatenate, copy – *Example Program:* 
 *[Selection sort][1], linear and binary search*
 
 **UNIT III FUNCTIONS AND POINTERS 9** Introduction to functions:
