@@ -27,7 +27,7 @@ Program: *Computation of Sine series, Scientific calculator using*
 Pointer operators – Pointer arithmetic – Arrays and pointers – Array of
 pointers – *Example Program: Sorting of names* – Parameter passing: Pass
 by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
-*and changing the value of a variable using pass by reference*
+*and changing the value of a variable using pass by reference*; [Pointer Camp][3]
 
 **UNIT IV STRUCTURES 9** Structure - Nested structures – Pointer and
 Structures – Array of structures – *Example Program using structures and*
@@ -78,3 +78,5 @@ Programming with C",McGraw-Hill Education, 1996.
 
 [1]: http://j.mp/selectionSortCC
 [2]: http://j.mp/swapUsingPointers
+[3]: http://j.mp/pointerKITE 
+
