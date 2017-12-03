@@ -13,8 +13,8 @@ Assignment statements – Decision making statements - Switch statement -
 Looping statements – Pre-processor directives - Compilation process
 
 **UNIT II ARRAYS AND STRINGS 9** Introduction to Arrays: Declaration,
-Initialization – One dimensional array – Example Program: *Computing
-Mean, Median and Mode* - Two dimensional arrays – *Example Program: *
+Initialization – One dimensional array – *Example Program: Computing*
+*Mean, Median and Mode* - Two dimensional arrays – *Example Program:*
 *Matrix Operations (Addition, Scaling, Determinant and Transpose)* - String
 operations: length, compare, concatenate, copy – Example Program: 
 *[Selection sort][1], linear and binary search*
