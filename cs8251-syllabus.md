@@ -24,7 +24,7 @@ operations: length, compare, concatenate, copy – *Example Program:*
 Function prototype, function definition, function call, Built-in
 functions (string functions, math functions) – Recursion – Example
 Program: *Computation of Sine series, Scientific calculator using*
-*built-in functions, Binary Search using recursive functions* – Pointers –
+*built-in functions, Binary Search using recursive functions* – [Pointers][5] –
 Pointer operators – Pointer arithmetic – Arrays and pointers – Array of
 pointers – *Example Program: Sorting of names* – Parameter passing: Pass
 by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
@@ -84,3 +84,4 @@ Programming with C",McGraw-Hill Education, 1996.
 [2]: http://j.mp/swapUsingPointers
 [3]: http://j.mp/pointerKITE 
 [4]: http://bit.ly/pArithmeticV 
+[5]: http://j.mp/pointerGlossary 
