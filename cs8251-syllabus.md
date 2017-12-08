@@ -15,7 +15,7 @@ Looping statements – Pre-processor directives - Compilation process;
 
 **UNIT II ARRAYS AND STRINGS 9** Introduction to Arrays: Declaration,
 Initialization – One dimensional array – *Example Program: Computing*
-*Mean, Median and Mode* - Two dimensional arrays – *Example Program:*
+*[Mean, Median and Mode][6]* - Two dimensional arrays – *Example Program:*
 *Matrix Operations (Addition, Scaling, Determinant and Transpose)* - String
 operations: length, compare, concatenate, copy – *Example Program:* 
 *[Selection sort][1], linear and binary search*
@@ -85,3 +85,4 @@ Programming with C",McGraw-Hill Education, 1996.
 [3]: http://j.mp/pointerKITE 
 [4]: http://bit.ly/pArithmeticV 
 [5]: http://j.mp/pointerGlossary 
+[6]: http://bit.ly/statStartCD
