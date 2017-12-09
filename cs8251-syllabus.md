@@ -23,7 +23,7 @@ operations: length, compare, concatenate, copy – *Example Program:*
 **UNIT III FUNCTIONS AND POINTERS 9** Introduction to functions:
 Function prototype, function definition, function call, Built-in
 functions (string functions, math functions) – Recursion – Example
-Program: *Computation of Sine series, Scientific calculator using*
+Program: *[Simple calculator][7], Computation of Sine series, Scientific calculator using*
 *built-in functions, Binary Search using recursive functions* – [Pointers][5] –
 Pointer operators – Pointer arithmetic – Arrays and pointers – Array of
 pointers – *Example Program: Sorting of names* – Parameter passing: Pass
@@ -52,11 +52,10 @@ Random access file - *Example Program: Transaction processing using*
 processing
 
 **TEXT BOOKS:** 
-
 1. Reema Thareja, ―Programming in C‖, Oxford University Press, Second
 Edition, 2016.
 
-2. Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
+[2.][10] Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
 Edition, Pearson Education, 2006
 
 **REFERENCES:**  
@@ -86,3 +85,6 @@ Programming with C",McGraw-Hill Education, 1996.
 [4]: http://bit.ly/pArithmeticV 
 [5]: http://j.mp/pointerGlossary 
 [6]: http://bit.ly/statStartCD
+[7]: http://j.mp/simpleCalculatorCC 
+
+[10]: https://github.com/kgisl/cs8251/blob/master/files/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie.pdf
