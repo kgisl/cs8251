@@ -51,14 +51,14 @@ Random access file - *Example Program: Transaction processing using*
  - Design applications using sequential and random access file
 processing
 
-**TEXT BOOKS:** 
+**TEXT BOOKS:**  
 1. Reema Thareja, ―Programming in C‖, Oxford University Press, Second
-Edition, 2016.
-
+Edition, 2016.  
 [2.][10] Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
 Edition, Pearson Education, 2006 [text version][11]
 
-**REFERENCES:** 
+**REFERENCES:**    
+
 [1.][12] Paul Deitel and Harvey Deitel, ―C How to Program‖, Seventh edition,
 Pearson Publication  
 2. Juneja, B. L and Anita Seth, ―Programming in C‖, CENGAGE Learning
