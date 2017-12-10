@@ -7,12 +7,12 @@
 array = [2, 3, 4, 99, -1]
 
 for i in range(len(array)): 
-	# do something with elements in array
-	print("element at position", i, array[i])
+    # do something with elements in array
+    print("element at position", i, array[i])
 
 for elem in array: 
-	# do something with elements in array
-	print("Element", elem) 
+    # do something with elements in array
+    print("Element", elem) 
 
 ```
 
@@ -23,20 +23,20 @@ Idiomatic way of walking a sequence (array, linked list, etc) in C.
 ```c
 int array[SIZE]; 
 for (int i = 0; i < SIZE; i++){ 
-	// do something with element in array
-	printf("element at position %d is %d", i, array[i]);
-	//...
-	//... 
+    // do something with element in array
+    printf("element at position %d is %d", i, array[i]);
+    //...
+    //... 
 } 
 
 Node *head; // already points at a valid linked list 
 for (Node *ptr = head; ptr != NULL; ptr = ptr->next){ 
-	// do something with element in the list 
-	printf("element(%p) has data %d", ptr, ptr->data);
-	//...
-	//...
+    // do something with element in the list 
+    printf("element(%p) has data %d", ptr, ptr->data);
+    //...
+    //...
 }
- 
+
 ```
 
 ![linkWalk](http://j.mp/linkWalk)
@@ -47,15 +47,15 @@ Assume you have a handle to a particular node (say `Node* start`) in the linked 
 
 ```c
 Node* find(Node* start, int data) { 
-	for (Node *ptr = start; ptr != NULL; ptr = ptr->next){ 
-		// do something with element in the list 
-		if (ptr->data == data){
-			printf("Data found!\n"); 
-			return ptr;  
-		}
-	}
-	printf("Data %d not found!\n", data); 
-	return NULL;
+    for (Node *ptr = start; ptr != NULL; ptr = ptr->next){ 
+        // do something with element in the list 
+        if (ptr->data == data){
+            printf("Data found!\n"); 
+            return ptr;  
+        }
+    }
+    printf("Data %d not found!\n", data); 
+    return NULL;
 }
 ```
 
@@ -65,12 +65,12 @@ Assume you have a handle to a particular node (say `Node* start`) in the linked 
 
 ```c
 Node* traverse_to_tail(Node* start) { 
-	Node *prev = NULL;
-	for (Node *ptr = start; ptr != NULL; ptr = ptr->next){ 
-		// do something with element in the list 
-		prev = ptr; 
-	}
-	return prev; 
+    Node *prev = NULL;
+    for (Node *ptr = start; ptr != NULL; ptr = ptr->next){ 
+        // do something with element in the list 
+        prev = ptr; 
+    }
+    return prev; 
 }
 ```
 
@@ -83,12 +83,12 @@ Beginning at node `start`, the following function moves
 
 ```c
 void traverse_reverse(Node* start) {
-	Node *tail = traverse_to_tail(start);
-	
-	for (Node *ptr = tail; ptr != NULL; ptr = ptr->prev){ 
-		// do something with element in the list 
-		printf("Element has %d\n", ptr->data);  
-	} 
+    Node *tail = traverse_to_tail(start);
+    
+    for (Node *ptr = tail; ptr != NULL; ptr = ptr->prev){ 
+        // do something with element in the list 
+        printf("Element has %d\n", ptr->data);  
+    } 
 }
 ```
 
