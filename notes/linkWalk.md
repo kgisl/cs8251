@@ -1,6 +1,6 @@
 **Table of Contents**
 
-* [Walking a sequence](#walking-a-sequence)  
+* [Koan: Walking a Sequence](#walking-a-sequence)  
 	* [in Python](#in-python)  
 	* [in C](#in-c)  
 		* [Kernighan and Ritchie  - The C Programming language](#kernighan-and-ritchie----the-c-programming-language)  
@@ -9,7 +9,7 @@
 		* [Example: Traversing a list in the reverse](#example-traversing-a-list-in-the-reverse)  
 
 
-# Walking a Sequence
+# Koan: Walking a Sequence
 
 ## in Python
 
