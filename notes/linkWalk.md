@@ -1,3 +1,14 @@
+**Table of Contents**
+
+* [Walking a sequence](#walking-a-sequence)  
+	* [in Python](#in-python)  
+	* [in C](#in-c)  
+		* [Kernighan and Ritchie  - The C Programming language](#kernighan-and-ritchie----the-c-programming-language)  
+		* [Example: Finding an element in the list](#example-finding-an-element-in-the-list)  
+		* [Example: Traversing to the tail](#example-traversing-to-the-tail)  
+		* [Example: Traversing a list in the reverse](#example-traversing-a-list-in-the-reverse)  
+
+
 # Walking a sequence
 
 ## in Python
