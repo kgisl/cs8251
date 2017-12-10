@@ -9,7 +9,7 @@
 		* [Example: Traversing a list in the reverse](#example-traversing-a-list-in-the-reverse)  
 
 
-# Walking a sequence
+# Walking a Sequence
 
 ## in Python
 
