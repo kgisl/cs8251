@@ -26,7 +26,7 @@ functions (string functions, math functions) – Recursion – Example
 Program: *[Simple calculator][7], Computation of Sine series, Scientific calculator using*
 *built-in functions, Binary Search using recursive functions* – [Pointers][5] –
 Pointer operators – Pointer arithmetic – Arrays and pointers – Array of
-pointers – *Example Program: Sorting of names* – Parameter passing: Pass
+pointers – *Example Program: [Sorting of names][8]* – Parameter passing: Pass
 by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
 *and changing the value of a variable using pass by reference*; [Pointer Camp][3]; 
 visualize pointer arithmetic in the [visualizer][4]
@@ -86,6 +86,7 @@ Programming with C",McGraw-Hill Education, 1996.
 [5]: http://j.mp/pointerGlossary 
 [6]: http://bit.ly/statStartCD
 [7]: http://j.mp/simpleCalculatorCC 
+[8]: http://j.mp/sortLikeUnix 
 
 [10]: https://github.com/kgisl/cs8251/blob/master/files/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie.pdf
 [11]: https://archive.org/stream/CProgrammingLanguage2ndEditionByBrianW.KernighanDennisM.Ritchie/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie_djvu.txt
