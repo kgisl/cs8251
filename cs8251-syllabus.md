@@ -56,7 +56,7 @@ processing
 Edition, 2016.
 
 [2.][10] Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
-Edition, Pearson Education, 2006
+Edition, Pearson Education, 2006 [text version][11]
 
 **REFERENCES:**  
 
@@ -88,3 +88,4 @@ Programming with C",McGraw-Hill Education, 1996.
 [7]: http://j.mp/simpleCalculatorCC 
 
 [10]: https://github.com/kgisl/cs8251/blob/master/files/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie.pdf
+[11]: https://archive.org/stream/CProgrammingLanguage2ndEditionByBrianW.KernighanDennisM.Ritchie/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie_djvu.txt
