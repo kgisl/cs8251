@@ -60,16 +60,19 @@ Edition, Pearson Education, 2006 [text version][11]
 
 **REFERENCES:** 
 [1.][12] Paul Deitel and Harvey Deitel, ―C How to Program‖, Seventh edition,
-Pearson Publication
+Pearson Publication  
 2. Juneja, B. L and Anita Seth, ―Programming in C‖, CENGAGE Learning
-India pvt. Ltd., 2011
+India pvt. Ltd., 2011  
 3. Pradip Dey, Manas Ghosh, ―Fundamentals of Computing and Programming
-in C‖, First Edition, Oxford University Press, 2009.
+in C‖, First Edition, Oxford University Press, 2009.  
 4. Anita Goel and Ajay Mittal, ―Computer Fundamentals and Programming in
 C‖, Dorling Kindersley (India) Pvt. Ltd., Pearson Education in South
-Asia, 2011.
+Asia, 2011.  
 5. Byron S. Gottfried, "Schaum's Outline of Theory and Problems of
-Programming with C",McGraw-Hill Education, 1996.
+Programming with C",McGraw-Hill Education, 1996.  
+
+
+----------
 
 
 [0]: http://j.mp/clangKITE 
