@@ -39,6 +39,7 @@ for (Node *ptr = head; ptr != NULL; ptr = ptr->next){
 
 ```
 
+### Kernighan and Ritchie  - The C Programming language
 ![linkWalk](http://j.mp/linkWalk)
 
 ### Example: Finding an element in the list  
