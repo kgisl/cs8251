@@ -36,7 +36,7 @@ for (Node *ptr = head; ptr != NULL; ptr = ptr->next){
 	//...
 	//...
 }
-
+ 
 ```
 
 ![linkWalk](http://j.mp/linkWalk)
