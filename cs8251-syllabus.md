@@ -58,21 +58,16 @@ Edition, 2016.
 [2.][10] Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
 Edition, Pearson Education, 2006 [text version][11]
 
-**REFERENCES:**  
-
-1. Paul Deitel and Harvey Deitel, ―C How to Program‖, Seventh edition,
+**REFERENCES:** 
+[1.][12] Paul Deitel and Harvey Deitel, ―C How to Program‖, Seventh edition,
 Pearson Publication
-
 2. Juneja, B. L and Anita Seth, ―Programming in C‖, CENGAGE Learning
 India pvt. Ltd., 2011
-
 3. Pradip Dey, Manas Ghosh, ―Fundamentals of Computing and Programming
 in C‖, First Edition, Oxford University Press, 2009.
-
 4. Anita Goel and Ajay Mittal, ―Computer Fundamentals and Programming in
 C‖, Dorling Kindersley (India) Pvt. Ltd., Pearson Education in South
 Asia, 2011.
-
 5. Byron S. Gottfried, "Schaum's Outline of Theory and Problems of
 Programming with C",McGraw-Hill Education, 1996.
 
@@ -90,3 +85,5 @@ Programming with C",McGraw-Hill Education, 1996.
 
 [10]: https://github.com/kgisl/cs8251/blob/master/files/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie.pdf
 [11]: https://archive.org/stream/CProgrammingLanguage2ndEditionByBrianW.KernighanDennisM.Ritchie/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie_djvu.txt
+
+[12]: https://github.com/kgisl/cs8251/blob/master/files/C_How_to_Program_7th_Edition_by_Paul_Dei.pdf
