@@ -1,3 +1,11 @@
+**Table of Contents**
+
+	* [Linear Search](#linear-search)  
+	* [Binary Search](#binary-search)  
+	* [Recusion code for Binary Search](#recusion-code-for-binary-search)  
+	* [Iterative code for Binary Search](#iterative-code-for-binary-search)  
+
+
 
 
 Credits: http://www.geeksforgeeks.org/linear-search-vs-binary-search/
