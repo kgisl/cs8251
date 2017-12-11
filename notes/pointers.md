@@ -2,8 +2,8 @@
 
 # Pointers
 
-Credits: https://github.com/kgisl/cs8251/blob/master/files/pointerConspiracy2.pdf
-Also see http://j.mp/pointerGlossary 
+- Credits: https://github.com/kgisl/cs8251/blob/master/files/pointerConspiracy2.pdf  
+- Also see http://j.mp/pointerGlossary 
 
 ## How to create a pointer? 
 
@@ -41,7 +41,7 @@ int* p4 = zero4; // null pointer
 
 ## What pointers are not 
 
-- Pointers are **not numbers**; when a number is a valid memory location in a computer, then it can be also be referred to as a pointer
+- Pointers are **not numbers**; when a number is the same as a valid memory address in a computer, then it can be also be referred to as a pointer
 - Pointers are **not memory addresses**; valid pointers are memory addresses
 - Pointers are not born equal; an integer pointer can only point to every 4th byte; a character pointer can point to every byte of memory 
 
