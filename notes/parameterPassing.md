@@ -50,7 +50,7 @@ void swapByValue(int a, int b)
 }
 ```
 
-### Output 
+### Output   
 ```
 n1: 10, n2: 20
 ```
@@ -82,7 +82,7 @@ void swapByReference(int *a, int *b)
  
 ```
 
-###Output
+###Output  
 ```
 n1: 20, n2: 10
 ```
