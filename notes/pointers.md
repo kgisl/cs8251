@@ -2,8 +2,11 @@
 
 # Pointers
 
-- Credits: https://github.com/kgisl/cs8251/blob/master/files/pointerConspiracy2.pdf  
+"I think the main barrier to understanding pointers is bad teachers." http://bit.ly/pointersAndBadTeachers
+
+- Credits: http://j.mp/greatPointerConspiracy  
 - Also see http://j.mp/pointerGlossary 
+- Take the code quiz at http://j.mp/pointerQuiz
 
 ## How to create a pointer? 
 
