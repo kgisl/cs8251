@@ -1,5 +1,9 @@
 
 
+Credits: http://www.geeksforgeeks.org/linear-search-vs-binary-search/
+
+![compare](https://files.gitter.im/cs8251/Lobby/RjOD/Screenshot-2017-12-11-at-09.27.59.png)
+
 ## Linear Search
 ![linear](https://files.gitter.im/cs8251/Lobby/RjOD/Screenshot-2017-12-11-at-09.28.36.png)
 
