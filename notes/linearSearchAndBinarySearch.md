@@ -12,6 +12,7 @@ Credits: http://www.geeksforgeeks.org/linear-search-vs-binary-search/
 
 
 How to find a number is this 5000-big list? 
+
 ![list1](https://cdn.rawgit.com/kgisl/cs8251/2d71a66c/img/screencapture-randomlists-random-numbers-1512968053371.png)
 
 ![list2](https://cdn.rawgit.com/kgisl/cs8251/2d71a66c/img/screencapture-randomlists-random-numbers-1512968053371-2.png)
