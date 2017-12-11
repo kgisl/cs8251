@@ -10,11 +10,11 @@
 
 ## How to create a pointer? 
 
-- A pointer to type `T` is denoted `T*` (pronounced "**pointer to T**")
+- A pointer to type `T` is denoted by `T*` (pronounced "**pointer to T**")
 - A pointer is created with the `& operator`. Assuming an `int i`, we can create a pointer to it: `int* p = &i;` (`&i` is typically pronounced as take the address of `i`)
 - A pointer can be dereferenced with the `* operator`, yielding the value it points to: `int j = *p;`
 
-That’s easy, right? The only point of con fusion is the dual role of `*`, as both part of the type, and as the dereferencing operator. 
+That’s easy, right? The only point of confusion is the dual role of `*`, as both part of the `type`, and as the `dereferencing` operator. 
 
 ## Contrasting pointer assignments and constant expressions
 
