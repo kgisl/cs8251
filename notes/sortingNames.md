@@ -89,3 +89,23 @@ int main () {
 ## CloudCoder link
 http://j.mp/selectionSortCC (pseudo code)
 http://j.mp/sortLikeUnix
+
+### Selection Sort Pseudo code
+
+```python
+def selectionsort(alist):
+    for i in range(len(alist)-1):
+        #form a sublist containing unsorted elements
+        sublist = alist[i+1:]
+        
+        #select the smallest value and find its index
+        smallest = min(sublist)
+        index_of_smallest = alist.index(smallest)
+        
+        #swap it with element at index 'i'
+        if index_of_smallest != i:
+            temp = alist[i]
+            alist[i] = alist[index_of_smallest]
+            alist[index_of_smallest] = temp        
+    return alist
+```
