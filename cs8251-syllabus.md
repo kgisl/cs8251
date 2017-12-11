@@ -25,8 +25,8 @@ Function prototype, function definition, function call, Built-in
 functions (string functions, math functions) – Recursion – Example
 Program: *[Simple calculator][7], Computation of Sine series, Scientific calculator using*
 *built-in functions, Binary Search using recursive functions* – [Pointers][5] –
-Pointer operators – Pointer arithmetic – Arrays and pointers – Array of
-pointers – *Example Program: [Sorting of names][8]* – Parameter passing: Pass
+Pointer operators – Pointer arithmetic – [Arrays and pointers][i1] – [Array of
+pointers][i2] – *Example Program: [Sorting of names][8]* – Parameter passing: Pass
 by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
 *and changing the value of a variable using pass by reference*; [Pointer Camp][3]; 
 visualize pointer arithmetic in the [visualizer][4]
@@ -91,3 +91,7 @@ Programming with C",McGraw-Hill Education, 1996.
 [11]: https://archive.org/stream/CProgrammingLanguage2ndEditionByBrianW.KernighanDennisM.Ritchie/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie_djvu.txt
 
 [12]: https://github.com/kgisl/cs8251/blob/master/files/C_How_to_Program_7th_Edition_by_Paul_Dei.pdf
+
+
+[i1]: https://github.com/kgisl/cs8251/blob/master/notes/PointerAndArrays.md#array-and-pointers
+[i2]: https://github.com/kgisl/cs8251/blob/master/notes/PointerAndArrays.md#array-of-pointers
