@@ -87,4 +87,5 @@ int main () {
 ```
 
 ## CloudCoder link
+http://j.mp/selectionSortCC (pseudo code)
 http://j.mp/sortLikeUnix
