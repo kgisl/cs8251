@@ -96,11 +96,11 @@ http://j.mp/sortLikeUnix
 def selectionsort(alist):
     for i in range(len(alist)-1):
         #form a sublist containing unsorted elements
-        sublist = alist[i+1:]
+        sublist = alist[i:]
         
         #select the smallest value and find its index
         smallest = min(sublist)
-        index_of_smallest = alist.index(smallest)
+        index_of_smallest = alist.index(smallest, i)
         
         #swap it with element at index 'i'
         if index_of_smallest != i:
