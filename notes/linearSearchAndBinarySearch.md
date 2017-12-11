@@ -1,0 +1,7 @@
+
+
+![linear](https://files.gitter.im/cs8251/Lobby/RjOD/Screenshot-2017-12-11-at-09.28.36.png)
+
+![binary](https://files.gitter.im/cs8251/Lobby/RjOD/Screenshot-2017-12-11-at-09.30.08.png)
+![binaryRecursive](https://files.gitter.im/cs8251/Lobby/RjOD/Screenshot-2017-12-11-at-09.31.17.png)
+![binaryIterative](https://files.gitter.im/cs8251/Lobby/RjOD/Screenshot-2017-12-11-at-09.31.36.png)
