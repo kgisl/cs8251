@@ -81,7 +81,7 @@ Programming with C",McGraw-Hill Education, 1996.
 [2]: http://j.mp/swapUsingPointers
 [3]: http://j.mp/pointerKITE 
 [4]: http://bit.ly/pArithmeticV 
-[5]: https://github.com/kgisl/cs8251/blob/master/notes/pointers.md
+[5]: http://j.mp/pointerGrok
 [6]: http://bit.ly/statStartCD
 [7]: http://j.mp/simpleCalculatorCC 
 [8]: http://j.mp/sortLikeUnix 
