@@ -2,13 +2,6 @@
 
 Credits: http://www.geeksforgeeks.org/linear-search-vs-binary-search/
 
-How to find a number is this 5000-big list? 
-![list1](https://github.com/kgisl/cs8251/blob/master/img/screencapture-randomlists-random-numbers-1512968053371.png)
-
-![list2](https://github.com/kgisl/cs8251/blob/master/img/screencapture-randomlists-random-numbers-1512968053371-2.png)
-
-![list3](https://github.com/kgisl/cs8251/blob/master/img/screencapture-randomlists-random-numbers-1512968053371-3.png)
-
 
 **Table of Contents**
 
@@ -16,6 +9,14 @@ How to find a number is this 5000-big list?
 * [Binary Search](#binary-search)  
 * [Recusion code for Binary Search](#recusion-code-for-binary-search)  
 * [Iterative code for Binary Search](#iterative-code-for-binary-search)  
+
+
+How to find a number is this 5000-big list? 
+![list1](https://cdn.rawgit.com/kgisl/cs8251/2d71a66c/img/screencapture-randomlists-random-numbers-1512968053371.png)
+
+![list2](https://cdn.rawgit.com/kgisl/cs8251/2d71a66c/img/screencapture-randomlists-random-numbers-1512968053371-2.png)
+
+![list3](https://cdn.rawgit.com/kgisl/cs8251/2d71a66c/img/screencapture-randomlists-random-numbers-1512968053371-3.png)
 
 
 ![compare](https://files.gitter.im/cs8251/Lobby/RjOD/Screenshot-2017-12-11-at-09.27.59.png)
