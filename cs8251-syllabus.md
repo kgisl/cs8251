@@ -18,11 +18,11 @@ Initialization – One dimensional array – *Example Program: Computing*
 *[Mean, Median and Mode][6]* - Two dimensional arrays – *Example Program:*
 *Matrix Operations (Addition, Scaling, Determinant and Transpose)* - String
 operations: length, compare, concatenate, copy – *Example Program:* 
-*[Selection sort][1], linear and binary search*
+*[Selection sort][1], [linear and binary search][i3]*
 
 **UNIT III FUNCTIONS AND POINTERS 9** Introduction to functions:
 Function prototype, function definition, function call, Built-in
-functions (string functions, math functions) – Recursion – Example
+functions (string functions, math functions) – [Recursion][recursion] – Example
 Program: *[Simple calculator][7], Computation of Sine series, Scientific calculator using*
 *built-in functions, Binary Search using recursive functions* – [Pointers][5] –
 Pointer operators – Pointer arithmetic – [Arrays and pointers][i1] – [Array of
@@ -75,7 +75,6 @@ Programming with C",McGraw-Hill Education, 1996.
 
 ----------
 
-
 [0]: http://j.mp/clangKITE 
 [0keys]: http://j.mp/clangKeys 
 [1]: http://j.mp/selectionSortCC
@@ -95,3 +94,6 @@ Programming with C",McGraw-Hill Education, 1996.
 
 [i1]: https://github.com/kgisl/cs8251/blob/master/notes/PointerAndArrays.md#array-and-pointers
 [i2]: https://github.com/kgisl/cs8251/blob/master/notes/PointerAndArrays.md#array-of-pointers
+[i3]: https://github.com/kgisl/cs8251/blob/master/notes/linearSearchAndBinarySearch.md#recusion-code-for-binary-search
+[recursion]: https://github.com/kgisl/cs8251/blob/master/notes/linearSearchAndBinarySearch.md#recusion-code-for-binary-search
+
