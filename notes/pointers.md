@@ -40,7 +40,8 @@ int* p4 = zero4; // null pointer
 - Pointers are references
 - Pointers can be null 
 - Pointers can traverse Arrays
-- Pointers can point to other pointers! (**double pointer**) 
+- Pointers can point to other pointers! (**double pointer**)
+	- Test drive http://j.mp/doublePointers 
 
 ## What pointers are not 
 
