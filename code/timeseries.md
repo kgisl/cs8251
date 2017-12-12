@@ -18,7 +18,7 @@ Write a program to calculate the sine series of a number. Accept two values on t
 
 `sine_series(30, 5) -> .5000`
 
-`sine_series(60, 5) -> .8660`
+`sine_series(60, 6) -> .8660`
 
 
 
