@@ -21,6 +21,10 @@ Write a program to calculate the sine series of a number. Accept two values on t
 `sine_series(60, 5) -> .8660`
 
 
+
+### Code for calculation 
+Credits: https://www.codingconnect.net/c-program-sine-series/
+
 ```c
 #include <stdio.h>
 #include <math.h> 
