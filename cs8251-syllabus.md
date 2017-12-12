@@ -71,7 +71,7 @@ C‖, Dorling Kindersley (India) Pvt. Ltd., Pearson Education in South
 Asia, 2011.  
 5. Byron S. Gottfried, "Schaum's Outline of Theory and Problems of
 Programming with C",McGraw-Hill Education, 1996.  
-
+6. [Solutions][9] to C Programming   
 
 ----------
 
@@ -87,6 +87,8 @@ Programming with C",McGraw-Hill Education, 1996.
 [7a]:  http://j.mp/sineSeriesCC
 [7b]: http://j.mp/scalculatorCC
 [8]: http://j.mp/sortLikeUnix 
+[9]: http://www.eng.uerj.br/~fariasol/disciplinas/LABPROG/C_language/Kernighan_and_Ritchie/solved-exercises/solved-exercises.html/
+
 
 [10]: https://github.com/kgisl/cs8251/blob/master/files/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie.pdf
 [11]: https://archive.org/stream/CProgrammingLanguage2ndEditionByBrianW.KernighanDennisM.Ritchie/C%20Programming%20Language%2C%202nd%20Edition%20by%20Brian%20W.%20Kernighan%2C%20Dennis%20M.%20Ritchie_djvu.txt
