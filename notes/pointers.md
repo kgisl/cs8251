@@ -41,7 +41,7 @@ int* p4 = zero4; // null pointer
 - Pointers can be null 
 - Pointers can traverse Arrays
 - Pointers can point to other pointers! (**double pointer**)
-	- Test drive http://j.mp/doublePointers 
+	- Swapping using double pointers -  http://j.mp/doublePointers 
 
 ## What pointers are not 
 
