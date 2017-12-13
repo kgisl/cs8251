@@ -22,7 +22,7 @@ operations: length, compare, concatenate, copy – *Example Program:*
 
 **UNIT III FUNCTIONS AND POINTERS 9** Introduction to functions:
 Function prototype, function definition, function call, Built-in
-functions ([string functions][i5], math functions) – Recursion – Example
+functions ([string functions][i5], [math functions][i6]) – Recursion – Example
 Program: *[Simple calculator][7], Computation of [Sine series][7a], [Scientific calculator][7b] using*
 *built-in functions, Binary Search using [recursive functions][recursion]* – [Pointers][5] –
 Pointer operators – Pointer arithmetic – [Arrays and pointers][i1] – [Array of
@@ -72,8 +72,11 @@ Asia, 2011.
 5. Byron S. Gottfried, "Schaum's Outline of Theory and Problems of
 Programming with C",McGraw-Hill Education, 1996.  
 6. [Solutions][9] to C Programming   
+7. [Video][v1] description of selection sort
 
 ----------
+
+[v1]: http://j.mp/selectionSortVideo 
 
 [0]: http://j.mp/clangKITE 
 [0keys]: http://j.mp/clangKeys 
@@ -108,3 +111,5 @@ Programming with C",McGraw-Hill Education, 1996.
 [i4]: https://github.com/kgisl/cs8251/blob/master/notes/parameterPassing.md#parameter-passing
 
 [i5]: https://files.gitter.im/cs8251/Lobby/XCpS/stringMethods.png
+
+[i6]: https://files.gitter.im/cs8251/Lobby/voK4/Screenshot-2017-12-13-at-21.16.07.png
