@@ -16,13 +16,13 @@ Looping statements – Pre-processor directives - Compilation process;
 **UNIT II ARRAYS AND STRINGS 9** Introduction to Arrays: Declaration,
 Initialization – One dimensional array – *Example Program: Computing*
 *[Mean, Median and Mode][6]* - Two dimensional arrays – *Example Program:*
-*Matrix Operations ([Addition][6a], [Subtraction][6b], Scaling, Determinant and Transpose)* - String
+*Matrix Operations ([Addition][6a], [Subtraction][6b], Scaling, Determinant and [Transpose][6e])* - String
 operations: length, compare, concatenate, copy – *Example Program:* 
 *[Selection sort][1], [linear and binary search][i3]*
 
 **UNIT III FUNCTIONS AND POINTERS 9** Introduction to functions:
 Function prototype, function definition, function call, Built-in
-functions (string functions, math functions) – Recursion – Example
+functions ([string functions][i5], math functions) – Recursion – Example
 Program: *[Simple calculator][7], Computation of [Sine series][7a], [Scientific calculator][7b] using*
 *built-in functions, Binary Search using [recursive functions][recursion]* – [Pointers][5] –
 Pointer operators – Pointer arithmetic – [Arrays and pointers][i1] – [Array of
@@ -85,6 +85,7 @@ Programming with C",McGraw-Hill Education, 1996.
 [6]: http://bit.ly/statStartCD
 [6a]: http://j.mp/additionMatrixCC
 [6b]: http://j.mp/subtractMatrixCC
+[6e]: http://j.mp/transposeMatrixCC
 [7]: http://j.mp/simpleCalculatorCC 
 [7a]:  http://j.mp/sineSeriesCC
 [7b]: http://j.mp/scalculatorCC
@@ -105,3 +106,5 @@ Programming with C",McGraw-Hill Education, 1996.
 [recursion]: https://github.com/kgisl/cs8251/blob/master/notes/linearSearchAndBinarySearch.md#recusion-code-for-binary-search  
 
 [i4]: https://github.com/kgisl/cs8251/blob/master/notes/parameterPassing.md#parameter-passing
+
+[i5]: https://files.gitter.im/cs8251/Lobby/XCpS/stringMethods.png
