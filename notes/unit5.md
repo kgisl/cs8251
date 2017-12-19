@@ -976,24 +976,6 @@ float calculate_sum(int* n, int i) {
     return sum; 
 }
 
-
-int main(int argc, char* argv[]) 
-{
-    int n[50];
-    
-    FILE *fp = fopen("num.dat", "r");
-    int i    = read_from_stream_into_array("num.dat", fp, n);
-    
-    if (i > 0) {
-        float sum     = calculate_sum(n, i); 
-        float average = sum / i;
-        printf("The average is %f for %d numbers\n",
-               average, i);
-    }
-    else {
-        puts("No data available in num.dat!");
-    }
-}
 ```
 
 ### Modular main()
