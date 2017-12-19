@@ -975,17 +975,15 @@ int read_from_stream_into_array(
 ### calculate\_sum(int[] arr, int size)
 
 ```c
-float calculate_sum(int n[], int i) {
-    
+float calculate_sum(int arr[], int size) {    
     float sum = 0; 
-    for (int counter = 0; counter < i; counter++){
-        sum = sum  + n[counter];
+    for (int i = 0; i < size; i++){
+        sum = sum  + arr[i];
     }
     printf("Sum: %f\n", sum); 
     return sum; 
 }
-    
-
+   
 ```
 
 ### modular main()
