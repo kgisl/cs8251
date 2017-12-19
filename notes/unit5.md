@@ -1,37 +1,8 @@
-**Table of Contents**
-
-* [UNIT V FILE PROCESSING](#unit-v-file-processing)  
-	* [Files](#files)  
-		* [Files and Streams](#files-and-streams)  
-		* [Types of file processing](#types-of-file-processing)  
-	* [Creating a Sequential Access file](#creating-a-sequential-access-file)  
-		* [Reading Sequential Access file](#reading-sequential-access-file)  
-* [include <stdio.h>](#include-stdioh)  
-* [include <stdio.h>](#include-stdioh)  
-		* [Read numbers from file and calculate Average](#read-numbers-from-file-and-calculate-average)  
-			* [Example Program: Average of numbers](#example-program-average-of-numbers)  
-* [include <stdio.h>](#include-stdioh)  
-			* [Example Program: Average of numbers read from a file](#example-program-average-of-numbers-read-from-a-file)  
-	* [Random access file](#random-access-file)  
-		* [Creating Random Access File](#creating-random-access-file)  
-* [include <stdio.h>](#include-stdioh)  
-		* [Writing Data](#writing-data)  
-		* [Reading Data](#reading-data)  
-* [include <stdio.h>](#include-stdioh)  
-		* [Transaction processing using random access files](#transaction-processing-using-random-access-files)  
-* [include <stdio.h>](#include-stdioh)  
-	* [Command line arguments](#command-line-arguments)  
-		* [Program 5.3](#program-53)  
-* [include <stdio.h>](#include-stdioh)  
-	* [Modular Versions](#modular-versions)  
-		* [read_from_stream_into_array(const char, FILE, int[])](#readfromstreamintoarrayconst-char-file-int)  
-		* [calculate_sum(int[] arr, int size)](#calculatesumint-arr-int-size)  
-
-
 
 # UNIT V FILE PROCESSING  
 
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
+
 **Table of Contents**
 
 * [UNIT V FILE PROCESSING](#unit-v-file-processing)  
@@ -51,9 +22,8 @@
 	* [Command line arguments](#command-line-arguments)  
 		* [Program 5.3](#program-53)  
 	* [Modular Versions](#modular-versions)  
-		* [readfromstreamintoarray(const char, FILE, int[])](#readfromstreamintoarrayconst-char-file-int)  
+		* [read_from_stream_into_array(const char, FILE, int[])](#readfromstreamintoarrayconst-char-file-int)  
 		* [calculate_sum(int[] arr, int size)](#calculatesumint-arr-int-size)  
-
 
 ## Files
 
