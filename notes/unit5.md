@@ -1,4 +1,6 @@
-**Table of Contents**
+# UNIT V FILE PROCESSING  
+
+	Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments
 
 * [UNIT V FILE PROCESSING](#unit-v-file-processing)  
 	* [Files](#files)  
@@ -6,31 +8,17 @@
 		* [Types of file processing](#types-of-file-processing)  
 	* [Creating a Sequential Access file](#creating-a-sequential-access-file)  
 		* [Reading Sequential Access file](#reading-sequential-access-file)  
-* [include <stdio.h>](#include-stdioh)  
-* [include <stdio.h>](#include-stdioh)  
 		* [Read numbers from file and calculate Average](#read-numbers-from-file-and-calculate-average)  
 			* [Example Program: Average of numbers](#example-program-average-of-numbers)  
-* [include <stdio.h>](#include-stdioh)  
 			* [Example Program: Average of numbers read from a file](#example-program-average-of-numbers-read-from-a-file)  
 	* [Random access file](#random-access-file)  
 		* [Creating Random Access File](#creating-random-access-file)  
-* [include <stdio.h>](#include-stdioh)  
 		* [Writing Data](#writing-data)  
 		* [Reading Data](#reading-data)  
-* [include <stdio.h>](#include-stdioh)  
 		* [Transaction processing using random access files](#transaction-processing-using-random-access-files)  
-* [include <stdio.h>](#include-stdioh)  
 	* [Command line arguments](#command-line-arguments)  
 		* [Program 5.3](#program-53)  
-* [include <stdio.h>](#include-stdioh)  
 
-
-# UNIT V FILE PROCESSING  
-
-	Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments
-
-
-[TOC]
 
 ## Files
 
@@ -937,8 +925,62 @@ int main( int argc, char *argv[] )
       } // end else
    } // end else
 } // end main
-
-
-
  
+```
+
+
+### Modular Versions
+
+Fork [this](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1)!
+
+
+```c
+
+int read_from_stream_into_array(
+    const char* fname,  // to use in logging if there is an error
+    FILE* fp,           // can also be assigned to stdin
+    int array[])        // array to be filled with values
+{
+    int counter = 0;
+    if (fp != NULL) {
+        printf("Reading numbers from %s\n", fname);
+        while (!feof(fp)) {
+            fscanf(fp, "%d ", &array[counter]);
+            printf("%d %d\n", counter, array[counter]);
+            counter++;
+        }
+        fclose(fp);
+    }
+    else
+        printf("Invalid file pointer for file:%s!", fname);
+
+    return counter;
+}
+
+float calculate_sum(int *n, int i) {
+    float sum = 0; 
+    for (int counter = 0; counter < i; counter++){
+        sum = sum  + n[i];
+    }
+    return sum; 
+}
+
+
+int main(int argc, char* argv[]) 
+{
+    int n[50];
+    
+    FILE *fp = fopen("num.dat", "r");
+    int i    = read_from_stream_into_array("num.dat", fp, n);
+    
+    if (i > 0) {
+        float sum     = calculate_sum(n, i); 
+        float average = sum / i;
+        printf("The average is %f for %d numbers\n",
+               average, i);
+    }
+    else {
+        puts("No data available in num.dat!");
+    }
+}
 ```
