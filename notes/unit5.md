@@ -1003,7 +1003,6 @@ int main(int argc, char* argv[]){
         float average = sum / i;
         printf("The average is %f for %d numbers\n",
                average, i);
-        ASSERT_EQ(average, 3); 
     }
     else {
         puts("No data available in num.dat!");
