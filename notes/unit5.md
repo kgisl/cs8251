@@ -1,6 +1,8 @@
 
 # UNIT V FILE PROCESSING  
 
+[TOC]
+
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
 **Table of Contents**
@@ -372,27 +374,6 @@ int main(){
 	The average of first 20 numbers = 10.05
 
 
-##### Using Functions
-
-Using [function](#readfromstreamintoarrayconst-char-file-int), the code becomes easier to read and deliver as well. 
-
-```c
-int main() { 
-    int n[50];
- 
-    int i    = read_from_stream_into_array("stdin", stdin, n, 6);
-    
-    if (i > 0) {
-        float sum     = calculate_sum(n, i); 
-        float average = sum / i;
-        printf("The average is %f for %d numbers\n",
-               average, i);
-    }
-    else {
-        puts("No data available on stdin!");
-    }
-}
-```
 
 #### Example Program: Average of numbers read from a file
 
@@ -1007,7 +988,7 @@ float calculate_sum(int n[], int i) {
 
 ```
 
-### Modular main()
+### modular main()
 
 ```c
 
@@ -1030,4 +1011,24 @@ int main(int argc, char* argv[]){
     fclose(fp); 
 }
 
+```
+
+### Averaging entries from stdin 
+
+```c
+int main() { 
+    int n[50];
+ 
+    int i    = read_from_stream_into_array("stdin", stdin, n, 6);
+    
+    if (i > 0) {
+        float sum     = calculate_sum(n, i); 
+        float average = sum / i;
+        printf("The average is %f for %d numbers\n",
+               average, i);
+    }
+    else {
+        puts("No data available on stdin!");
+    }
+}
 ```
