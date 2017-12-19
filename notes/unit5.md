@@ -943,6 +943,10 @@ Fork [this CD session](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar
 ### read\_from_stream\_into\_array(const char*, FILE*, int[])
 
 ```c
+// can also be easily extended and modified 
+// will come handy for next refactoring
+// All it needs is a valid file pointer
+// If it is stdin, then fscanf90 === scanf()
 int read_from_stream_into_array(
     const char* fname,  // to use in logging if there is an error
     FILE* fp,           // can also be assigned to stdin
@@ -963,12 +967,19 @@ int read_from_stream_into_array(
 
     return counter;
 }
+
+
+
 ```
 
 ### calculate\_sum(int[] arr, int size)
 
 ```c
-float calculate_sum(int* n, int i) {
+// Calculate the sum but pays attention to only
+// the number of entries made into the array
+//
+float calculate_sum(int *n, int i) {
+    
     float sum = 0; 
     for (int counter = 0; counter < i; counter++){
         sum = sum  + n[i];
