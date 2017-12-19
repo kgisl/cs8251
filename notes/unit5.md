@@ -23,7 +23,7 @@
 		* [Program 5.3](#program-53)  
 	* [Modular Versions](#modular-versions)  
 		* [read_from_stream_into_array(const char, FILE, int[])](#readfromstreamintoarrayconst-char-file-int)  
-		* [calculate_sum(int[] arr, int size)](#calculatesumint-arr-int-size)  
+		* [calculate\_sum(int[] arr, int size)](#calculate_sumint-arr-int-size)  
 
 ## Files
 
@@ -966,6 +966,7 @@ int read_from_stream_into_array(
 ```
 
 ### calculate\_sum(int[] arr, int size)
+
 ```c
 float calculate_sum(int* n, int i) {
     float sum = 0; 
