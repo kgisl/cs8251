@@ -18,7 +18,7 @@ Initialization – One dimensional array – *Example Program: Computing*
 *[Mean, Median and Mode][6]* - Two dimensional arrays – *Example Program:*
 *Matrix Operations ([Addition][6a], [Subtraction][6b], Scaling, Determinant and [Transpose][6e])* - String
 operations: length, compare, concatenate, copy – *Example Program:* 
-*[Selection sort][1](see video link below), [linear and binary search][i3]*
+*[Selection sort][1] (see video link below), [linear and binary search][i3]*
 
 **UNIT III FUNCTIONS AND POINTERS 9** Introduction to functions:
 Function prototype, function definition, function call, Built-in
