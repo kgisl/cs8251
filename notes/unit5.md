@@ -22,7 +22,6 @@
 * [include <stdio.h>](#include-stdioh)  
 	* [Command line arguments](#command-line-arguments)  
 		* [Program 5.3](#program-53)  
-* [include <stdio.h>](#include-stdioh)  
 		* [Modular Versions](#modular-versions)  
 
 
