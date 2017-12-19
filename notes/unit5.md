@@ -226,61 +226,24 @@ to a new file, the new record would be written and the records after 300 White 0
 be copied to the new file. This requires processing every record in the file to update one
 record. 
 
-### Example Program: Average of numbers stored in file
-
-Write a program to calculate the average of first n numbers.
-
-```c
-
-#include <stdio.h>
-int main(){
-	int n, i = 0, sum =0;
-	float avg = 0.0;
-	printf("\n Enter the value of n : ");
-	scanf("%d", &n);
-	do{
-		sum = sum + i;
-		i = i + 1;
-	} while(i<=n);
-	avg = (float)sum/n;
-	printf("\n The sum of first %d numbers = %d",n, sum);
-	printf("\n The average of first %d numbers = %.2f", n, avg);
-	return 0;
-}
-```
-
-**Output**
-	
-	Enter the value of n : 20
-	The sum of first 20 numbers = 210
-	The average of first 20 numbers = 10.05
-
-
-
 The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
 
 ```c
 #include <stdio.h>
- int main()
- {
- FILE *fp;
- int n[5],i;
- if((fp = fopen(“num.dat”, “w”)) != NULL)
- {
- printf(“Enter 5 numbers, to be stored in
-num.dat...”);
- for(i = 0; i < 5; i++)
- {
- scanf(“%d”, &n[i]);
- fprintf(fp, “%d\n”, n[i]);
- }
- fprintf(fp,”%d”,9999);
- fclose(ptr);
- }
- else
- printf(“Unable to open num.dat ...\n”);
- return 0;
- }
+int main() {
+	FILE* fp;
+    int n[5], i;
+    if ((fp = fopen("num.dat", "w")) != NULL) {
+        puts("Enter 5 numbers, to be stored in num.dat...");
+        for (i = 0; i < 5; i++) {
+            scanf("%d", &n[i]);
+            fprintf(fp, "%d\n", n[i]);
+        }
+        fprintf(fp,"%d", 9999);
+        fclose(fp);
+    }
+    else
+        printf("Unable to open num.dat...\n"); }
 ```
  
 **Output:**
@@ -356,6 +319,76 @@ int main() {
 }
 ```
 
+### Read numbers from file and calculate Average
+
+
+#### Example Program: Average of numbers
+
+Write a program to calculate the average of first n numbers.
+
+This is the simplest version of calculating averages of a bunch of numbers. 
+
+```c
+
+#include <stdio.h>
+int main(){
+	int n, i = 0, sum =0;
+	float avg = 0.0;
+	printf("\n Enter the value of n : ");
+	scanf("%d", &n);
+	do{
+		sum = sum + i;
+		i = i + 1;
+	} while(i<=n);
+	avg = (float)sum/n;
+	printf("\n The sum of first %d numbers = %d",n, sum);
+	printf("\n The average of first %d numbers = %.2f", n, avg);
+	return 0;
+}
+```
+
+**Output**
+	
+	Enter the value of n : 20
+	The sum of first 20 numbers = 210
+	The average of first 20 numbers = 10.05
+
+
+#### Example Program: Average of numbers read from a file
+
+The next program reads five (or more) integer values from the data file `num.dat`. In this program end-of-file marker `EOF` is used to exit the loop.
+
+```c
+
+int main()
+{
+	FILE* fp;
+	int n[50], i = 0;
+	float sum = 0;
+	if ((fp = fopen("num.dat", "r")) != NULL) {
+	    puts("Reading numbers from num.dat");
+	    while (!feof(fp)) {
+	        fscanf(fp, "%d ", &n[i]);
+	        printf("%d %d\n", i, n[i]);
+	        sum += n[i];
+	        i++;
+	    }
+	    fclose(fp);
+	
+	    if (i > 0) {
+	        float average = sum / i;
+	        printf("The average is %f for %d numbers\n",
+	            average, i);
+	    }
+	    else {
+	        puts("No data available in num.dat!");
+	    }
+	}
+	else
+	    printf("Unable to open num.dat...\n");
+}
+
+```
 
 ## Random access file 
 
