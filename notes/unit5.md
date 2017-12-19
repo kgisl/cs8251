@@ -1,3 +1,6 @@
+# UNIT V FILE PROCESSING  
+
+*Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 **Table of Contents**
 
 * [UNIT V FILE PROCESSING](#unit-v-file-processing)  
@@ -6,29 +9,18 @@
 		* [Types of file processing](#types-of-file-processing)  
 	* [Creating a Sequential Access file](#creating-a-sequential-access-file)  
 		* [Reading Sequential Access file](#reading-sequential-access-file)  
-* [include <stdio.h>](#include-stdioh)  
-* [include <stdio.h>](#include-stdioh)  
 		* [Read numbers from file and calculate Average](#read-numbers-from-file-and-calculate-average)  
 			* [Example Program: Average of numbers](#example-program-average-of-numbers)  
-* [include <stdio.h>](#include-stdioh)  
 			* [Example Program: Average of numbers read from a file](#example-program-average-of-numbers-read-from-a-file)  
 	* [Random access file](#random-access-file)  
 		* [Creating Random Access File](#creating-random-access-file)  
-* [include <stdio.h>](#include-stdioh)  
 		* [Writing Data](#writing-data)  
 		* [Reading Data](#reading-data)  
-* [include <stdio.h>](#include-stdioh)  
 		* [Transaction processing using random access files](#transaction-processing-using-random-access-files)  
-* [include <stdio.h>](#include-stdioh)  
 	* [Command line arguments](#command-line-arguments)  
 		* [Program 5.3](#program-53)  
-		* [Modular Versions](#modular-versions)  
+	* [Modular Versions](#modular-versions)  
 
-
-
-# UNIT V FILE PROCESSING  
-
-*Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
 
 ## Files
@@ -940,13 +932,15 @@ int main( int argc, char *argv[] )
 ```
 
 
-### Modular Versions
+## Modular Versions
 
 Fork [this](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1)!
 
 
-```c
 
+### read_from_stream_into_array(const char*, FILE*, int[])
+
+```c
 int read_from_stream_into_array(
     const char* fname,  // to use in logging if there is an error
     FILE* fp,           // can also be assigned to stdin
@@ -967,8 +961,11 @@ int read_from_stream_into_array(
 
     return counter;
 }
+```
 
-float calculate_sum(int *n, int i) {
+### calculate_sum(int[] arr, int size)
+```c
+float calculate_sum(int* n, int i) {
     float sum = 0; 
     for (int counter = 0; counter < i; counter++){
         sum = sum  + n[i];
