@@ -378,7 +378,7 @@ Using [function](#readfromstreamintoarrayconst-char-file-int), the code becomes 
 
 ```c
 int main() { 
-	int n[50];
+    int n[50];
  
     int i    = read_from_stream_into_array("stdin", stdin, n, 6);
     
