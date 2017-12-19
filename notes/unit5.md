@@ -975,9 +975,8 @@ int read_from_stream_into_array(
 ### calculate\_sum(int[] arr, int size)
 
 ```c
-// Calculate the sum but pays attention to only
-// the number of entries made into the array
-//
+// Calculate the sum of all elements 
+// in the array
 float calculate_sum(int *n, int i) {
     
     float sum = 0; 
