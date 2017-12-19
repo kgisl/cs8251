@@ -1,6 +1,6 @@
 # UNIT V FILE PROCESSING  
 
-	Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments
+*Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
 * [UNIT V FILE PROCESSING](#unit-v-file-processing)  
 	* [Files](#files)  
