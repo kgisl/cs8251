@@ -344,9 +344,7 @@ int main() {
 
 #### Example Program: Average of numbers
 
-Write a program to calculate the average of first n numbers.
-
-This is the simplest version of calculating averages of a bunch of numbers. 
+Write a program to calculate the average of first n numbers. This is the simplest version of calculating averages of a bunch of numbers. 
 
 ```c
 
@@ -373,6 +371,28 @@ int main(){
 	The sum of first 20 numbers = 210
 	The average of first 20 numbers = 10.05
 
+
+##### Using Functions
+
+Using [function](#readfromstreamintoarrayconst-char-file-int), the code becomes easier to read and deliver as well. 
+
+```c
+int main() { 
+	int n[50];
+ 
+    int i    = read_from_stream_into_array("stdin", stdin, n, 6);
+    
+    if (i > 0) {
+        float sum     = calculate_sum(n, i); 
+        float average = sum / i;
+        printf("The average is %f for %d numbers\n",
+               average, i);
+    }
+    else {
+        puts("No data available on stdin!");
+    }
+}
+```
 
 #### Example Program: Average of numbers read from a file
 
@@ -945,22 +965,22 @@ Fork [this CD session](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar
 ```c
 // can also be easily extended and modified 
 // will come handy for next refactoring
-// All it needs is a valid file pointer
-// If it is stdin, then fscanf90 === scanf()
+//
 int read_from_stream_into_array(
     const char* fname,  // to use in logging if there is an error
     FILE* fp,           // can also be assigned to stdin
-    int array[])        // array to be filled with values
+    int array[],    // array to be filled with values
+    int size           // will decide max num of entries to read
+    )
 {
     int counter = 0;
     if (fp != NULL) {
         printf("Reading numbers from %s\n", fname);
-        while (!feof(fp)) {
+        while (!feof(fp) && counter < size) {
             fscanf(fp, "%d ", &array[counter]);
             printf("%d %d\n", counter, array[counter]);
             counter++;
         }
-        fclose(fp);
     }
     else
         printf("Invalid file pointer for file:%s!", fname);
@@ -969,22 +989,21 @@ int read_from_stream_into_array(
 }
 
 
-
 ```
 
 ### calculate\_sum(int[] arr, int size)
 
 ```c
-// Calculate the sum of all elements 
-// in the array
-float calculate_sum(int *n, int i) {
+float calculate_sum(int n[], int i) {
     
     float sum = 0; 
     for (int counter = 0; counter < i; counter++){
-        sum = sum  + n[i];
+        sum = sum  + n[counter];
     }
+    printf("Sum: %f\n", sum); 
     return sum; 
 }
+    
 
 ```
 
@@ -996,17 +1015,19 @@ int main(int argc, char* argv[]){
     int n[50];
     
     FILE *fp = fopen("num.dat", "r");
-    int i    = read_from_stream_into_array("num.dat", fp, n);
-    
+    int i    = read_from_stream_into_array("num.dat", fp, n, 5);
+   
     if (i > 0) {
         float sum     = calculate_sum(n, i); 
         float average = sum / i;
         printf("The average is %f for %d numbers\n",
                average, i);
+        ASSERT_EQ(average, 3); 
     }
     else {
         puts("No data available in num.dat!");
     }
+    fclose(fp); 
 }
 
 ```
