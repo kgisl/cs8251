@@ -936,7 +936,7 @@ int main( int argc, char *argv[] )
 
 ## Modular Versions
 
-Fork [this](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1)!
+Fork [this CD session](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1) to get testable code!
 
 
 
