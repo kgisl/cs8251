@@ -93,9 +93,43 @@ C imposes no structure on a file. Thus, notions such as a record of a file do no
 
 Figure 11.2 creates a simple sequential-access file that might be used in an accounts
 receivable system to keep track of the amounts owed by a company’s credit clients. For
-each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a “record” for that client. The account number is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in accountnumber order. In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. [Note: Figures 11.6–11.7 use the data file created in 
+each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a “record” for that client. The account number is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in accountnumber order. In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. [Note: Figures 11.6–11.7 use the data file created in Fig. 11.2, so you must run Fig. 11.2 before Figs. 11.6–11.7.] 
 
-Fig. 11.2, so you must run Fig. 11.2 before Figs. 11.6–11.7.] 
+```c
+// Fig. 11.2: fig11_02.c
+// Creating a sequential file
+#include <stdio.h>
+
+int main( void )
+{ 
+   unsigned int account; // account number
+   char name[ 30 ]; // account name
+   double balance; // account balance
+
+   FILE *cfPtr; // cfPtr = clients.dat file pointer   
+
+   // fopen opens file. Exit program if unable to create file 
+   if ( ( cfPtr = fopen( "clients.dat", "w" ) ) == NULL ) {
+      puts( "File could not be opened" );
+   } // end if
+   else { 
+      puts( "Enter the account, name, and balance." );
+      puts( "Enter EOF to end input." );
+      printf( "%s", "? " );
+      scanf( "%d%29s%lf", &account, name, &balance );
+
+      // write account, name and balance into file with fprintf
+      while ( !feof( stdin ) ) { 
+         fprintf( cfPtr, "%d %s %.2f\n", account, name, balance );
+         printf( "%s", "? " );
+         scanf( "%d%29s%lf", &account, name, &balance );
+      } // end while
+      
+      fclose( cfPtr ); // fclose closes file   
+   } // end else
+} // end main
+
+```
 
 	Enter the account, name, and balance.
 	Enter EOF to end input.
@@ -171,10 +205,42 @@ have a different file pointer returned by fopen. All subsequent file-processing 
 ### Reading Sequential Access file
 
 Data is stored in files so that the data can be retrieved for processing when needed. The
-previous section demonstrated how to create a file for sequential access. This section shows
-how to read data sequentially from a file.
-Figure 11.6 reads records from the file "clients.dat" created by the program of
-Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line
+previous section demonstrated how to create a file for sequential access. This section shows how to read data sequentially from a file.
+
+```c
+// Fig. 11.6: fig11_06.c
+// Reading and printing a sequential file
+#include <stdio.h>
+
+int main( void )
+{ 
+   unsigned int account; // account number
+   char name[ 30 ]; // account name
+   double balance; // account balance
+
+   FILE *cfPtr; // cfPtr = clients.dat file pointer
+
+   // fopen opens file; exits program if file cannot be opened 
+   if ( ( cfPtr = fopen( "clients.dat", "r" ) ) == NULL ) {
+      puts( "File could not be opened" );
+   } // end if
+   else { // read account, name and balance from file
+      printf( "%-10s%-13s%s\n", "Account", "Name", "Balance" );
+      fscanf( cfPtr, "%d%29s%lf", &account, name, &balance );
+
+      // while not end of file
+      while ( !feof( cfPtr ) ) { 
+         printf( "%-10d%-13s%7.2f\n", account, name, balance );
+         fscanf( cfPtr, "%d%29s%lf", &account, name, &balance );
+      } // end while
+
+      fclose( cfPtr ); // fclose closes the file   
+   } // end else
+} // end main
+
+```
+
+Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line
 14 attempts to open the file "clients.dat" for reading ("r") and determines whether it
 opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the
 file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument
@@ -187,104 +253,20 @@ the program terminates. Function feof returns true only after the program attemp
 read the nonexistent data following the last line. 
 
 Resetting the File Position Pointer
-To retrieve data sequentially from a file, a program normally starts reading from the beginning
-of the file and reads all data consecutively until the desired data is found. It may
-be desirable to process the data sequentially in a file several times (from the beginning of
-the file) during the execution of a program. The statement
+To retrieve data sequentially from a file, a program normally starts reading from the beginning of the file and reads all data consecutively until the desired data is found. It may be desirable to process the data sequentially in a file several times (from the beginning of the file) during the execution of a program. The statement
+
+	rewind( cfPtr );
+
 causes a program’s file position pointer—which indicates the number of the next byte in
 the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0)
 pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer
 value that specifies the byte in the file at which the next read or write is to occur. This is
 sometimes referred to as the file offset. The file position pointer is a member of the FILE
 structure associated with each file.
-Credit Inquiry Program
-The program of Fig. 11.7 allows a credit manager to obtain lists of customers with zero
-balances (i.e., customers who do not owe any money), customers with credit balances (i.e.,
-customers to whom the company owes money) and customers with debit balances (i.e.,
-customers who owe the company money for goods and services received). A credit balance
-is a negative amount; a debit balance is a positive amount
-
-The program displays a menu and allows the credit manager to enter one of three
-options to obtain credit information. Option 1 produces a list of accounts with zero balances.
-Option 2 produces a list of accounts with credit balances. Option 3 produces a list
-of accounts with debit balances. Option 4 terminates program execution. A sample output
-is shown in Fig. 11.8.
-
-	Enter request
-	 1 - List accounts with zero balances
-	 2 - List accounts with credit balances
-	 3 - List accounts with debit balances
-	 4 - End of run
-	? 1
-
-	Accounts with zero balances:
-	300 White 0.00
-	? 2
-	Accounts with credit balances:
-	400 Stone -42.16
-	? 3
-	Accounts with debit balances:
-	100 Jones 24.98
-	200 Doe 345.67
-	500 Rich 224.62
-	? 4
-	End of run.
-
-Data in this type of sequential file cannot be modified without the risk of destroying
-other data. For example, if the name “White” needs to be changed to “Worthington,” the
-old name cannot simply be overwritten. The record for White was written to the file as
-If the record is rewritten beginning at the same location in the file using the new name,
-the record will be
-The new record is larger (has more characters) than the original record. The characters beyond
-the second “o” in “Worthington” will overwrite the beginning of the next sequential
-record in the file. The problem here is that in the formatted input/output model using
-fprintf and fscanf, fields—and hence records—can vary in size. For example, the values
-7, 14, –117, 2074 and 27383 are all ints stored in the same number of bytes internally,
-but they’re different-sized fields when displayed on the screen or written to a file as text.
-Therefore, sequential access with fprintf and fscanf is not usually used to update
-records in place. Instead, the entire file is usually rewritten. To make the preceding name
-change, the records before 300 White 0.00 in such a sequential-access file would be copied
-to a new file, the new record would be written and the records after 300 White 0.00 would
-be copied to the new file. This requires processing every record in the file to update one
-record. 
 
 
 
 ### Read numbers from file and calculate Average
-
-
-#### Example Program: Average of numbers
-
-Write a program to calculate the average of first n numbers. This is the simplest version of calculating averages of a bunch of numbers. 
-
-```c
-
-#include <stdio.h>
-int main(){
-	int n, i = 0, sum =0;
-	float avg = 0.0;
-	printf("\n Enter the value of n : ");
-	scanf("%d", &n);
-	do{
-		sum = sum + i;
-		i = i + 1;
-	} while(i<=n);
-	avg = (float)sum/n;
-	printf("\n The sum of first %d numbers = %d",n, sum);
-	printf("\n The average of first %d numbers = %.2f", n, avg);
-	return 0;
-}
-```
-
-**Output**
-	
-	Enter the value of n : 20
-	The sum of first 20 numbers = 210
-	The average of first 20 numbers = 10.05
-
-
-
-#### Example Program: Average of numbers read from a file
 
 The next program reads five (or more) integer values from the data file `num.dat`. In this program end-of-file marker `EOF` is used to exit the loop.
 
@@ -941,7 +923,7 @@ int main() {
 ```
 
 
-### To Be Deleted 
+## To Be Deleted 
 
 The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
 
@@ -1035,3 +1017,89 @@ int main() {
 	return 0;
 }
 ```
+
+
+### Credit Inquiry Program
+
+Credit Inquiry Program
+The program of Fig. 11.7 allows a credit manager to obtain lists of customers with zero
+balances (i.e., customers who do not owe any money), customers with credit balances (i.e.,
+customers to whom the company owes money) and customers with debit balances (i.e.,
+customers who owe the company money for goods and services received). A credit balance
+is a negative amount; a debit balance is a positive amount
+
+The program displays a menu and allows the credit manager to enter one of three
+options to obtain credit information. Option 1 produces a list of accounts with zero balances.
+Option 2 produces a list of accounts with credit balances. Option 3 produces a list
+of accounts with debit balances. Option 4 terminates program execution. A sample output
+is shown in Fig. 11.8.
+
+	Enter request
+	 1 - List accounts with zero balances
+	 2 - List accounts with credit balances
+	 3 - List accounts with debit balances
+	 4 - End of run
+	? 1
+
+	Accounts with zero balances:
+	300 White 0.00
+	? 2
+	Accounts with credit balances:
+	400 Stone -42.16
+	? 3
+	Accounts with debit balances:
+	100 Jones 24.98
+	200 Doe 345.67
+	500 Rich 224.62
+	? 4
+	End of run.
+
+Data in this type of sequential file cannot be modified without the risk of destroying
+other data. For example, if the name “White” needs to be changed to “Worthington,” the
+old name cannot simply be overwritten. The record for White was written to the file as
+If the record is rewritten beginning at the same location in the file using the new name,
+the record will be
+The new record is larger (has more characters) than the original record. The characters beyond
+the second “o” in “Worthington” will overwrite the beginning of the next sequential
+record in the file. The problem here is that in the formatted input/output model using
+fprintf and fscanf, fields—and hence records—can vary in size. For example, the values
+7, 14, –117, 2074 and 27383 are all ints stored in the same number of bytes internally,
+but they’re different-sized fields when displayed on the screen or written to a file as text.
+Therefore, sequential access with fprintf and fscanf is not usually used to update
+records in place. Instead, the entire file is usually rewritten. To make the preceding name
+change, the records before 300 White 0.00 in such a sequential-access file would be copied
+to a new file, the new record would be written and the records after 300 White 0.00 would
+be copied to the new file. This requires processing every record in the file to update one
+record. 
+
+
+### Example Program: Average of numbers
+
+Write a program to calculate the average of first n numbers. This is the simplest version of calculating averages of a bunch of numbers. 
+
+```c
+
+#include <stdio.h>
+int main(){
+	int n, i = 0, sum =0;
+	float avg = 0.0;
+	printf("\n Enter the value of n : ");
+	scanf("%d", &n);
+	do{
+		sum = sum + i;
+		i = i + 1;
+	} while(i<=n);
+	avg = (float)sum/n;
+	printf("\n The sum of first %d numbers = %d",n, sum);
+	printf("\n The average of first %d numbers = %.2f", n, avg);
+	return 0;
+}
+```
+
+**Output**
+	
+	Enter the value of n : 20
+	The sum of first 20 numbers = 210
+	The average of first 20 numbers = 10.05
+
+
