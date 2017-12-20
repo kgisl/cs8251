@@ -312,28 +312,15 @@ data, and delete data no longer needed.
 ### Creating Random Access File
 
 Function fwrite transfers a specified number of bytes beginning at a specified location in
-memory to a file. The data is written beginning at the location in the file indicated by the
-file position pointer. Function fread transfers a specified number of bytes from the location
-in the file specified by the file position pointer to an area in memory beginning with
-a specified address. Now, when writing an integer, instead of using
-which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which
-requires 1 byte of storage) for a four-byte integer, we can use
-which always writes four bytes on a system with four-byte integers from a variable number
-to the file represented by fPtr (we’ll explain the 1 argument shortly). Later, fread can be
-used to read those four bytes into an integer variable number. Although fread and fwrite
-read and write data, such as integers, in fixed-size rather than variable-size format, the data
-they handle are processed in computer “raw data” format (i.e., bytes of data) rather than
-in printf’s and scanf’s human-readable text format. Because the “raw” representation of
+memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which
+requires 1 byte of storage) for a four-byte integer, we can use which always writes four bytes on a system with four-byte integers from a variable number to the file represented by fPtr (we’ll explain the 1 argument shortly). Later, fread can be used to read those four bytes into an integer variable number. Although fread and fwrite read and write data, such as integers, in fixed-size rather than variable-size format, the data they handle are processed in computer “raw data” format (i.e., bytes of data) rather than in printf’s and scanf’s human-readable text format. Because the “raw” representation of data is system dependent, “raw data” may not be readable on other systems, or by programs produced by other compilers or with other compiler options.
 
-data is system dependent, “raw data” may not be readable on other systems, or by programs
-produced by other compilers or with other compiler options.
 Functions fwrite and fread are capable of reading and writing arrays of data to and
 from disk. The third argument of both fread and fwrite is the number of elements in the
 array that should be read from or written to disk. The preceding fwrite function call
-writes a single integer to disk, so the third argument is 1 (as if one element of an array is
-being written).
-File-processing programs rarely write a single field to a file. Normally, they write one
-struct at a time, as we show in the following examples.
+writes a single integer to disk, so the third argument is 1 (as if one element of an array is being written). File-processing programs rarely write a single field to a file. Normally, they write one struct at a time, as we show in the following examples.
+
+
 Consider the following problem statement:
 
 	Create a credit-processing system capable of storing up to 100 fixed-length records. Each record should consist of an account number that will be used as the record key, a last name, a first name and a balance. The resulting program should be able to update an account, insert a new account record, delete an account and list all the account	records in a formatted text file for printing. Use a random-access file.
@@ -379,10 +366,7 @@ int main( void )
 
 ```
 
-Function fwrite writes a block of bytes to a file. Line 29 causes the structure blankClient
-of size sizeof(struct clientData) to be written to the file pointed to by cfPtr.
-The operator sizeof returns the size in bytes of its operand in parentheses (in this case
-struct clientData). Function fwrite can actually be used to write several elements of an array of objects. To do so, supply in the call to fwrite a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, fwrite was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the fwrite call. [Note: Figures 11.11, 11.14 and 11.15 use the data file created in Fig. 11.10, so you must run Fig. 11.10 before Figs. 11.11, 11.14 and 11.15]. 
+Function **fwrite** writes a block of bytes to a file. Line 29 causes the structure blankClient of size `sizeof(struct clientData)` to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to fwrite a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, fwrite was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the fwrite call. [Note: Figures 11.11, 11.14 and 11.15 use the data file created in Fig. 11.10, so you must run Fig. 11.10 before Figs. 11.11, 11.14 and 11.15]. 
 
 ### Writing Data
 
