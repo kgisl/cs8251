@@ -93,7 +93,7 @@ C imposes no structure on a file. Thus, notions such as a record of a file do no
 
 Figure 11.2 creates a simple sequential-access file that might be used in an accounts
 receivable system to keep track of the amounts owed by a company’s credit clients. For
-each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a “record” for that client. The account number is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in accountnumber order. In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. [Note: Figures 11.6–11.7 use the data file created in Fig. 11.2, so you must run Fig. 11.2 before Figs. 11.6–11.7.] 
+each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a “record” for that client. The account number is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in account number order. In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. *[Note: Figures 11.6–11.7 use the data file created in Fig. 11.2, so you must run Fig. 11.2 before Figs. 11.6–11.7.]* 
 
 ```c
 // Fig. 11.2: fig11_02.c
@@ -138,7 +138,7 @@ int main( void )
 	? 300 White 0.00
 	? 400 Stone -42.16
 	? 500 Rich 224.62
-	? ^Z
+	? ^D (or ^Z)
 
 Now let’s examine this program. Line 11 states that `cfPtr` is a pointer to a FILE structure. A C program administers each file with a separate FILE structure. You need not know the specifics of the FILE structure to use files, but you can study the declaration in **stdio.h** if you like. We’ll soon see precisely how the FILE structure leads indirectly to the operating system’s file control block (FCB) for a file.
 
@@ -155,33 +155,24 @@ end-of-file when data entry is complete. Figure 11.3 lists the key combinations 
 	Windows                <Ctrl> z
 
 Line 24 uses function feof to determine whether the end-of-file indicator is set for
-the file to which stdin refers. The end-of-file indicator informs the program that there’s no
-more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard
-input when the user enters the end-of-file key combination. The argument to function feof
-is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The
-function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
+the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
 Line 25 writes data to the file clients.dat. The data may be retrieved later by a program
-designed to read the file (see Section 11.4). Function fprintf is equivalent to
-printf except that fprintf also receives as an argument a file pointer for the file to which
-the data will be written. Function fprintf can output data to the standard output by
-using stdout as the file pointer, as in:
+designed to read the file (see Section 11.4). Function fprintf is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which
+the data will be written. Function **fprintf** can output data to the standard output by
+using **stdout** as the file pointer, as in:
 
 	`fprintf( stdout, "%d %s %.2f\n", account, name, balance );`
 
 After the user enters end-of-file, the program closes the clients.dat file with fclose
 and terminates. Function fclose also receives the file pointer (rather than the filename)
-as an argument. If function fclose is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
+as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
 
-In the sample execution for the program of Fig. 11.2, the user enters information for
-five accounts, then enters end-of-file to signal that data entry is complete. The sample execution does not show how the data records actually appear in the file. To verify that the file has been created successfully, in the next section we present a program that reads the file and prints its contents.
-
-Figure 11.4 illustrates the relationship between FILE pointers, FILE structures and
-FCBs. When the file "clients.dat" is opened, an FCB for the file is copied into memory.
-The figure shows the connection between the file pointer returned by fopen and the FCB
-used by the operating system to administer the file.
+### File Access Modes
 
 Programs may process no files, one file or several files. Each file used in a program will
-have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). To create a file, or to discard the contents of a file before writing data, open the file for writing ("w"). To read an existing file, open it for reading ("r"). To add records to the end of an existing file, open the file for appending ("a"). To open a file so that it may be written to and read from, open the file for updating in one of the three update modes—"r+", "w+" or "a+". Mode "r+" opens an existing file for reading and writing. Mode "w+" creates a file for reading and writing. If the file already exists, it’s opened and its current contents are discarded. Mode "a+" opens a file for reading and writing—all writing is done at the end of the file. If the file does not exist, it’s created. Each file open mode has a corresponding binary mode (containing the letter b) for manipulating binary files. The binary modes are used in Sections 11.5–11.9 when we introduce random-access files. In addition, C11 provides exclusive write mode, which you indicate by adding an x to the end of the w, w+, wb or wb+ modes. In exclusive write mode, fopen will fail if the file already exists or cannot be created. If opening a file in exclusive write mode is successful and the underlying system supports exclusive file access, then only your program can access the file while it’s open. (Some compilers and platforms do not support exclusive write mode.) If an error occurs while opening a file in any mode, fopen returns NULL. 
+have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). To create a file, or to discard the contents of a file before writing data, open the file for writing ("w"). To read an existing file, open it for reading ("r"). To add records to the end of an existing file, open the file for appending ("a"). To open a file so that it may be written to and read from, open the file for updating in one of the three update modes—"r+", "w+" or "a+". Mode "r+" opens an existing file for reading and writing. Mode "w+" creates a file for reading and writing. If the file already exists, it’s opened and its current contents are discarded. Mode "a+" opens a file for reading and writing—all writing is done at the end of the file. If the file does not exist, it’s created. Each file open mode has a corresponding binary mode (containing the letter b) for manipulating binary files. **The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.** 
+
+If an error occurs while opening a file in any mode, fopen returns **NULL**. 
 
 
 |Mode 	| Description |
@@ -240,19 +231,13 @@ int main( void )
 
 ```
 
-Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line
-14 attempts to open the file "clients.dat" for reading ("r") and determines whether it
-opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the
-file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument
-a file pointer for the file from which the data is read. After this statement executes
-the first time, account will have the value 100, name will have the value "Jones" and balance
-will have the value 24.98. Each time the second fscanf statement (line 24) executes,
-the program reads another record from the file and account, name and balance take on
-new values. When the program reaches the end of the file, the file is closed (line 27) and
-the program terminates. Function feof returns true only after the program attempts to
+Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line 14 attempts to open the file "clients.dat" for reading ("r") and determines whether it opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
+
+Each time the second fscanf statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function feof returns true only after the program attempts to
 read the nonexistent data following the last line. 
 
-Resetting the File Position Pointer
+
+**Resetting the File Position Pointer**
 To retrieve data sequentially from a file, a program normally starts reading from the beginning of the file and reads all data consecutively until the desired data is found. It may be desirable to process the data sequentially in a file several times (from the beginning of the file) during the execution of a program. The statement
 
 	rewind( cfPtr );
@@ -263,7 +248,6 @@ pointed to by cfPtr. The file position pointer is not really a pointer. Rather i
 value that specifies the byte in the file at which the next read or write is to occur. This is
 sometimes referred to as the file offset. The file position pointer is a member of the FILE
 structure associated with each file.
-
 
 
 ### Read numbers from file and calculate Average
