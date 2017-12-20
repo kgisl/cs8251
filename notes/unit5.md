@@ -289,8 +289,7 @@ int main()
 ## Random access file 
 
 As we stated previously, records in a file created with the formatted output function
-fprintf are not necessarily the same length. However, individual records of a randomaccess
-file are normally fixed in length and may be accessed directly (and thus quickly)
+**fprintf** are not necessarily the same length. However, individual records of a random access file are normally fixed in length and may be accessed directly (and thus quickly)
 without searching through other records. This makes random-access files appropriate for
 airline reservation systems, banking systems, point-of-sale systems, and other kinds of
 transaction-processing systems that require rapid access to specific data. There are other ways of implementing random-access files, but we’ll limit our discussion to this straightforward approach using fixed-length records.
@@ -311,9 +310,7 @@ data, and delete data no longer needed.
 
 ### Creating Random Access File
 
-Function fwrite transfers a specified number of bytes beginning at a specified location in
-memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which
-requires 1 byte of storage) for a four-byte integer, we can use which always writes four bytes on a system with four-byte integers from a variable number to the file represented by fPtr (we’ll explain the 1 argument shortly). Later, fread can be used to read those four bytes into an integer variable number. Although fread and fwrite read and write data, such as integers, in fixed-size rather than variable-size format, the data they handle are processed in computer “raw data” format (i.e., bytes of data) rather than in printf’s and scanf’s human-readable text format. Because the “raw” representation of data is system dependent, “raw data” may not be readable on other systems, or by programs produced by other compilers or with other compiler options.
+Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which requires 1 byte of storage) for a four-byte integer, we can use which always writes four bytes on a system with four-byte integers from a variable number to the file represented by fPtr (we’ll explain the 1 argument shortly). Later, fread can be used to read those four bytes into an integer variable number. Although fread and fwrite read and write data, such as integers, in fixed-size rather than variable-size format, the data they handle are processed in computer “raw data” format (i.e., bytes of data) rather than in printf’s and **scanf**’s human-readable text format. Because the “raw” representation of data is system dependent, “raw data” may not be readable on other systems, or by programs produced by other compilers or with other compiler options.
 
 Functions fwrite and fread are capable of reading and writing arrays of data to and
 from disk. The third argument of both fread and fwrite is the number of elements in the
@@ -368,7 +365,7 @@ int main( void )
 
 Function **fwrite** writes a block of bytes to a file. Line 29 causes the structure blankClient of size `sizeof(struct clientData)` to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to fwrite a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, fwrite was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the fwrite call. [Note: Figures 11.11, 11.14 and 11.15 use the data file created in Fig. 11.10, so you must run Fig. 11.10 before Figs. 11.11, 11.14 and 11.15]. 
 
-### Writing Data
+### Writing Random Access Data
 
 Figure 11.11 writes data to the file "credit.dat". It uses the combination of fseek and
 fwrite to store data at specific locations in the file. Function fseek sets the file position
@@ -380,15 +377,12 @@ byte location calculated by `(client.accountNum - 1) * sizeof(struct clientData)
 
 The value of this expression is called the offset or the displacement. Because the account number is between 1 and 100 but the byte positions in the file start with 0, 1 is subtracted from the account number when calculating the byte location of the record. Thus, for record 1, the file position pointer is set to byte 0 of the file. The symbolic constant SEEK_SET indicates that the file position pointer is positioned relative to the beginning of the file by the amount of the offset. As the above statement indicates, a seek for account number 1 in the file sets the file position pointer to the beginning of the file because the byte location calculated is 0. Figure 11.13 illustrates the file pointer referring to a FILE structure in memory. The file position pointer in this diagram indicates that the next byte to be read or written is 5 bytes from the beginning of the file.
 
-The function prototype for fseek is
-where offset is the number of bytes to seek from whence in the file pointed to by
-stream—a positive offset seeks forward and a negative one seeks backward. Argument
-whence is one of the values SEEK\_SET, SEEK\_CUR or SEEK\_END (all defined in <stdio.h>), which indicate the location from which the seek begins. SEEK\_SET *indicates that the seek starts at the beginning of the file*; SEEK\_CUR indicates that the seek starts at the current location in the file; and SEEK_END indicates that the seek starts at the end of the file. 
+The function prototype for fseek is where offset is the number of bytes to seek from whence in the file pointed to by stream—a positive offset seeks forward and a negative one seeks backward. Argument whence is one of the values SEEK\_SET, SEEK\_CUR or SEEK\_END (all defined in stdio.h), which indicate the location from which the seek begins. SEEK\_SET *indicates that the seek starts at the beginning of the file*; SEEK\_CUR indicates that the seek starts at the current location in the file; and SEEK\_END indicates that the seek starts at the end of the file. 
 
-For simplicity, the programs in this chapter do not perform error checking. Industrial strength programs should determine whether functions such as fscanf (lines 36–37), fseek (lines 40–41) and fwrite (line 44) operate correctly by checking their return values. Function fscanf returns the number of data items successfully read or the value EOF if a problem occurs while reading data. Function fseek returns a nonzero value if the seek operation cannot be performed. Function fwrite returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
+For simplicity, the programs in this chapter do not perform error checking. Industrial strength programs should determine whether functions such as fscanf (lines 36–37), fseek (lines 40–41) and fwrite (line 44) operate correctly by checking their return values. Function fscanf returns the number of data items successfully read or the value **EOF** if a problem occurs while reading data. Function **fseek** returns a nonzero value if the seek operation cannot be performed. Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
 
-### Reading Data 
+### Reading Random Access Data 
 
 
 Function fread reads a specified number of bytes from a file into memory. For example,
