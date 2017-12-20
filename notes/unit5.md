@@ -949,9 +949,9 @@ Fork [this CD session](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar
 //
 int read_from_stream_into_array(
     const char* fname, // to use in logging if there is an error
-    FILE* fp,          // can also be assigned to stdin
-    int array[],       // array to be filled with values
-    int size           // will decide max num of entries to read
+    FILE* fp, // can also be assigned to stdin
+    int array[], // array to be filled with values
+    int size // will decide max num of entries to read
     )
 {
     int counter = 0;
@@ -969,20 +969,21 @@ int read_from_stream_into_array(
     return counter;
 }
 
-
 ```
 
 ### calculate\_sum(int[] arr, int size)
 
 ```c
-float calculate_sum(int arr[], int size) {    
-    float sum = 0; 
-    for (int i = 0; i < size; i++){
-        sum = sum  + arr[i];
+float calculate_sum(int arr[], int size)
+{
+    float sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum = sum + arr[i];
     }
-    printf("Sum: %f\n", sum); 
-    return sum; 
+    printf("Sum: %f\n", sum);
+    return sum;
 }
+
    
 ```
 
