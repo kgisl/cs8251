@@ -948,9 +948,9 @@ Fork [this CD session](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar
 // will come handy for next refactoring
 //
 int read_from_stream_into_array(
-    const char* fname,  // to use in logging if there is an error
-    FILE* fp,           // can also be assigned to stdin
-    int array[],    // array to be filled with values
+    const char* fname, // to use in logging if there is an error
+    FILE* fp,          // can also be assigned to stdin
+    int array[],       // array to be filled with values
     int size           // will decide max num of entries to read
     )
 {
