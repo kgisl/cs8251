@@ -5,6 +5,146 @@
 
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
+
+## File Handling in C Language
+
+A **file** represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a readymade structure.
+
+In C language, we use a structure **pointer of file type** to declare a file.
+
+		FILE *fp;
+
+C provides a number of functions that helps to perform basic file operations. Following are the functions,
+
+|Function 	 |description    |
+|:-----------|:--------------|
+| fopen()	| create a new file or open a existing file |
+| fclose() 	| closes a file	|
+| getc() 	| reads a character from a file|
+| putc()	| writes a character to a file|
+| fscanf()  | reads a set of data from a file|
+| fprintf() | writes a set of data to a file | 
+| getw() 	| reads a integer from a file|
+| putw() 	| writes a integer to a file|
+| fseek() 	| set the position to desire point | 
+| ftell()	| gives current position in the file | 
+| rewind()	| set the position to the beginning point |  
+
+**Opening a File or Creating a File**
+
+The `fopen()` function is used to create a new file or to open an existing file.
+
+**General Syntax :**
+
+`*fp = FILE fopen(const char _*filename_ , const char _*mode_ );`
+
+Here **filename** is the name of the file to be opened and **mode** specifies the purpose of opening the file. Mode can be of following types,
+
+**\*fp** is the FILE pointer (**FILE *fp** ), which will hold the reference to the opened (or created) file.
+
+**Closing a File**
+
+The fclose() function is used to close an already opened file.
+
+**General Syntax :**
+
+int **fclose** ( FILE _*fp_ );
+Here fclose() function closes the file and returns **zero** on success, or **EOF** if there is an error in closing the file. This **EOF** is a constant defined in the header file **stdio.h**.
+
+**Input/Output operation on File**
+
+In the above table we have discussed about various file I/O functions to perform reading and writing on file. getc() and putc() are simplest functions used to read and write individual characters to a file.
+
+```c
+#include <stdio.h>
+#include <conio.h>
+main() {
+	FILE *fp;
+	char ch;
+	fp = **fopen** (" _one.txt_ ", " _w_ ");
+	printf("Enter data");
+	while( (ch = getchar()) != EOF) {
+		putc(ch, fp);
+	}
+
+	fclose(fp);
+	fp = fopen("one.txt", "r");
+	while( (ch = getc()) != EOF)
+		printf("%c", ch);
+	fclose(fp);
+}
+```
+
+**Reading and Writing from File using fprintf() and fscanf()**
+
+```c
+#include<stdio.h>
+#include<conio.h>
+struct emp
+{
+	char name[10];
+	int age;
+};
+
+void main(){
+	struct emp e;
+	FILE *p, *q;
+	p = fopen("one.txt", "a");
+	q = fopen("one.txt", "r");
+	printf("Enter Name and Age");
+	scanf("%s %d", e.name, &e.age);
+	fprintf(p,"%s %d", e.name, e.age);
+	fclose(p);
+	do
+	{
+		fscanf(q,"%s %d", e.name, e.age);
+		printf("%s %d", e.name, e.age);
+	} while(!feof(q));
+	getch();
+}
+
+```
+
+In this program, we have create two FILE pointers and both are refering to the same file but in different modes. **fprintf()** function directly writes into the file, while **fscanf()** reads from the file, which can then be printed on console usinf standard **printf()** function.
+
+
+**Difference between Append and Write Mode**
+
+Write (w) mode and Append (a) mode, while opening a file are almost the same. Both are used to write in a file. In both the modes, new file is created if it doesn't exists already.
+
+The only difference they have is, when you open a file in the write mode, the file is reset, resulting in deletion of any data already present in the file. While in append mode this will not happen. Append mode is used to append or add data to the existing data of file(if any). Hence, when you open a file in Append(a) mode, the cursor is positioned at the end of the present data in the file.
+
+**Reading and Writing in a Binary File**
+
+A Binary file is similar to the text file, but it contains only large numerical data. The Opening modes are mentioned in the table for opening modes above.
+
+**fread()** and **fwrite()** functions are used to read and write is a binary file.
+
+```
+fwrite(data_element_to_be_written, size_of_element,number_of_elements, pointer_to_file);`
+```
+
+**fread()** is also used in the same way, with the same arguments like fwrite() function. Below mentioned is a simple example of writing into a binary file
+
+```c
+const char mytext = "The quick brown fox jumps over the lazy dog";
+FILE *bfp = fopen("test.txt", "wb");
+if (bfp) {
+	fwrite(mytext , sizeof(char) , strlen(mytext) , bfp);
+	fclose(bfp) ;
+}
+```
+
+**fseek(), ftell() and rewind() functions**
+
+- **fseek()** - It is used to move the reading control to different positions using fseek function.
+- **ftell()** - It tells the byte location of current position of cursor in file pointer.
+- **rewind()** - It moves the control to beginning of the file.
+
+
+
+
+
 **Table of Contents**
 
 * [UNIT V FILE PROCESSING](#unit-v-file-processing)  
@@ -29,7 +169,35 @@
 
 ## Files
 
+**What are files?**  A file is sequential stream of bytes ending with an end-of-file marker.
+
+As we know, at the time of execution, every program is executed in the main memory. Main memory is volatile and the data would be lost once the program is terminated. If we need the same data again, we have to store the data in a file on the disk. A file is sequential stream of bytes ending with an end-of-file marker.
+
 Storage of data in variables and arrays is temporary—such data is lost when a program terminates. Files are used for permanent retention of data. Computers store files on secondary storage devices, such as hard drives, CDs, DVDs and flash drives. In this chapter, we explain how data files are created, updated and processed by C programs. We consider both sequential-access and random-access file processing.
+
+### File Extensions
+File extensions
+We can usually tell if a file is binary or text based on its file extension. This is because by convention the extension reflects the file format, and it is ultimately the file format that dictates whether the file data is binary or text.
+
+Common extensions that are binary file formats:
+
+	Images: jpg, png, gif, bmp, tiff, psd, ...
+	Videos: mp4, mkv, avi, mov, mpg, vob, ...
+	Audio: mp3, aac, wav, flac, ogg, mka, wma, ...
+	Documents: pdf, doc, xls, ppt, docx, odt, ...
+	Archive: zip, rar, 7z, tar, iso, ...
+	Database: mdb, accde, frm, sqlite, ...
+	Executable: exe, dll, so, class, ...
+
+
+Common extensions that are text file formats:
+
+	Web standards: html, xml, css, svg, json, ...
+	Source code: c, cpp, h, cs, js, py, java, rb, pl, php, sh, ...
+	Documents: txt, tex, markdown, asciidoc, rtf, ps, ...
+	Configuration: ini, cfg, rc, reg, ...
+	Tabular data: csv, tsv, ...
+
 
 ### Files and Streams
 C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either
@@ -41,21 +209,26 @@ stream enables a program to read data from the keyboard, and the standard output
 
 The standard input, standard output and standard error are manipulated using file pointers stdin, stdout and stderr. 
 
-
-The standard library provides many functions for reading data from files and for
-
-writing data to files. Function fgetc, like getchar, reads one character from a file. Function fgetc receives as an argument a FILE pointer for the file from which a character will be read. The call fgetc( stdin ) reads one character from stdin—the standard input.
-This call is equivalent to the call getchar().
+The standard library provides many functions for reading data from files and for writing data to files. Function fgetc, like getchar, reads one character from a file. Function fgetc receives as an argument a FILE pointer for the file from which a character will be read. The call `fgetc( stdin )` reads one character from `stdin`—the standard input. This call is equivalent to the call `getchar()`.
 
 Function fputc, like putchar, writes one character to a file. Function fputc receives
-as arguments a character to be written and a pointer for the file to which the character will be written. The function call fputc( 'a', stdout ) writes the character 'a' to stdout—
-the standard output. This call is equivalent to putchar( 'a' ).
+as arguments a character to be written and a pointer for the file to which the character will be written. The function call `fputc( 'a', stdout )` writes the character 'a' to stdout— the standard output. This call is equivalent to `putchar( 'a' )`.
 
 Several other functions used to read data from standard input and write data to standard
 output have similarly named file-processing functions. The fgets and fputs functions,
 for example, can be used to read a line from a file and write a line to a file, respectively.
-In the next several sections, we introduce the file-processing equivalents of functions scanf and printf— fscanf and fprintf. Later in the chapter we discuss functions fread and
-fwrite.
+In the next several sections, we introduce the file-processing equivalents of functions scanf and printf— fscanf and fprintf. 
+
+
+|Function	| Description |
+|:-------	|:--------------|
+|fopen | open a file for either sequential or random access | 
+|fclose | close a file that has been opened for access | 
+|fprintf	| Write to sequential (or text) file |
+|fscanf | Read from sequential (or text) file | 
+|fread | Read from random (or binary) file | 
+|rwrite | Write to random (or binary) file |
+
 
 ### Types of file processing 
 
@@ -174,24 +347,22 @@ have a different file pointer returned by fopen. All subsequent file-processing 
 
 If an error occurs while opening a file in any mode, fopen returns **NULL**. 
 
-
 |Mode 	| Description |
 |:-------	|:--------------|
 |r			| Open an existing file for reading. |
 |w		| Create a file for writing. If the file already exists, discard the current contents.
-|a 		| Append: open or create a file for writing at the end of the file.
+|a, a+ 	| Append: open or create a file for writing at the end of the file.
 |r+		| Open an existing file for update (reading and writing).
 |w+		| Create a file for update. If the file already exists, discard the current contents.
-|a+		| Append: open or create a file for update; writing is done at the end of the file.
 
 |Mode 	| Description |
 |:-------	|:--------------|
-|rb		| Open an existing file for reading in binary mode.
-|wb		| Create a file for writing in binary mode. If the file already exists, discard the current contents.
-|ab		| Append: open or create a file for writing at the end of the file in binary mode.
-|rb+ 		| Open an existing file for update (reading and writing) in binary mode.
-|wb+	| Create a file for update in binary mode. If the file already exists, discard the current contents.
-|ab+		| Append: open or create a file for update in binary mode; writing is done at the end of the file
+|rb 		| opens a binary file in reading mode |
+|wb		| opens or create a binary file in writing mode |
+|ab, ab+		| opens a binary file in append mode |
+|rb+		| opens a binary file in both reading and writing mode |
+|wb+	| opens a binary file in both reading and writing mode |
+
 
 ### Reading Sequential Access file
 
@@ -379,7 +550,7 @@ The value of this expression is called the offset or the displacement. Because t
 
 The function prototype for fseek is where offset is the number of bytes to seek from whence in the file pointed to by stream—a positive offset seeks forward and a negative one seeks backward. Argument whence is one of the values SEEK\_SET, SEEK\_CUR or SEEK\_END (all defined in stdio.h), which indicate the location from which the seek begins. SEEK\_SET *indicates that the seek starts at the beginning of the file*; SEEK\_CUR indicates that the seek starts at the current location in the file; and SEEK\_END indicates that the seek starts at the end of the file. 
 
-For simplicity, the programs in this chapter do not perform error checking. Industrial strength programs should determine whether functions such as fscanf (lines 36–37), fseek (lines 40–41) and fwrite (line 44) operate correctly by checking their return values. Function fscanf returns the number of data items successfully read or the value **EOF** if a problem occurs while reading data. Function **fseek** returns a nonzero value if the seek operation cannot be performed. Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
+Function fscanf returns the number of data items successfully read or the value **EOF** if a problem occurs while reading data. Function **fseek** returns a nonzero value if the seek operation cannot be performed. Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
 
 ### Reading Random Access Data 
@@ -1063,5 +1234,4 @@ int main(){
 	Enter the value of n : 20
 	The sum of first 20 numbers = 210
 	The average of first 20 numbers = 10.05
-
 
