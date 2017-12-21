@@ -551,14 +551,11 @@ data, and delete data no longer needed.
 Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which requires 1 byte of storage) for a four-byte integer, we can use which always writes four bytes on a system with four-byte integers from a variable number to the file represented by fPtr (we’ll explain the 1 argument shortly). Later, fread can be used to read those four bytes into an integer variable number. Although fread and fwrite read and write data, such as integers, in fixed-size rather than variable-size format, the data they handle are processed in computer “raw data” format (i.e., bytes of data) rather than in printf’s and **scanf**’s human-readable text format. Because the “raw” representation of data is system dependent, “raw data” may not be readable on other systems, or by programs produced by other compilers or with other compiler options.
 
 Functions fwrite and fread are capable of reading and writing arrays of data to and
-from disk. The third argument of both fread and fwrite is the number of elements in the
-array that should be read from or written to disk. The preceding fwrite function call
-writes a single integer to disk, so the third argument is 1 (as if one element of an array is being written). File-processing programs rarely write a single field to a file. Normally, they write one struct at a time, as we show in the following examples.
-
+from disk. The third argument of both fread and fwrite is the number of elements in the array that should be read from or written to disk. The preceding fwrite function call writes a single integer to disk, so the third argument is 1 (as if one element of an array is being written). File-processing programs rarely write a single field to a file. Normally, they write one struct at a time, as we show in the following examples.
 
 Consider the following problem statement:
 
-	Create a credit-processing system capable of storing up to 100 fixed-length records. Each record should consist of an account number that will be used as the record key, a last name, a first name and a balance. The resulting program should be able to update an account, insert a new account record, delete an account and list all the account	records in a formatted text file for printing. Use a random-access file.
+	Create a credit-processing system capable of storing up to 100 fixed-length records. Each record should consist of an account number that will be used as the record key, a last name, a first name and a balance. The resulting program should be able to update an account, insert a new account record, delete an account and list all the account records in a formatted text file for printing. Use a random-access file.
 
 The next several sections introduce the techniques necessary to create the credit-processing program. Figure 11.10 shows how to open a random-access file, define a record format using a struct, write data to the disk and close the file. This program initializes all 100 records of the file "credit.dat" with empty structs using the function fwrite. Each empty struct contains 0 for the account number, "" (the empty string) for the last name, "" for the first name and 0.0 for the balance. The file is initialized in this manner to create space on disk in which the file will be stored and to make it possible to determine whether a record contains data.
 
@@ -571,12 +568,12 @@ The next several sections introduce the techniques necessary to create the credi
 // clientData structure definition            
 struct clientData {                              
    unsigned int acctNum; // account number
-   char lastName[ 15 ]; // account last name    
-   char firstName[ 10 ]; // account first name   
+   char lastName[15]; // account last name    
+   char firstName[10]; // account first name   
    double balance; // account balance      
 }; // end structure clientData                
 
-int main( void )
+int main(void)
 { 
    unsigned int i; // counter used to count from 1-100
 
@@ -605,10 +602,7 @@ Function **fwrite** writes a block of bytes to a file. Line 29 causes the struct
 
 ### Writing Random Access Data
 
-Figure 11.11 writes data to the file "credit.dat". It uses the combination of fseek and
-fwrite to store data at specific locations in the file. Function fseek sets the file position
-pointer to a specific position in the file, then fwrite writes the data. A sample execution
-is shown in Fig. 11.12.
+Figure 11.11 writes data to the file **"credit.dat"**. It uses the combination of **fseek** and **fwrite** to store data at specific locations in the file. Function fseek sets the file position pointer to a specific position in the file, then fwrite writes the data. A sample execution is shown in Fig. 11.12.
 
 Lines 40–41 position the file position pointer for the file referenced by cfPtr to the
 byte location calculated by `(client.accountNum - 1) * sizeof(struct clientData)`.
@@ -622,17 +616,15 @@ Function fscanf returns the number of data items successfully read or the value 
 
 ### Reading Random Access Data 
 
+Function **fread** reads a specified number of bytes from a file into memory. For example,
 
-Function fread reads a specified number of bytes from a file into memory. For example,
+`fread(&client, sizeof(struct clientData), 1, cfPtr);`
 
-`fread( &client, sizeof( struct clientData ), 1, cfPtr );`
+reads the number of bytes determined by `sizeof(struct clientData)` from the file referenced by **cfPtr**, stores the data in client and returns the number of bytes read. The bytes are read from the location specified by the file position pointer. Function `fread` can read several fixed-size array elements by providing a pointer to the array in which the elements will be stored and by indicating the number of elements to be read. The preceding statement reads one element. 
 
-reads the number of bytes determined by sizeof(struct clientData) from the file referenced by **cfPtr**, stores the data in client and returns the number of bytes read. The bytes are read from the location specified by the file position pointer. Function fread can read several fixed-size array elements by providing a pointer to the array in which the elements will be stored and by indicating the number of elements to be read. The preceding statement reads one element. 
+To read more than one, specify the number of elements as **fread**’s third argument. Function fread returns the number of items it successfully input. If this number is less than the third argument in the function call, then a read error occurred.
 
-To read more than one, specify the number of elements as fread’s third argument. Function fread returns the number of items it successfully input. If this number is less than the third argument in the function call, then a read error occurred.
-
-Figure 11.14 reads sequentially every record in the "credit.dat" file, determines
-whether each record contains data and displays the formatted data for records containing data. Function feof determines when the end of the file is reached, and the fread function transfers data from the file to the clientData structure client. 
+Figure 11.14 reads sequentially every record in the "**credit.dat**" file, determines whether each record contains data and displays the formatted data for records containing data. Function **feof** determines when the end of the file is reached, and the **fread** function transfers data from the file to the `clientData` structure client. 
 
 ```c
 
@@ -643,8 +635,8 @@ whether each record contains data and displays the formatted data for records co
 // clientData structure definition               
 struct clientData {                              
    unsigned int acctNum; // account number     
-   char lastName[ 15 ]; // account last name     
-   char firstName[ 10 ]; // account first name   
+   char lastName[15]; // account last name     
+   char firstName[10]; // account first name   
    double balance; // account balance            
 }; // end structure clientData                   
 
