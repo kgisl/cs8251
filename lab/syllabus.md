@@ -16,12 +16,12 @@
 
 5. Check whether a given number is Armstrong number or not?
 
-6. Given a set of numbers like &lt;10, 36, 54, 89, 12, 27&gt;, find sum of weights based on the following conditions.
+6. Given a set of numbers like `<10, 36, 54, 89, 12, 27>`, find sum of weights based on the following conditions:
 
    - 5 if it is a perfect cube.
    - 4 if it is a multiple of 4 and divisible by 6.
    - 3 if it is a prime number.
-> Sort the numbers based on the weight in the increasing order as shown below 
+> Sort the numbers based on the weight in the increasing order as shown below   
 > `<10,its weight>`  
 > `<36,its weight>`  
 > `<89,its weight>`  
