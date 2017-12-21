@@ -5,12 +5,22 @@
 
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
+### References
+
+
+- Understand [file functions][1] 
+- Quick reference on [file handling][2]
+
+[1]: https://www.go4expert.com/articles/understanding-c-file-handling-functions-t29966/
+[2]: http://iiti.ac.in/people/~tanimad/FileHandlinginCLanguage.pdf 
+
+
 
 ### Pre-lecture exercise - a "Show and Tell" exercise
 
 1. Create your own paper document by writing a few numbers 
 and words in 3-4 lines. Do not use cursive writing, instead 
-use capital letters and right as neatly as possible. Here's 
+use capital letters and write as neatly as possible. Here's 
 an [example](http://j.mp/numberWords). 
 2. Create a digital copy of the same (what will you use to 
 create a scanned copy?)
@@ -415,11 +425,11 @@ If an error occurs while opening a file in any mode, fopen returns **NULL**.
 
 |Mode 	| Description |
 |:-------	|:--------------|
-|rb 		| opens a binary file in reading mode |
-|wb		| opens or create a binary file in writing mode |
-|ab, ab+		| opens a binary file in append mode |
-|rb+		| opens a binary file in both reading and writing mode |
-|wb+	| opens a binary file in both reading and writing mode |
+|rb 		 | opens a binary file in reading mode |
+|wb		 | opens or create a binary file in writing mode |
+|ab, ab+ | opens a binary file in append mode |
+|rb+		 | opens a binary file in both reading and writing mode |
+|wb+	 | opens a binary file in both reading and writing mode |
 
 
 ### Reading Sequential Access file
