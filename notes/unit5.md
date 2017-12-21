@@ -5,8 +5,7 @@
 
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
-### References other than books
-
+### Online References attribution
 
 - Understand [file functions][1] 
 - Quick reference on [file handling][2]
@@ -47,7 +46,7 @@ Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filerea
 
 
 
-## File Handling in C Language
+## File Handling in C Language - Quick Reference
 
 A **file** represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a readymade structure.
 
@@ -183,7 +182,7 @@ if (bfp) {
 - **rewind()** - It moves the control to beginning of the file.
 
 
-
+----------
 
 
 **Table of Contents**
