@@ -383,7 +383,7 @@ as an argument. If function **fclose** is not called explicitly, the operating s
 ### File Access Modes
 
 Programs may process no files, one file or several files. Each file used in a program will
-have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). To create a file, or to discard the contents of a file before writing data, open the file for writing ("w"). To read an existing file, open it for reading ("r"). To add records to the end of an existing file, open the file for appending ("a"). To open a file so that it may be written to and read from, open the file for updating in one of the three update modes—"r+", "w+" or "a+". Mode "r+" opens an existing file for reading and writing. Mode "w+" creates a file for reading and writing. If the file already exists, it’s opened and its current contents are discarded. Mode "a+" opens a file for reading and writing—all writing is done at the end of the file. If the file does not exist, it’s created. Each file open mode has a corresponding binary mode (containing the letter b) for manipulating binary files. **The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.** 
+have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). **The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.** 
 
 If an error occurs while opening a file in any mode, fopen returns **NULL**. 
 
