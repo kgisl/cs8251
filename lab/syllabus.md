@@ -61,4 +61,8 @@
 - Cancellation
 - Prepare chart
 
+BONUS
+
+19. https://github.com/kgisl/kilo  - simple text editor in < 1000 lines of C code
+
 **TOTAL: 60 PERIODS**
