@@ -245,28 +245,16 @@ Common extensions that are text file formats:
 
 By convention, the data in every text file obeys a number of rules:
 
-The text looks readable to a human or at least moderately sane. Even if it contains a heavy proportion of punctuation symbols (like HTML, RTF, and other markup formats), there is some visible structure and it’s not seemingly random garbage.
-
-The data format is usually line-oriented. Each line could be a separate command, or a list of values could put each item on a different line, etc. The maximum number of characters in each line is usually a reasonable value like 100, not like 1000.
-
-Non-printable ASCII characters are discouraged or disallowed. Examples include the NUL byte (0x00), DEL byte (0x7F), and most of the range 0x01 to 0x1F (except tab, carriage return, newline, etc.). Some text editors silently convert or discard these bytes, which is why binary files should never be edited in a text editor.By convention, the data in every text file obeys a number of rules:
-
-The text looks readable to a human or at least moderately sane. Even if it contains a heavy proportion of punctuation symbols (like HTML, RTF, and other markup formats), there is some visible structure and it’s not seemingly random garbage.
-
-The data format is usually line-oriented. Each line could be a separate command, or a list of values could put each item on a different line, etc. The maximum number of characters in each line is usually a reasonable value like 100, not like 1000.
-
-Non-printable ASCII characters are discouraged or disallowed. Examples include the NUL byte (0x00), DEL byte (0x7F), and most of the range 0x01 to 0x1F (except tab, carriage return, newline, etc.). Some text editors silently convert or discard these bytes, which is why binary files should never be edited in a text editor.
+- The text looks readable to a human or at least moderately sane. Even if it contains a heavy proportion of punctuation symbols (like HTML, RTF, and other markup formats), there is some visible structure and it’s not seemingly random garbage.
+- The data format is usually line-oriented. Each line could be a separate command, or a list of values could put each item on a different line, etc. The maximum number of characters in each line is usually a reasonable value like 100, not like 1000.
+- The text looks readable to a human or at least moderately sane. Even if it contains a heavy proportion of punctuation symbols (like HTML, RTF, and other markup formats), there is some visible structure and it’s not seemingly random garbage.
 
 
 ### Binary File Characteristics
 
-For most software that people use in their daily lives, the software consumes and produces binary files. Examples of such software include Microsoft Office, Adobe Photoshop, and various audio/video/media players. A typical computer user works with mostly binary files and very few text files.
-
-A binary file always needs a matching software to read or write it. For example, an MP3 file can be produced by a sound recorder or audio editor, and it can be played in a music player or audio editor. But an MP3 file cannot be played in an image viewer or a database software.
-
-Some binary formats are popular enough that a wide variety of programs can produce or consume it. Image formats like JPEG are the best example – not only can they be used in image viewers and editors, they can be viewed in web browsers, audio players (for album art), and document software (such as adding a picture into a Word doc). But other binary formats, especially for niche proprietary software, might have only one program in the world that can read and write it. For example, a high-end video editing software might let you save your project to a file, but this software is the only one that can understand its own file format; the binary file will never be useful anywhere else.
-
-If you use a text editor to open a binary file, you will see copious amounts of garbage, seemingly random accented and Asian characters, and long lines overflowing with text – this exercise is safe but pointless. However, editing or saving a binary file in a text editor will corrupt the file, so never do this. The reason corruption happens is because applying a text mode interpretation will change certain byte sequences – such as discarding NUL bytes, converting newlines, discarding sequences that are invalid under a certain character encoding, etc. – which means that opening and saving a binary file will almost surely produce a file with different bytes.
+- For most software that people use in their daily lives, the software consumes and produces binary files. Examples of such software include Microsoft Office, Adobe Photoshop, and various audio/video/media players. A typical computer user works with mostly binary files and very few text files.
+- A binary file always needs a matching software to read or write it. For example, an MP3 file can be produced by a sound recorder or audio editor, and it can be played in a music player or audio editor. But an MP3 file cannot be played in an image viewer or a database software.
+- Some binary formats are popular enough that a wide variety of programs can produce or consume it. Image formats like JPEG are the best example – not only can they be used in image viewers and editors, they can be viewed in web browsers, audio players (for album art), and document software (such as adding a picture into a Word doc). 
 
 
 ### Files and Streams
@@ -277,7 +265,7 @@ files and their associated streams are automatically opened when program executi
 communication channels between files and programs. For example, the standard input
 stream enables a program to read data from the keyboard, and the standard output stream enables a program to print data on the screen. Opening a file returns a pointer to a FILE structure (defined in `<stdio.h>`) that contains information used to process the file. In some operating systems, this structure includes a file descriptor, i.e., an index into an operating system array called the open file table. Each array element contains a file control block (FCB)—information that the operating system uses to administer a particular file. 
 
-The standard input, standard output and standard error are manipulated using file pointers stdin, stdout and stderr. 
+The standard input, standard output and standard error are manipulated using file pointers `stdin`, `stdout` and `stderr`. 
 
 The standard library provides many functions for reading data from files and for writing data to files. Function fgetc, like getchar, reads one character from a file. Function fgetc receives as an argument a FILE pointer for the file from which a character will be read. The call `fgetc( stdin )` reads one character from `stdin`—the standard input. This call is equivalent to the call `getchar()`.
 
@@ -302,33 +290,14 @@ In the next several sections, we introduce the file-processing equivalents of fu
 
 ### Types of file processing 
 
-Every open fi le has an associated fi le position indicator,
-which describes where read and write operations take
-place in the fi le. The position is always specifi ed in bytes
-from the beginning of the fi le. When a new fi le is opened,
-the position indicator is always at the beginning of the
-fi le, i.e., at position 0. Because the fi le is new and has a
-length of 0, there is no other location to indicate. When
-an existing fi le is opened, the position indicator is at the
-end of the fi le if the fi le was opened in the append mode,
-or at the beginning of the fi le if the fi le was opened in any
-other mode.
- The fi le input/output functions covered earlier in this
-chapter make use of the position indicator, although the
-manipulations go on behind the scenes. Writing and
-reading operations occur at the location of the position
-indicator and update the position indicator as well. Thus,
-if one wishes to read all the data in a fi le sequentially or
-write data to a fi le sequentially, it is not necessary to be
-concerned about the position indicator because the stream
-I/O functions take care of it automatically.
- When more control is required, the C library functions
-that help determine and change the value of the fi le position
-indicator, have to be used. By controlling the position
-indicator, random access of a fi le can be made possible.
-Here, random means that data can be read from, or written
-to, any position in a fi le without reading or writing all the
-preceding data. 
+- There are two types of files - text and binary files 
+- There are two techniques for processing files - sequential and random
+
+Every open file has an associated file position indicator, which describes where read and write operations take place in the file. The position is always specified in bytes from the beginning of the file. When a new file is opened, the position indicator is always at the beginning of the file, i.e., at position 0.
+
+Writing and reading operations occur at the location of the position indicator and update the position indicator as well. Thus, if one wishes to read all the data in a file sequentially or write data to a file sequentially, it is not necessary to be concerned about the position indicator because the stream I/O functions take care of it automatically.
+ 
+When more control is required, the C library functions that help determine and change the value of the file position indicator, have to be used. By controlling the position indicator, random access of a file can be made possible. Here, random means that data can be read from, or written to, any position in a file without reading or writing all the preceding data.
 
 ## Creating a Sequential Access file
 
@@ -338,41 +307,40 @@ C imposes no structure on a file. Thus, notions such as a record of a file do no
 
 Figure 11.2 creates a simple sequential-access file that might be used in an accounts
 receivable system to keep track of the amounts owed by a company’s credit clients. For
-each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a “record” for that client. The account number is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in account number order. In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. *[Note: Figures 11.6–11.7 use the data file created in Fig. 11.2, so you must run Fig. 11.2 before Figs. 11.6–11.7.]* 
+each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a “record” for that client. The **account number** is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in account number order. In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. 
 
 ```c
 // Fig. 11.2: fig11_02.c
 // Creating a sequential file
 #include <stdio.h>
 
-int main( void )
-{ 
-   unsigned int account; // account number
-   char name[ 30 ]; // account name
-   double balance; // account balance
+int main(void) {
+  unsigned int account;  // account number
+  char name[30];         // account name
+  double balance;        // account balance
 
-   FILE *cfPtr; // cfPtr = clients.dat file pointer   
+  FILE* cfPtr;  // cfPtr = clients.dat file pointer
 
-   // fopen opens file. Exit program if unable to create file 
-   if ( ( cfPtr = fopen( "clients.dat", "w" ) ) == NULL ) {
-      puts( "File could not be opened" );
-   } // end if
-   else { 
-      puts( "Enter the account, name, and balance." );
-      puts( "Enter EOF to end input." );
-      printf( "%s", "? " );
-      scanf( "%d%29s%lf", &account, name, &balance );
+  // fopen opens file. Exit program if unable to create file
+  if ((cfPtr = fopen("clients.dat", "w")) == NULL) {
+    puts("File could not be opened");
+  }  // end if
+  else {
+    puts("Enter the account, name, and balance.");
+    puts("Enter EOF to end input.");
+    printf("%s", "? ");
+    scanf("%d%29s%lf", &account, name, &balance);
 
-      // write account, name and balance into file with fprintf
-      while ( !feof( stdin ) ) { 
-         fprintf( cfPtr, "%d %s %.2f\n", account, name, balance );
-         printf( "%s", "? " );
-         scanf( "%d%29s%lf", &account, name, &balance );
-      } // end while
-      
-      fclose( cfPtr ); // fclose closes file   
-   } // end else
-} // end main
+    // write account, name and balance into file with fprintf
+    while (!feof(stdin)) {
+      fprintf(cfPtr, "%d %s %.2f\n", account, name, balance);
+      printf("%s", "? ");
+      scanf("%d%29s%lf", &account, name, &balance);
+    }  // end while
+
+    fclose(cfPtr);  // fclose closes file
+  }                 // end else
+}  // end main
 
 ```
 
@@ -446,31 +414,30 @@ previous section demonstrated how to create a file for sequential access. This s
 // Reading and printing a sequential file
 #include <stdio.h>
 
-int main( void )
-{ 
-   unsigned int account; // account number
-   char name[ 30 ]; // account name
-   double balance; // account balance
+int main(void) {
+  unsigned int account;  // account number
+  char name[30];         // account name
+  double balance;        // account balance
 
-   FILE *cfPtr; // cfPtr = clients.dat file pointer
+  FILE *cfPtr;  // cfPtr = clients.dat file pointer
 
-   // fopen opens file; exits program if file cannot be opened 
-   if ( ( cfPtr = fopen( "clients.dat", "r" ) ) == NULL ) {
-      puts( "File could not be opened" );
-   } // end if
-   else { // read account, name and balance from file
-      printf( "%-10s%-13s%s\n", "Account", "Name", "Balance" );
-      fscanf( cfPtr, "%d%29s%lf", &account, name, &balance );
+  // fopen opens file; exits program if file cannot be opened
+  if ((cfPtr = fopen("clients.dat", "r")) == NULL) {
+    puts("File could not be opened");
+  }       // end if
+  else {  // read account, name and balance from file
+    printf("%-10s%-13s%s\n", "Account", "Name", "Balance");
+    fscanf(cfPtr, "%d%29s%lf", &account, name, &balance);
 
-      // while not end of file
-      while ( !feof( cfPtr ) ) { 
-         printf( "%-10d%-13s%7.2f\n", account, name, balance );
-         fscanf( cfPtr, "%d%29s%lf", &account, name, &balance );
-      } // end while
+    // while not end of file
+    while (!feof(cfPtr)) {
+      printf("%-10d%-13s%7.2f\n", account, name, balance);
+      fscanf(cfPtr, "%d%29s%lf", &account, name, &balance);
+    }  // end while
 
-      fclose( cfPtr ); // fclose closes the file   
-   } // end else
-} // end main
+    fclose(cfPtr);  // fclose closes the file
+  }                 // end else
+}  // end main
 
 ```
 
@@ -499,32 +466,28 @@ The next program reads five (or more) integer values from the data file `num.dat
 
 ```c
 
-int main()
-{
-	FILE* fp;
-	int n[50], i = 0;
-	float sum = 0;
-	if ((fp = fopen("num.dat", "r")) != NULL) {
-	    puts("Reading numbers from num.dat");
-	    while (!feof(fp)) {
-	        fscanf(fp, "%d ", &n[i]);
-	        printf("%d %d\n", i, n[i]);
-	        sum += n[i];
-	        i++;
-	    }
-	    fclose(fp);
-	
-	    if (i > 0) {
-	        float average = sum / i;
-	        printf("The average is %f for %d numbers\n",
-	            average, i);
-	    }
-	    else {
-	        puts("No data available in num.dat!");
-	    }
-	}
-	else
-	    printf("Unable to open num.dat...\n");
+int main() {
+  FILE* fp;
+  int n[50], i = 0;
+  float sum = 0;
+  if ((fp = fopen("num.dat", "r")) != NULL) {
+    puts("Reading numbers from num.dat");
+    while (!feof(fp)) {
+      fscanf(fp, "%d ", &n[i]);
+      printf("%d %d\n", i, n[i]);
+      sum += n[i];
+      i++;
+    }
+    fclose(fp);
+
+    if (i > 0) {
+      float average = sum / i;
+      printf("The average is %f for %d numbers\n", average, i);
+    } else {
+      puts("No data available in num.dat!");
+    }
+  } else
+    printf("Unable to open num.dat...\n");
 }
 
 ```
@@ -576,36 +539,35 @@ The next several sections introduce the techniques necessary to create the credi
 // Creating a random-access file sequentially
 #include <stdio.h>
 
-// clientData structure definition            
-struct clientData {                              
-   unsigned int acctNum; // account number
-   char lastName[15]; // account last name    
-   char firstName[10]; // account first name   
-   double balance; // account balance      
-}; // end structure clientData                
+// clientData structure definition
+struct clientData {
+  unsigned int acctNum;  // account number
+  char lastName[15];     // account last name
+  char firstName[10];    // account first name
+  double balance;        // account balance
+};                       // end structure clientData
 
-int main(void)
-{ 
-   unsigned int i; // counter used to count from 1-100
+int main(void) {
+  unsigned int i;  // counter used to count from 1-100
 
-   // create clientData with default information       
-   struct clientData blankClient = { 0, "", "", 0.0 }; 
-   
-   FILE *cfPtr; // credit.dat file pointer
+  // create clientData with default information
+  struct clientData blankClient = {0, "", "", 0.0};
 
-   // fopen opens the file; exits if file cannot be opened
-   if ( ( cfPtr = fopen( "credit.dat", "wb" ) ) == NULL ) {
-      puts( "File could not be opened." );
-   } // end if
-   else { 
-      // output 100 blank records to file                              
-      for ( i = 1; i <= 100; ++i ) {                                   
-         fwrite( &blankClient, sizeof( struct clientData ), 1, cfPtr );
-      } // end for                                                     
+  FILE *cfPtr;  // credit.dat file pointer
 
-      fclose ( cfPtr ); // fclose closes the file
-   } // end else
-} // end main
+  // fopen opens the file; exits if file cannot be opened
+  if ((cfPtr = fopen("credit.dat", "wb")) == NULL) {
+    puts("File could not be opened.");
+  }  // end if
+  else {
+    // output 100 blank records to file
+    for (i = 1; i <= 100; ++i) {
+      fwrite(&blankClient, sizeof(struct clientData), 1, cfPtr);
+    }  // end for
+
+    fclose(cfPtr);  // fclose closes the file
+  }                 // end else
+}  // end main
 
 ```
 
@@ -620,55 +582,54 @@ Figure 11.11 writes data to the file **"credit.dat"**. It uses the combination o
 // Writing data randomly to a random-access file
 #include <stdio.h>
 
-// clientData structure definition               
-struct clientData {                              
-   unsigned int acctNum; // account number
-   char lastName[ 15 ]; // account last name    
-   char firstName[ 10 ]; // account first name   
-   double balance; // account balance   
-}; // end structure clientData                   
- 
-int main( void ) 
-{ 
-   FILE *cfPtr; // credit.dat file pointer
+// clientData structure definition
+struct clientData {
+  unsigned int acctNum;  // account number
+  char lastName[15];     // account last name
+  char firstName[10];    // account first name
+  double balance;        // account balance
+};                       // end structure clientData
 
-   // create clientData with default information
-   struct clientData client = { 0, "", "", 0.0 };
+int main(void) {
+  FILE *cfPtr;  // credit.dat file pointer
 
-   // fopen opens the file; exits if file cannot be opened
-   if ( ( cfPtr = fopen( "credit.dat", "rb+" ) ) == NULL ) {
-      puts( "File could not be opened." );
-   } // end if
-   else { 
-      // require user to specify account number
-      printf( "%s", "Enter account number"
-         " ( 1 to 100, 0 to end input )\n? " );
-      scanf( "%d", &client.acctNum );
+  // create clientData with default information
+  struct clientData client = {0, "", "", 0.0};
 
-      // user enters information, which is copied into file
-      while ( client.acctNum != 0 ) { 
-         // user enters last name, first name and balance
-         printf( "%s", "Enter lastname, firstname, balance\n? " );
-        
-         // set record lastName, firstName and balance value
-         fscanf(stdin, "%14s%9s%lf", client.lastName, 
-            client.firstName, &client.balance);
+  // fopen opens the file; exits if file cannot be opened
+  if ((cfPtr = fopen("credit.dat", "rb+")) == NULL) {
+    puts("File could not be opened.");
+  }  // end if
+  else {
+    // require user to specify account number
+    printf("%s",
+           "Enter account number"
+           " ( 1 to 100, 0 to end input )\n? ");
+    scanf("%d", &client.acctNum);
 
-         // seek position in file to user-specified record   
-         fseek(cfPtr, (client.acctNum - 1) *              
-            sizeof(struct clientData), SEEK_SET);         
+    // user enters information, which is copied into file
+    while (client.acctNum != 0) {
+      // user enters last name, first name and balance
+      printf("%s", "Enter lastname, firstname, balance\n? ");
 
-         // write user-specified information in file              
-         fwrite( &client, sizeof( struct clientData ), 1, cfPtr );
+      // set record lastName, firstName and balance value
+      fscanf(stdin, "%14s%9s%lf", client.lastName, client.firstName,
+             &client.balance);
 
-         // enable user to input another account number
-         printf( "%s", "Enter account number\n? " );
-         scanf( "%d", &client.acctNum );
-      } // end while
+      // seek position in file to user-specified record
+      fseek(cfPtr, (client.acctNum - 1) * sizeof(struct clientData), SEEK_SET);
 
-      fclose( cfPtr ); // fclose closes the file
-   } // end else
-} // end main
+      // write user-specified information in file
+      fwrite(&client, sizeof(struct clientData), 1, cfPtr);
+
+      // enable user to input another account number
+      printf("%s", "Enter account number\n? ");
+      scanf("%d", &client.acctNum);
+    }  // end while
+
+    fclose(cfPtr);  // fclose closes the file
+  }                 // end else
+}  // end main
 
 ```
 Lines 40–41 position the file position pointer for the file referenced by cfPtr to the
@@ -703,45 +664,43 @@ Figure 11.14 reads sequentially every record in the "**credit.dat**" file, deter
 // Reading a random-access file sequentially
 #include <stdio.h>
 
-// clientData structure definition               
-struct clientData {                              
-   unsigned int acctNum; // account number     
-   char lastName[15]; // account last name     
-   char firstName[10]; // account first name   
-   double balance; // account balance            
-}; // end structure clientData                   
+// clientData structure definition
+struct clientData {
+  unsigned int acctNum;  // account number
+  char lastName[15];     // account last name
+  char firstName[10];    // account first name
+  double balance;        // account balance
+};                       // end structure clientData
 
-int main( void )
-{ 
-   FILE *cfPtr; // credit.dat file pointer
-   int result; // used to test whether fread read any bytes
+int main(void) {
+  FILE *cfPtr;  // credit.dat file pointer
+  int result;   // used to test whether fread read any bytes
 
-   // create clientData with default information
-   struct clientData client = { 0, "", "", 0.0 };
+  // create clientData with default information
+  struct clientData client = {0, "", "", 0.0};
 
-   // fopen opens the file; exits if file cannot be opened
-   if ( ( cfPtr = fopen( "credit.dat", "rb" ) ) == NULL ) {
-      puts( "File could not be opened." );
-   } // end if
-   else { 
-      printf( "%-6s%-16s%-11s%10s\n", "Acct", "Last Name",
-         "First Name", "Balance" );
+  // fopen opens the file; exits if file cannot be opened
+  if ((cfPtr = fopen("credit.dat", "rb")) == NULL) {
+    puts("File could not be opened.");
+  }  // end if
+  else {
+    printf("%-6s%-16s%-11s%10s\n", "Acct", "Last Name", "First Name",
+           "Balance");
 
-      // read all records from file (until eof)
-      while ( !feof( cfPtr ) ) { 
-         result = fread( &client, sizeof( struct clientData ), 1, cfPtr );
+    // read all records from file (until eof)
+    while (!feof(cfPtr)) {
+      result = fread(&client, sizeof(struct clientData), 1, cfPtr);
 
-         // display record
-         if ( result != 0 && client.acctNum != 0 ) {
-            printf( "%-6d%-16s%-11s%10.2f\n", 
-               client.acctNum, client.lastName, 
-               client.firstName, client.balance );
-         } // end if
-      } // end while
+      // display record
+      if (result != 0 && client.acctNum != 0) {
+        printf("%-6d%-16s%-11s%10.2f\n", client.acctNum, client.lastName,
+               client.firstName, client.balance);
+      }  // end if
+    }    // end while
 
-      fclose( cfPtr ); // fclose closes the file
-   } // end else
-} // end main
+    fclose(cfPtr);  // fclose closes the file
+  }                 // end else
+}  // end main
 
 ```
 
@@ -793,241 +752,224 @@ After **option 1** is chosen, the file **accounts.txt** contains:
 
 ```c
 
-// Bank-account program reads a random-access file sequentially, 
-// updates data already written to the file, creates new data to 
+// Bank-account program reads a random-access file sequentially,
+// updates data already written to the file, creates new data to
 // be placed in the file, and deletes data previously in the file.
 #include <stdio.h>
 
-// clientData structure definition               
-struct clientData {                              
-   unsigned int acctNum; // account number
-   char lastName[ 15 ]; // account last name     
-   char firstName[ 10 ]; // account first name   
-   double balance; // account balance            
-}; // end structure clientData                   
+// clientData structure definition
+struct clientData {
+  unsigned int acctNum;  // account number
+  char lastName[15];     // account last name
+  char firstName[10];    // account first name
+  double balance;        // account balance
+};                       // end structure clientData
 
 // prototypes
-unsigned int enterChoice( void );
-void textFile( FILE *readPtr );
-void updateRecord( FILE *fPtr );
-void newRecord( FILE *fPtr );
-void deleteRecord( FILE *fPtr );
+unsigned int enterChoice(void);
+void textFile(FILE *readPtr);
+void updateRecord(FILE *fPtr);
+void newRecord(FILE *fPtr);
+void deleteRecord(FILE *fPtr);
 
-int main( void )
-{ 
-   FILE *cfPtr; // credit.dat file pointer
-   unsigned int choice; // user's choice
+int main(void) {
+  FILE *cfPtr;          // credit.dat file pointer
+  unsigned int choice;  // user's choice
 
-   // fopen opens the file; exits if file cannot be opened
-   if ( ( cfPtr = fopen( "credit.dat", "rb+" ) ) == NULL ) {
-      puts( "File could not be opened." );
-   } // end if
-   else { 
-      // enable user to specify action
-      while ( ( choice = enterChoice() ) != 5 ) { 
-         switch ( choice ) { 
-            // create text file from record file
-            case 1:
-               textFile( cfPtr );
-               break;
-            // update record
-            case 2:
-               updateRecord( cfPtr );
-               break;
-            // create record
-            case 3:
-               newRecord( cfPtr );
-               break;
-            // delete existing record
-            case 4:
-               deleteRecord( cfPtr );
-               break;
-            // display message if user does not select valid choice
-            default:
-               puts( "Incorrect choice" );
-               break;
-         } // end switch
-      } // end while
+  // fopen opens the file; exits if file cannot be opened
+  if ((cfPtr = fopen("credit.dat", "rb+")) == NULL) {
+    puts("File could not be opened.");
+  }  // end if
+  else {
+    // enable user to specify action
+    while ((choice = enterChoice()) != 5) {
+      switch (choice) {
+        // create text file from record file
+        case 1:
+          textFile(cfPtr);
+          break;
+        // update record
+        case 2:
+          updateRecord(cfPtr);
+          break;
+        // create record
+        case 3:
+          newRecord(cfPtr);
+          break;
+        // delete existing record
+        case 4:
+          deleteRecord(cfPtr);
+          break;
+        // display message if user does not select valid choice
+        default:
+          puts("Incorrect choice");
+          break;
+      }  // end switch
+    }    // end while
 
-      fclose( cfPtr ); // fclose closes the file
-   } // end else
-} // end main
+    fclose(cfPtr);  // fclose closes the file
+  }                 // end else
+}  // end main
 
-// create formatted text file for printing 
-void textFile( FILE *readPtr )
-{ 
-   FILE *writePtr; // accounts.txt file pointer
-   int result; // used to test whether fread read any bytes
+// create formatted text file for printing
+void textFile(FILE *readPtr) {
+  FILE *writePtr;  // accounts.txt file pointer
+  int result;      // used to test whether fread read any bytes
 
-   // create clientData with default information
-   struct clientData client = { 0, "", "", 0.0 };
+  // create clientData with default information
+  struct clientData client = {0, "", "", 0.0};
 
-   // fopen opens the file; exits if file cannot be opened
-   if ( ( writePtr = fopen( "accounts.txt", "w" ) ) == NULL ) {
-      puts( "File could not be opened." );
-   } // end if
-   else { 
-      rewind( readPtr ); // sets pointer to beginning of file
-      fprintf( writePtr, "%-6s%-16s%-11s%10s\n", 
-         "Acct", "Last Name", "First Name","Balance" );
+  // fopen opens the file; exits if file cannot be opened
+  if ((writePtr = fopen("accounts.txt", "w")) == NULL) {
+    puts("File could not be opened.");
+  }  // end if
+  else {
+    rewind(readPtr);  // sets pointer to beginning of file
+    fprintf(writePtr, "%-6s%-16s%-11s%10s\n", "Acct", "Last Name", "First Name",
+            "Balance");
 
-      // copy all records from random-access file into text file
-      while ( !feof( readPtr ) ) { 
-         result = fread(&client, sizeof( struct clientData ), 1, readPtr);
+    // copy all records from random-access file into text file
+    while (!feof(readPtr)) {
+      result = fread(&client, sizeof(struct clientData), 1, readPtr);
 
-         // write single record to text file
-         if ( result != 0 && client.acctNum != 0 ) {
-            fprintf( writePtr, "%-6d%-16s%-11s%10.2f\n",
-               client.acctNum, client.lastName,         
-               client.firstName, client.balance );      
-         } // end if
-      } // end while
+      // write single record to text file
+      if (result != 0 && client.acctNum != 0) {
+        fprintf(writePtr, "%-6d%-16s%-11s%10.2f\n", client.acctNum,
+                client.lastName, client.firstName, client.balance);
+      }  // end if
+    }    // end while
 
-      fclose( writePtr ); // fclose closes the file
-   } // end else
-} // end function textFile
+    fclose(writePtr);  // fclose closes the file
+  }                    // end else
+}  // end function textFile
 
 // update balance in record
-void updateRecord( FILE *fPtr )
+void updateRecord(FILE *fPtr)
 
-{ 
-   unsigned int account; // account number
-   double transaction; // transaction amount
+{
+  unsigned int account;  // account number
+  double transaction;    // transaction amount
 
-   // create clientData with no information
-   struct clientData client = { 0, "", "", 0.0 };
+  // create clientData with no information
+  struct clientData client = {0, "", "", 0.0};
 
-   // obtain number of account to update
-   printf( "%s", "Enter account to update ( 1 - 100 ): " );
-   scanf( "%d", &account );
+  // obtain number of account to update
+  printf("%s", "Enter account to update ( 1 - 100 ): ");
+  scanf("%d", &account);
 
-   // move file pointer to correct record in file              
-   fseek( fPtr, ( account - 1 ) * sizeof( struct clientData ), 
-      SEEK_SET );                                              
+  // move file pointer to correct record in file
+  fseek(fPtr, (account - 1) * sizeof(struct clientData), SEEK_SET);
 
-   // read record from file
-   fread( &client, sizeof( struct clientData ), 1, fPtr );
+  // read record from file
+  fread(&client, sizeof(struct clientData), 1, fPtr);
 
-   // display error if account does not exist
-   if ( client.acctNum == 0 ) {
-      printf( "Account #%d has no information.\n", account );
-   } // end if
-   else { // update record
-      printf( "%-6d%-16s%-11s%10.2f\n\n", 
-         client.acctNum, client.lastName, 
-         client.firstName, client.balance );
-      
-      // request transaction amount from user 
-      printf( "%s", "Enter charge ( + ) or payment ( - ): " );
-      scanf( "%lf", &transaction );
-      client.balance += transaction; // update record balance
-      
-      printf( "%-6d%-16s%-11s%10.2f\n", 
-         client.acctNum, client.lastName, 
-         client.firstName, client.balance );
-      
-      // move file pointer to correct record in file              
-      fseek( fPtr, ( account - 1 ) * sizeof( struct clientData ), 
-         SEEK_SET );                                              
+  // display error if account does not exist
+  if (client.acctNum == 0) {
+    printf("Account #%d has no information.\n", account);
+  }       // end if
+  else {  // update record
+    printf("%-6d%-16s%-11s%10.2f\n\n", client.acctNum, client.lastName,
+           client.firstName, client.balance);
 
-      // write updated record over old record in file         
-      fwrite( &client, sizeof( struct clientData ), 1, fPtr );
-   } // end else
-} // end function updateRecord
+    // request transaction amount from user
+    printf("%s", "Enter charge ( + ) or payment ( - ): ");
+    scanf("%lf", &transaction);
+    client.balance += transaction;  // update record balance
+
+    printf("%-6d%-16s%-11s%10.2f\n", client.acctNum, client.lastName,
+           client.firstName, client.balance);
+
+    // move file pointer to correct record in file
+    fseek(fPtr, (account - 1) * sizeof(struct clientData), SEEK_SET);
+
+    // write updated record over old record in file
+    fwrite(&client, sizeof(struct clientData), 1, fPtr);
+  }  // end else
+}  // end function updateRecord
 
 // delete an existing record
-void deleteRecord( FILE *fPtr )
-{ 
-   struct clientData client; // stores record read from file
-   struct clientData blankClient = { 0, "", "", 0 }; // blank client
-   
-   unsigned int accountNum; // account number
+void deleteRecord(FILE *fPtr) {
+  struct clientData client;  // stores record read from file
+  struct clientData blankClient = {0, "", "", 0};  // blank client
 
-   // obtain number of account to delete
-   printf( "%s", "Enter account number to delete ( 1 - 100 ): " );
-   scanf( "%d", &accountNum );
+  unsigned int accountNum;  // account number
 
-   // move file pointer to correct record in file                 
-   fseek( fPtr, ( accountNum - 1 ) * sizeof( struct clientData ), 
-      SEEK_SET );                                                 
+  // obtain number of account to delete
+  printf("%s", "Enter account number to delete ( 1 - 100 ): ");
+  scanf("%d", &accountNum);
 
-   // read record from file                               
-   fread( &client, sizeof( struct clientData ), 1, fPtr );
+  // move file pointer to correct record in file
+  fseek(fPtr, (accountNum - 1) * sizeof(struct clientData), SEEK_SET);
 
-   // display error if record does not exist
-   if ( client.acctNum == 0 ) {
-      printf( "Account %d does not exist.\n", accountNum );
-   } // end if
-   else { // delete record
-      // move file pointer to correct record in file                 
-      fseek( fPtr, ( accountNum - 1 ) * sizeof( struct clientData ), 
-         SEEK_SET );                                                 
+  // read record from file
+  fread(&client, sizeof(struct clientData), 1, fPtr);
 
-      // replace existing record with blank record   
-      fwrite( &blankClient,                          
-         sizeof( struct clientData ), 1, fPtr );     
-   } // end else
-} // end function deleteRecord
+  // display error if record does not exist
+  if (client.acctNum == 0) {
+    printf("Account %d does not exist.\n", accountNum);
+  }       // end if
+  else {  // delete record
+    // move file pointer to correct record in file
+    fseek(fPtr, (accountNum - 1) * sizeof(struct clientData), SEEK_SET);
+
+    // replace existing record with blank record
+    fwrite(&blankClient, sizeof(struct clientData), 1, fPtr);
+  }  // end else
+}  // end function deleteRecord
 
 // create and insert record
-void newRecord( FILE *fPtr )
-{ 
-   // create clientData with default information
-   struct clientData client = { 0, "", "", 0.0 };
+void newRecord(FILE *fPtr) {
+  // create clientData with default information
+  struct clientData client = {0, "", "", 0.0};
 
-   unsigned int accountNum; // account number
+  unsigned int accountNum;  // account number
 
-   // obtain number of account to create
-   printf( "%s", "Enter new account number ( 1 - 100 ): " );
-   scanf( "%d", &accountNum );
+  // obtain number of account to create
+  printf("%s", "Enter new account number ( 1 - 100 ): ");
+  scanf("%d", &accountNum);
 
-   // move file pointer to correct record in file                 
-   fseek( fPtr, ( accountNum - 1 ) * sizeof( struct clientData ), 
-      SEEK_SET );                                                 
+  // move file pointer to correct record in file
+  fseek(fPtr, (accountNum - 1) * sizeof(struct clientData), SEEK_SET);
 
-   // read record from file                               
-   fread( &client, sizeof( struct clientData ), 1, fPtr );
+  // read record from file
+  fread(&client, sizeof(struct clientData), 1, fPtr);
 
-   // display error if account already exists
-   if ( client.acctNum != 0 ) {
-      printf( "Account #%d already contains information.\n",
-         client.acctNum );
-   } // end if
-   else { // create record
-      // user enters last name, first name and balance
-      printf( "%s", "Enter lastname, firstname, balance\n? " );
-      scanf( "%14s%9s%lf", &client.lastName, &client.firstName, 
-         &client.balance );
+  // display error if account already exists
+  if (client.acctNum != 0) {
+    printf("Account #%d already contains information.\n", client.acctNum);
+  }       // end if
+  else {  // create record
+    // user enters last name, first name and balance
+    printf("%s", "Enter lastname, firstname, balance\n? ");
+    scanf("%14s%9s%lf", &client.lastName, &client.firstName, &client.balance);
 
-      client.acctNum = accountNum;
-      
-      // move file pointer to correct record in file   
-      fseek( fPtr, ( client.acctNum - 1 ) *            
-         sizeof( struct clientData ), SEEK_SET );      
+    client.acctNum = accountNum;
 
-      // insert record in file                       
-      fwrite( &client,                               
-         sizeof( struct clientData ), 1, fPtr );     
-   } // end else
-} // end function newRecord
+    // move file pointer to correct record in file
+    fseek(fPtr, (client.acctNum - 1) * sizeof(struct clientData), SEEK_SET);
+
+    // insert record in file
+    fwrite(&client, sizeof(struct clientData), 1, fPtr);
+  }  // end else
+}  // end function newRecord
 
 // enable user to input menu choice
-unsigned int enterChoice( void )
-{ 
-   unsigned int menuChoice; // variable to store user's choice
+unsigned int enterChoice(void) {
+  unsigned int menuChoice;  // variable to store user's choice
 
-   // display available options
-   printf( "%s", "\nEnter your choice\n"
-      "1 - store a formatted text file of accounts called\n"
-      "    \"accounts.txt\" for printing\n"
-      "2 - update an account\n"
-      "3 - add a new account\n"
-      "4 - delete an account\n"
-      "5 - end program\n? " );
+  // display available options
+  printf("%s",
+         "\nEnter your choice\n"
+         "1 - store a formatted text file of accounts called\n"
+         "    \"accounts.txt\" for printing\n"
+         "2 - update an account\n"
+         "3 - add a new account\n"
+         "4 - delete an account\n"
+         "5 - end program\n? ");
 
-   scanf( "%u", &menuChoice ); // receive choice from user
-   return menuChoice;
-} // end function enterChoice
+  scanf("%u", &menuChoice);  // receive choice from user
+  return menuChoice;
+}  // end function enterChoice
 
 ```
 
@@ -1052,39 +994,38 @@ On many UNIX systems it’s possible to pass arguments to **`main`** from the co
 // Using command-line arguments
 #include <stdio.h>
 
-int main( int argc, char *argv[] )
-{ 
-   FILE *inFilePtr; // input file pointer
-   FILE *outFilePtr; // output file pointer
-   int c; // define c to hold characters read from the source file
+int main(int argc, char *argv[]) {
+  FILE *inFilePtr;   // input file pointer
+  FILE *outFilePtr;  // output file pointer
+  int c;             // define c to hold characters read from the source file
 
-   // check number of command-line arguments
-   if ( argc != 3 ) {
-      puts( "Usage: mycopy infile outfile" );
-   } // end if
-   else {
-      // if input file can be opened
-      if ( ( inFilePtr = fopen( argv[ 1 ], "r" ) ) != NULL ) {
-         // if output file can be opened
-         if ( ( outFilePtr = fopen( argv[ 2 ], "w" ) ) != NULL ) {
-            // read and output characters
-            while ( ( c = fgetc( inFilePtr ) ) != EOF ) {
-               fputc( c, outFilePtr );
-            } // end while
+  // check number of command-line arguments
+  if (argc != 3) {
+    puts("Usage: mycopy infile outfile");
+  }  // end if
+  else {
+    // if input file can be opened
+    if ((inFilePtr = fopen(argv[1], "r")) != NULL) {
+      // if output file can be opened
+      if ((outFilePtr = fopen(argv[2], "w")) != NULL) {
+        // read and output characters
+        while ((c = fgetc(inFilePtr)) != EOF) {
+          fputc(c, outFilePtr);
+        }  // end while
 
-            fclose( outFilePtr ); // close the output file
-         } // end if 
-         else { // output file could not be opened
-            printf( "File \"%s\" could not be opened\n", argv[ 2 ] ); 
-         } // end else
+        fclose(outFilePtr);  // close the output file
+      }                      // end if
+      else {                 // output file could not be opened
+        printf("File \"%s\" could not be opened\n", argv[2]);
+      }  // end else
 
-         fclose( inFilePtr ); // close the input file
-      } // end if
-      else { // input file could not be opened
-         printf( "File \"%s\" could not be opened\n", argv[ 1 ] );
-      } // end else
-   } // end else
-} // end main
+      fclose(inFilePtr);  // close the input file
+    }                     // end if
+    else {                // input file could not be opened
+      printf("File \"%s\" could not be opened\n", argv[1]);
+    }  // end else
+  }    // end else
+}  // end main
  
 ```
 
@@ -1098,29 +1039,27 @@ Fork [this CD session](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar
 ### read\_from_stream\_into\_array(const char*, FILE*, int[])
 
 ```c
-// can also be easily extended and modified 
+// can also be easily extended and modified
 // will come handy for next refactoring
 //
 int read_from_stream_into_array(
-    const char* fname, // to use in logging if there is an error
-    FILE* fp, // can also be assigned to stdin
-    int array[], // array to be filled with values
-    int size // will decide max num of entries to read
-    )
-{
-    int counter = 0;
-    if (fp != NULL) {
-        printf("Reading numbers from %s\n", fname);
-        while (!feof(fp) && counter < size) {
-            fscanf(fp, "%d ", &array[counter]);
-            printf("%d %d\n", counter, array[counter]);
-            counter++;
-        }
+    const char* fname,  // to use in logging if there is an error
+    FILE* fp,           // can also be assigned to stdin
+    int array[],        // array to be filled with values
+    int size            // will decide max num of entries to read
+    ) {
+  int counter = 0;
+  if (fp != NULL) {
+    printf("Reading numbers from %s\n", fname);
+    while (!feof(fp) && counter < size) {
+      fscanf(fp, "%d ", &array[counter]);
+      printf("%d %d\n", counter, array[counter]);
+      counter++;
     }
-    else
-        printf("Invalid file pointer for file:%s!", fname);
+  } else
+    printf("Invalid file pointer for file:%s!", fname);
 
-    return counter;
+  return counter;
 }
 
 ```
@@ -1128,14 +1067,13 @@ int read_from_stream_into_array(
 ### calculate\_sum(int[] arr, int size)
 
 ```c
-float calculate_sum(int arr[], int size)
-{
-    float sum = 0;
-    for (int i = 0; i < size; i++) {
-        sum = sum + arr[i];
-    }
-    printf("Sum: %f\n", sum);
-    return sum;
+float calculate_sum(int arr[], int size) {
+  float sum = 0;
+  for (int i = 0; i < size; i++) {
+    sum = sum + arr[i];
+  }
+  printf("Sum: %f\n", sum);
+  return sum;
 }
 
    
@@ -1145,22 +1083,20 @@ float calculate_sum(int arr[], int size)
 
 ```c
 
-int main(int argc, char* argv[]){
-    int n[50];
-    
-    FILE *fp = fopen("num.dat", "r");
-    int i = read_from_stream_into_array("num.dat", fp, n, 5);
-   
-    if (i > 0) {
-        float sum = calculate_sum(n, i); 
-        float average = sum / i;
-        printf("The average is %f for %d numbers\n",
-               average, i);
-    }
-    else {
-        puts("No data available in num.dat!");
-    }
-    fclose(fp); 
+int main(int argc, char* argv[]) {
+  int n[50];
+
+  FILE* fp = fopen("num.dat", "r");
+  int i = read_from_stream_into_array("num.dat", fp, n, 5);
+
+  if (i > 0) {
+    float sum = calculate_sum(n, i);
+    float average = sum / i;
+    printf("The average is %f for %d numbers\n", average, i);
+  } else {
+    puts("No data available in num.dat!");
+  }
+  fclose(fp);
 }
 
 ```
@@ -1168,20 +1104,18 @@ int main(int argc, char* argv[]){
 ### Averaging entries from stdin 
 
 ```c
-int main() { 
-    int n[50];
- 
-    int i = read_from_stream_into_array("stdin", stdin, n, 6);
-    
-    if (i > 0) {
-        float sum = calculate_sum(n, i); 
-        float average = sum / i;
-        printf("The average is %f for %d numbers\n",
-               average, i);
-    }
-    else {
-        puts("No data available on stdin!");
-    }
+int main() {
+  int n[50];
+
+  int i = read_from_stream_into_array("stdin", stdin, n, 6);
+
+  if (i > 0) {
+    float sum = calculate_sum(n, i);
+    float average = sum / i;
+    printf("The average is %f for %d numbers\n", average, i);
+  } else {
+    puts("No data available on stdin!");
+  }
 }
 ```
 
@@ -1193,19 +1127,19 @@ The next program reads five integer values from the keyboard and stores them in 
 ```c
 #include <stdio.h>
 int main() {
-	FILE* fp;
-    int n[5], i;
-    if ((fp = fopen("num.dat", "w")) != NULL) {
-        puts("Enter 5 numbers, to be stored in num.dat...");
-        for (i = 0; i < 5; i++) {
-            scanf("%d", &n[i]);
-            fprintf(fp, "%d\n", n[i]);
-        }
-        fprintf(fp,"%d", 9999);
-        fclose(fp);
+  FILE* fp;
+  int n[5], i;
+  if ((fp = fopen("num.dat", "w")) != NULL) {
+    puts("Enter 5 numbers, to be stored in num.dat...");
+    for (i = 0; i < 5; i++) {
+      scanf("%d", &n[i]);
+      fprintf(fp, "%d\n", n[i]);
     }
-    else
-        printf("Unable to open num.dat...\n"); }
+    fprintf(fp, "%d", 9999);
+    fclose(fp);
+  } else
+    printf("Unable to open num.dat...\n");
+}
 ```
  
 **Output:**
@@ -1258,26 +1192,26 @@ Now one might think that calls to **fprinf()** and **fscanf()** differ significa
 
 ```c
  #include <stdlib.h>
- #include <stdio.h>
- #define SIZE 100
- 
+#include <stdio.h>
+#define SIZE 100
+
 int main() {
-	char temp[SIZE];
-	char fname[60];
-	FILE *fp;
-	printf(“Enter name of fi lename:”);
-	fflush(stdin);
-	scanf(“%s”, fname);
-	if((fp = fopen(fname, “r”)) == NULL){
-		 fprintf(stderr, “Error in opening fi le”);
-		 exit(1);
-	}
-	while(!feof(fp)){
-		 fgets(temp, SIZE, fp);
-		 printf(“%s”,temp);
-	}
-	fclose(fp);
-	return 0;
+  char temp[SIZE];
+  char fname[60];
+  FILE *fp;
+  printf(“Enter name of fi lename :”);
+  fflush(stdin);
+  scanf(“% s”, fname);
+  if ((fp = fopen(fname, “r”)) == NULL) {
+    fprintf(stderr, “Error in opening fi le”);
+    exit(1);
+  }
+  while (!feof(fp)) {
+    fgets(temp, SIZE, fp);
+    printf(“% s”, temp);
+  }
+  fclose(fp);
+  return 0;
 }
 ```
 
@@ -1285,15 +1219,15 @@ int main() {
 ### Credit Inquiry Program
 
 Credit Inquiry Program
-The program of Fig. 11.7 allows a credit manager to obtain lists of customers with zero
-balances (i.e., customers who do not owe any money), customers with credit balances (i.e.,
-customers to whom the company owes money) and customers with debit balances (i.e.,
-customers who owe the company money for goods and services received). A credit balance is a negative amount; a debit balance is a positive amount
+The program of Fig. 11.7 allows a credit manager to obtain lists of 
+  - customers with zero balances (i.e., customers who do not owe any money), 
+  - customers with credit balances (i.e., customers to whom the company owes money) and 
+  - customers with debit balances (i.e., customers who owe the company money for goods and services received). 
+
+A credit balance is a negative amount; a debit balance is a positive amount
 
 The program displays a menu and allows the credit manager to enter one of three
-options to obtain credit information. Option 1 produces a list of accounts with zero balances.
-Option 2 produces a list of accounts with credit balances. Option 3 produces a list
-of accounts with debit balances. Option 4 terminates program execution. A sample output is shown in Fig. 11.8.
+options to obtain credit information. Option 1 produces a list of accounts with zero balances. Option 2 produces a list of accounts with credit balances. Option 3 produces a list of accounts with debit balances. Option 4 terminates program execution. A sample output is shown in Fig. 11.8.
 
 	Enter request
 	 1 - List accounts with zero balances
@@ -1320,7 +1254,9 @@ other data. For example, if the name “White” needs to be changed to “Worth
 old name cannot simply be overwritten. The record for White was written to the file as
 If the record is rewritten beginning at the same location in the file using the new name,
 the record will be
+
 The new record is larger (has more characters) than the original record. The characters beyond
+
 the second “o” in “Worthington” will overwrite the beginning of the next sequential
 record in the file. The problem here is that in the formatted input/output model using
 fprintf and fscanf, fields—and hence records—can vary in size. For example, the values
@@ -1328,10 +1264,7 @@ fprintf and fscanf, fields—and hence records—can vary in size. For example, 
 but they’re different-sized fields when displayed on the screen or written to a file as text.
 Therefore, sequential access with fprintf and fscanf is not usually used to update
 records in place. Instead, the entire file is usually rewritten. To make the preceding name
-change, the records before 300 White 0.00 in such a sequential-access file would be copied
-to a new file, the new record would be written and the records after 300 White 0.00 would
-be copied to the new file. This requires processing every record in the file to update one
-record. 
+change, the records before 300 White 0.00 in such a sequential-access file would be copied to a new file, the new record would be written and the records after 300 White 0.00 would be copied to the new file. This requires processing every record in the file to update one record. 
 
 
 ### Example Program: Average of numbers
