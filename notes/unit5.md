@@ -42,6 +42,7 @@ to the image below:
 
 ### Post lecture exercise
 
+- Try and understand Kilo project - https://github.com/kgisl/kilo
 Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
 
