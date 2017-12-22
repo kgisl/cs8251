@@ -68,9 +68,12 @@ C provides a number of functions that helps to perform basic file operations. Fo
 | putw() 	| writes a integer to a file|
 | fseek() 	| set the position to desire point | 
 | ftell()	| gives current position in the file | 
-| rewind()	| set the position to the beginning point |  
+| rewind()	| set the position to the beginning point |
+| fread()   | reads specific number of bytes from binary file | 
+| fwrite()	| writes specific number of bytes to binary files | 
 
-**Opening a File or Creating a File**
+  
+   **Opening a File or Creating a File**
 
 The `fopen()` function is used to create a new file or to open an existing file.
 
@@ -331,6 +334,8 @@ preceding data.
 
 C imposes no structure on a file. Thus, notions such as a record of a file do not exist as part of the C language. The following example shows how you can impose your own record structure on a file.
 
+![sequential](http://j.mp/seqFile)
+
 Figure 11.2 creates a simple sequential-access file that might be used in an accounts
 receivable system to keep track of the amounts owed by a company’s credit clients. For
 each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a “record” for that client. The account number is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in account number order. In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. *[Note: Figures 11.6–11.7 use the data file created in Fig. 11.2, so you must run Fig. 11.2 before Figs. 11.6–11.7.]* 
@@ -536,8 +541,7 @@ transaction-processing systems that require rapid access to specific data. There
 location of a record relative to the beginning of the file can be calculated as a function of the record key. We’ll soon see how this facilitates immediate access to specific records, even in large files.
   - Figure below illustrates one way to implement a random-access file. Such a file is like a freight train with many cars—some empty and some with cargo. Each car in the train has the same length.
 
-< FIGURE REQUIRED FROM BOOK>
-
+![rand](http://j.mp/randFile)
 
 Fixed-length records enable data to be inserted in a random-access file without
 destroying other data in the file. Data stored previously can also be updated or deleted
@@ -548,16 +552,23 @@ data, and delete data no longer needed.
 
 ### Creating Random Access File
 
-Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which requires 1 byte of storage) for a four-byte integer, we can use which always writes four bytes on a system with four-byte integers from a variable number to the file represented by fPtr (we’ll explain the 1 argument shortly). Later, fread can be used to read those four bytes into an integer variable number. Although fread and fwrite read and write data, such as integers, in fixed-size rather than variable-size format, the data they handle are processed in computer “raw data” format (i.e., bytes of data) rather than in printf’s and **scanf**’s human-readable text format. Because the “raw” representation of data is system dependent, “raw data” may not be readable on other systems, or by programs produced by other compilers or with other compiler options.
+Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using 
 
-Functions fwrite and fread are capable of reading and writing arrays of data to and
-from disk. The third argument of both fread and fwrite is the number of elements in the array that should be read from or written to disk. The preceding fwrite function call writes a single integer to disk, so the third argument is 1 (as if one element of an array is being written). File-processing programs rarely write a single field to a file. Normally, they write one struct at a time, as we show in the following examples.
+	fprintf( fPtr, "%d", number );
+
+which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which requires 1 byte of storage) for a four-byte integer, we can use 
+
+	fwrite( &number, sizeof( int ), 1, fPtr );
+
+which always writes four bytes on a system with four-byte integers from a variable number to the file represented by `fPtr` (we’ll explain the `1` argument shortly). Later, **fread** can be used to read those four bytes into an integer variable number. Although fread and fwrite read and write data, such as integers, in fixed-size rather than variable-size format, the data they handle are processed in computer “raw data” format (i.e., bytes of data) rather than in **printf**’s and **scanf**’s human-readable text format. Because the “raw” representation of data is *system dependent*, “raw data” may not be readable on other systems, or by programs produced by other compilers or with other compiler options.
+
+Functions **fwrite** and **fread** are capable of reading and writing arrays of data to and from disk. The third argument of both fread and fwrite is the number of elements in the array that should be read from or written to disk. The preceding fwrite function call writes a single integer to disk, so the third argument is 1 (as if one element of an array is being written). File-processing programs rarely write a single field to a file. Normally, they write one struct at a time, as we show in the following examples.
 
 Consider the following problem statement:
 
 	Create a credit-processing system capable of storing up to 100 fixed-length records. Each record should consist of an account number that will be used as the record key, a last name, a first name and a balance. The resulting program should be able to update an account, insert a new account record, delete an account and list all the account records in a formatted text file for printing. Use a random-access file.
 
-The next several sections introduce the techniques necessary to create the credit-processing program. Figure 11.10 shows how to open a random-access file, define a record format using a struct, write data to the disk and close the file. This program initializes all 100 records of the file "credit.dat" with empty structs using the function fwrite. Each empty struct contains 0 for the account number, "" (the empty string) for the last name, "" for the first name and 0.0 for the balance. The file is initialized in this manner to create space on disk in which the file will be stored and to make it possible to determine whether a record contains data.
+The next several sections introduce the techniques necessary to create the credit-processing program. Figure 11.10 shows how to open a random-access file, define a record format using a struct, write data to the disk and close the file. This program initializes all 100 records of the file "credit.dat" with empty structs using the function fwrite. Each empty struct contains `0` for the account number, `""` (the empty string) for the last name, `""` for the first name and 0.0 for the balance. The file is initialized in this manner to create space on disk in which the file will be stored and to make it possible to determine whether a record contains data.
 
 ```c
 
@@ -598,7 +609,7 @@ int main(void)
 
 ```
 
-Function **fwrite** writes a block of bytes to a file. Line 29 causes the structure blankClient of size `sizeof(struct clientData)` to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to fwrite a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, fwrite was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the fwrite call. [Note: Figures 11.11, 11.14 and 11.15 use the data file created in Fig. 11.10, so you must run Fig. 11.10 before Figs. 11.11, 11.14 and 11.15]. 
+Function **fwrite** writes a block of bytes to a file. Line 29 causes the structure blankClient of size `sizeof(struct clientData)` to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to **fwrite** a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, **fwrite** was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the **fwrite** call. 
 
 ### Writing Random Access Data
 
@@ -640,12 +651,12 @@ int main( void )
          printf( "%s", "Enter lastname, firstname, balance\n? " );
         
          // set record lastName, firstName and balance value
-         fscanf( stdin, "%14s%9s%lf", client.lastName, 
-            client.firstName, &client.balance );
+         fscanf(stdin, "%14s%9s%lf", client.lastName, 
+            client.firstName, &client.balance);
 
          // seek position in file to user-specified record   
-         fseek( cfPtr, ( client.acctNum - 1 ) *              
-            sizeof( struct clientData ), SEEK_SET );         
+         fseek(cfPtr, (client.acctNum - 1) *              
+            sizeof(struct clientData), SEEK_SET);         
 
          // write user-specified information in file              
          fwrite( &client, sizeof( struct clientData ), 1, cfPtr );
@@ -663,9 +674,13 @@ int main( void )
 Lines 40–41 position the file position pointer for the file referenced by cfPtr to the
 byte location calculated by `(client.accountNum - 1) * sizeof(struct clientData)`.
 
-The value of this expression is called the offset or the displacement. Because the account number is between 1 and 100 but the byte positions in the file start with 0, 1 is subtracted from the account number when calculating the byte location of the record. Thus, for record 1, the file position pointer is set to byte 0 of the file. The symbolic constant SEEK_SET indicates that the file position pointer is positioned relative to the beginning of the file by the amount of the offset. As the above statement indicates, a seek for account number 1 in the file sets the file position pointer to the beginning of the file because the byte location calculated is 0. Figure 11.13 illustrates the file pointer referring to a FILE structure in memory. The file position pointer in this diagram indicates that the next byte to be read or written is 5 bytes from the beginning of the file.
+The value of this expression is called the offset or the displacement. Because the account number is between 1 and 100 but the byte positions in the file start with 0, 1 is subtracted from the account number when calculating the byte location of the record. Thus, for record 1, the file position pointer is set to byte 0 of the file. The symbolic constant `SEEK_SET` indicates that the file position pointer is positioned relative to the beginning of the file by the amount of the offset. As the above statement indicates, a seek for account number `1` in the file sets the file position pointer to the beginning of the file because the byte location calculated is 0. Figure 11.13 illustrates the file pointer referring to a FILE structure in memory. The file position pointer in this diagram indicates that the next byte to be read or written is 5 bytes from the beginning of the file.
 
-The function prototype for **fseek** is where offset is the number of bytes to seek from whence in the file pointed to by stream—a positive offset seeks forward and a negative one seeks backward. Argument whence is one of the values SEEK\_SET, SEEK\_CUR or SEEK\_END (all defined in stdio.h), which indicate the location from which the seek begins. SEEK\_SET *indicates that the seek starts at the beginning of the file*; SEEK\_CUR indicates that the seek starts at the current location in the file; and SEEK\_END indicates that the seek starts at the end of the file. 
+The function prototype for **fseek** is where offset is the number of bytes to seek from whence in the file pointed to by stream—a positive offset seeks forward and a negative one seeks backward. Argument whence is one of the values `SEEK_SET`, `SEEK_CUR` or `SEEK_END` (all defined in `<stdio.h>`), which indicate the location from which the seek begins. 
+
+	SEEK_SET *indicates that the seek starts at the beginning of the file*; 
+	SEEK_CUR indicates that the seek starts at the current location in the file; and 
+	SEEK_END indicates that the seek starts at the end of the file. 
 
 Function fscanf returns the number of data items successfully read or the value **EOF** if a problem occurs while reading data. Function **fseek** returns a nonzero value if the seek operation cannot be performed. Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
