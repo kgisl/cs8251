@@ -604,12 +604,68 @@ Function **fwrite** writes a block of bytes to a file. Line 29 causes the struct
 
 Figure 11.11 writes data to the file **"credit.dat"**. It uses the combination of **fseek** and **fwrite** to store data at specific locations in the file. Function fseek sets the file position pointer to a specific position in the file, then fwrite writes the data. A sample execution is shown in Fig. 11.12.
 
+```c
+// Fig. 11.11: fig11_11.c
+// Writing data randomly to a random-access file
+#include <stdio.h>
+
+// clientData structure definition               
+struct clientData {                              
+   unsigned int acctNum; // account number
+   char lastName[ 15 ]; // account last name    
+   char firstName[ 10 ]; // account first name   
+   double balance; // account balance   
+}; // end structure clientData                   
+ 
+int main( void ) 
+{ 
+   FILE *cfPtr; // credit.dat file pointer
+
+   // create clientData with default information
+   struct clientData client = { 0, "", "", 0.0 };
+
+   // fopen opens the file; exits if file cannot be opened
+   if ( ( cfPtr = fopen( "credit.dat", "rb+" ) ) == NULL ) {
+      puts( "File could not be opened." );
+   } // end if
+   else { 
+      // require user to specify account number
+      printf( "%s", "Enter account number"
+         " ( 1 to 100, 0 to end input )\n? " );
+      scanf( "%d", &client.acctNum );
+
+      // user enters information, which is copied into file
+      while ( client.acctNum != 0 ) { 
+         // user enters last name, first name and balance
+         printf( "%s", "Enter lastname, firstname, balance\n? " );
+        
+         // set record lastName, firstName and balance value
+         fscanf( stdin, "%14s%9s%lf", client.lastName, 
+            client.firstName, &client.balance );
+
+         // seek position in file to user-specified record   
+         fseek( cfPtr, ( client.acctNum - 1 ) *              
+            sizeof( struct clientData ), SEEK_SET );         
+
+         // write user-specified information in file              
+         fwrite( &client, sizeof( struct clientData ), 1, cfPtr );
+
+         // enable user to input another account number
+         printf( "%s", "Enter account number\n? " );
+         scanf( "%d", &client.acctNum );
+      } // end while
+
+      fclose( cfPtr ); // fclose closes the file
+   } // end else
+} // end main
+
+```
 Lines 40–41 position the file position pointer for the file referenced by cfPtr to the
 byte location calculated by `(client.accountNum - 1) * sizeof(struct clientData)`.
 
 The value of this expression is called the offset or the displacement. Because the account number is between 1 and 100 but the byte positions in the file start with 0, 1 is subtracted from the account number when calculating the byte location of the record. Thus, for record 1, the file position pointer is set to byte 0 of the file. The symbolic constant SEEK_SET indicates that the file position pointer is positioned relative to the beginning of the file by the amount of the offset. As the above statement indicates, a seek for account number 1 in the file sets the file position pointer to the beginning of the file because the byte location calculated is 0. Figure 11.13 illustrates the file pointer referring to a FILE structure in memory. The file position pointer in this diagram indicates that the next byte to be read or written is 5 bytes from the beginning of the file.
 
-The function prototype for fseek is where offset is the number of bytes to seek from whence in the file pointed to by stream—a positive offset seeks forward and a negative one seeks backward. Argument whence is one of the values SEEK\_SET, SEEK\_CUR or SEEK\_END (all defined in stdio.h), which indicate the location from which the seek begins. SEEK\_SET *indicates that the seek starts at the beginning of the file*; SEEK\_CUR indicates that the seek starts at the current location in the file; and SEEK\_END indicates that the seek starts at the end of the file. 
+The function prototype for **fseek** is where offset is the number of bytes to seek from whence in the file pointed to by stream—a positive offset seeks forward and a negative one seeks backward. Argument whence is one of the values SEEK\_SET, SEEK\_CUR or SEEK\_END (all defined in stdio.h), which indicate the location from which the seek begins. SEEK\_SET *indicates that the seek starts at the beginning of the file*; SEEK\_CUR indicates that the seek starts at the current location in the file; and SEEK\_END indicates that the seek starts at the end of the file. 
 
 Function fscanf returns the number of data items successfully read or the value **EOF** if a problem occurs while reading data. Function **fseek** returns a nonzero value if the seek operation cannot be performed. Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
@@ -1217,14 +1273,12 @@ Credit Inquiry Program
 The program of Fig. 11.7 allows a credit manager to obtain lists of customers with zero
 balances (i.e., customers who do not owe any money), customers with credit balances (i.e.,
 customers to whom the company owes money) and customers with debit balances (i.e.,
-customers who owe the company money for goods and services received). A credit balance
-is a negative amount; a debit balance is a positive amount
+customers who owe the company money for goods and services received). A credit balance is a negative amount; a debit balance is a positive amount
 
 The program displays a menu and allows the credit manager to enter one of three
 options to obtain credit information. Option 1 produces a list of accounts with zero balances.
 Option 2 produces a list of accounts with credit balances. Option 3 produces a list
-of accounts with debit balances. Option 4 terminates program execution. A sample output
-is shown in Fig. 11.8.
+of accounts with debit balances. Option 4 terminates program execution. A sample output is shown in Fig. 11.8.
 
 	Enter request
 	 1 - List accounts with zero balances
