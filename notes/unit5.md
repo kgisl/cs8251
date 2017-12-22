@@ -43,7 +43,9 @@ to the image below:
 ### Post lecture exercise
 
 - Try and understand Kilo project - https://github.com/kgisl/kilo
-Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
+   - [writing](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L705) to file 
+   - [reading](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L674) to file
+- Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
 
 
