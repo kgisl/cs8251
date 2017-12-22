@@ -1146,74 +1146,6 @@ int main() {
 
 	Enter 5 numbers, to be stored in num.dat ... 1 2 3 4 5
 
-The file num.dat now contains the numbers arranged in the following format.
-
-	1
-	2
-	3
-	4
-	5
-	9999
- 
-Here 9999 is used as end-of-file marker. It is not a member of the data set. While reading data from ‘num.dat’, the data is read until 9999 is found. The following program describes the usage where the numbers stored in the file ‘num.dat’ are summed up and displayed. Here fscanf() has to be used to read data from the file.
-
-```c
-#include <stdio.h>
-int main(){
-	FILE *fp;
-	int n,s=0;
-	if((fp = fopen(“num.dat”, “r”)) != NULL){
-		fscanf(fp, “%d\n”, &n);
-		while(n!=9999){ 
-			s+=n;
-			fscanf(fp, “%d\n”, &n);
-		}
-		printf(“Sum is %d”,s);
-		fclose(fp);
-	} 
-	else
-		printf(“Unable to open num.dat ... \n”);
-	 return 0;
- }
-
-```
-
-**Output:**
-
-	Sum is 15
-
-fscanf() is a fi eld-oriented function and is inappropriate for use in a robust, general-purpose text fi le reader. It has two major drawbacks.
-
-  - The programmer must know the exact data layout of the input fi le in advance and rewrite the function call for every different layout
-  - It is difficult to read text strings that contain spaces because fscanf() sees space characters as field delimiters.
-
-Now one might think that calls to **fprinf()** and **fscanf()** differ significantly from calls to **printf()** and **scanf()**, and that these latter functions do not seem to require file pointers. 
-
-
-```c
- #include <stdlib.h>
-#include <stdio.h>
-#define SIZE 100
-
-int main() {
-  char temp[SIZE];
-  char fname[60];
-  FILE *fp;
-  printf(“Enter name of fi lename :”);
-  fflush(stdin);
-  scanf(“% s”, fname);
-  if ((fp = fopen(fname, “r”)) == NULL) {
-    fprintf(stderr, “Error in opening fi le”);
-    exit(1);
-  }
-  while (!feof(fp)) {
-    fgets(temp, SIZE, fp);
-    printf(“% s”, temp);
-  }
-  fclose(fp);
-  return 0;
-}
-```
 
 
 ### Credit Inquiry Program
@@ -1255,16 +1187,11 @@ old name cannot simply be overwritten. The record for White was written to the f
 If the record is rewritten beginning at the same location in the file using the new name,
 the record will be
 
-The new record is larger (has more characters) than the original record. The characters beyond
+The new record is larger (has more characters) than the original record. The characters beyondthe second “o” in “Worthington” will overwrite the beginning of the next sequential record in the file. The problem here is that in the formatted input/output model using fprintf and fscanf, fields—and hence records—can vary in size. For example, the values 7, 14, –117, 2074 and 27383 are all ints stored in the same number of bytes internally, but they’re different-sized fields when displayed on the screen or written to a file as text.
 
-the second “o” in “Worthington” will overwrite the beginning of the next sequential
-record in the file. The problem here is that in the formatted input/output model using
-fprintf and fscanf, fields—and hence records—can vary in size. For example, the values
-7, 14, –117, 2074 and 27383 are all ints stored in the same number of bytes internally,
-but they’re different-sized fields when displayed on the screen or written to a file as text.
 Therefore, sequential access with fprintf and fscanf is not usually used to update
 records in place. Instead, the entire file is usually rewritten. To make the preceding name
-change, the records before 300 White 0.00 in such a sequential-access file would be copied to a new file, the new record would be written and the records after 300 White 0.00 would be copied to the new file. This requires processing every record in the file to update one record. 
+change, the records before 300 White 0.00 in such a sequential-access file would be copied to a new file, the new record would be written and the records after 300 White 0.00 would be copied to the new file. ***This requires processing every record in the file to update one record.*** 
 
 
 ### Example Program: Average of numbers
