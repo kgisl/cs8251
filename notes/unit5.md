@@ -14,7 +14,6 @@
 [2]: http://iiti.ac.in/people/~tanimad/FileHandlinginCLanguage.pdf 
 
 
-
 ### Pre-lecture exercise - a "Show and Tell" exercise
 
 1. Create your own paper document by writing a few numbers 
@@ -45,8 +44,34 @@ to the image below:
 - Try and understand Kilo project - https://github.com/kgisl/kilo
    - [writing](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L705) to file 
    - [reading](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L674) to file
+   - Implement a `<Ctrl-O>` option that loads in a new file into the editor
 - Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
+## Key Terms
+
+### Binary file 
+Binary file is a collection of bytes or a character stream. The data that is written into and read from binary file remain unchanged, with no separation between lines and no use of end-of-line characters and the interpretation of the file is left to the programmer.
+
+### Text file 
+A text file is a stream of characters that can be processed sequentially and logically in the forward direction. The maximum number of characters in each line is limited to 255 characters. 
+
+### Record 
+A record consist of a collection of data fields that conforms  to a previously defi ned structure that can be stored on or retrieved from a file.
+
+### Sequential file access 
+In case of sequential fi le access, data is read from or written to a file in a sequential manner while the position indicator automatically gets adjusted by the stream I/O functions. 
+
+### Random file access 
+Random access means reading from or writing to any position in a fi le without reading or writing all the preceding data by controlling the `position indicator`
+
+### Stream 
+The stream is a common, logical interface to the various devices that comprise the computer and is a logical interface to a file. Although files differ in form and capabilities, all streams are the same.
+
+### File management 
+It basically means all operations related to creating, renaming, deleting, merging, reading, writing, etc. of any type of files.
+
+### Path 
+The path specifies the drive and/or directory (or folder) where the file is located. On PCs, the backslash character is used to separate directory names in a path. Some systems like Unix use the forward slash (/) as the directory separator. 
 
 
 ## File Handling in C Language - Quick Reference
@@ -1121,6 +1146,69 @@ int main() {
   }
 }
 ```
+
+
+
+
+
+## FAQ 
+
+**1. What is file?**
+ A file is a collection of bytes stored on a secondary storage device, which
+is generally a disk of some kind. It is identifi ed by a name, which is given
+at the time of its creation. It may be amended, moved from one storage
+device to another or removed completely when desired.
+**2. What is a stream?**
+In C, the stream is a common, logical interface to the various devices
+that form the computer. When the program executes, each stream is
+tied together to a specifi c device that is source or destination of data.
+The stream provides a consistent interface and to the programmer one
+hardware device will look much like another. In its most common form,
+a stream is a logical interface to a fi le. Stream I/O uses some temporary
+storage area, called buffer, for reading from or writing data to a fi le.
+A stream is linked to a fi le by using an open operation. A stream is
+disassociated from a fi le using a close operation.
+ The C language provides three “standard” streams that are always
+available to a C program. These are
+
+		Name   Description      Example
+		stdin  Standard Input   Keyboard
+		stdout Standard Output  Screen
+		stderr Standard Error   Screen
+
+**3. What is buffer? What’s its purpose?**
+Buffer is a temporary storage area that holds data while they are being
+transferred to and from memory. Buffering is a scheme that prevents
+excessive access to a physical I/O device like a disk or a terminal. Its
+purpose is to synchronize the physical devices that the program needs. 
+The buffer collects output data until there are enough to write effi ciently.
+The buffering activities are taken care of by software called device
+drivers or access methods provided by the operating system.
+**4. Why have buffers?**
+ It speeds up input/output which can be a major bottleneck in execution
+times. That is, it is less time-consuming to transmit several characters
+as a block than to send them one by one.
+**5. What is **FILE**?**
+FILE is a structure declared in stdio.h. The members of the
+FILE structure are used by the program in the various fi le access
+operations. For each fi le that is to be opened, a pointer to type FILE
+must be declared. When the function fopen() is called, that function
+creates an instance of the FILE structure and returns a pointer to that
+structure. This pointer is used in all subsequent operations on the fi le.
+But programmers don’t need to be concerned about the members of the
+structure FILE.
+Because one may use a number of different files in the program,
+he or she must specify when reading or writing which fi le one wishes
+to use. This is accomplished by using a variable called a file pointer, a
+pointer variable that points to a structure FILE.
+**6. How many files can I open at once?**
+ The number of fi les that can be opened at once will be determined by
+the value of the constant FOPEN_MAX that is defined in `<stdio.h>`.
+`FOPEN_MAX` is an integer that specifies the maximum number of streams
+that can be open at one time. The C language standard requires that
+the value of `FOPEN_MAX` be at least 8, including the standard streams 
+stdin, stdout and stderr. Thus, as a minimum, it’s possible to
+work with up to 5 fi les simultaneously.
 
 
 ## To Be Deleted 
