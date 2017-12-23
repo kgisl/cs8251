@@ -660,7 +660,7 @@ int main(void) {
 }  // end main
 
 ```
-Lines 40–41 position the file position pointer for the file referenced by cfPtr to the
+We position the file position pointer for the file referenced by cfPtr to the
 byte location calculated by `(client.accountNum - 1) * sizeof(struct clientData)`.
 
 The value of this expression is called the offset or the displacement. Because the account number is between 1 and 100 but the byte positions in the file start with 0, 1 is subtracted from the account number when calculating the byte location of the record. Thus, for record 1, the file position pointer is set to byte 0 of the file. The symbolic constant `SEEK_SET` indicates that the file position pointer is positioned relative to the beginning of the file by the amount of the offset. As the above statement indicates, a seek for account number `1` in the file sets the file position pointer to the beginning of the file because the byte location calculated is 0. Figure 11.13 illustrates the file pointer referring to a FILE structure in memory. The file position pointer in this diagram indicates that the next byte to be read or written is 5 bytes from the beginning of the file.
@@ -1211,7 +1211,8 @@ stdin, stdout and stderr. Thus, as a minimum, it’s possible to
 work with up to 5 fi les simultaneously.
 
 
-## To Be Deleted 
+## Bonus Material
+
 
 The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
 
