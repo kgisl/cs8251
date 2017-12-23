@@ -1140,13 +1140,13 @@ int main() {
 
 
 
-## Modular Versions
+### Modular Versions
 
 Fork [this CD session](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1) to get testable code!
 
 
 
-### read\_from_stream\_into\_array(const char*, FILE*, int[])
+#### read\_from_stream\_into\_array(const char*, FILE*, int[])
 
 ```c
 // can also be easily extended and modified
@@ -1174,7 +1174,7 @@ int read_from_stream_into_array(
 
 ```
 
-### calculate\_sum(int[] arr, int size)
+#### calculate\_sum(int[] arr, int size)
 
 ```c
 float calculate_sum(int arr[], int size) {
@@ -1189,7 +1189,7 @@ float calculate_sum(int arr[], int size) {
    
 ```
 
-### modular main()
+#### modular main()
 
 ```c
 
@@ -1228,52 +1228,6 @@ int main() {
   }
 }
 ```
-
-
-### Credit Inquiry Program
-
-Credit Inquiry Program
-The program of Fig. 11.7 allows a credit manager to obtain lists of 
-  - customers with zero balances (i.e., customers who do not owe any money), 
-  - customers with credit balances (i.e., customers to whom the company owes money) and 
-  - customers with debit balances (i.e., customers who owe the company money for goods and services received). 
-
-A credit balance is a negative amount; a debit balance is a positive amount
-
-The program displays a menu and allows the credit manager to enter one of three
-options to obtain credit information. Option 1 produces a list of accounts with zero balances. Option 2 produces a list of accounts with credit balances. Option 3 produces a list of accounts with debit balances. Option 4 terminates program execution. A sample output is shown in Fig. 11.8.
-
-	Enter request
-	 1 - List accounts with zero balances
-	 2 - List accounts with credit balances
-	 3 - List accounts with debit balances
-	 4 - End of run
-	? 1
-
-	Accounts with zero balances:
-	300 White 0.00
-	? 2
-	Accounts with credit balances:
-	400 Stone -42.16
-	? 3
-	Accounts with debit balances:
-	100 Jones 24.98
-	200 Doe 345.67
-	500 Rich 224.62
-	? 4
-	End of run.
-
-Data in this type of sequential file cannot be modified without the risk of destroying
-other data. For example, if the name “White” needs to be changed to “Worthington,” the
-old name cannot simply be overwritten. The record for White was written to the file as
-If the record is rewritten beginning at the same location in the file using the new name,
-the record will be
-
-The new record is larger (has more characters) than the original record. The characters beyondthe second “o” in “Worthington” will overwrite the beginning of the next sequential record in the file. The problem here is that in the formatted input/output model using fprintf and fscanf, fields—and hence records—can vary in size. For example, the values 7, 14, –117, 2074 and 27383 are all ints stored in the same number of bytes internally, but they’re different-sized fields when displayed on the screen or written to a file as text.
-
-Therefore, sequential access with fprintf and fscanf is not usually used to update
-records in place. Instead, the entire file is usually rewritten. To make the preceding name
-change, the records before 300 White 0.00 in such a sequential-access file would be copied to a new file, the new record would be written and the records after 300 White 0.00 would be copied to the new file. ***This requires processing every record in the file to update one record.*** 
 
 
 ### Example Program: Average of numbers
