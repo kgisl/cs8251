@@ -1,9 +1,9 @@
 
 # UNIT V FILE PROCESSING  
+*Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
+
 
 [TOC]
-
-*Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
 ### Online References attribution
 
@@ -14,7 +14,7 @@
 [2]: http://iiti.ac.in/people/~tanimad/FileHandlinginCLanguage.pdf 
 
 
-### Pre-lecture exercise - a "Show and Tell" exercise
+### Pre-Unit exercise - a "Show and Tell" exercise
 
 1. Create your own paper document by writing a few numbers 
 and words in 3-4 lines. Do not use cursive writing, instead 
@@ -39,39 +39,24 @@ to the image below:
 
 ![ocr](https://cdn.rawgit.com/kgashok/filesOCR/1d2f5c87/directoryImage.png)
 
-### Post lecture exercise
+### Post-Unit exercise
+- Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
 - Try and understand Kilo project - https://github.com/kgisl/kilo
    - [writing](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L705) to file 
    - [reading](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L674) to file
    - Implement a `<Ctrl-O>` option that loads in a new file into the editor
-- Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
 ## Key Terms
 
-### Binary file 
-Binary file is a collection of bytes or a character stream. The data that is written into and read from binary file remain unchanged, with no separation between lines and no use of end-of-line characters and the interpretation of the file is left to the programmer.
-
-### Text file 
-A text file is a stream of characters that can be processed sequentially and logically in the forward direction. The maximum number of characters in each line is limited to 255 characters. 
-
-### Record 
-A record consist of a collection of data fields that conforms  to a previously defi ned structure that can be stored on or retrieved from a file.
-
-### Sequential file access 
-In case of sequential fi le access, data is read from or written to a file in a sequential manner while the position indicator automatically gets adjusted by the stream I/O functions. 
-
-### Random file access 
-Random access means reading from or writing to any position in a fi le without reading or writing all the preceding data by controlling the `position indicator`
-
-### Stream 
-The stream is a common, logical interface to the various devices that comprise the computer and is a logical interface to a file. Although files differ in form and capabilities, all streams are the same.
-
-### File management 
-It basically means all operations related to creating, renaming, deleting, merging, reading, writing, etc. of any type of files.
-
-### Path 
-The path specifies the drive and/or directory (or folder) where the file is located. On PCs, the backslash character is used to separate directory names in a path. Some systems like Unix use the forward slash (/) as the directory separator. 
+- **Binary file** : Binary file is a collection of bytes or a character stream. The data that is written into and read from binary file remain unchanged, with no separation between lines and no use of end-of-line characters and the interpretation of the file is left to the programmer.
+- **Text file** :  A text file is a stream of characters that can be processed sequentially and logically in the forward direction. The maximum number of characters in each line is limited to 255 characters. 
+- **Sequential file access**: In case of sequential file access, data is read from or written to a file in a sequential manner while the `position indicator` automatically gets adjusted by the stream I/O functions. 
+- **Random file access**:  Random access means reading from or writing to any position in a file without reading or writing all the preceding data by controlling the `position indicator`
+- **Record**:  A record consist of a collection of data fields that conforms  to a previously defined structure that can be stored on or retrieved from a file.
+- **Stream**:  The stream is a common, logical interface to the various devices that comprise the computer and is a logical interface to a file. Although files differ in form and capabilities, all streams are the same.
+- **File management**:  It basically means all operations related to creating, renaming, deleting, merging, reading, writing, etc. of any type of files.
+- **Path**: The path specifies the drive and/or directory (or folder) where the file is located. On PCs, the backslash character is used to separate directory names in a path. Some systems like Unix use the forward slash (/) as the directory separator. 
 
 
 ## File Handling in C Language - Quick Reference
@@ -321,11 +306,11 @@ In the next several sections, we introduce the file-processing equivalents of fu
 - There are two types of files - text and binary files 
 - There are two techniques for processing files - sequential and random
 
-Every open file has an associated file position indicator, which describes where read and write operations take place in the file. The position is always specified in bytes from the beginning of the file. When a new file is opened, the position indicator is always at the beginning of the file, i.e., at position 0.
+Every open file has an associated `file position indicator`, which describes where read and write operations take place in the file. The position is always specified in bytes from the beginning of the file. When a new file is opened, the position indicator is always at the beginning of the file, i.e., at `position 0`.
 
-Writing and reading operations occur at the location of the position indicator and update the position indicator as well. Thus, if one wishes to read all the data in a file sequentially or write data to a file sequentially, it is not necessary to be concerned about the position indicator because the stream I/O functions take care of it automatically.
- 
-When more control is required, the C library functions that help determine and change the value of the file position indicator, have to be used. By controlling the position indicator, random access of a file can be made possible. Here, random means that data can be read from, or written to, any position in a file without reading or writing all the preceding data.
+- Writing and reading operations occur at the location of the position indicator and update the position indicator as well. Thus, if one wishes to read all the data in a file sequentially or write data to a file sequentially, it is not necessary to be concerned about the `position indicator` because the stream I/O functions take care of it automatically.
+
+- When more control is required, the C library functions that help determine and change the value of the `file position indicator`, have to be used. By controlling the position indicator, random access of a file can be made possible. Here, random means that data can be read from, or written to, any position in a file without reading or writing all the preceding data.
 
 ## Creating a Sequential Access file
 
@@ -334,8 +319,11 @@ C imposes no structure on a file. Thus, notions such as a record of a file do no
 ![sequential](http://j.mp/seqFile)
 
 Figure 11.2 creates a simple sequential-access file that might be used in an accounts
-receivable system to keep track of the amounts owed by a company’s credit clients. For
-each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a “record” for that client. The **account number** is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in account number order. In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. 
+receivable system to keep track of the amounts owed by a company’s credit clients. 
+
+- For each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a **“record”** for that client. 
+- The **account number** is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in account number order. 
+- In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. 
 
 ```c
 // Fig. 11.2: fig11_02.c
@@ -369,8 +357,9 @@ int main(void) {
     fclose(cfPtr);  // fclose closes file
   }                 // end else
 }  // end main
-
 ```
+
+**OUTPUT**
 
 	Enter the account, name, and balance.
 	Enter EOF to end input.
@@ -381,15 +370,15 @@ int main(void) {
 	? 500 Rich 224.62
 	? ^D (or ^Z)
 
-Now let’s examine this program. Line 11 states that `cfPtr` is a pointer to a FILE structure. A C program administers each file with a separate FILE structure. You need not know the specifics of the FILE structure to use files, but you can study the declaration in **stdio.h** if you like. We’ll soon see precisely how the FILE structure leads indirectly to the operating system’s file control block (FCB) for a file.
+Now let’s examine this program. Line 11 states that `cfPtr` is a pointer to a FILE structure. A C program administers each file with a separate FILE structure. 
 
 Each open file must have a separately declared pointer of type FILE that’s used to refer
-to the file. Line 14 names the file—"clients.dat"—to be used by the program and establishes a “line of communication” with the file. The file pointer cfPtr is assigned a pointer to the FILE structure for the file opened with fopen. Function fopen takes two arguments: a **filename** (which can include path information leading to the file’s location) and a **file open mode**. 
+to the file. Line 14 names the file— **"clients.dat"** —to be used by the program and establishes a “line of communication” with the file. The file pointer **cfPtr** is assigned a pointer to the FILE structure for the file opened with **fopen**. Function fopen takes two arguments: a **filename** (which can include path information leading to the file’s location) and a **file open mode**. 
 
 The file open mode "w" indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, fopen creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file. 
 
 The program prompts the user to enter the various fields for each record or to enter
-end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering end-of-file for various computer systems. 
+end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering **end-of-file** (**`EOF`**)for various computer systems. 
 
 	Operating system       Key combination
 	Linux/Mac OS X/UNIX    <Ctrl> d
@@ -398,7 +387,7 @@ end-of-file when data entry is complete. Figure 11.3 lists the key combinations 
 Line 24 uses function feof to determine whether the end-of-file indicator is set for
 the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
 Line 25 writes data to the file clients.dat. The data may be retrieved later by a program
-designed to read the file (see Section 11.4). Function fprintf is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which
+designed to read the file (see Section 11.4). Function **fprintf** is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which
 the data will be written. Function **fprintf** can output data to the standard output by
 using **stdout** as the file pointer, as in:
 
@@ -545,11 +534,11 @@ data, and delete data no longer needed.
 
 Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using 
 
-	fprintf( fPtr, "%d", number );
+	fprintf(fPtr, "%d", number);
 
 which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which requires 1 byte of storage) for a four-byte integer, we can use 
 
-	fwrite( &number, sizeof( int ), 1, fPtr );
+	fwrite(&number, sizeof(int), 1, fPtr);
 
 which always writes four bytes on a system with four-byte integers from a variable number to the file represented by `fPtr` (we’ll explain the `1` argument shortly). Later, **fread** can be used to read those four bytes into an integer variable number. Although fread and fwrite read and write data, such as integers, in fixed-size rather than variable-size format, the data they handle are processed in computer “raw data” format (i.e., bytes of data) rather than in **printf**’s and **scanf**’s human-readable text format. Because the “raw” representation of data is *system dependent*, “raw data” may not be readable on other systems, or by programs produced by other compilers or with other compiler options.
 
@@ -577,10 +566,8 @@ struct clientData {
 
 int main(void) {
   unsigned int i;  // counter used to count from 1-100
-
   // create clientData with default information
   struct clientData blankClient = {0, "", "", 0.0};
-
   FILE *cfPtr;  // credit.dat file pointer
 
   // fopen opens the file; exits if file cannot be opened
@@ -591,7 +578,7 @@ int main(void) {
     // output 100 blank records to file
     for (i = 1; i <= 100; ++i) {
       fwrite(&blankClient, sizeof(struct clientData), 1, cfPtr);
-    }  // end for
+    } 
 
     fclose(cfPtr);  // fclose closes the file
   }                 // end else
@@ -632,7 +619,7 @@ int main(void) {
     // require user to specify account number
     printf("%s",
            "Enter account number"
-           " ( 1 to 100, 0 to end input )\n? ");
+           "(1 to 100, 0 to end input)\n?");
     scanf("%d", &client.acctNum);
 
     // user enters information, which is copied into file
@@ -661,24 +648,31 @@ int main(void) {
 
 ```
 We position the file position pointer for the file referenced by cfPtr to the
-byte location calculated by `(client.accountNum - 1) * sizeof(struct clientData)`.
+byte location calculated by 
 
-The value of this expression is called the offset or the displacement. Because the account number is between 1 and 100 but the byte positions in the file start with 0, 1 is subtracted from the account number when calculating the byte location of the record. Thus, for record 1, the file position pointer is set to byte 0 of the file. The symbolic constant `SEEK_SET` indicates that the file position pointer is positioned relative to the beginning of the file by the amount of the offset. As the above statement indicates, a seek for account number `1` in the file sets the file position pointer to the beginning of the file because the byte location calculated is 0. Figure 11.13 illustrates the file pointer referring to a FILE structure in memory. The file position pointer in this diagram indicates that the next byte to be read or written is 5 bytes from the beginning of the file.
+	`(client.accountNum - 1) * sizeof(struct clientData)`.
+
+The value of this expression is called the offset or the displacement. Because the account number is between 1 and 100 but the byte positions in the file start with 0, 1 is subtracted from the account number when calculating the byte location of the record. Thus, for record 1, the file position pointer is set to byte 0 of the file. The symbolic constant `SEEK_SET` indicates that the file position pointer is positioned relative to the beginning of the file by the amount of the offset. As the above statement indicates, a seek for account number `1` in the file sets the file position pointer to the beginning of the file because the byte location calculated is 0. 
+
+	int fseek( FILE *stream, long int offset, int whence );
 
 The function prototype for **fseek** is where offset is the number of bytes to seek from whence in the file pointed to by stream—a positive offset seeks forward and a negative one seeks backward. Argument whence is one of the values `SEEK_SET`, `SEEK_CUR` or `SEEK_END` (all defined in `<stdio.h>`), which indicate the location from which the seek begins. 
 
-	SEEK_SET *indicates that the seek starts at the beginning of the file*; 
-	SEEK_CUR indicates that the seek starts at the current location in the file; and 
-	SEEK_END indicates that the seek starts at the end of the file. 
+	SEEK_SET - the seek starts at the beginning of the file 
+	SEEK_CUR - the seek starts at the current location in the file and 
+	SEEK_END - the seek starts at the end of the file 
 
-Function fscanf returns the number of data items successfully read or the value **EOF** if a problem occurs while reading data. Function **fseek** returns a nonzero value if the seek operation cannot be performed. Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
+#### Return values 
+ - Function fscanf returns the number of data items successfully read or the value **EOF** if a problem occurs while reading data. 
+ - Function **fseek** returns a nonzero value if the seek operation cannot be performed.
+ - Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
 
 ### Reading Random Access Data 
 
 Function **fread** reads a specified number of bytes from a file into memory. For example,
 
-`fread(&client, sizeof(struct clientData), 1, cfPtr);`
+	fread(&client, sizeof(struct clientData), 1, cfPtr);
 
 reads the number of bytes determined by `sizeof(struct clientData)` from the file referenced by **cfPtr**, stores the data in client and returns the number of bytes read. The bytes are read from the location specified by the file position pointer. Function `fread` can read several fixed-size array elements by providing a pointer to the array in which the elements will be stored and by indicating the number of elements to be read. The preceding statement reads one element. 
 
@@ -731,6 +725,8 @@ int main(void) {
 }  // end main
 
 ```
+
+**OUTPUT**
 
 	Acct Last Name First Name Balance
 	  29 Brown     Nancy      -24.54
@@ -872,9 +868,7 @@ void textFile(FILE *readPtr) {
 }  // end function textFile
 
 // update balance in record
-void updateRecord(FILE *fPtr)
-
-{
+void updateRecord(FILE *fPtr) {
   unsigned int account;  // account number
   double transaction;    // transaction amount
 
@@ -1013,7 +1007,7 @@ On many UNIX systems it’s possible to pass arguments to **`main`** from the co
 	> `mycopy input output`  
 
 - This command line indicates that file **input** is to be copied to file **output**. When the program is executed, if **argc** is not 3 (**mycopy** counts as one of the arguments), the program prints an error message and terminates. Otherwise, array **argv** contains the strings "mycopy", "input" and "output".   
-- The second and third arguments on the command line are used as file names by the program. The files are opened using function **fopen**. If both files are opened successfully, characters are read from file **input** and written to file **output** until the end-of-file indicator for file input is set.   
+- The second and third arguments on the command line are used as file names by the program. The files are opened using function **fopen**. If both files are opened successfully, characters are read from file **input** and written to file **output** until the **end-of-file indicator** for file input is set.   
 - Then the program terminates. The result is an exact copy of file input (if no errors occur during processing).  
 
 ### Program 5.3
@@ -1056,6 +1050,94 @@ int main(int argc, char *argv[]) {
 }  // end main
  
 ```
+
+## FAQ 
+
+**1. What is file?**
+ A file is a collection of bytes stored on a secondary storage device, which
+is generally a disk of some kind. It is identifi ed by a name, which is given
+at the time of its creation. It may be amended, moved from one storage
+device to another or removed completely when desired.
+**2. What is a stream?**
+In C, the stream is a common, logical interface to the various devices
+that form the computer. When the program executes, each stream is
+tied together to a specifi c device that is source or destination of data.
+The stream provides a consistent interface and to the programmer one
+hardware device will look much like another. In its most common form,
+a stream is a logical interface to a fi le. Stream I/O uses some temporary
+storage area, called buffer, for reading from or writing data to a fi le.
+A stream is linked to a fi le by using an open operation. A stream is
+disassociated from a fi le using a close operation.
+ The C language provides three “standard” streams that are always
+available to a C program. These are
+
+		Name   Description      Example
+		stdin  Standard Input   Keyboard
+		stdout Standard Output  Screen
+		stderr Standard Error   Screen
+
+**3. What is buffer? What’s its purpose?**
+Buffer is a temporary storage area that holds data while they are being
+transferred to and from memory. Buffering is a scheme that prevents
+excessive access to a physical I/O device like a disk or a terminal. Its
+purpose is to synchronize the physical devices that the program needs. 
+The buffer collects output data until there are enough to write effi ciently.
+The buffering activities are taken care of by software called device
+drivers or access methods provided by the operating system.
+**4. Why have buffers?**
+ It speeds up input/output which can be a major bottleneck in execution
+times. That is, it is less time-consuming to transmit several characters
+as a block than to send them one by one.
+**5. What is **FILE**?**
+FILE is a structure declared in stdio.h. The members of the
+FILE structure are used by the program in the various fi le access
+operations. For each fi le that is to be opened, a pointer to type FILE
+must be declared. When the function fopen() is called, that function
+creates an instance of the FILE structure and returns a pointer to that
+structure. This pointer is used in all subsequent operations on the fi le.
+But programmers don’t need to be concerned about the members of the
+structure FILE.
+Because one may use a number of different files in the program,
+he or she must specify when reading or writing which fi le one wishes
+to use. This is accomplished by using a variable called a file pointer, a
+pointer variable that points to a structure FILE.
+**6. How many files can I open at once?**
+ The number of fi les that can be opened at once will be determined by
+the value of the constant FOPEN_MAX that is defined in `<stdio.h>`.
+`FOPEN_MAX` is an integer that specifies the maximum number of streams
+that can be open at one time. The C language standard requires that
+the value of `FOPEN_MAX` be at least 8, including the standard streams 
+stdin, stdout and stderr. Thus, as a minimum, it’s possible to
+work with up to 5 fi les simultaneously.
+
+
+## Bonus Material
+
+
+The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
+
+```c
+#include <stdio.h>
+int main() {
+  FILE* fp;
+  int n[5], i;
+  if ((fp = fopen("num.dat", "w")) != NULL) {
+    puts("Enter 5 numbers, to be stored in num.dat...");
+    for (i = 0; i < 5; i++) {
+      scanf("%d", &n[i]);
+      fprintf(fp, "%d\n", n[i]);
+    }
+    fprintf(fp, "%d", 9999);
+    fclose(fp);
+  } else
+    printf("Unable to open num.dat...\n");
+}
+```
+ 
+**Output:**
+
+	Enter 5 numbers, to be stored in num.dat ... 1 2 3 4 5
+
 
 
 ## Modular Versions
@@ -1146,98 +1228,6 @@ int main() {
   }
 }
 ```
-
-
-
-
-
-## FAQ 
-
-**1. What is file?**
- A file is a collection of bytes stored on a secondary storage device, which
-is generally a disk of some kind. It is identifi ed by a name, which is given
-at the time of its creation. It may be amended, moved from one storage
-device to another or removed completely when desired.
-**2. What is a stream?**
-In C, the stream is a common, logical interface to the various devices
-that form the computer. When the program executes, each stream is
-tied together to a specifi c device that is source or destination of data.
-The stream provides a consistent interface and to the programmer one
-hardware device will look much like another. In its most common form,
-a stream is a logical interface to a fi le. Stream I/O uses some temporary
-storage area, called buffer, for reading from or writing data to a fi le.
-A stream is linked to a fi le by using an open operation. A stream is
-disassociated from a fi le using a close operation.
- The C language provides three “standard” streams that are always
-available to a C program. These are
-
-		Name   Description      Example
-		stdin  Standard Input   Keyboard
-		stdout Standard Output  Screen
-		stderr Standard Error   Screen
-
-**3. What is buffer? What’s its purpose?**
-Buffer is a temporary storage area that holds data while they are being
-transferred to and from memory. Buffering is a scheme that prevents
-excessive access to a physical I/O device like a disk or a terminal. Its
-purpose is to synchronize the physical devices that the program needs. 
-The buffer collects output data until there are enough to write effi ciently.
-The buffering activities are taken care of by software called device
-drivers or access methods provided by the operating system.
-**4. Why have buffers?**
- It speeds up input/output which can be a major bottleneck in execution
-times. That is, it is less time-consuming to transmit several characters
-as a block than to send them one by one.
-**5. What is **FILE**?**
-FILE is a structure declared in stdio.h. The members of the
-FILE structure are used by the program in the various fi le access
-operations. For each fi le that is to be opened, a pointer to type FILE
-must be declared. When the function fopen() is called, that function
-creates an instance of the FILE structure and returns a pointer to that
-structure. This pointer is used in all subsequent operations on the fi le.
-But programmers don’t need to be concerned about the members of the
-structure FILE.
-Because one may use a number of different files in the program,
-he or she must specify when reading or writing which fi le one wishes
-to use. This is accomplished by using a variable called a file pointer, a
-pointer variable that points to a structure FILE.
-**6. How many files can I open at once?**
- The number of fi les that can be opened at once will be determined by
-the value of the constant FOPEN_MAX that is defined in `<stdio.h>`.
-`FOPEN_MAX` is an integer that specifies the maximum number of streams
-that can be open at one time. The C language standard requires that
-the value of `FOPEN_MAX` be at least 8, including the standard streams 
-stdin, stdout and stderr. Thus, as a minimum, it’s possible to
-work with up to 5 fi les simultaneously.
-
-
-## Bonus Material
-
-
-The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
-
-```c
-#include <stdio.h>
-int main() {
-  FILE* fp;
-  int n[5], i;
-  if ((fp = fopen("num.dat", "w")) != NULL) {
-    puts("Enter 5 numbers, to be stored in num.dat...");
-    for (i = 0; i < 5; i++) {
-      scanf("%d", &n[i]);
-      fprintf(fp, "%d\n", n[i]);
-    }
-    fprintf(fp, "%d", 9999);
-    fclose(fp);
-  } else
-    printf("Unable to open num.dat...\n");
-}
-```
- 
-**Output:**
-
-	Enter 5 numbers, to be stored in num.dat ... 1 2 3 4 5
-
 
 
 ### Credit Inquiry Program
