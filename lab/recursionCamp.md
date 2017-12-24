@@ -207,7 +207,7 @@ int main () {
 ```
 
 ### Recursive Palindrome 
-####http://j.mp/palindromeRecKG
+#### http://j.mp/palindromeRecKG
 
 ```c
 #include <stdio.h> 
