@@ -40,7 +40,7 @@
     - b. Capitalize the first word of each sentence.
     - c. Replace a given word with another word.
 
-12. Solve towers of Hanoi using recursion.
+12. Solve [towers of Hanoi][1] using recursion. Also see http://j.mp/rTutorial for Recursion Camp on CC. 
 
 13. Sort the list of numbers using pass by reference.
 
@@ -66,3 +66,7 @@ BONUS
 19. https://github.com/kgisl/kilo  - simple text editor in < 1000 lines of C code
 
 **TOTAL: 60 PERIODS**
+
+
+[1]: http://j.mp/towerOfHanoiCC 
+[2]: http://rTutorial 
