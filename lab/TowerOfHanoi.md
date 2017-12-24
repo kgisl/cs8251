@@ -2,6 +2,10 @@
 
 # Tower of Hanoi
 
+## CloudCoder link 
+http://j.mp/towerOfHanoiCC 
+
+
 The puzzle was invented by the French mathematician Édouard Lucas in 1883. There is a story about an Indian temple in Kashi Vishwanath which contains a large room with three time-worn posts in it, surrounded by 64 golden disks. Brahmin priests, acting out the command of an ancient prophecy, have been moving these disks in accordance with the immutable rules of Brahma since that time. The puzzle is therefore also known as the **Tower of Brahma** puzzle. According to the legend, when the last move of the puzzle is completed, the world will end.
 
 ```c
