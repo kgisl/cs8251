@@ -53,8 +53,8 @@ int main() {
 
 ### Diagrammatic representation
 
-https://en.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Towers_of_Hanoi
-
+- https://en.wikibooks.org/wiki/Data_Structures/Stacks_and_Queues#Towers_of_Hanoi
+- http://interactivepython.org/runestone/static/pythonds/Recursion/TowerofHanoi.html
 
 ### Visualize it! 
 
