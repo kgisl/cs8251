@@ -17,7 +17,7 @@ void TowersOfHanoi(int n, char* from, char* to, char* temp)
     if(n > 0)
     {
         TowersOfHanoi(n-1, from, temp, to);   //recursion
-				moveDisk(from, to); 
+        moveDisk(from, to); 
         //Move n-1 disks from temp to the destination
         TowersOfHanoi(n-1, temp, to, from);   //recursion
     }
