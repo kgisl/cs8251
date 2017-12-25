@@ -19,4 +19,4 @@ The *essential* difference between a **pointer** and **array** is
 
 ### Solution key for Pointer Walk
 
-![key](http://j.mp/pointerArrayCompare)
+http://j.mp/pointerArrayCompare 
