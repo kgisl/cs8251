@@ -16,3 +16,7 @@ The *essential* difference between a **pointer** and **array** is
 ## Array of Pointers
 
 ![image4](https://files.gitter.im/cs8251/Lobby/Qcdi/Screenshot-2017-12-11-at-09.05.49.png)
+
+### Solution key for Pointer Walk
+
+![key](http://j.mp/pointerArrayCompare)
