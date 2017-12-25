@@ -3,6 +3,7 @@
 
 - http://j.mp/pointerWalkVideo will demonstrate the pointer and how it is used to operate on an array. 
 - Try out the problem on CC at http://j.mp/pointerWalk to practice this yourself.
+- Write your own `strlen` function using pointers at http://j.mp/strlenCC 
 
 The *essential* difference between a **pointer** and **array** is 
  
