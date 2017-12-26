@@ -15,7 +15,10 @@ Write your own C function that behaves like the built-in `C` function `strlen`.
 
 ## Example 
 
-`mystrlen({'a', 'b', '\0'} == 2 ` 
-`mystrlen({'a', 'b', '@'} == -1 ` 
-`mystrlen({'a', 'b', 'c', '\0'} == 3 ` 
+`mystrlen({'a', 'b', '\0'} == 2 `     
+`mystrlen({'a', 'b', '@'} == -1 `    
+`mystrlen({'a', 'b', 'c', '\0'} == 3 `    
+
+
+
 
