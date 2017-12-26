@@ -1,5 +1,5 @@
 
-## Write your own strlen function
+## Write your own `strlen` function
 
 http://en.cppreference.com/w/c/string/byte/strlen
 
