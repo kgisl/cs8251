@@ -9,6 +9,7 @@
 
 - Understand [file functions][1] 
 - Quick reference on [file handling][2]
+- All about [EOF](https://latedev.wordpress.com/2012/12/04/all-about-eof/) 
 
 [1]: https://www.go4expert.com/articles/understanding-c-file-handling-functions-t29966/
 [2]: http://iiti.ac.in/people/~tanimad/FileHandlinginCLanguage.pdf 
