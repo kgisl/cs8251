@@ -19,6 +19,7 @@ Write your own C function that behaves like the built-in `C` function `strlen`.
 `mystrlen({'a', 'b', '@'} == -1 `    
 `mystrlen({'a', 'b', 'c', '\0'} == 3 `    
 
+### Spoiler Alert 
 
-
+http://j.mp/mystrlenPNG
 
