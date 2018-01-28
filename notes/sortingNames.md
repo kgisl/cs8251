@@ -1,4 +1,16 @@
+
+[TOC]
+
+# Sorting
+
+This document presents two solutions for the sorting of strings. 
+
+  - The first solution uses a fixed sized array (of size `MAX_LEN = 100`). The array is filled up with 4 arbitrary strings ( in the `main` function which is a sample driver). Sorting is accomplished using `Selection Sort` (the pseudo code in Python is presented in [here](#selection-sort-pseudo-code) below. 
+
+  - The second solution uses an array of pointers which each point to a dynamically allocated array of characters. The sorting is done using `qsort` which comes standard as part of the C library
+
 ## Selection sort of strings (Unit 2)
+
 
 ```c
 #include <stdio.h> 
