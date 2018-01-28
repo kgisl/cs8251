@@ -7,41 +7,12 @@ This document presents two solutions for the sorting of strings.
 
   - The first solution uses a fixed sized array (of size `MAX_LEN = 100`). The array is filled up with 4 arbitrary strings ( in the `main` function which is a sample driver). Sorting is accomplished using `Selection Sort` (the pseudo code in Python is presented in [here](#selection-sort-pseudo-code) below. 
 
-A scaffold code might help get you started. 
-```c
-#include <stdio.h> 
-#include <string.h> 
-#define MAX_LEN 100
+  - The second solution uses an array of pointers which each point to a dynamically allocated array of characters. The sorting is done using `qsort` which comes standard as part of the C library
 
-void selection_sort(char strings[][MAX_LEN], int size){
-    return;
-}
-
-int main () { 
-    char strings[10][MAX_LEN]; 
-    int i = 0;
-    int c = 0;
-    //Read the strings into the array #1
-    while((c=scanf("%s", strings[i])) != -1) {
-        //printf("%s ", strings[i++]);
-        //strings[i][strlen(strings[i])] = '\0';
-        i++;
-    }
-    // The most important part #3
-    // How to sort them?
-    selection_sort(strings, i);
-
-    //Print the strings from the array #2
-    while (i>0)
-    //for (int j = 0; j <i; j++)
-        printf("%s ", strings[--i]);
-    
-    //sliming effort! 
-    //printf("alpha beta omega phi zeta");
-}
-```
 
 ## Selection sort of strings (Unit 2)
+
+Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) before looking below.
 
 
 ```c
@@ -95,8 +66,6 @@ int main(){
 }
 ```
 ## Array of Pointers (Unit 3)
-
-  - The second solution uses an array of pointers which each point to a dynamically allocated array of characters. The sorting is done using `qsort` which comes standard as part of the C library
 
 
 ```c
@@ -155,4 +124,40 @@ def selectionsort(alist):
             alist[i] = alist[index_of_smallest]
             alist[index_of_smallest] = temp        
     return alist
+```
+
+
+### Scaffold Code for #1 
+A scaffold code might help get you started. 
+```c
+#include <stdio.h> 
+#include <string.h> 
+#define MAX_LEN 100
+
+void selection_sort(char strings[][MAX_LEN], int size){
+    return;
+}
+
+int main () { 
+    char strings[10][MAX_LEN]; 
+    int i = 0;
+    int c = 0;
+    //Read the strings into the array #1
+    while((c=scanf("%s", strings[i])) != -1) {
+        //printf("%s ", strings[i++]);
+        //strings[i][strlen(strings[i])] = '\0';
+        i++;
+    }
+    // The most important part #3
+    // How to sort them?
+    selection_sort(strings, i);
+
+    //Print the strings from the array #2
+    while (i>0)
+    //for (int j = 0; j <i; j++)
+        printf("%s ", strings[--i]);
+    
+    //sliming effort! 
+    //printf("alpha beta omega phi zeta");
+}
 ```
