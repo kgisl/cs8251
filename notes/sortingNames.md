@@ -12,7 +12,7 @@
 //   - STEP 1 select the index of the minimum out of the sub-array
 //   - STEP 2 swap the value with a pre-determined location 
 //   - do it for the entire list of numbers 
-void selectionSort(char arr[][MAX_LEN], int n)
+void selection_sort(char arr[][MAX_LEN], int n)
 {
     int i, j, min_idx;
     char minStr[MAX_LEN];
@@ -43,7 +43,7 @@ void selectionSort(char arr[][MAX_LEN], int n)
 int main(){
     char names[100][MAX_LEN] = {"beta", "alpha", "zeta", "omega"};
     int count = 4;
-    selectionSort(names, count);
+    selection_sort(names, count);
     printf("\nSorted array is\n");
     for (int i = 0; i < count; i++)
         printf("%s ", names[i]);
@@ -87,8 +87,8 @@ int main () {
 ```
 
 ## CloudCoder link
-http://j.mp/selectionSortCC (pseudo code)
-http://j.mp/sortLikeUnix
+- http://j.mp/selectionSortCC (pseudo code)  
+- http://j.mp/sortLikeUnix
 
 ### Selection Sort Pseudo code
 
