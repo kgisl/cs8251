@@ -162,9 +162,15 @@ int main () {
 }
 ```
 
-### Final Solution 
+### Final Solution - #1
 
 ![final](http://j.mp/finalSolutionUnixSort)
+
+
+### Final Solution - #2 
+![final2](http://j.mp/unixSortUsingArrayPointers1)
+
+![final3](http://j.mp/unixSortUsingArrayPointers2)
 
 ### Video key 
 
