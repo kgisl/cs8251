@@ -77,7 +77,7 @@ int main () {
 
 ### Final Solution - #1
 
-Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) before looking below.
+Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) elsewhere looking below.
 
 ![final](http://j.mp/finalSolutionUnixSort)
 
