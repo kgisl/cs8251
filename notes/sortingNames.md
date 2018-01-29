@@ -161,3 +161,57 @@ int main () {
     //printf("alpha beta omega phi zeta");
 }
 ```
+
+### Final Solution 
+
+```c
+#include <stdio.h> 
+#include <string.h> 
+#define MAX_LEN 100
+
+void selection_sort(char strings[][MAX_LEN], int size){
+    
+    char minstr[MAX_LEN];
+    for(int i = 0; i < size-1; i++) {
+        int min_idx = i; 
+        strcpy(minstr, strings[i]); 
+        
+        for(int j = i+1; j < size; j++){
+           if(strcmp(minstr, strings[j]) > 0){
+               strcpy(minstr, strings[j]); 
+               min_idx = j;
+           } 
+        }
+        
+        if(min_idx != i) {
+            char temp[MAX_LEN]; 
+            strcpy(temp, strings[i]); 
+            strcpy(strings[i], strings[min_idx]); 
+            strcpy(strings[min_idx], temp); 
+        }
+    }
+}
+
+int main () { 
+    char strings[10][MAX_LEN]; 
+    int i = 0;
+    int c = 0;
+    //Read the strings into the array #1
+    while((c=scanf("%s", strings[i])) != -1) {
+        //printf("%s ", strings[i++]);
+        //strings[i][strlen(strings[i])] = '\0';
+        i++;
+    }
+    // The most important part #3
+    // How to sort them?
+    selection_sort(strings, i);
+
+    //Print the strings from the array #2
+    for(int j = 0; j < i; j++)
+        printf("%s ", strings[j]);
+    
+    //sliming effort! 
+    //printf("alpha beta omega phi zeta");
+}
+
+```
