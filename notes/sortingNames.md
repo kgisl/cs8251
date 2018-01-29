@@ -10,9 +10,88 @@ This document presents two solutions for the sorting of strings.
   - The second solution uses an array of pointers which each point to a dynamically allocated array of characters. The sorting is done using `qsort` which comes standard as part of the C library
 
 
-## Selection sort of strings (Unit 2)
+
+## Selection Sort Pseudo code
+
+
+
+```python
+def selectionsort(alist):
+    for i in range(len(alist)-1):
+        #form a sublist containing unsorted elements
+        sublist = alist[i:]
+        
+        #select the smallest value and find its index
+        smallest = min(sublist)
+        index_of_smallest = alist.index(smallest, i)
+        
+        #swap it with element at index 'i'
+        if index_of_smallest != i:
+            temp = alist[i]
+            alist[i] = alist[index_of_smallest]
+            alist[index_of_smallest] = temp        
+    return alist
+```
+
+
+### Scaffold Code for #1 
+A scaffold code might help get you started. 
+
+```c
+#include <stdio.h> 
+#include <string.h> 
+#define MAX_LEN 100
+
+void selection_sort(char strings[][MAX_LEN], int size){
+    return;
+}
+
+int main () { 
+    char strings[10][MAX_LEN]; 
+    int i = 0;
+    int c = 0;
+    //Read the strings into the array #1
+    while((c=scanf("%s", strings[i])) != -1) {
+        //printf("%s ", strings[i++]);
+        //strings[i][strlen(strings[i])] = '\0';
+        i++;
+    }
+    // The most important part #3
+    // How to sort them?
+    selection_sort(strings, i);
+
+    //Print the strings from the array #2
+    for (int j = 0; j <i; j++)
+	    printf("%s ", strings[--i]);
+    
+    //sliming effort! 
+    //printf("alpha beta omega phi zeta");
+}
+```
+
+
+## CloudCoder link
+- http://j.mp/selectionSortCC (pseudo code)  
+- http://j.mp/sortLikeUnix
+
+
+### Final Solution - #1
 
 Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) before looking below.
+
+![final](http://j.mp/finalSolutionUnixSort)
+
+
+### Final Solution - #2 
+![final2](http://j.mp/unixSortUsingArrayPointers1)
+
+![final3](http://j.mp/unixSortUsingArrayPointers2)
+
+### Video key 
+
+http://j.mp/unixSortCVideo
+
+## Selection sort of strings (Unit 2)
 
 
 ```c
@@ -65,7 +144,10 @@ int main(){
     return 0;
 }
 ```
-## Array of Pointers (Unit 3)
+
+
+
+## Array of Pointers (Unit 3, using qsort)
 
 
 ```c
@@ -101,77 +183,3 @@ int main () {
 }
 
 ```
-
-## CloudCoder link
-- http://j.mp/selectionSortCC (pseudo code)  
-- http://j.mp/sortLikeUnix
-
-### Selection Sort Pseudo code
-
-```python
-def selectionsort(alist):
-    for i in range(len(alist)-1):
-        #form a sublist containing unsorted elements
-        sublist = alist[i:]
-        
-        #select the smallest value and find its index
-        smallest = min(sublist)
-        index_of_smallest = alist.index(smallest, i)
-        
-        #swap it with element at index 'i'
-        if index_of_smallest != i:
-            temp = alist[i]
-            alist[i] = alist[index_of_smallest]
-            alist[index_of_smallest] = temp        
-    return alist
-```
-
-
-### Scaffold Code for #1 
-A scaffold code might help get you started. 
-```c
-#include <stdio.h> 
-#include <string.h> 
-#define MAX_LEN 100
-
-void selection_sort(char strings[][MAX_LEN], int size){
-    return;
-}
-
-int main () { 
-    char strings[10][MAX_LEN]; 
-    int i = 0;
-    int c = 0;
-    //Read the strings into the array #1
-    while((c=scanf("%s", strings[i])) != -1) {
-        //printf("%s ", strings[i++]);
-        //strings[i][strlen(strings[i])] = '\0';
-        i++;
-    }
-    // The most important part #3
-    // How to sort them?
-    selection_sort(strings, i);
-
-    //Print the strings from the array #2
-    while (i>0)
-    //for (int j = 0; j <i; j++)
-        printf("%s ", strings[--i]);
-    
-    //sliming effort! 
-    //printf("alpha beta omega phi zeta");
-}
-```
-
-### Final Solution - #1
-
-![final](http://j.mp/finalSolutionUnixSort)
-
-
-### Final Solution - #2 
-![final2](http://j.mp/unixSortUsingArrayPointers1)
-
-![final3](http://j.mp/unixSortUsingArrayPointers2)
-
-### Video key 
-
-http://j.mp/unixSortCVideo
