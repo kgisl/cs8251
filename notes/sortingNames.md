@@ -91,6 +91,8 @@ Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) elsewhere looking b
 
 http://j.mp/unixSortCVideo
 
+# Alternatives
+
 ## Selection sort of strings (Unit 2)
 
 
