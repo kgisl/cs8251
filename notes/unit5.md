@@ -1054,12 +1054,13 @@ int main(int argc, char *argv[]) {
 
 ## FAQ 
 
-**1. What is file?**
+**1. What is file?**  
  A file is a collection of bytes stored on a secondary storage device, which
 is generally a disk of some kind. It is identifi ed by a name, which is given
 at the time of its creation. It may be amended, moved from one storage
-device to another or removed completely when desired.
-**2. What is a stream?**
+device to another or removed completely when desired.  
+
+**2. What is a stream?**  
 In C, the stream is a common, logical interface to the various devices
 that form the computer. When the program executes, each stream is
 tied together to a specifi c device that is source or destination of data.
@@ -1069,7 +1070,7 @@ a stream is a logical interface to a fi le. Stream I/O uses some temporary
 storage area, called buffer, for reading from or writing data to a fi le.
 A stream is linked to a fi le by using an open operation. A stream is
 disassociated from a fi le using a close operation.
- The C language provides three “standard” streams that are always
+The C language provides three “standard” streams that are always
 available to a C program. These are
 
 		Name   Description      Example
@@ -1077,19 +1078,22 @@ available to a C program. These are
 		stdout Standard Output  Screen
 		stderr Standard Error   Screen
 
-**3. What is buffer? What’s its purpose?**
+
+**3. What is buffer? What’s its purpose?**  
 Buffer is a temporary storage area that holds data while they are being
 transferred to and from memory. Buffering is a scheme that prevents
 excessive access to a physical I/O device like a disk or a terminal. Its
 purpose is to synchronize the physical devices that the program needs. 
 The buffer collects output data until there are enough to write effi ciently.
 The buffering activities are taken care of by software called device
-drivers or access methods provided by the operating system.
-**4. Why have buffers?**
- It speeds up input/output which can be a major bottleneck in execution
+drivers or access methods provided by the operating system.  
+
+**4. Why have buffers?**  
+It speeds up input/output which can be a major bottleneck in execution
 times. That is, it is less time-consuming to transmit several characters
-as a block than to send them one by one.
-**5. What is **FILE**?**
+as a block than to send them one by one.  
+
+**5. What is **FILE**?**  
 FILE is a structure declared in stdio.h. The members of the
 FILE structure are used by the program in the various fi le access
 operations. For each fi le that is to be opened, a pointer to type FILE
@@ -1101,15 +1105,17 @@ structure FILE.
 Because one may use a number of different files in the program,
 he or she must specify when reading or writing which fi le one wishes
 to use. This is accomplished by using a variable called a file pointer, a
-pointer variable that points to a structure FILE.
-**6. How many files can I open at once?**
+pointer variable that points to a structure FILE.  
+
+**6. How many files can I open at once?**  
  The number of fi les that can be opened at once will be determined by
 the value of the constant FOPEN_MAX that is defined in `<stdio.h>`.
 `FOPEN_MAX` is an integer that specifies the maximum number of streams
 that can be open at one time. The C language standard requires that
 the value of `FOPEN_MAX` be at least 8, including the standard streams 
 stdin, stdout and stderr. Thus, as a minimum, it’s possible to
-work with up to 5 fi les simultaneously.
+work with up to 5 fi les simultaneously.  
+
 
 
 ## Bonus Material
