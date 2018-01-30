@@ -126,7 +126,7 @@ main() {
 
 	fclose(fp);
 	fp = fopen("one.txt", "r");
-	while( (ch = getchar()) != EOF)
+	while( (ch = getc(fp)) != EOF)
 		printf("%c", ch);
 	fclose(fp);
 }
