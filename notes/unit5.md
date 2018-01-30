@@ -1008,7 +1008,11 @@ On many UNIX systems, it is possible to pass arguments to **`main`** from the co
 It is possible to pass arguments to `C` programs when they are executed. The brackets which follow `main()` are used for this purpose. `argc` refers to the number of arguments passed, and `argv[]` is a pointer array which points to each argument which is passed to `main`. 
 
 ### Simple example 
-A simple example follows, which checks to see if a single argument is supplied on the command line when the program is invoked.
+A simple example follows, which checks to see if a single argument is supplied on the command line when the program is invoked. The program is called by the command line,
+
+	 myprog argument1
+
+The actual C code for the program is presented below: 
 
 ```c
 #include <stdio.h>
@@ -1025,10 +1029,7 @@ int main(int argc, char *argv[])
 }
 ```
 
-Note that `*argv[0]` is the name of the program invoked, which means that `*argv[1]` is a pointer to the first argument supplied, and `*argv[n]` is the last argument. If no arguments are supplied, `argc` will be one. Thus for `n` arguments, `argc` will be equal to `n + 1`. The program is called by the command line,
-
-	 myprog  argument1
-
+Note that `*argv[0]` is the name of the program invoked, which means that `*argv[1]` is a pointer to the first argument supplied, and `*argv[n]` is the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
 
 
 
