@@ -84,6 +84,11 @@ Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) elsewhere looking b
 
 
 ### Final Solution - #2 
+
+![sortpointers](http://j.mp/arrayPointerSort) 
+Instead of moving the strings around, we only move the pointer to the strings around within the array of pointers. 
+
+
 ![final2](http://j.mp/unixSortUsingArrayPointers1)
 
 ![final3](http://j.mp/unixSortUsingArrayPointers2)
