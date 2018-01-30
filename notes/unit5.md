@@ -154,8 +154,8 @@ void main(){
 	fclose(p);
 	do
 	{
-		fscanf(q,"%s %d", e.name, e.age);
-		printf("%s %d", e.name, e.age);
+	    fscanf(q,"%s %d", e.name, e.age);
+	    printf("%s %d", e.name, e.age);
 	} while(!feof(q));
 	getch();
 }
