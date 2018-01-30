@@ -118,7 +118,7 @@ In the above table we have discussed about various file I/O functions to perform
 main() {
 	FILE *fp;
 	char ch;
-	fp = **fopen** (" _one.txt_ ", " _w_ ");
+	fp = fopen ("one.txt", "w");
 	printf("Enter data");
 	while( (ch = getchar()) != EOF) {
 		putc(ch, fp);
@@ -126,7 +126,7 @@ main() {
 
 	fclose(fp);
 	fp = fopen("one.txt", "r");
-	while( (ch = getc()) != EOF)
+	while( (ch = getchar()) != EOF)
 		printf("%c", ch);
 	fclose(fp);
 }
@@ -177,8 +177,8 @@ A Binary file is similar to the text file, but it contains only large numerical 
 
 **fread()** and **fwrite()** functions are used to read and write is a binary file.
 
-```
-fwrite(data_element_to_be_written, size_of_element,number_of_elements, pointer_to_file);`
+```c
+fwrite(data_element_to_be_written, size_of_element,number_of_elements, pointer_to_file);
 ```
 
 **fread()** is also used in the same way, with the same arguments like fwrite() function. Below mentioned is a simple example of writing into a binary file
