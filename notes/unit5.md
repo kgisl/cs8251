@@ -1113,9 +1113,8 @@ the value of the constant FOPEN_MAX that is defined in `<stdio.h>`.
 `FOPEN_MAX` is an integer that specifies the maximum number of streams
 that can be open at one time. The C language standard requires that
 the value of `FOPEN_MAX` be at least 8, including the standard streams 
-stdin, stdout and stderr. Thus, as a minimum, it’s possible to
-work with up to 5 fi les simultaneously.  
-
+`stdin`, `stdout` and `stderr`. Thus, as a minimum, it’s possible to
+work with up to 5 files simultaneously.  
 
 
 ## Bonus Material
