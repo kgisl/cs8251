@@ -1035,6 +1035,7 @@ Note that `*argv[0]` is the name of the program invoked, which means that `*argv
 ### Program 5.3
 
 **Program 5.3** below copies a file into another file one character at a time. We assume that the executable file for the program is called **mycopy**. A typical command line for the **mycopy** program on a Linux/UNIX system is  
+
 	> `mycopy input output`  
 
 - This command line indicates that file **input** is to be copied to file **output**. When the program is executed, if **argc** is not 3 (**mycopy** counts as one of the arguments), the program prints an error message and terminates. Otherwise, array **argv** contains the strings "mycopy", "input" and "output".   
