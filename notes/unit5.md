@@ -998,20 +998,48 @@ unsigned int enterChoice(void) {
 
 ## Command line arguments
 
-On many UNIX systems it’s possible to pass arguments to **`main`** from the command line by including the parameters **`int argc`** and **`char *argv[]`** in the parameter list of **`main()`**. 
+On many UNIX systems, it is possible to pass arguments to **`main`** from the command line by including the parameters **`int argc`** and **`char *argv[]`** in the parameter list of **`main()`**. 
 
   - Parameter **`argc`** receives the number of command-line arguments
   - Parameter **`argv`** is an array of strings in which the actual command-line arguments are stored  
 
 - Common uses of command-line arguments include passing options to a program and passing filenames to a program.  
-- **Program 5.3** below copies a file into another file one character at a time. We assume that the executable file for the program is called **mycopy**. A typical command line for the **mycopy** program on a Linux/UNIX system is  
+
+It is possible to pass arguments to `C` programs when they are executed. The brackets which follow `main()` are used for this purpose. `argc` refers to the number of arguments passed, and `argv[]` is a pointer array which points to each argument which is passed to `main`. 
+
+### Simple example 
+A simple example follows, which checks to see if a single argument is supplied on the command line when the program is invoked.
+
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[]) 
+{
+  if(argc == 2)
+    printf("The argument supplied is %s\n", argv[1]);
+  else if(argc > 2)
+    printf("Too many arguments supplied.\n");
+  else
+    printf("One argument expected.\n");
+  return 0;
+}
+```
+
+Note that `*argv[0]` is the name of the program invoked, which means that `*argv[1]` is a pointer to the first argument supplied, and `*argv[n]` is the last argument. If no arguments are supplied, `argc` will be one. Thus for `n` arguments, `argc` will be equal to `n + 1`. The program is called by the command line,
+
+	 myprog  argument1
+
+
+
+
+### Program 5.3
+
+**Program 5.3** below copies a file into another file one character at a time. We assume that the executable file for the program is called **mycopy**. A typical command line for the **mycopy** program on a Linux/UNIX system is  
 	> `mycopy input output`  
 
 - This command line indicates that file **input** is to be copied to file **output**. When the program is executed, if **argc** is not 3 (**mycopy** counts as one of the arguments), the program prints an error message and terminates. Otherwise, array **argv** contains the strings "mycopy", "input" and "output".   
 - The second and third arguments on the command line are used as file names by the program. The files are opened using function **fopen**. If both files are opened successfully, characters are read from file **input** and written to file **output** until the **end-of-file indicator** for file input is set.   
 - Then the program terminates. The result is an exact copy of file input (if no errors occur during processing).  
-
-### Program 5.3
 
 ```
 // Using command-line arguments
