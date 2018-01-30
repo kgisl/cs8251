@@ -18,9 +18,10 @@ This eliminates the twin problems of complicated storage management and high ove
 
 The sorting process has three steps: 
 
->>read all the tokens of input 
->>sort them 
->>print them in order 
+>read all the tokens of input  
+>sort them  
+>print them in order  
+
 
 As usual, it's best to divide the program into functions that match this natural division, with the main routine controlling the other functions. Let us defer the sorting step for a moment, and concentrate on the data structure and the input and output. 
 
