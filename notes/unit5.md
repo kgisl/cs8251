@@ -387,7 +387,7 @@ end-of-file when data entry is complete. Figure 11.3 lists the key combinations 
 
 Line 24 uses function feof to determine whether the end-of-file indicator is set for
 the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
-Line 25 writes data to the file clients.dat. The data may be retrieved later by a program
+Line 25 writes data to the file `clients.dat`. The data may be retrieved later by a program
 designed to read the file (see Section 11.4). Function **fprintf** is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which
 the data will be written. Function **fprintf** can output data to the standard output by
 using **stdout** as the file pointer, as in:
