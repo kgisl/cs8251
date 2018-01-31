@@ -1283,24 +1283,24 @@ Write a program to calculate the average of first n numbers. This is the simples
 
 #include <stdio.h>
 int main(){
-	int n, i = 0, sum =0;
-	float avg = 0.0;
-	printf("\n Enter the value of n : ");
-	scanf("%d", &n);
-	do{
-		sum = sum + i;
-		i = i + 1;
-	} while(i<=n);
-	avg = (float)sum/n;
-	printf("\n The sum of first %d numbers = %d",n, sum);
-	printf("\n The average of first %d numbers = %.2f", n, avg);
-	return 0;
+    int n, i = 0, sum =0;
+    float avg = 0.0;
+    printf("\n Enter the value of n : ");
+    scanf("%d", &n);
+    do{
+        sum = sum + i;
+        i = i + 1;
+    } while(i<=n);
+    avg = (float)sum/n;
+    printf("\n The sum of first %d numbers = %d",n, sum);
+    printf("\n The average of first %d numbers = %.2f", n, avg);
+    return 0;
 }
 ```
 
 **Output**
 	
-	Enter the value of n : 20
-	The sum of first 20 numbers = 210
-	The average of first 20 numbers = 10.05
+    Enter the value of n : 20
+    The sum of first 20 numbers = 210
+    The average of first 20 numbers = 10.05
 
