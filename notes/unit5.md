@@ -1159,6 +1159,7 @@ creates an instance of the FILE structure and returns a pointer to that
 structure. This pointer is used in all subsequent operations on the fi le.
 But programmers don’t need to be concerned about the members of the
 structure FILE.
+
 Because one may use a number of different files in the program,
 he or she must specify when reading or writing which fi le one wishes
 to use. This is accomplished by using a variable called a file pointer, a
@@ -1172,6 +1173,10 @@ that can be open at one time. The C language standard requires that
 the value of `FOPEN_MAX` be at least 8, including the standard streams 
 `stdin`, `stdout` and `stderr`. Thus, as a minimum, it’s possible to
 work with up to 5 files simultaneously.  
+
+**7. What is the advantage of text files over binary files? **  
+Due to differences in binary data representations across platforms, files written in binary format often are not portable. For more portable file representations, consider using text files.
+
 
 
 ## Bonus Material
