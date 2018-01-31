@@ -300,7 +300,7 @@ By convention, the data in every text file obeys a number of rules:
 
 
 ### Files and Streams
-C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either
+C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either 
 with an `end-of-file (EOF)` marker or at a specific byte number recorded in a system-maintained,
 administrative data structure. When a file is opened, a stream is associated with it. Three
 files and their associated streams are automatically opened when program execution begins — the standard input, the standard output and the standard error. Streams provide
