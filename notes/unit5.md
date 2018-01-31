@@ -1113,9 +1113,9 @@ int main(int argc, char *argv[]) {
 
 **1. What is file?**  
  A file is a collection of bytes stored on a secondary storage device, which
-is generally a disk of some kind. It is identifi ed by a name, which is given
+is generally a disk of some kind. It is identified by a name, which is given
 at the time of its creation. It may be amended, moved from one storage
-device to another or removed completely when desired.  
+device to another or removed completely when desired. 
 
 **2. What is a stream?**  
 In C, the stream is a common, logical interface to the various devices
@@ -1141,7 +1141,7 @@ Buffer is a temporary storage area that holds data while they are being
 transferred to and from memory. Buffering is a scheme that prevents
 excessive access to a physical I/O device like a disk or a terminal. Its
 purpose is to synchronize the physical devices that the program needs. 
-The buffer collects output data until there are enough to write effi ciently.
+The buffer collects output data until there are enough to write efficiently.
 The buffering activities are taken care of by software called device
 drivers or access methods provided by the operating system.  
 
