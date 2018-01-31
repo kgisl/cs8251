@@ -1038,7 +1038,7 @@ It is possible to pass arguments to `C` programs when they are executed. The bra
 ### Simple example 
 A simple example follows, which checks to see if a single argument is supplied on the command line when the program is invoked. The program is called by the command line,
 
-	 myprog argument1
+	 > myprog argument1
 
 The actual C code for the program is presented below: 
 
