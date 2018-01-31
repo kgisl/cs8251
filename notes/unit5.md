@@ -229,29 +229,6 @@ if (bfp) {
 
 ----------
 
-
-**Table of Contents**
-
-* [UNIT V FILE PROCESSING](#unit-v-file-processing)  
-	* [Files](#files)  
-		* [Files and Streams](#files-and-streams)  
-		* [Types of file processing](#types-of-file-processing)  
-	* [Creating a Sequential Access file](#creating-a-sequential-access-file)  
-		* [Reading Sequential Access file](#reading-sequential-access-file)  
-		* [Read numbers from file and calculate Average](#read-numbers-from-file-and-calculate-average)  
-			* [Example Program: Average of numbers](#example-program-average-of-numbers)  
-			* [Example Program: Average of numbers read from a file](#example-program-average-of-numbers-read-from-a-file)  
-	* [Random access file](#random-access-file)  
-		* [Creating Random Access File](#creating-random-access-file)  
-		* [Writing Data](#writing-data)  
-		* [Reading Data](#reading-data)  
-		* [Transaction processing using random access files](#transaction-processing-using-random-access-files)  
-	* [Command line arguments](#command-line-arguments)  
-		* [Program 5.3](#program-53)  
-	* [Modular Versions](#modular-versions)  
-		* [read_from_stream_into_array(const char, FILE, int[])](#readfromstreamintoarrayconst-char-file-int)  
-		* [calculate\_sum(int[] arr, int size)](#calculate_sumint-arr-int-size)  
-
 ## Files
 
 **What are files?**  A file is sequential stream of bytes ending with an end-of-file marker.
