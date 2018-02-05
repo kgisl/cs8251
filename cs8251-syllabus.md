@@ -57,7 +57,7 @@ processing
 
 **TEXT BOOKS:**  
 [1.][10a] Reema Thareja, ―Programming in C‖, Oxford University Press, Second
-Edition, 2016.  
+Edition, 2016.  Online version with resources are [here](https://india.oup.com/orcs/9780199485529/)
 [2.][10] Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
 Edition, Pearson Education, 2006 [text version][11]  and solutions [online](http://clc-wiki.net/wiki/K%26R2_solutions)
 
