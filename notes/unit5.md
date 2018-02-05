@@ -1156,33 +1156,7 @@ Due to differences in binary data representations across platforms, files writte
 
 
 
-## Bonus Material
-
-
-The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
-
-```c
-#include <stdio.h>
-int main() {
-  FILE* fp;
-  int n[5], i;
-  if ((fp = fopen("num.dat", "w")) != NULL) {
-    puts("Enter 5 numbers, to be stored in num.dat...");
-    for (i = 0; i < 5; i++) {
-      scanf("%d", &n[i]);
-      fprintf(fp, "%d\n", n[i]);
-    }
-    fprintf(fp, "%d", 9999);
-    fclose(fp);
-  } else
-    printf("Unable to open num.dat...\n");
-}
-```
- 
-**Output:**
-
-	Enter 5 numbers, to be stored in num.dat ... 1 2 3 4 5
-
+## Bonus Material (related)
 
 
 ### Modular Versions
@@ -1303,4 +1277,32 @@ int main(){
     Enter the value of n : 20
     The sum of first 20 numbers = 210
     The average of first 20 numbers = 10.05
+
+
+### Using '9999' as EOF 
+
+The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
+
+```c
+#include <stdio.h>
+int main() {
+  FILE* fp;
+  int n[5], i;
+  if ((fp = fopen("num.dat", "w")) != NULL) {
+    puts("Enter 5 numbers, to be stored in num.dat...");
+    for (i = 0; i < 5; i++) {
+      scanf("%d", &n[i]);
+      fprintf(fp, "%d\n", n[i]);
+    }
+    fprintf(fp, "%d", 9999);
+    fclose(fp);
+  } else
+    printf("Unable to open num.dat...\n");
+}
+```
+ 
+**Output:**
+
+	Enter 5 numbers, to be stored in num.dat ... 1 2 3 4 5
+
 
