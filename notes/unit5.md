@@ -1306,3 +1306,391 @@ int main() {
 	Enter 5 numbers, to be stored in num.dat ... 1 2 3 4 5
 
 
+### solution.h
+
+```c
+#ifndef SOLUTION_INCLUDED
+#define SOLUTION_INCLUDED
+
+int   read_from_stream_into_array(const char*, FILE *f, int a[], int size); 
+int   write_to_stream_from_array(const char*, FILE *f, int a[], int size);
+float calculate_sum(int arr[], int size);
+
+int   filesize(FILE* fp);
+int   filecopy(FILE* source, FILE* dest);
+int   fileappend(FILE* source, FILE* dest);
+int   fileprint(FILE* fp);
+
+void hello(void);
+#endif
+```
+
+### solution.c 
+
+```c
+
+#include <stdio.h>
+#include "solution.h"
+
+int filesize(FILE* fp)
+{
+    fseek(fp, 0, SEEK_SET);
+
+    int count = 0;
+    if (fp) {
+        while (fgetc(fp) && !feof(fp) && ++count)
+            ;
+
+        rewind(fp);
+        return count;
+    }
+    return -1;
+}
+
+int filecopy(FILE* source, FILE* dest)
+{
+    int count = 0;
+    char c;
+    if (source != 0 && dest != 0) {
+        while ((c = fgetc(source)) && !feof(source) && ++count)
+            fputc(c, dest);
+
+        rewind(source);
+        rewind(dest);
+        return count;
+    }
+    return -1;
+}
+
+int fileappend(FILE* source, FILE* dest)
+{
+    int res = fseek(dest, 0, SEEK_END);
+
+    int count = 0;
+    if (!res) {
+        count = filecopy(source, dest);
+        return count;
+    }
+    return -1;
+}
+
+int fileprint(FILE* fp)
+{
+    int res = fseek(fp, 0, SEEK_SET);
+
+    int count = 0;
+    char c;
+    if (!res) {
+        while ((c = fgetc(fp)) && !feof(fp) && ++count)
+            putc(c, stdout);
+        return count;
+    }
+    return -1;
+}
+
+
+// can also be easily extended and modified
+// will come handy for next refactoring
+//
+int read_from_stream_into_array(
+    const char* fname, // to use in logging if there is an error
+    FILE* fp, // can also be assigned to stdin
+    int array[], // array to be filled with values
+    int size // will decide max num of entries to read
+    )
+{
+    int counter = 0;
+    if (fp != NULL) {
+        printf("Reading numbers from %s\n", fname);
+        while (!feof(fp) && counter < size) {
+            fscanf(fp, "%d ", &array[counter]);
+            printf("%d %d\n", counter, array[counter]);
+            counter++;
+        }
+    }
+    else
+        printf("Invalid file pointer for file:%s!", fname);
+
+    return counter;
+}
+
+int write_to_stream_from_array(
+    const char* fname,
+    FILE* fp,
+    int array[],
+    int size)
+{
+    int index = 0;
+    if (fp != NULL) {
+        while (index < size) {
+            fprintf(fp, "%d\n", array[index]);
+            index++;
+        }
+    }
+    else
+        printf("Invalid file pointer for file:%s!", fname);
+
+    return index;
+}
+
+
+// Calculate the sum but pays attention to only
+// the number of entries made into the array
+//
+float calculate_sum(int arr[], int size)
+{
+    float sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum = sum + arr[i];
+    }
+    printf("Sum: %f\n", sum);
+    return sum;
+}
+
+// Legacy, ignore!
+//
+void hello(void)
+{
+
+    puts("Hello, World!");
+}
+
+```
+
+### solution.tests.cpp 
+
+
+```c
+
+#include <gtest/gtest.h>
+
+extern "C" {
+#include "solution.h"
+#include "_utils.h"
+}
+
+using namespace ::testing;
+
+
+TEST(FileTest, read_from_two_files_and_merge_to_third_file)
+{
+    FILE *fp1, *fp2, *fp3;
+    fp1 = fopen("first.txt", "r");
+    fp2 = fopen("second.txt", "r");
+    fp3 = fopen("file3.txt", "w+");
+
+    filecopy(fp1, fp3);
+    fileappend(fp2, fp3);
+
+    // how do you know it worked?
+    int size1, size2, size3;
+    size1 = filesize(fp1);
+    size2 = filesize(fp2);
+    size3 = filesize(fp3);
+    ASSERT_EQ(size1 + size2, size3); // validation count-wise
+
+    // validate it visually as well!
+    fileprint(fp3);
+}
+
+TEST(FileTest, read_from_stdin_and_append_to_existing_file)
+{
+    // normally not required
+    redirect("num.txt", stdin, "r");
+
+    FILE* fp1 = fopen("file2.txt", "w+");
+    int before = filesize(fp1);
+    fileappend(stdin, fp1); // contents from stdin >> file2
+    int after = filesize(fp1);
+    fclose(fp1);
+
+    printf("before %d , after %d\n", before, after);
+}
+
+TEST(FileTest, file_append)
+{
+    FILE *fp1, *fp2;
+    fp1 = fopen("file1.txt", "r");
+    fp2 = fopen("file2.txt", "w+");
+
+    int count = filesize(fp1);
+    int count2 = 0;
+    if (fp1 != 0 && fp2 != 0) {
+        filecopy(fp1, fp2);
+        fileappend(fp1, fp2);
+        count2 = filesize(fp2);
+        ASSERT_EQ(count * 2, count2);
+    }
+    else
+        ASSERT_FALSE(false);
+}
+
+TEST(FileTest, file_copy)
+{
+    FILE *fp1, *fp2;
+    fp1 = fopen("file1.txt", "r");
+    fp2 = fopen("file2.txt", "w+");
+
+    int count = filesize(fp1);
+    int count2 = 0;
+    if (fp1 != 0 && fp2 != 0) {
+        filecopy(fp1, fp2);
+        count2 = filesize(fp2);
+        ASSERT_EQ(count, count2);
+        fclose(fp1);
+        fclose(fp2);
+    }
+    else {
+        ASSERT_FALSE(false);
+    }
+
+    fp1 = fopen("num.txt", "r");
+    count = filesize(fp1);
+    fclose(fp1);
+
+    redirect("num.txt", stdin, "r");
+    fp2 = fopen("file2.txt", "w+");
+    filecopy(stdin, fp2);
+    count2 = filesize(fp2);
+
+    ASSERT_EQ(count, count2);
+    fclose(fp2);
+}
+
+
+
+TEST(FileTest, get_from_stdin_and_calculate_average)
+{
+    redirect("num.txt", stdin, "r");
+    int n[50];
+
+    int i = read_from_stream_into_array("stdin", stdin, n, 6);
+
+    if (i > 0) {
+        float sum = calculate_sum(n, i);
+        float average = sum / i;
+        printf("The average is %f for %d numbers\n",
+            average, i);
+        ASSERT_FLOAT_EQ(average, 667.333313);
+    }
+    else {
+        puts("No data available in num.txt!");
+    }
+}
+
+
+TEST(FileTest, read_from_two_files_and_sum_into_third_file)
+{
+    FILE *fp1, *fp2, *fp3;
+    fp1 = fopen("stat1.txt", "r");
+    fp2 = fopen("stat2.txt", "r");
+    fp3 = fopen("star3.txt", "w+");
+
+    int arr1[5], arr2[5], arr3[5];
+    read_from_stream_into_array("stat1.txt", fp1, arr1, 5);
+    read_from_stream_into_array("stat2.txt", fp2, arr2, 5);
+    for (int i = 0; i < 5; i++) {
+        arr3[i] = arr1[i] + arr2[i];
+    }
+
+    fputs("array 1\n", fp3);
+    write_to_stream_from_array("stat3.txt", fp3, arr1, 5);
+    fputs("array 2\n", fp3);
+    write_to_stream_from_array("stat3.txt", fp3, arr2, 5);
+    fputs("The Sum!\n", fp3);
+    write_to_stream_from_array("stat3.txt", fp3, arr3, 5);
+    fileprint(fp3); // should print '6 6 6 6 6'
+
+    fclose(fp1);
+    fclose(fp2);
+    fclose(fp3);
+}
+
+
+TEST(FileTest, count_number_of_bytes_in_text_file)
+{
+
+    FILE* fp = fopen("podcast.txt", "r");
+    if (fp == NULL)
+        printf("File is not available!\n");
+
+    int count = 0;
+    while (fgetc(fp) && !feof(fp) && ++count)
+        ;
+    printf("Number of bytes: %d\n", count);
+    fclose(fp);
+    ASSERT_EQ(count, 3667);
+}
+
+
+TEST(FileTest, DISABLED_get_from_stdin_and_store_values_in_file)
+{
+    redirect("num.txt", stdin, "r");
+
+    FILE* fp;
+    int n[5], i = 0;
+    if ((fp = fopen("num.dat", "w")) != NULL) {
+        puts("Enter 5 numbers, to be stored in num.dat...");
+        for (i = 0; i < 5; i++) {
+            scanf("%d", &n[i]);
+            fprintf(fp, "%d\n", n[i]);
+        }
+        //fprintf(fp,"%d", 9999);
+        fclose(fp);
+    }
+    else
+        printf("Unable to open num.dat...\n");
+}
+
+
+TEST(FileTest, calculate_average_of_numbers_in_file_using_functions)
+{
+    int n[50];
+
+    FILE* fp = fopen("num.dat", "r");
+    int i = read_from_stream_into_array("num.dat", fp, n, 5);
+
+    if (i > 0) {
+        float sum = calculate_sum(n, i);
+        float average = sum / i;
+        printf("The average is %f for %d numbers\n",
+            average, i);
+        ASSERT_EQ(average, 3);
+    }
+    else {
+        puts("No data available in num.dat!");
+    }
+    fclose(fp);
+}
+
+// verbose yet simple, non-functional version
+TEST(FileTest, calculate_average_of_numbers_stored_in_file)
+{
+    FILE* fp;
+    int n[50], i = 0;
+    float sum = 0;
+    if ((fp = fopen("num.dat", "r")) != NULL) {
+        puts("Reading numbers from num.dat");
+        while (!feof(fp)) {
+            fscanf(fp, "%d ", &n[i]);
+            printf("%d %d\n", i, n[i]);
+            sum += n[i];
+            i++;
+        }
+        fclose(fp);
+
+        if (i > 0) {
+            float average = sum / i;
+            printf("The average is %f for %d numbers\n",
+                average, i);
+        }
+        else {
+            puts("No data available in num.dat!");
+        }
+    }
+    else
+        printf("Unable to open num.dat...\n");
+}
+
+
+```
