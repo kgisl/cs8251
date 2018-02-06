@@ -1447,13 +1447,6 @@ float calculate_sum(int arr[], int size)
     return sum;
 }
 
-// Legacy, ignore!
-//
-void hello(void)
-{
-
-    puts("Hello, World!");
-}
 
 ```
 
