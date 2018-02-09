@@ -1086,6 +1086,18 @@ int main(int argc, char *argv[]) {
  
 ```
 
+_Also refer to the test case `file_copy` in [solutions.test.cpp](#solutiontestscpp)_
+
+### Count bytes in a file 
+
+Version 1 
+	 -  https://github.com/kgashok/filesOCR/blob/master/hand.c  
+
+Version 2  
+	 - [count number of bytes](#solutiontestscpp) as a test case 
+
+
+
 ## FAQ 
 
 **1. What is file?**  
