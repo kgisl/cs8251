@@ -1086,15 +1086,15 @@ int main(int argc, char *argv[]) {
  
 ```
 
-_Also refer to the test case `file_copy` in [solutions.test.cpp](#solutiontestscpp)_
+_Also refer to the test case `file_copy` in [solutions.test.cpp](#solutiontestscpp)_ 
 
 ### Count bytes in a file 
 
-Version 1 
+Version 1 (using command line args)
 	 -  https://github.com/kgashok/filesOCR/blob/master/hand.c  
 
 Version 2  
-	 - [count number of bytes](#solutiontestscpp) as a test case 
+	 - test case `count_number_of_bytes_in_text_file` in [solutions.test.cpp](#solutiontestscpp)
 
 
 
