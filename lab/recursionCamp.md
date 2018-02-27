@@ -1,9 +1,67 @@
+**Table of Contents**
+
+	* [Table of Contents](#table-of-contents)  
+		* [Why Recursion? - Pros and Cons](#why-recursion---pros-and-cons)  
+			* [Quiz 1](#quiz-1)  
+			* [Quiz 2](#quiz-2)  
+* [include <stdio.h>](#include-stdioh)  
+		* [Recursive Natural Number Summation](#recursive-natural-number-summation)  
+			* [http://j.mp/naturalRecKG](#httpjmpnaturalreckg)  
+* [include <stdio.h>](#include-stdioh)  
+			* [Output](#output)  
+		* [Recursive Power Calculation](#recursive-power-calculation)  
+			* [http://j.mp/powerRecKG](#httpjmppowerreckg)  
+* [include <stdio.h>](#include-stdioh)  
+		* [Recursive Factorial](#recursive-factorial)  
+			* [http://j.mp/factorialRecKG](#httpjmpfactorialreckg)  
+* [include <stdio.h>](#include-stdioh)  
+		* [Recursive GCD of Two Numbers](#recursive-gcd-of-two-numbers)  
+			* [http://j.mp/gcdRecKG](#httpjmpgcdreckg)  
+* [include <stdio.h>](#include-stdioh)  
+		* [Recursive Fibonacci Series](#recursive-fibonacci-series)  
+			* [http://j.mp/fiboRecKG](#httpjmpfiboreckg)  
+* [include<stdio.h>](#includestdioh)  
+			* [Output](#output)  
+		* [Recursive Sum of Integer Array](#recursive-sum-of-integer-array)  
+			* [http://j.mp/arraysumRecKG](#httpjmparraysumreckg)  
+* [include <stdio.h>](#include-stdioh)  
+		* [Recursive Palindrome](#recursive-palindrome)  
+			* [http://j.mp/palindromeRecKG](#httpjmppalindromereckg)  
+* [include <stdio.h>](#include-stdioh)  
+* [include <string.h>](#include-stringh)  
+			* [Output](#output)  
+		* [Recursive Palindrome Number](#recursive-palindrome-number)  
+* [include <string.h>  // for sprintf () function call](#include-stringh---for-sprintf--function-call)  
+		* [Recursive Linked List](#recursive-linked-list)  
+			* [http://j.mp/linkedRecKG](#httpjmplinkedreckg)  
+* [include <stdio.h>](#include-stdioh)  
+* [include <stdlib.h>](#include-stdlibh)  
+			* [Output](#output)  
+		* [Alternative Fibonacci](#alternative-fibonacci)  
+* [include <stdio.h>](#include-stdioh)  
+			* [Output](#output)  
+		* [Recursive HalfOf](#recursive-halfof)  
+			* [http://j.mp/halfOfRecKG](#httpjmphalfofreckg)  
+* [include <stdio.h>](#include-stdioh)  
+		* [Tower of Hanoi](#tower-of-hanoi)  
+			* [http://j.mp/towerOfHanoiCC](#httpjmptowerofhanoicc)  
+		* [Right Numeric Triangle](#right-numeric-triangle)  
+			* [http://j.mp/recRightTriangle](#httpjmprecrighttriangle)  
+		* [Recursive Sorts](#recursive-sorts)  
+			* [Selection Sort](#selection-sort)  
+				* [http://j.mp/selectionSortCC](#httpjmpselectionsortcc)  
+* [https://code.activestate.com/recipes/576917-functional-selection-sort/#c1](#httpscodeactivestatecomrecipes576917-functional-selection-sortc1)  
+			* [Insertion Sort](#insertion-sort)  
+				* [http://j.mp/insertionSortCC](#httpjmpinsertionsortcc)  
+			* [Merge Sort](#merge-sort)  
+			* [Quick Sort](#quick-sort)  
+
 
 ## Table of Contents
 
-Take a look at the http://j.mp/rHTML version for Table Of Contents.
-
 [TOC]
+
+
 
 ### Why Recursion? - Pros and Cons 
 
