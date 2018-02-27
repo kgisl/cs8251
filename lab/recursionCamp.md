@@ -464,21 +464,6 @@ def selectsortr(L):
 	return [smallest] + selectsortr(L)
 ```
 
-**Javascript alternative**
-
-```javascript 
-// helper function that returns the index of the
-// minimum value in the array 
-function indexOfMinValue(arr){
-    return arr.reduce((iMin, x, i) => x > arr[iMin]? iMin : i, -1);
-}
-function selectSortR(a){
-  if (!a.length) return [];                     // #1
-  let minVal = a.splice(indexOfMinValue(a), 1); // #2 and #3 
-  return [minVal].concat(selectSortR(a));       // #4 and #5
-}
-```
-
 #### Insertion Sort 
 
 ##### http://j.mp/insertionSortCC 
@@ -524,3 +509,17 @@ def quicksort(s):
 
 ```
 
+**Javascript alternative for selectsort**
+
+```javascript 
+// helper function that returns the index of the
+// minimum value in the array 
+function indexOfMinValue(arr){
+    return arr.reduce((iMin, x, i) => x > arr[iMin]? iMin : i, -1);
+}
+function selectSortR(a){
+  if (!a.length) return [];                     // #1
+  let minVal = a.splice(indexOfMinValue(a), 1); // #2 and #3 
+  return [minVal].concat(selectSortR(a));       // #4 and #5
+}
+```
