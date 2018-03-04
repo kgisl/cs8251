@@ -1,9 +1,15 @@
----
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stringCopy.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
 
----
-
-<h2 id="stringcopy">stringCopy</h2>
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="stringcopy">stringCopy</h2>
 <p>Create a function <code>stringcpy</code> that takes two parameters: an <code>dest</code> (character pointer) and a <code>src</code> (const char pointer).</p>
 <p>Copy the contents from <code>src</code> to the <code>dest</code>ination.</p>
 <h3 id="required-definitions">Required definitions</h3>
@@ -73,4 +79,7 @@ output: <code>copy this</code></p>
 <span class="token punctuation">}</span>
 
 </code></pre>
+</div>
+</body>
 
+</html>
