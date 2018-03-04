@@ -18,9 +18,9 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 - [strcmp](http://j.mp/stringCompareCC)  ,
 - [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
 - [strend] - string match at the end of the string, **TBD**
-  [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
-  [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
-  [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205) and
+- [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
+- [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
+- [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205) and
   [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203)
   [day_of_year] - **TBD**, Page 94, K&R 
 
@@ -47,5 +47,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3OTc0MTQzM119
+eyJoaXN0b3J5IjpbLTE5OTkyOTE1NDZdfQ==
 -->
