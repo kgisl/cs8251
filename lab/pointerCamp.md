@@ -22,7 +22,7 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 - [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
 - [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205) and
 - [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203)
-[day_of_year] - **TBD**, Page 94, K&R 
+- [day_of_year] - **TBD**, Page 94, K&R 
 
 #### - Traversal
 - [vowel counting](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1078)
@@ -47,5 +47,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5OTU4NzcwNV19
+eyJoaXN0b3J5IjpbMTk0NzI4OTU0OF19
 -->
