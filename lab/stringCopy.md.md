@@ -1,85 +1,82 @@
-<!DOCTYPE html>
-<html>
+## stringCopy
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stringCopy.md</title>
-  <link rel="stylesheet" href="https://stackedit.io/style.css" />
-</head>
+Create a function `stringcpy` that takes two parameters: an `dest` (character pointer) and a `src` (const char pointer). 
 
-<body class="stackedit">
-  <div class="stackedit__html"><h2 id="stringcopy">stringCopy</h2>
-<p>Create a function <code>stringcpy</code> that takes two parameters: an <code>dest</code> (character pointer) and a <code>src</code> (const char pointer).</p>
-<p>Copy the contents from <code>src</code> to the <code>dest</code>ination.</p>
-<h3 id="required-definitions">Required definitions</h3>
-<ul>
-<li>Define three versions of <code>stringcpy</code> function as <code>stringcpy1()</code> (using array subscripting), <code>stringcpy2()</code> (using pointers) ,  <code>stringcpy3</code> - the most professional version and <code>stringcpy4</code> as a single and simple one line function.</li>
-<li>Define a suitable C program with a <code>main</code> function to call the <code>strcpy</code> function after getting the required source destination from stdin.</li>
-<li>The given <code>main</code> function must not be edited. Use it as it has been provided, otherwise the test cases may not pass.</li>
-</ul>
-<h3 id="example">Example</h3>
-<p>input: <code>abcde</code><br>
-output:  <code>abcde</code></p>
-<p>input: <code>copy this</code><br>
-output: <code>copy this</code></p>
-<h2 id="solution">Solution</h2>
-<pre class=" language-c"><code class="prism  language-c">
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+Copy the contents from `src` to the `dest`ination. 
 
-<span class="token comment">/* Write string copy using subscripting or indexing */</span>
-<span class="token keyword">char</span> <span class="token operator">*</span><span class="token function">stringcpy1</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>dest<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> src<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+### Required definitions
+- Define three versions of `stringcpy` function as `stringcpy1()` (using array subscripting), `stringcpy2()` (using pointers) ,  `stringcpy3` - the most professional version and `stringcpy4` as a single and simple one line function.  
+- Define a suitable C program with a `main` function to call the `strcpy` function after getting the required source destination from stdin. 
+- The given `main` function must not be edited. Use it as it has been provided, otherwise the test cases may not pass. 
+
+### Example
+
+input: `abcde `
+output:  `abcde`
+
+input: `copy this` 
+output: `copy this`              
+
+
+
+## Solution 
+
+```c
+
+#include <stdio.h> 
+
+/* Write string copy using subscripting or indexing */
+char *stringcpy1(char *dest, const char* src) { 
+    int i = 0; 
     
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>dest<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> src<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">)</span>
-        i<span class="token operator">++</span><span class="token punctuation">;</span> 
-    <span class="token keyword">return</span> dest<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
+    while ((dest[i] = src[i]) != '\0')
+        i++; 
+    return dest; 
+}
 
-<span class="token comment">/* Write string copy using pointers */</span>
-<span class="token keyword">char</span><span class="token operator">*</span> <span class="token function">stringcpy2</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>dest<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> src<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-    <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>s <span class="token operator">=</span> src<span class="token punctuation">;</span>
-    <span class="token keyword">char</span> <span class="token operator">*</span>t <span class="token operator">=</span> dest<span class="token punctuation">;</span>
+/* Write string copy using pointers */
+char* stringcpy2(char *dest, const char* src) { 
+    const char *s = src;
+    char *t = dest;
 
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">*</span>t <span class="token operator">=</span> <span class="token operator">*</span>s<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        t<span class="token operator">++</span><span class="token punctuation">;</span>
-        s<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> dest<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-
-<span class="token comment">/* Write string copy using pointers - professional edition */</span>
-<span class="token keyword">char</span> <span class="token operator">*</span><span class="token function">stringcpy3</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>dest<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> src<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-    <span class="token keyword">char</span> <span class="token operator">*</span>res <span class="token operator">=</span> dest<span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">*</span>dest<span class="token operator">++</span> <span class="token operator">==</span> <span class="token operator">*</span>src<span class="token punctuation">)</span>
-        <span class="token punctuation">;</span> 
-    <span class="token keyword">return</span> res<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
-
-<span class="token comment">/* a one line function statement for stringcopy */</span> 
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span> </span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
-<span class="token keyword">char</span> <span class="token operator">*</span><span class="token function">stringcpy4</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>dest<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> src<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-    <span class="token keyword">return</span> <span class="token function">memcpy</span><span class="token punctuation">(</span>dest<span class="token punctuation">,</span> src<span class="token punctuation">,</span> <span class="token function">strlen</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span>
+    while ((*t = *s) != '\0') {
+        t++;
+        s++;
+    }
+    return dest;
+}
 
 
-<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-    <span class="token keyword">char</span> destination<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-    <span class="token keyword">char</span> source<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%[^0123456789]"</span><span class="token punctuation">,</span> source<span class="token punctuation">)</span><span class="token punctuation">;</span>
+/* Write string copy using pointers - professional edition */
+char *stringcpy3(char *dest, const char* src) { 
+    char *res = dest;
+    while (*dest++ == *src)
+        ; 
+    return res; 
+}
+
+/* a one line function statement for stringcopy */ 
+#include <stdlib.h> 
+#include <string.h>
+char *stringcpy4(char *dest, const char* src) { 
+    return memcpy(dest, src, strlen(src)); 
+}
+
+
+int main () { 
+    char destination[30]; 
+    char source[30]; 
+    scanf("%[^0123456789]", source);
     
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> <span class="token function">stringcpy1</span><span class="token punctuation">(</span>destination<span class="token punctuation">,</span> source<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> <span class="token function">stringcpy2</span><span class="token punctuation">(</span>destination<span class="token punctuation">,</span> source<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> <span class="token function">stringcpy3</span><span class="token punctuation">(</span>destination<span class="token punctuation">,</span> source<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s\n"</span><span class="token punctuation">,</span> <span class="token function">stringcpy4</span><span class="token punctuation">(</span>destination<span class="token punctuation">,</span> source<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    printf("%s\n", stringcpy1(destination, source)); 
+    printf("%s\n", stringcpy2(destination, source)); 
+    printf("%s\n", stringcpy3(destination, source)); 
+    printf("%s\n", stringcpy4(destination, source)); 
 
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    return 0;
+}
 
-</code></pre>
-</div>
-</body>
-
-</html>
+```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDE1NTQxODczXX0=
+-->
