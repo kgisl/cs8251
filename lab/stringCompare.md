@@ -4,7 +4,7 @@ Create a function `strcompare` which compares the character strings `s` and `t`,
 
 The value is obtained by subtracting the characters at the first position where `s` and `t` disagree. 
 
-	 strcmp: return <0 if s<t, 0 if s==t, >0 if s>t 
+	strcmp: return <0 if s<t, 0 if s==t, >0 if s>t 
 
 ### Required definitions
 - Define two versions of `strcompare` function as `strcompare1()` (using array subscripting), `strcompare2()` (using pointers) 
@@ -67,5 +67,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNDE4NTg2MF19
+eyJoaXN0b3J5IjpbLTE5NzE4MjQxMDZdfQ==
 -->
