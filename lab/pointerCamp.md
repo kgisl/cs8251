@@ -17,11 +17,12 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcmp](http://j.mp/stringCompareCC)  ,
 - [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
-- [strend] - string match at the end of the string, TBD
+- [strend] - string match at the end of the string, **TBD**
   [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
   [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
   [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205) and
   [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203)
+  [day_of_year] - **TBD**, Page 94, K&R 
 
 #### - Traversal
 - [vowel counting](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1078)
@@ -46,5 +47,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NjcwNTY3NV19
+eyJoaXN0b3J5IjpbMTQ3OTc0MTQzM119
 -->
