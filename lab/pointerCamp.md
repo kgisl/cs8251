@@ -41,11 +41,11 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
     - [Linked List based Queue](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
 
 
-### Another Pointer Problemset 
+## Another Pointer Problemset 
 
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTczOTE4ODRdfQ==
+eyJoaXN0b3J5IjpbLTk2NTYxNDcxN119
 -->
