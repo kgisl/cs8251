@@ -8,12 +8,14 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 - [mystrlen](http://j.mp/strlenCC) 
 -  matrixUpdate - http://j.mp/arrayPointer
 
-####- Function Parameters
+#### - Function Parameters
 - [swap](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=924) 
 - [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
 
-####- String based
+#### - String based
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
+- [strcpy](http://j.mp/stringCopyCC)
+- [strcmp] - TBD  
 - [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
   [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
   [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
@@ -42,3 +44,6 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU1NTQwNjg0NV19
+-->
