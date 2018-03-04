@@ -18,6 +18,9 @@ input: `copy this`
 output: `copy this`              
 
 
+## CloudCoder Link 
+http://j.mp/stringCopyCC 
+
 
 ## Solution 
 
@@ -78,5 +81,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjEyMjEzODBdfQ==
+eyJoaXN0b3J5IjpbNTU1NjgzNzQwXX0=
 -->
