@@ -22,7 +22,7 @@ output: `copy this`
 http://j.mp/stringCopyCC 
 
 
-## Solution 
+### Solution 
 
 ```c
 
@@ -81,5 +81,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1NjgzNzQwXX0=
+eyJoaXN0b3J5IjpbMTgzMTIxNzAxOV19
 -->
