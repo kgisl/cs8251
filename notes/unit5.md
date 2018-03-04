@@ -1003,6 +1003,8 @@ unsigned int enterChoice(void) {
 
 ## Command line arguments
 
+![command](https://files.gitter.im/kgashok/advik/jbXG/commandLineArgv.png)
+
 On many UNIX systems, it is possible to pass arguments to **`main`** from the command line by including the parameters **`int argc`** and **`char *argv[]`** in the parameter list of **`main()`**. 
 
   - Parameter **`argc`** receives the number of command-line arguments
@@ -1017,7 +1019,7 @@ A simple example follows, which checks to see if a single argument is supplied o
 
 	 > myprog argument1
 
-The actual C code for the program is presented below: 
+The actual `C` code for the program is presented below: 
 
 ```c
 #include <stdio.h>
