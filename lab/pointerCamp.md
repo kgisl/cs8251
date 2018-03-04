@@ -14,8 +14,8 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 
 #### - String based
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
-- [strcpy](http://j.mp/stringCopyCC)
-- [strcmp] - TBD  
+- [strcpy](http://j.mp/stringCopyCC),
+- [strcmp] - TBD  ,
 - [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
   [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
   [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
@@ -45,5 +45,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NTQwNjg0NV19
+eyJoaXN0b3J5IjpbNTE3MTQ4Njg1XX0=
 -->
