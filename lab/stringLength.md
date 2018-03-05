@@ -16,9 +16,9 @@ Write your own C function that behaves like the built-in `C` function `stringlen
 ## Example 
 
 `stringlen("ab") == 2 `     
-`mystrlen("abc") == 3 `    
+`stringlen("abc") == 3 `    
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk0MTgzNzAyXX0=
+eyJoaXN0b3J5IjpbNTMyNjU3NjI2XX0=
 -->
