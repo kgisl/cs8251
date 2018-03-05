@@ -17,8 +17,8 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 - [strlen](http://j.mp/stringLenCC),
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcat](http://j.mp/stringCatCC), 
-- [strcmp](http://j.mp/stringCompareCC) ,
 - [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
+- [strcmp](http://j.mp/stringCompareCC) ,
 - [strend](http://j.mp/stringEndCC), 
 - [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
 - [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
@@ -49,5 +49,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDg1NDM0NzVdfQ==
+eyJoaXN0b3J5IjpbODI3NjU3OTgxXX0=
 -->
