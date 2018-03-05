@@ -23,15 +23,14 @@ helloworld
 #include <stdio.h>
 
 char* stringcat(char *s, const char *t) { 
-    char* swalk = s; 
-    
-    while (*swalk++);  /* Get to the end of the string */
-    swalk--; // Make pointer point to '\0' 
-    while((*swalk++ = *t++)); // concatenate until '\0'
-    
+   char *swalk = s;
+   while (*swalk)      /* find end of s */
+        swalk++;
+    while (*t)      /* copy t */
+        *swalk++ = *t++;
+    *swalk = '\0';
     return s;
 }
-
 
 int main(void)
 {
@@ -50,5 +49,5 @@ int main(void)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0Mzg4NjcxMl19
+eyJoaXN0b3J5IjpbMjA0ODg1NTc2XX0=
 -->
