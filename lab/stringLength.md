@@ -1,9 +1,9 @@
 
-## Write your own `strlen` function
+## Write your own `stringlen` function
 
 http://en.cppreference.com/w/c/string/byte/strlen
 
-Write your own C function that behaves like the built-in `C` function `strlen`.  
+Write your own C function that behaves like the built-in `C` function `stringlen`.  
 
  - Returns the length of the given null-terminated byte string. That is, the number of characters in a character array whose first element is pointed to by `str` up to and not including the first null character (`'\0'`).
 
@@ -20,5 +20,5 @@ Write your own C function that behaves like the built-in `C` function `strlen`.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDI5NTc3OTJdfQ==
+eyJoaXN0b3J5IjpbLTE5MTkzOTkwMzBdfQ==
 -->
