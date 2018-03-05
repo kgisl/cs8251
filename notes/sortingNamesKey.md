@@ -78,7 +78,7 @@ int main () {
 
 ### Final Solution - #1
 
-Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) elsewhere looking below.
+Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) elsewhere before looking below.
 
 ![final](http://j.mp/finalSolutionUnixSort)
 
@@ -192,5 +192,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTA2MjM5ODddfQ==
+eyJoaXN0b3J5IjpbLTE4NDEzOTM2NzZdfQ==
 -->
