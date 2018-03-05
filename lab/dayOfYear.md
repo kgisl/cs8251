@@ -4,6 +4,7 @@
 Credits: 
 _The C Programming Language, 2nd Edition, by Kernighan and Ritchie_, **Exercise 5.09 on page 114**
 
+
 Consider the problem of date conversion, from day of the month to day of the year and vice versa. For example, March 1 is the 60th day of a non-leap year, and the 61st day of a leap year. Define the function to do the conversion: 
 
 **day\_of\_year** converts the month and day into the day of the year, and 
@@ -57,5 +58,5 @@ static char daytab[2][13] = {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzE4ODIzMTVdfQ==
+eyJoaXN0b3J5IjpbLTE3MTA4NDc4MDFdfQ==
 -->
