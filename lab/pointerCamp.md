@@ -14,10 +14,11 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 
 #### - String based
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
+- [strlen] - TBD 
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcmp](http://j.mp/stringCompareCC) ,
 - [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
-- [strend] - string match at the end of the string, **TBD**
+- [strend](http://j.mp/stringEndCC), 
 - [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
 - [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
 - [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205),
@@ -47,5 +48,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NTYxNDcxN119
+eyJoaXN0b3J5IjpbMjAzODIwNzA1N119
 -->
