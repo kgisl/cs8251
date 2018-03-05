@@ -85,7 +85,7 @@ Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) elsewhere before lo
 
 ### Final Solution - #2 
 
-![sortpointers](http://j.mp/arrayPointerSort)  
+![sortpointers](https://camo.githubusercontent.com/1c43d076af0b84b9d0d3d1f43649eba6172786c5/687474703a2f2f6a2e6d702f706f696e746572417272617973)  
 
 Instead of moving the strings around, we only move the pointer to the strings around within the array of pointers. 
 
@@ -193,5 +193,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjk4ODU1NzRdfQ==
+eyJoaXN0b3J5IjpbLTc2NTgyMjExMF19
 -->
