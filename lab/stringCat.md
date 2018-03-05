@@ -27,7 +27,7 @@ char* stringcat(char *s, const char *t) {
     
     while (*swalk++);  /* Get to the end of the string */
     swalk--; // Make pointer point to '\0' 
-    while((*swalk++ = *t++)); // concatenate until 
+    while((*swalk++ = *t++)); // concatenate until '\0'
     
     return s;
 }
@@ -50,5 +50,5 @@ int main(void)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDI3NzYzMTRdfQ==
+eyJoaXN0b3J5IjpbMjE0Mzg4NjcxMl19
 -->
