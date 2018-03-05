@@ -2,18 +2,7 @@
 
 Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossary
 
-#### - Miscellaneous 
-- [doubleSwap](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2484)
-- [pointerWalk](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2551)
-- [mystrlen](http://j.mp/strlenCC) 
--  matrixUpdate - http://j.mp/arrayPointer
-
-#### - Function Parameters
-- [swap](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=924) 
-- [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
-
 #### - String based
-- [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
 - [strlen](http://j.mp/stringLenCC),
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcat](http://j.mp/stringCatCC), 
@@ -25,6 +14,18 @@ Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossa
 - [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205),
 - [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203) and
 - [day_of_year](http://j.mp/dayYearCC) 
+
+
+#### - Miscellaneous 
+- [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
+- [doubleSwap](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2484)
+- [pointerWalk](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2551)
+- [mystrlen](http://j.mp/strlenCC) 
+-  matrixUpdate - http://j.mp/arrayPointer
+
+#### - Function Parameters
+- [swap](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=924) 
+- [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
 
 #### - Traversal
 - [vowel counting](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1078)
@@ -49,5 +50,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MTkyNTA1OV19
+eyJoaXN0b3J5IjpbMTIzMjc1MDQ0M119
 -->
