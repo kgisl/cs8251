@@ -166,7 +166,7 @@ int main(){
 int comparator(const void* a, const void* b){
     const char* pa = *(const char**)a; 
     const char* pb = *(const char**)b; 
-    printf("%s %s\n", pa, pb); 
+    //printf("%s %s\n", pa, pb); 
     return strcmp(pa, pb); 
     
     //Cast 'a' to a pointer to a constant pointer to a character and dereference that
@@ -199,5 +199,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDExOTQ2OTkzXX0=
+eyJoaXN0b3J5IjpbLTE0MzUxMTcyOTVdfQ==
 -->
