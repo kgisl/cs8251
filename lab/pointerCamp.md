@@ -2,6 +2,9 @@
 
 Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossary
 
+On CloudCoder, the landing page is http://j.mp/pointerKITE
+
+
 #### - String based
 - [strlen](http://j.mp/stringLenCC),
 - [strcpy](http://j.mp/stringCopyCC),
@@ -50,5 +53,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMjc1MDQ0M119
+eyJoaXN0b3J5IjpbMjAzMTQzMjY3M119
 -->
