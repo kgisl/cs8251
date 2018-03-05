@@ -25,11 +25,9 @@ helloworld
 char* stringcat(char *s, const char *t) { 
     char* swalk = s; 
     
-    while (*swalk++)
-        ; 
+    while (*swalk++); 
     swalk--;
-    while((*swalk++ = *t++))
-        ;
+    while((*swalk++ = *t++));
     
     return s;
 }
@@ -52,5 +50,5 @@ int main(void)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU4NDUyOTUxXX0=
+eyJoaXN0b3J5IjpbLTE2NzI2NDI2MV19
 -->
