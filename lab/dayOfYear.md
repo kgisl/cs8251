@@ -53,9 +53,32 @@ static char daytab[2][13] = {
 	return day;
 }
 
+```
 
+### Alternative 
+
+```c 
+int day_of_year(int year, int month, int day)
+{
+	int i, leap;
+	char *p;
+	
+	leap = (year%4 == 0 && year%100 != 0) || year%400 == 0;
+
+	/* Set `p' to point at first month in the correct row. */
+	//p = &daytab[leap][1];
+	p = daytab[leap]; 
+	
+	/* Move `p' along the row, to each successive month. */
+	for (i = 1; i < month; i++) {
+		//day += *p;
+		//++p;
+		day += *++p;
+	}
+	return day;
+}
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzE4ODIzMTVdfQ==
+eyJoaXN0b3J5IjpbMTI2NzgyNTMzMl19
 -->
