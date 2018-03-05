@@ -185,7 +185,7 @@ int main () {
     char buf[20];
     while ((res = scanf("%s", buf)) != EOF){
     //while (fgets(buf, 20, stdin) != NULL){
-        names[count] = malloc(sizeof(int)*res);
+        names[count] = malloc(sizeof(char)*res);
         strcpy(names[count++], buf); 
         printf("%s ", buf);
     }
@@ -199,5 +199,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzUxMTcyOTVdfQ==
+eyJoaXN0b3J5IjpbLTE5NDk2NjI1MDZdfQ==
 -->
