@@ -164,14 +164,14 @@ int main(){
 #include <string.h> 
 
 int comparator(const void* a, const void* b){
-    //const char* pa = *(const char**)a; 
-    //const char* pb = *(const char**)b; 
-    //printf("%s %s\n", pa, pb); 
-    //return strcmp(pa, pb); 
+    const char* pa = *(const char**)a; 
+    const char* pb = *(const char**)b; 
+    printf("%s %s\n", pa, pb); 
+    return strcmp(pa, pb); 
     
     //Cast 'a' to a pointer to a constant pointer to a character and dereference that
     //Credits: https://bewuethr.github.io/sorting-strings-in-c-with-qsort/
-    return strcmp(*(char* const*) a, *(char* const*) b);
+    //return strcmp(*(char* const*) a, *(char* const*) b);
     
     //in case you want to sort characters in a string 
     //return (*(char*)a) < (*(char*)b);
@@ -199,5 +199,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk4NzE4NjA5XX0=
+eyJoaXN0b3J5IjpbNDExOTQ2OTkzXX0=
 -->
