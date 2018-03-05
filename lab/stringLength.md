@@ -1,5 +1,5 @@
 
-## Write your own `stringlen` function
+## Write your own `string_len` function
 
 http://en.cppreference.com/w/c/string/byte/strlen
 
@@ -20,5 +20,5 @@ Write your own C function that behaves like the built-in `C` function `stringlen
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyNjU3NjI2XX0=
+eyJoaXN0b3J5IjpbNTU5MDYwOTg1XX0=
 -->
