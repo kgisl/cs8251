@@ -15,10 +15,10 @@ Write your own C function that behaves like the built-in `C` function `stringlen
 
 ## Example 
 
-`stringlen("ab") == 2 `     
-`stringlen("abc") == 3 `    
+`string_len("ab") == 2 `     
+`string_len("abc") == 3 `    
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU5MDYwOTg1XX0=
+eyJoaXN0b3J5IjpbLTM2NTU2Nzk5MV19
 -->
