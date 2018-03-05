@@ -1,6 +1,8 @@
 
 ## Day of Year 
 
+Credits: 
+_The C Programming Language, 2nd Edition, by Kernighan and Ritchie_, **Exercise 5.09 on page 114**
 
 Consider the problem of date conversion, from day of the month to day of the year and vice versa. For example, March 1 is the 60th day of a non-leap year, and the 61st day of a leap year. Define the function to do the conversion: 
 
@@ -18,6 +20,8 @@ Consider the problem of date conversion, from day of the month to day of the yea
 ### Pointer practice
 
 Modify / Refactor the existing code to use pointers to come up with the appropriate solution. 
+
+Rewrite the routines  `day_of_year`  and  `month_day`  with pointers instead of indexing.
 
 
 ### Solution
@@ -53,5 +57,5 @@ static char daytab[2][13] = {
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwODQ4NzQ4Ml19
+eyJoaXN0b3J5IjpbLTEwNzE4ODIzMTVdfQ==
 -->
