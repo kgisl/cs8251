@@ -1702,3 +1702,6 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNTY1MDcwMTI1XX0=
+-->
