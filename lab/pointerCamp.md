@@ -18,8 +18,6 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203) and
 - [day_of_year](http://j.mp/dayYearCC) 
 
->>>>>>> 4846768aa1eefdd57a5339676039ebb15786ee44
-
 #### - Miscellaneous 
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
 - [doubleSwap](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2484)
@@ -54,5 +52,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDAxMTU0NzZdfQ==
+eyJoaXN0b3J5IjpbODY5Mjg2NzE0XX0=
 -->
