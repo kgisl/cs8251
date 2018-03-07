@@ -1039,7 +1039,7 @@ Note that `*argv[0]` is the name of the program invoked, which means that `*argv
 
 ### Another example 
 
-Review the [
+Review the [argument sorting]
 
 ### Program 5.3
 
@@ -1705,5 +1705,5 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNTk5MzA3N119
+eyJoaXN0b3J5IjpbMTI5Nzg2MzcxN119
 -->
