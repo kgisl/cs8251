@@ -22,6 +22,10 @@ int comparator_char(const void* a, const void* b){
  *   - if only 1 argument provided, the characters are sorted
  *   - sorting is accomplished using qsort and 
  *   - and two comparators
+ *  
+ *   Usage: ./a.out abcdzyxghi -> abcdghixyz
+ *          ./a.out argon zero black -> argon black zero
+ *
  */ 
 
 int main(int argc, const char* argv[])
