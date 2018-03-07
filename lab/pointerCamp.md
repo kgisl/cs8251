@@ -54,5 +54,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTczMjA2MDBdfQ==
+eyJoaXN0b3J5IjpbLTE3MDAxMTU0NzZdfQ==
 -->
