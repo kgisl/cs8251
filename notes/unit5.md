@@ -1041,6 +1041,7 @@ Note that `*argv[0]` is the name of the program invoked, which means that `*argv
 
 Review the [argument sorting program](https://github.com/kgisl/cs8251/blob/master/code/argsort.c) to see how `argc` and `argv[]` are used to pass as arguments for `qsort` which sorts the input command line arguments. 
 
+
 ### Program 5.3
 
 **Program 5.3** below copies a file into another file one character at a time. We assume that the executable file for the program is called **mycopy**. A typical command line for the **mycopy** program on a Linux/UNIX system is  
@@ -1705,5 +1706,5 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY3Nzk5NzkzXX0=
+eyJoaXN0b3J5IjpbMTE2MTE4MjYyM119
 -->
