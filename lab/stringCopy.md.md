@@ -5,8 +5,12 @@ Create a function `stringcpy` that takes two parameters: an `dest` (character po
 Copy the contents from `src` to the `dest`ination. 
 
 ### Required definitions
-- Define three versions of `stringcpy` function as `stringcpy1()` (using array subscripting), `stringcpy2()` (using pointers) ,  `stringcpy3` - the most professional version and `stringcpy4` as a single and simple one line function.  
-- Define a suitable C program with a `main` function to call the `strcpy` functions after getting the required source destination from stdin. 
+- Define three versions of `stringcpy` function as 
+	- `stringcpy1()` (using array subscripting), 
+	- `stringcpy2()` (using pointers) ,  
+	- `stringcpy3` - the most professional version and 
+	- `stringcpy4` as a single and simple one line function.  
+- Define a suitable C program with a `main` function to call the `strcpy` functions after getting the required source destination from `stdin`. 
 - The given `main` function must not be edited. Use it as it has been provided, otherwise the test cases may not pass. 
 
 ### Example
@@ -81,5 +85,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MjkxODM5MV19
+eyJoaXN0b3J5IjpbMTE0OTUxNjI2M119
 -->
