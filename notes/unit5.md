@@ -1039,7 +1039,7 @@ Note that `*argv[0]` is the name of the program invoked, which means that `*argv
 
 ### Another example 
 
-Review the [argument sorting program](https://github.com/kgisl/cs8251/blob/master/code/argsort.c) to see 
+Review the [argument sorting program](https://github.com/kgisl/cs8251/blob/master/code/argsort.c) to see how argc an
 
 ### Program 5.3
 
@@ -1705,5 +1705,5 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NDEzODgzNF19
+eyJoaXN0b3J5IjpbLTQxMDg3NzY3Ml19
 -->
