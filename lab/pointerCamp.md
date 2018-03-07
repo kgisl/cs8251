@@ -1,6 +1,6 @@
 ## Pointer Camp
 
-Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossary
+Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
 On CloudCoder, the landing page is http://j.mp/pointerKITE
 
@@ -53,5 +53,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMTQzMjY3M119
+eyJoaXN0b3J5IjpbLTEzOTczMjA2MDBdfQ==
 -->
