@@ -1,6 +1,6 @@
 ## Pointer Camp
 
-Totally new to Pointers? First go update yourself at http://bit.ly/pointerGlossary
+Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
 #### - Miscellaneous 
 - [doubleSwap](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2484)
