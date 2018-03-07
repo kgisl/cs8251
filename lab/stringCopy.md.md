@@ -19,7 +19,7 @@ input: `abc` `de `
 output:  `abcde`  
 
 input: `copy this`   
-output: `copythis`                
+output: `copy this`                
 
 
 ## CloudCoder Link 
@@ -85,5 +85,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0OTUxNjI2M119
+eyJoaXN0b3J5IjpbLTE3MTc2NDkxMjFdfQ==
 -->
