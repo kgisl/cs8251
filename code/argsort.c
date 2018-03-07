@@ -17,6 +17,12 @@ int comparator_char(const void* a, const void* b){
     return ( *(char*)a - *(char*)b );
 }
 
+/*
+ * program sorts command line arguments in ascending order
+ *   - if only 1 argument provided, the characters are sorted
+ *   - sorting is accomplished using qsort and 
+ *   - and two comparators
+ */ 
 
 int main(int argc, const char* argv[])
 {
