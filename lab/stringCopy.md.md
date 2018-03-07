@@ -11,7 +11,7 @@ Copy the contents from `src` to the `dest`ination.
 
 ### Example
 
-input: `abcde `  
+input: `abc` `de `  
 output:  `abcde`  
 
 input: `copy this`   
@@ -81,5 +81,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDA1Mzk3NjVdfQ==
+eyJoaXN0b3J5IjpbMjA5MjkxODM5MV19
 -->
