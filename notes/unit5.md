@@ -1040,6 +1040,7 @@ Note that `*argv[0]` is the name of the program invoked, which means that `*argv
 ### Another example 
 
 
+
 ### Program 5.3
 
 **Program 5.3** below copies a file into another file one character at a time. We assume that the executable file for the program is called **mycopy**. A typical command line for the **mycopy** program on a Linux/UNIX system is  
@@ -1704,5 +1705,5 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU5NTI3MzA3XX0=
+eyJoaXN0b3J5IjpbMTgwMTI1ODE2OV19
 -->
