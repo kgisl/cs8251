@@ -27,7 +27,6 @@ int comparator_char(const void* a, const void* b){
  *          ./a.out argon zero black -> argon black zero
  *
  */ 
-
 int main(int argc, const char* argv[])
 {
     if (argc == 2) {
