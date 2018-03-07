@@ -15,7 +15,7 @@ Copy the contents from `src` to the `dest`ination. Return the pointer `dest` as 
 
 ### Example
 
-input: `abc` `de `  
+input: `abcde`  
 output:  `abcde`  
 
 input: `copy this`   
@@ -85,5 +85,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODk4NDA4OTddfQ==
+eyJoaXN0b3J5IjpbLTE5MDk0NTY0MTVdfQ==
 -->
