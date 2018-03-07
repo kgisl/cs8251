@@ -11,11 +11,11 @@ Copy the contents from `src` to the `dest`ination.
 
 ### Example
 
-input: `abcde `
-output:  `abcde`
+input: `abcde `  
+output:  `abcde`  
 
-input: `copy this` 
-output: `copy this`              
+input: `copy this`   
+output: `copy this`                
 
 
 ## CloudCoder Link 
@@ -81,5 +81,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMTIxNzAxOV19
+eyJoaXN0b3J5IjpbLTU4NTEzODE4MV19
 -->
