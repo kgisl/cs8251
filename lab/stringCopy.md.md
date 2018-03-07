@@ -2,7 +2,7 @@
 
 Create a function `stringcpy` that takes two parameters: an `dest` (character pointer) and a `src` (const char pointer). 
 
-Copy the contents from `src` to the `dest`ination. 
+Copy the contents from `src` to the `dest`ination. Return the pointer `dest` as the return value of the function.
 
 ### Required definitions
 - Define three versions of `stringcpy` function as 
@@ -85,5 +85,5 @@ int main () {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTc2NDkxMjFdfQ==
+eyJoaXN0b3J5IjpbLTEyODk4NDA4OTddfQ==
 -->
