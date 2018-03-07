@@ -1,9 +1,51 @@
 
 ## Table of Contents
 
-Take a look at the http://j.mp/rHTML version for Table Of Contents.
-
 [TOC]
+
+
+* [Table of Contents](#table-of-contents)  
+	* [Why Recursion? - Pros and Cons](#why-recursion---pros-and-cons)  
+		* [Quiz 1](#quiz-1)  
+		* [Quiz 2](#quiz-2)  
+	* [Recursive Natural Number Summation](#recursive-natural-number-summation)  
+		* [http://j.mp/naturalRecKG](#httpjmpnaturalreckg)  
+		* [Output](#output)  
+	* [Recursive Power Calculation](#recursive-power-calculation)  
+		* [http://j.mp/powerRecKG](#httpjmppowerreckg)  
+	* [Recursive Factorial](#recursive-factorial)  
+		* [http://j.mp/factorialRecKG](#httpjmpfactorialreckg)  
+	* [Recursive GCD of Two Numbers](#recursive-gcd-of-two-numbers)  
+		* [http://j.mp/gcdRecKG](#httpjmpgcdreckg)  
+	* [Recursive Fibonacci Series](#recursive-fibonacci-series)  
+		* [http://j.mp/fiboRecKG](#httpjmpfiboreckg)  
+		* [Output](#output)  
+	* [Recursive Sum of Integer Array](#recursive-sum-of-integer-array)  
+		* [http://j.mp/arraysumRecKG](#httpjmparraysumreckg)  
+	* [Recursive Palindrome](#recursive-palindrome)  
+		* [http://j.mp/palindromeRecKG](#httpjmppalindromereckg)  
+		* [Output](#output)  
+	* [Recursive Palindrome Number](#recursive-palindrome-number)  
+	* [Recursive Linked List](#recursive-linked-list)  
+		* [http://j.mp/linkedRecKG](#httpjmplinkedreckg)  
+		* [Output](#output)  
+	* [Alternative Fibonacci](#alternative-fibonacci)  
+		* [Output](#output)  
+	* [Recursive HalfOf](#recursive-halfof)  
+		* [http://j.mp/halfOfRecKG](#httpjmphalfofreckg)  
+	* [Tower of Hanoi](#tower-of-hanoi)  
+		* [http://j.mp/towerOfHanoiCC](#httpjmptowerofhanoicc)  
+	* [Right Numeric Triangle](#right-numeric-triangle)  
+		* [http://j.mp/recRightTriangle](#httpjmprecrighttriangle)  
+	* [Recursive Sorts](#recursive-sorts)  
+		* [Selection Sort](#selection-sort)  
+			* [http://j.mp/selectionSortCC](#httpjmpselectionsortcc)  
+		* [Insertion Sort](#insertion-sort)  
+			* [http://j.mp/insertionSortCC](#httpjmpinsertionsortcc)  
+		* [Merge Sort](#merge-sort)  
+		* [Quick Sort](#quick-sort)  
+
+
 
 ### Why Recursion? - Pros and Cons 
 
@@ -464,21 +506,6 @@ def selectsortr(L):
 	return [smallest] + selectsortr(L)
 ```
 
-**Javascript alternative**
-
-```javascript 
-// helper function that returns the index of the
-// minimum value in the array 
-function indexOfMinValue(arr){
-    return arr.reduce((iMin, x, i) => x > arr[iMin]? iMin : i, -1);
-}
-function selectSortR(a){
-  if (!a.length) return [];                     // #1
-  let minVal = a.splice(indexOfMinValue(a), 1); // #2 and #3 
-  return [minVal].concat(selectSortR(a));       // #4 and #5
-}
-```
-
 #### Insertion Sort 
 
 ##### http://j.mp/insertionSortCC 
@@ -524,3 +551,17 @@ def quicksort(s):
 
 ```
 
+**Javascript alternative for selectsort**
+
+```javascript 
+// helper function that returns the index of the
+// minimum value in the array 
+function indexOfMinValue(arr){
+    return arr.reduce((iMin, x, i) => x > arr[iMin]? iMin : i, -1);
+}
+function selectSortR(a){
+  if (!a.length) return [];                     // #1
+  let minVal = a.splice(indexOfMinValue(a), 1); // #2 and #3 
+  return [minVal].concat(selectSortR(a));       // #4 and #5
+}
+```

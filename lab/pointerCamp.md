@@ -2,23 +2,34 @@
 
 Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
+On CloudCoder, the landing page is http://j.mp/pointerKITE
+
+
+#### - String based
+- [strlen](http://j.mp/stringLenCC),
+- [strcpy](http://j.mp/stringCopyCC),
+- [strcat](http://j.mp/stringCatCC), 
+- [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
+- [strcmp](http://j.mp/stringCompareCC) ,
+- [strend](http://j.mp/stringEndCC), 
+- [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
+- [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
+- [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205),
+- [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203) and
+- [day_of_year](http://j.mp/dayYearCC) 
+
+>>>>>>> 4846768aa1eefdd57a5339676039ebb15786ee44
+
 #### - Miscellaneous 
+- [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
 - [doubleSwap](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2484)
 - [pointerWalk](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2551)
 - [mystrlen](http://j.mp/strlenCC) 
 -  matrixUpdate - http://j.mp/arrayPointer
 
-####- Function Parameters
+#### - Function Parameters
 - [swap](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=924) 
 - [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
-
-####- String based
-- [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
-- [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
-  [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
-  [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
-  [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205) and
-  [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203)
 
 #### - Traversal
 - [vowel counting](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1078)
@@ -37,8 +48,11 @@ Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
     - [Linked List based Queue](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
 
 
-### Another Pointer Problemset 
+## Another Pointer Problemset 
 
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzOTczMjA2MDBdfQ==
+-->

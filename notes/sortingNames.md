@@ -78,14 +78,15 @@ int main () {
 
 ### Final Solution - #1
 
-Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) elsewhere looking below.
+Spoiler Alert! Try the [scaffold code](#scaffold-code-for-1) elsewhere before looking below.
 
 ![final](http://j.mp/finalSolutionUnixSort)
 
 
 ### Final Solution - #2 
 
-![sortpointers](http://j.mp/arrayPointerSort) 
+![sortpointers](https://camo.githubusercontent.com/1c43d076af0b84b9d0d3d1f43649eba6172786c5/687474703a2f2f6a2e6d702f706f696e746572417272617973)  
+
 Instead of moving the strings around, we only move the pointer to the strings around within the array of pointers. 
 
 
@@ -167,6 +168,12 @@ int comparator(const void* a, const void* b){
     const char* pb = *(const char**)b; 
     //printf("%s %s\n", pa, pb); 
     return strcmp(pa, pb); 
+    
+    //Cast 'a' to a pointer to a constant pointer to a character and dereference that
+    //Credits: https://bewuethr.github.io/sorting-strings-in-c-with-qsort/
+    //return strcmp(*(char* const*) a, *(char* const*) b);
+    
+    //in case you want to sort characters in a string 
     //return (*(char*)a) < (*(char*)b);
     
 }
@@ -178,7 +185,7 @@ int main () {
     char buf[20];
     while ((res = scanf("%s", buf)) != EOF){
     //while (fgets(buf, 20, stdin) != NULL){
-        names[count] = malloc(sizeof(int)*res);
+        names[count] = malloc(sizeof(char)*res);
         strcpy(names[count++], buf); 
         printf("%s ", buf);
     }
@@ -191,3 +198,6 @@ int main () {
 }
 
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE5NDk2NjI1MDZdfQ==
+-->
