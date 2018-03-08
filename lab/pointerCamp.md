@@ -6,7 +6,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 
 #### - String based
-- [strlen](http://j.mp/stringLenCC),
+- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC) ,
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcat](http://j.mp/stringCatCC), 
 - [strrev](http://j.mp/reverseUsingPointers),
@@ -15,8 +15,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
-- [day_of_year](http://j.mp/dayYearCC) and 
-- [mystrlen](http://j.mp/strlenCC) 
+- [day_of_year](http://j.mp/dayYearCC) 
 
 #### - Function Parameters
 - [pointerWalk](http://j.mp/pointerWalk)
@@ -53,5 +52,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM1NTk2OTMzXX0=
+eyJoaXN0b3J5IjpbMTAxNDI1MjkxMF19
 -->
