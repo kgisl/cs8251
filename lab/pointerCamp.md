@@ -20,7 +20,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 #### - Miscellaneous 
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
-- [pointerWalk](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2551)
+- [pointerWalk](http://j.mp/pointerWalk)
 - [doubleSwap](http://j.mp/doubleSwap)
 - [palindrome](http://j.mp/dPalindromeKG) using double pointers
 -  matrixUpdate - http://j.mp/arrayPointer
@@ -52,5 +52,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMDEzOTA0M119
+eyJoaXN0b3J5IjpbLTk4MTU0NTc1N119
 -->
