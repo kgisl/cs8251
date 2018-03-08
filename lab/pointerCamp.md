@@ -16,8 +16,8 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)  - array 1
-- [day_of_year](http://j.mp/dayYearCC)  - multidimensional 1
-- [matrixUpdate](http://j.mp/arrayPointer) - multidimensional 2
+- [day_of_year](http://j.mp/dayYearCC)  - multidimensional array 1
+- [matrixUpdate](http://j.mp/arrayPointer) - multidimensional array 2
 
 #### - Function Parameters
 - [pointerWalk](http://j.mp/pointerWalk)
@@ -49,5 +49,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA5MzMyMDIzXX0=
+eyJoaXN0b3J5IjpbMjE5NDE2MjE1XX0=
 -->
