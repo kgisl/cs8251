@@ -15,12 +15,12 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
-- [palindrome](http://j.mp/dPalindromeKG) and
 - [day_of_year](http://j.mp/dayYearCC) 
 
 #### - Miscellaneous 
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
 - [doubleSwap](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2484)
+- [palindrome](http://j.mp/dPalindromeKG) using double pointers
 - [pointerWalk](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2551)
 - [mystrlen](http://j.mp/strlenCC) 
 -  matrixUpdate - http://j.mp/arrayPointer
@@ -52,5 +52,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzc1ODc0M119
+eyJoaXN0b3J5IjpbOTE5MTY2NDY3XX0=
 -->
