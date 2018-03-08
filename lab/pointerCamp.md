@@ -14,7 +14,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [strend](http://j.mp/stringEndCC), 
 - [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
 - [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
-- [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205),
+- [replaceString](http://j.mp/replaceCC),
 - [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203) and
 - [day_of_year](http://j.mp/dayYearCC) 
 
@@ -52,5 +52,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MjAzNzY2OV19
+eyJoaXN0b3J5IjpbLTE2OTE4MjQxN119
 -->
