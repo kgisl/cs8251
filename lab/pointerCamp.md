@@ -46,11 +46,11 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
     - [Linked List based Queue](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
 
 
-## Another Pointer Problemset 
+## Another Pointer Problem Set 
 
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMTA1MzQ0OF19
+eyJoaXN0b3J5IjpbLTE4NTI5Mzg4NjZdfQ==
 -->
