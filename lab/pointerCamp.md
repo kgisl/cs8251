@@ -6,28 +6,25 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 
 #### - String based
-- [strlen](http://j.mp/stringLenCC),
+- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcat](http://j.mp/stringCatCC), 
-- [strrev](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1200),
+- [strrev](http://j.mp/reverseUsingPointers),
 - [strcmp](http://j.mp/stringCompareCC) ,
 - [strend](http://j.mp/stringEndCC), 
-- [subString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1204), 
-- [indexOf](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1202),
-- [replaceString](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1205),
-- [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203) and
-- [day_of_year](http://j.mp/dayYearCC) 
-
-#### - Miscellaneous 
-- [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)
-- [doubleSwap](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2484)
-- [pointerWalk](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=2551)
-- [mystrlen](http://j.mp/strlenCC) 
--  matrixUpdate - http://j.mp/arrayPointer
+- [subString](http://j.mp/subStringCC), 
+- [indexOf](http://j.mp/indexCC),
+- [replaceString](http://j.mp/replaceCC),
+- [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208)  - array 1
+- [day_of_year](http://j.mp/dayYearCC)  - multidimensional array 1
+- [matrixUpdate](http://j.mp/arrayPointer) - multidimensional array 2
 
 #### - Function Parameters
-- [swap](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=924) 
+- [pointerWalk](http://j.mp/pointerWalk)
 - [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
+- [swap](http://j.mp/swapUsingPointers) 
+- [doubleSwap](http://j.mp/doubleSwap)
+- [palindrome](http://j.mp/dPalindromeKG) using double pointers
 
 #### - Traversal
 - [vowel counting](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1078)
@@ -46,7 +43,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
     - [Linked List based Queue](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
 
 
-## Another Pointer Problemset 
+## Another Pointer Problem Set 
 
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
