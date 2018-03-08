@@ -6,7 +6,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 
 #### - String based
-- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC) ,
+- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcat](http://j.mp/stringCatCC), 
 - [strrev](http://j.mp/reverseUsingPointers),
@@ -52,5 +52,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNDI1MjkxMF19
+eyJoaXN0b3J5IjpbMTcyMTA1MzQ0OF19
 -->
