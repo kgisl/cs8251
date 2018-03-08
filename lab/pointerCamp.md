@@ -18,7 +18,6 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [day_of_year](http://j.mp/dayYearCC) and 
 - [mystrlen](http://j.mp/strlenCC) 
 
-
 #### - Function Parameters
 - [pointerWalk](http://j.mp/pointerWalk)
 - [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
@@ -48,5 +47,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MDU0ODg5OV19
+eyJoaXN0b3J5IjpbNDUzNDUzMzIzXX0=
 -->
