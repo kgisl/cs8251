@@ -15,7 +15,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
-- [palindrome](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1203) and
+- [palindrome](http://j.mp/dPalindromeKG) and
 - [day_of_year](http://j.mp/dayYearCC) 
 
 #### - Miscellaneous 
@@ -52,5 +52,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2OTM3MjY5Ml19
+eyJoaXN0b3J5IjpbLTkwNzc1ODc0M119
 -->
