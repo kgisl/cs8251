@@ -37,9 +37,9 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 ## PDS-1 Practice
   - Lab 3
- - [connect](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1191), [traverse](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1190) and 
+	 - [connect](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1191), [traverse](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1190) and 
 [insertBefore](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1193)
- - [Doubly-Linked List](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1189)
+	 - [Doubly-Linked List](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1189)
        - Processing strings as linked lists [TBD]
   - Lab 6 
     - [Fixed Array based Stack](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1115)
@@ -55,5 +55,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzc3MjcyMzNdfQ==
+eyJoaXN0b3J5IjpbNTQ2NTA4OTI3XX0=
 -->
