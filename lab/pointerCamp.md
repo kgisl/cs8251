@@ -10,12 +10,13 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcat](http://j.mp/stringCatCC), 
 - [strrev](http://j.mp/reverseUsingPointers),
-- [strcmp](http://j.mp/stringCompareCC) ,
+- [strcmp](http://j.mp/stringCompareCC),
 - [strend](http://j.mp/stringEndCC), 
+- [strchr](TBD)
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
-- [have_no_fives](http://j.mp/haveNoFive)
+- [have_no_fives](http://j.mp/haveNoFive),
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208) 
   
 #### Array Manipulation  
@@ -52,5 +53,5 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDY0Mzg4ODNdfQ==
+eyJoaXN0b3J5IjpbMTg0MDgzMjc1N119
 -->
