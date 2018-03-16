@@ -4,23 +4,30 @@ Write the function `strend(const char *s, const char *t)`, which returns 1 if th
 
 ### Example 
 
-**input**
-		
-		abcde  de  
+**input**  
+
+	abcde  de  
 
 **output** 
-1 
+
+	1 
 
 **input**
-`abcde` `abcde`  
+
+	abcde abcde 
+	 
 **output** 
-1 
+
+	1 
 
 **input**
-`abcde` `dz`  
+
+	abcde dz  
+
 **output** 
-0
+
+	0
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjM4Njc4ODNdfQ==
+eyJoaXN0b3J5IjpbMTUyNTE3NzA5XX0=
 -->
