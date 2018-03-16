@@ -5,7 +5,9 @@ Write the function `strend(const char *s, const char *t)`, which returns 1 if th
 ### Example 
 
 **input**
-`abcde` `de`  
+		
+		abcde  de  
+
 **output** 
 1 
 
@@ -20,5 +22,5 @@ Write the function `strend(const char *s, const char *t)`, which returns 1 if th
 0
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTkwMDU1OV19
+eyJoaXN0b3J5IjpbLTE1NjM4Njc4ODNdfQ==
 -->
