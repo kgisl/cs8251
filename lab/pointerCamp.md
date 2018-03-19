@@ -54,6 +54,3 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTc1Mjc4MTRdfQ==
--->
