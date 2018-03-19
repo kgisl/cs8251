@@ -19,7 +19,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
 - [have_no_fives](http://j.mp/haveNoFive),
-- [subsequence](http://j.mp/subseqCC)
+- [subsequence](http://j.mp/subSeqCC)
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208) 
   
 #### Array Manipulation  
