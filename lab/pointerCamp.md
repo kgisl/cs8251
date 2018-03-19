@@ -19,6 +19,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
 - [have_no_fives](http://j.mp/haveNoFive),
+- [subsequence](http://j.mp/subseqCC)
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208) 
   
 #### Array Manipulation  
@@ -54,6 +55,3 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTc1Mjc4MTRdfQ==
--->
