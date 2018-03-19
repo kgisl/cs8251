@@ -46,7 +46,6 @@
 		* [Quick Sort](#quick-sort)  
 
 
-
 ### Why Recursion? - Pros and Cons 
 
 _"Recursive functions are confusing, elegant and fascinating, all the same time!"_
@@ -481,6 +480,10 @@ To visualize this code, click http://j.mp/halfOfV
 
 #### http://j.mp/recRightTriangle 
 
+### Subsequence
+
+#### http://j.mp/subseqCC 
+
 ### Recursive Sorts
 
 #### Selection Sort 
@@ -551,6 +554,8 @@ def quicksort(s):
 
 ```
 
+
+
 **Javascript alternative for selectsort**
 
 ```javascript 
@@ -565,3 +570,4 @@ function selectSortR(a){
   return [minVal].concat(selectSortR(a));       // #4 and #5
 }
 ```
+
