@@ -26,7 +26,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [subsequence](http://j.mp/subSeqCC)
 - [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208) 
   
-#### Array Manipulation  
+#### - Array Manipulation  
 - [day_of_year](http://j.mp/dayYearCC)  - multidimensional array 1
 - [matrixUpdate](http://j.mp/arrayPointer) - multidimensional array 2
 
