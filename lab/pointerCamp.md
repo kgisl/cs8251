@@ -6,6 +6,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 
 #### - String based
+- [vowel counting](https://j.mp/vowelCC),
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcat](http://j.mp/stringCatCC), 
@@ -36,8 +37,6 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [doubleSwap](http://j.mp/doubleSwap)
 - [palindrome](http://j.mp/dPalindromeKG) using double pointers
 
-#### - Traversal
-- [vowel counting](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1078)
 
 ## PDS-1 Practice
   - Lab 3
