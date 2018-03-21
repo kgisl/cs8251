@@ -24,7 +24,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [replaceString](http://j.mp/replaceCC),
 - [have_no_fives](http://j.mp/haveNoFive),
 - [subsequence](http://j.mp/subSeqCC)
-- [alphabets](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=33,p=1208) 
+- [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
   
 #### - Array Manipulation  
 - [day_of_year](http://j.mp/dayYearCC)  - multidimensional array 1
@@ -40,9 +40,9 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 ## PDS-1 Practice
   - Lab 3
-	 - [connect](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1191), [traverse](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1190) and 
-[insertBefore](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1193)
-	 - [Doubly-Linked List](https://cloudcoder.kgisl.com/cloudcoder/#exercise?c=7,p=1189)
+	 - [connect](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190) and 
+[insertBefore](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
+	 - [Doubly-Linked List](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1189)
        - Processing strings as linked lists [TBD]
   - Lab 6 
     - [Fixed Array based Stack](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1115)
