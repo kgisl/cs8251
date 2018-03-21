@@ -14,9 +14,9 @@ Write the function logic using recursion; do not use for loops.
 
 	("ab", "abcde") -> 1
 	("ab", "addde") -> 0 
-	("NEEDLE", "haNystEEaDcLkkkkkEe") -> 1
-	("truck", "ruc") -> 0 
-	("truck", "") -> 1 
-	("", "truck2") -> 0 
+	("NEEDLE", "haNystEEaDcLkkkkkEe") -> 1  
+	("truck", "ruc") -> 0   
+	("truck", "") -> 0  
+	("", "truck2") -> 1 
 	("TRUCKS", "ABCDEFHIKS") -> 0 
 
