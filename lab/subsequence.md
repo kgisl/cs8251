@@ -6,9 +6,10 @@ Write the function logic using recursion; do not use for loops.
 
 **BONUS**: It is actually possible to  use just two pointer variables for the complete solution. Go for it! 
 
+**BONUS 2**: If you refactor it really well, it is all but two lines! 
+
 
 ----------
-
 
 ### Example 
 
