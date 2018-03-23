@@ -24,6 +24,7 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
+- [binaryAdd](http://j.mp/binaryAddCC) (CapGemini), 
 - [have_no_fives](http://j.mp/haveNoFive) and
 - [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
   
