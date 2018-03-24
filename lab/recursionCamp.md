@@ -527,13 +527,14 @@ def insertion_sort(l, nsorted=1):
 #### Merge Sort
 ```python
 from heapq import merge
-
 def mergesort(w):
     if len(w)<2:
         return w
     else:
         mid = len(w) // 2
-        return merge(mergesort(w[:mid]), mergesort(w[mid:]))
+		return merge(mergesort(w[:mid]),
+                     mergesort(w[mid:]))
+                     
 ```
 
 #### Quick Sort 
