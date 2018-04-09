@@ -19,7 +19,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringRCharCC),  
 - [strend](http://j.mp/stringEndCC), 
-- [strstr](http://j.mp/stringStrCC) and [strstrw](j.mp/strstrWrapCC), 
+- [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrWrapCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
 - [strpbrk](http://j.mp/strpbrkCC), 
 - [strcspn](http://j.mp/stringcspnCC), 
@@ -28,7 +28,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [subset](http://j.mp/subSetCC), 
 - [subsequence](http://j.mp/subSeqCC), 
 
-### String Misc
+### String allocation (dynamic memory)
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
