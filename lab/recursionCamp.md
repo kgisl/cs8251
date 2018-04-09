@@ -48,6 +48,8 @@
 
 ### Why Recursion? - Pros and Cons 
 
+- Read this reddit [article!](https://www.reddit.com/r/learnprogramming/comments/8axanq/recursion_when_would_i_use_it_beyond_factorials/ )
+
 _"Recursive functions are confusing, elegant and fascinating, all the same time!"_
 
 Some programs and/or computer algorithms are more readable, concise and less error prone when implemented as recursive calls. The **downside:** low performance and high memory usage, especially when there are innumerable recursive calls, sometimes resulting in memory overflow conditions on the stack.
@@ -503,10 +505,11 @@ def selectsortr(l):
 or 
 
 def selectsortr(L):
-	if not L: return []
-	smallest = min(L)
-	L.remove(smallest)
-	return [smallest] + selectsortr(L)
+    if not L: return []
+    smallest = min(L)
+    L.remove(smallest)
+    return [smallest] + selectsortr(L)
+    
 ```
 
 #### Insertion Sort 
@@ -517,22 +520,22 @@ def selectsortr(L):
 
 import bisect
 
-def insertion_sort(l, nsorted=1):
-    if nsorted >= len(l):
-        return l
-    bisect.insort(l, l.pop(), hi=nsorted)
-    return insertion_sort(l, nsorted + 1)
+def insertion_sort(L, nsorted=1):
+    if nsorted >= len(L):
+        return L
+    bisect.insort(L, L.pop(), hi=nsorted)
+    return insertion_sort(L, nsorted + 1)
 ```
 
 #### Merge Sort
 ```python
 from heapq import merge
 def mergesort(w):
-    if len(w)<2:
+    if len(w) < 2:
         return w
     else:
         mid = len(w) // 2
-		return merge(mergesort(w[:mid]),
+        return merge(mergesort(w[:mid]),
                      mergesort(w[mid:]))
                      
 ```
@@ -541,9 +544,9 @@ def mergesort(w):
 
 ```python 
 def quicksort(s):
-  len_s = len(s)
-  if len_s < 2:
-    return s
+    len_s = len(s)
+    if len_s < 2:
+        return s
 
   pivot = s[random.randrange(0, len_s)]
 
