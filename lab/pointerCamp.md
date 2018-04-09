@@ -5,15 +5,21 @@ Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 
-#### - String based
+## - String based
 - [vowel counting](https://j.mp/vowelCC),
-- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
+### String manipulation
 - [strcpy](http://j.mp/stringCopyCC),
 - [strcat](http://j.mp/stringCatCC), 
+- [strncat](http://j.mp/stringNCatCC), TBD
+- [toupper](http://j.mp/toUpperCC), TBD,
+- [tolower](http://j.mp/toLowerCC), TBD,
 - [strrev](http://j.mp/reverseUsingPointers),
-- [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
-- [strend](http://j.mp/stringEndCC), 
+### String examination 
+- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [strchar](http://j.mp/stringCharCC), 
+- [strrchar](http://j.mp/stringRCharCC), TBD,
+- [strend](http://j.mp/stringEndCC), 
+- [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
 - [strstr](http://j.mp/stringStrCC), 
 - [strpbrk](http://j.mp/strpbrkCC), 
 - [strcspn](http://j.mp/stringcspnCC), 
@@ -21,6 +27,8 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [strtok](http://j.mp/strTokenizeCC),
 - [subset](http://j.mp/subSetCC), 
 - [subsequence](http://j.mp/subSeqCC), 
+
+### String Misc
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
@@ -28,11 +36,11 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [have_no_fives](http://j.mp/haveNoFive) and
 - [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
   
-#### - Array Manipulation  
+## - Array Manipulation  
 - [day_of_year](http://j.mp/dayYearCC)  - multidimensional array 1
 - [matrixUpdate](http://j.mp/arrayPointer) - multidimensional array 2
 
-#### - Function Parameters
+## - Function Parameters
 - [pointerWalk](http://j.mp/pointerWalk)
 - [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
 - [swap](http://j.mp/swapUsingPointers) 
