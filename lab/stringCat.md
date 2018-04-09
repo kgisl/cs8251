@@ -1,6 +1,6 @@
 ## stringCat
 
-Write a pointer version of the function  `strcat`  that `strcat(s,t)`  copies the string  `t`  to the end of  `s`  .
+Write a pointer version of the function  `strncat`  that `strncat(s,t, n)`  copies the first n characters of string  `t`  to the end of  `s`  .
 
 
 ### Example 
@@ -49,5 +49,5 @@ int main(void)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0ODg1NTc2XX0=
+eyJoaXN0b3J5IjpbLTEyNjA1OTY3NTEsMjA0ODg1NTc2XX0=
 -->
