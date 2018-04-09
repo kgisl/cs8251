@@ -6,21 +6,21 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 
 ## - String based
+A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 - [vowel counting](https://j.mp/vowelCC),
 ### String manipulation
 - [strcpy](http://j.mp/stringCopyCC),
-- [strcat](http://j.mp/stringCatCC), 
-- [strncat](http://j.mp/stringNCatCC), TBD
-- [toupper](http://j.mp/toUpperCC), TBD,
-- [tolower](http://j.mp/toLowerCC), TBD,
+- [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC)
+- [strupper](http://j.mp/toUpperCC),
+- [strlower](http://j.mp/toLowerCC),
+- [strflipcase](j.mp/stringFlipCC), 
 - [strrev](http://j.mp/reverseUsingPointers),
 ### String examination 
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
-- [strchar](http://j.mp/stringCharCC), 
-- [strrchar](http://j.mp/stringRCharCC), TBD,
+- [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringRCharCC),  
 - [strend](http://j.mp/stringEndCC), 
+- [strstr](http://j.mp/stringStrCC) and [strstrw](j.mp/strstrWrapCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
-- [strstr](http://j.mp/stringStrCC), 
 - [strpbrk](http://j.mp/strpbrkCC), 
 - [strcspn](http://j.mp/stringcspnCC), 
 - [strspn](http://j.mp/stringspnCC), 
@@ -33,10 +33,10 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 - [indexOf](http://j.mp/indexCC),
 - [replaceString](http://j.mp/replaceCC),
 - [binaryAdd](http://j.mp/binaryAddCC) (CapGemini), 
-- [have_no_fives](http://j.mp/haveNoFive) and
-- [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
+- [have_no_fives](http://j.mp/haveNoFive) 
   
 ## - Array Manipulation  
+- [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
 - [day_of_year](http://j.mp/dayYearCC)  - multidimensional array 1
 - [matrixUpdate](http://j.mp/arrayPointer) - multidimensional array 2
 
