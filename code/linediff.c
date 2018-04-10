@@ -30,9 +30,7 @@
 #define MAXLINE 1000
 
 void diff_line(char *lineone, char *linetwo, int linenumber) {
-  if (strcmp(lineone, linetwo) < 0 || 
-      strcmp(lineone, linetwo) > 0
-     )
+  if (strcmp(lineone, linetwo))
     printf("%d<%s%d>%s\n", linenumber, lineone, linenumber, linetwo);
 }
 
