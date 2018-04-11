@@ -43,7 +43,7 @@ void mystrcat(char *s, char *t)
 }
 
 // concise version of strcat
-void mystrcat2(char *dest, char *source){
+void mystrcat2(char *dest, const char *source){
   while(*dest) dest++;
   while((*dest++ = *source++));
 }
@@ -52,11 +52,13 @@ void mystrcat2(char *dest, char *source){
 
 #if DRIVER
 #include <stdio.h>
+#include <string.h>
+#include <assert.h>
 
 int main(void)
 {
-  char S1[8192] = "String One";
-  char S2[8192] = "String Two";
+  char S1[30] = "String One";
+  char S2[10] = "String Two";
 
 
   printf("String one is (%s)\n", S1);
@@ -66,10 +68,17 @@ int main(void)
   //"The combined string is (String OneString Two)"
   printf("The combined string is (%s)\n", S1);
 
+  //before copying again, assert there is space in S1
+  assert(sizeof(S1) > strlen(S1) + strlen(S2));
   mystrcat2(S1, S2);
   //"The combined string is (String OneString TwoString Two)"
   printf("The combined string is (%s)\n", S1);
 
+  //before copying again, assert there is space in S1
+  assert(sizeof(S1) > strlen(S1) + strlen(S2));
+  mystrcat2(S1, S2); // will not execute, since assert will abort
+  printf("The combined string is (%s)\n", S1);
+  
   return 0;
 }
 
