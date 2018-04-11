@@ -25,8 +25,8 @@
 
 ******************************************************/
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 #define MAXLINE 1000
 
 void diff_line(char *lineone, char *linetwo, int linenumber) {
