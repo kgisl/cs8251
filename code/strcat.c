@@ -42,6 +42,12 @@ void mystrcat(char *s, char *t)
 
 }
 
+// concise version of strcat
+void mystrcat2(char *dest, char *source){
+  while(*dest) dest++;
+  while((*dest++ = *source++));
+}
+
 #define DRIVER         6
 
 #if DRIVER
@@ -57,6 +63,11 @@ int main(void)
   printf("String two is (%s)\n", S2);
  
   mystrcat(S1, S2);
+  //"The combined string is (String OneString Two)"
+  printf("The combined string is (%s)\n", S1);
+
+  mystrcat2(S1, S2);
+  //"The combined string is (String OneString TwoString Two)"
   printf("The combined string is (%s)\n", S1);
 
   return 0;
