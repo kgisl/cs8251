@@ -1,0 +1,6 @@
+[submodule "code/code/psgc"]
+	path = code/code/psgc
+	url = https://github.com/kgashok/psgc.git
+[submodule "code/psgc"]
+	path = code/psgc
+	url = https://github.com/kgisl/cs8251.git
