@@ -43,7 +43,7 @@
 [2]: http://iiti.ac.in/people/~tanimad/FileHandlinginCLanguage.pdf 
 
 
-### Pre-Unit exercise - a "Show and Tell" exercise
+## Pre-Unit exercise - a "Show and Tell" exercise
 
 1. Create your own paper document by writing a few numbers 
 and words in 3-4 lines. Do not use cursive writing, instead 
@@ -68,7 +68,7 @@ to the image below:
 
 ![ocr](https://cdn.rawgit.com/kgashok/filesOCR/1d2f5c87/directoryImage.png)
 
-### Post-Unit exercise
+## Post-Unit exercise
 - Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
 - Try and understand Kilo project - https://github.com/kgisl/kilo
@@ -88,7 +88,7 @@ to the image below:
 - **Path**: The path specifies the drive and/or directory (or folder) where the file is located. On PCs, the backslash character is used to separate directory names in a path. Some systems like Unix use the forward slash (/) as the directory separator. 
 
 
-## File Handling in C Language - Quick Reference
+# File Handling in C Language - Quick Reference
 
 A **file** represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a readymade structure.
 
@@ -229,7 +229,7 @@ if (bfp) {
 
 ----------
 
-## Files
+# Files
 
 **What are files?**  A file is sequential stream of bytes ending with an end-of-file marker.
 
@@ -269,14 +269,14 @@ By convention, the data in every text file obeys a number of rules:
 - The text looks readable to a human or at least moderately sane. Even if it contains a heavy proportion of punctuation symbols (like HTML, RTF, and other markup formats), there is some visible structure and it’s not seemingly random garbage.
 
 
-### Binary File Characteristics
+## Binary File Characteristics
 
 - For most software that people use in their daily lives, the software consumes and produces binary files. Examples of such software include Microsoft Office, Adobe Photoshop, and various audio/video/media players. A typical computer user works with mostly binary files and very few text files.
 - A binary file always needs a matching software to read or write it. For example, an MP3 file can be produced by a sound recorder or audio editor, and it can be played in a music player or audio editor. But an MP3 file cannot be played in an image viewer or a database software.
 - Some binary formats are popular enough that a wide variety of programs can produce or consume it. Image formats like JPEG are the best example – not only can they be used in image viewers and editors, they can be viewed in web browsers, audio players (for album art), and document software (such as adding a picture into a Word doc). 
 
 
-### Files and Streams
+## Files and Streams
 C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either 
 with an `end-of-file (EOF)` marker or at a specific byte number recorded in a system-maintained,
 administrative data structure. When a file is opened, a stream is associated with it. Three
@@ -307,7 +307,7 @@ In the next several sections, we introduce the file-processing equivalents of fu
 |rwrite | Write to random (or binary) file |
 
 
-### Types of file processing 
+## Types of file processing 
 
 - There are two types of files - text and binary files 
 - There are two techniques for processing files - sequential and random
@@ -318,7 +318,7 @@ Every open file has an associated `file position indicator`, which describes whe
 
 - When more control is required, the C library functions that help determine and change the value of the `file position indicator`, have to be used. By controlling the position indicator, random access of a file can be made possible. Here, random means that data can be read from, or written to, any position in a file without reading or writing all the preceding data.
 
-## Creating a Sequential Access file
+# Creating a Sequential Access file
 
 C imposes no structure on a file. Thus, notions such as a record of a file do not exist as part of the C language. The following example shows how you can impose your own record structure on a file.
 
@@ -1706,5 +1706,5 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1NjA5OTI4NiwxMTYxMTgyNjIzXX0=
+eyJoaXN0b3J5IjpbLTE2MjAxMTQ5MjYsMTE2MTE4MjYyM119
 -->
