@@ -834,7 +834,7 @@ SEEK_END - the seek starts at the end of the file
 </code></pre>
 <p><strong>Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2.)</strong></p>
 <h2 id="transaction-processing-using-random-access-files">Transaction processing using random access files</h2>
-<p>We now present a substantial transaction-processing program using <strong>random access</strong> files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 has been executed to create the file <strong>credit.dat</strong>.</p>
+<p>We now present a substantial transaction-processing program using <strong>random access</strong> files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 (see program under <a href="#creating-random-access-file">“Creating Random Access File”</a> heading) has been executed to create the file <strong>credit.dat</strong>.</p>
 <p>The program has five options.</p>
 <p><strong>Option 1</strong> calls function textFile (lines 63–94) to store a formatted list of all the accounts (typically called a report) in a text file called accounts.txt that may be printed later. The function uses fread and the sequential file access techniques used in the program of Section below.</p>
 <p>After <strong>option 1</strong> is chosen, the file <strong>accounts.txt</strong> contains:</p>
