@@ -1169,7 +1169,7 @@ the value of `FOPEN_MAX` be at least 8, including the standard streams
 `stdin`, `stdout` and `stderr`. Thus, as a minimum, it’s possible to
 work with up to 5 files simultaneously.  
 
-**7. What is the advantage of text files over binary files? **  
+**7. What is the advantage of text files over binary files?**  
 Due to differences in binary data representations across platforms, files written in binary format often are not portable. For more portable file representations, consider using text files.
 
 
@@ -1706,6 +1706,6 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNjA1Njk1OCwtODI5MzQ1ODMsMTE2MT
-E4MjYyM119
+eyJoaXN0b3J5IjpbLTgzNTE2NTYwOCwxMzA2MDU2OTU4LC04Mj
+kzNDU4MywxMTYxMTgyNjIzXX0=
 -->
