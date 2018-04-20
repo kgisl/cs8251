@@ -1104,7 +1104,7 @@ Version 2
 
 
 
-## FAQ 
+# FAQ 
 
 **1. What is file?**  
  A file is a collection of bytes stored on a secondary storage device, which
@@ -1174,7 +1174,7 @@ Due to differences in binary data representations across platforms, files writte
 
 
 
-## Bonus Material
+# Bonus Material
 
 
 ### Modular Versions
@@ -1248,7 +1248,7 @@ int main(int argc, char* argv[]) {
 
 ```
 
-### Averaging entries from stdin 
+## Averaging entries from stdin 
 
 ```c
 int main() {
@@ -1267,7 +1267,7 @@ int main() {
 ```
 
 
-### Example Program: Average of numbers
+## Example Program: Average of numbers
 
 Write a program to calculate the average of first n numbers. This is the simplest version of calculating averages of a bunch of numbers. 
 
@@ -1297,7 +1297,7 @@ int main(){
     The average of first 20 numbers = 10.05
 
 
-### Using '9999' as EOF 
+## Using '9999' as EOF 
 
 The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
 
@@ -1706,5 +1706,5 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MzExMzgzNiwxMTYxMTgyNjIzXX0=
+eyJoaXN0b3J5IjpbLTgyOTM0NTgzLDExNjExODI2MjNdfQ==
 -->
