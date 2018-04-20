@@ -1,5 +1,7 @@
 
 ![dma](http://bit.ly/dynamicMemory)
+Also see http://j.mp/cs2851-dynamicMemory 
+
 
 #### Why Dynamic Allocation
 From https://en.wikipedia.org/wiki/C_dynamic_memory_allocation
@@ -107,5 +109,5 @@ int main()
 What will be the output? 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg2MTY0NDhdfQ==
+eyJoaXN0b3J5IjpbNjIyNDgyNTk1LC0xMTI4NjE2NDQ4XX0=
 -->
