@@ -40,7 +40,8 @@ void mystrcat(char *s, char *t) {
 
 // concise version of strcat
 void mystrcat2(char *dest, const char *source) {
-  while (*dest) dest++;
+  while (*dest)
+    dest++;
   while ((*dest++ = *source++))
     ;
 }
@@ -71,7 +72,7 @@ int main(void) {
 
   // before copying again, assert there is space in S1
   assert(sizeof(S1) > strlen(S1) + strlen(S2));
-  mystrcat2(S1, S2);  // will not execute, since assert will abort
+  mystrcat2(S1, S2); // will not execute, since assert will abort
   printf("The combined string is (%s)\n", S1);
 
   return 0;

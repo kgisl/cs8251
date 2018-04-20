@@ -2,8 +2,8 @@
 int main() {
   int a, b;
   char ca, cb;
-  int* p = &a;
-  int* q = &b;
+  int *p = &a;
+  int *q = &b;
   ca = 'b';
   cb = 'f';
   char cc = (ca + cb) % 96 + 96;
