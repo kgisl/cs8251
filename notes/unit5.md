@@ -403,7 +403,7 @@ After the user enters end-of-file, the program closes the clients.dat file with 
 and terminates. Function fclose also receives the file pointer (rather than the filename)
 as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
 
-### File Access Modes
+## File Access Modes
 
 Programs may process no files, one file or several files. Each file used in a program will
 have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). **The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.** 
@@ -427,7 +427,7 @@ If an error occurs while opening a file in any mode, fopen returns **NULL**.
 |wb+	 | opens a binary file in both reading and writing mode |
 
 
-### Reading Sequential Access file
+## Reading Sequential Access file
 
 Data is stored in files so that the data can be retrieved for processing when needed. The
 previous section demonstrated how to create a file for sequential access. This section shows how to read data sequentially from a file.
@@ -483,7 +483,7 @@ sometimes referred to as the file offset. The file position pointer is a member 
 structure associated with each file.
 
 
-### Read numbers from file and calculate Average
+## Read numbers from file and calculate Average
 
 The next program reads five (or more) integer values from the data file `num.dat`. In this program end-of-file marker `EOF` is used to exit the loop.
 
@@ -515,7 +515,7 @@ int main() {
 
 ```
 
-## Random access file 
+# Random access file 
 
 As we stated previously, records in a file created with the formatted output function
 **fprintf** are not necessarily the same length. However, individual records of a random access file are normally fixed in length and may be accessed directly (and thus quickly)
@@ -536,7 +536,7 @@ random-access file, enter data, read the data both sequentially and randomly, up
 data, and delete data no longer needed. 
 
 
-### Creating Random Access File
+## Creating Random Access File
 
 Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using 
 
@@ -594,7 +594,7 @@ int main(void) {
 
 Function **fwrite** writes a block of bytes to a file. Line 29 causes the structure blankClient of size `sizeof(struct clientData)` to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to **fwrite** a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, **fwrite** was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the **fwrite** call. 
 
-### Writing Random Access Data
+## Writing Random Access Data
 
 Figure 11.11 writes data to the file **"credit.dat"**. It uses the combination of **fseek** and **fwrite** to store data at specific locations in the file. Function fseek sets the file position pointer to a specific position in the file, then fwrite writes the data. A sample execution is shown in Fig. 11.12.
 
@@ -674,7 +674,7 @@ The function prototype for **fseek** is where offset is the number of bytes to s
  - Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
 
-### Reading Random Access Data 
+## Reading Random Access Data 
 
 Function **fread** reads a specified number of bytes from a file into memory. For example,
 
@@ -744,7 +744,7 @@ int main(void) {
 **Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2.)**
 
 
-### Transaction processing using random access files 
+## Transaction processing using random access files 
 
 
 We now present a substantial transaction-processing program using **random access** files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 has been executed to create the file **credit.dat**.
@@ -1001,7 +1001,7 @@ unsigned int enterChoice(void) {
 
 ```
 
-## Command line arguments
+# Command line arguments
 
 ![command](https://files.gitter.im/kgashok/advik/jbXG/commandLineArgv.png)
 
@@ -1014,7 +1014,7 @@ On many UNIX systems, it is possible to pass arguments to **`main`** from the co
 
 It is possible to pass arguments to `C` programs when they are executed. The brackets which follow `main()` are used for this purpose. `argc` refers to the number of arguments passed, and `argv[]` is a pointer array which points to each argument which is passed to `main`. 
 
-### Simple example 
+## Simple example 
 A simple example follows, which checks to see if a single argument is supplied on the command line when the program is invoked. The program is called by the command line,
 
 	 > myprog argument1
@@ -1037,12 +1037,12 @@ int main(int argc, char *argv[]) {
 
 Note that `*argv[0]` is the name of the program invoked, which means that `*argv[1]` is a pointer to the first argument supplied, and `*argv[n]` is the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
 
-### Another example 
+## Another example 
 
 Review the [argument sorting program](https://github.com/kgisl/cs8251/blob/master/code/argsort.c) to see how `argc` and `argv[]` are used to pass as arguments for `qsort` which sorts the input command line arguments. 
 
 
-### Program 5.3
+## Program 5.3
 
 **Program 5.3** below copies a file into another file one character at a time. We assume that the executable file for the program is called **mycopy**. A typical command line for the **mycopy** program on a Linux/UNIX system is  
 
@@ -1706,5 +1706,5 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjAxMTQ5MjYsMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbMjA2MzExMzgzNiwxMTYxMTgyNjIzXX0=
 -->
