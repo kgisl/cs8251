@@ -43,7 +43,7 @@
 [2]: http://iiti.ac.in/people/~tanimad/FileHandlinginCLanguage.pdf 
 
 
-### Pre-Unit exercise - a "Show and Tell" exercise
+## Pre-Unit exercise - a "Show and Tell" exercise
 
 1. Create your own paper document by writing a few numbers 
 and words in 3-4 lines. Do not use cursive writing, instead 
@@ -68,7 +68,7 @@ to the image below:
 
 ![ocr](https://cdn.rawgit.com/kgashok/filesOCR/1d2f5c87/directoryImage.png)
 
-### Post-Unit exercise
+## Post-Unit exercise
 - Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
 - Try and understand Kilo project - https://github.com/kgisl/kilo
@@ -76,7 +76,7 @@ to the image below:
    - [reading](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L674) to file
    - Implement a `<Ctrl-O>` option that loads in a new file into the editor
 
-## Key Terms
+# Key Terms
 
 - **Binary file** : Binary file is a collection of bytes or a character stream. The data that is written into and read from binary file remain unchanged, with no separation between lines and no use of end-of-line characters and the interpretation of the file is left to the programmer.
 - **Text file** :  A text file is a stream of characters that can be processed sequentially and logically in the forward direction. The maximum number of characters in each line is limited to 255 characters. 
@@ -88,7 +88,7 @@ to the image below:
 - **Path**: The path specifies the drive and/or directory (or folder) where the file is located. On PCs, the backslash character is used to separate directory names in a path. Some systems like Unix use the forward slash (/) as the directory separator. 
 
 
-## File Handling in C Language - Quick Reference
+# File Handling in C Language - Quick Reference
 
 A **file** represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a readymade structure.
 
@@ -229,7 +229,7 @@ if (bfp) {
 
 ----------
 
-## Files
+# Files
 
 **What are files?**  A file is sequential stream of bytes ending with an end-of-file marker.
 
@@ -269,14 +269,14 @@ By convention, the data in every text file obeys a number of rules:
 - The text looks readable to a human or at least moderately sane. Even if it contains a heavy proportion of punctuation symbols (like HTML, RTF, and other markup formats), there is some visible structure and it’s not seemingly random garbage.
 
 
-### Binary File Characteristics
+## Binary File Characteristics
 
 - For most software that people use in their daily lives, the software consumes and produces binary files. Examples of such software include Microsoft Office, Adobe Photoshop, and various audio/video/media players. A typical computer user works with mostly binary files and very few text files.
 - A binary file always needs a matching software to read or write it. For example, an MP3 file can be produced by a sound recorder or audio editor, and it can be played in a music player or audio editor. But an MP3 file cannot be played in an image viewer or a database software.
 - Some binary formats are popular enough that a wide variety of programs can produce or consume it. Image formats like JPEG are the best example – not only can they be used in image viewers and editors, they can be viewed in web browsers, audio players (for album art), and document software (such as adding a picture into a Word doc). 
 
 
-### Files and Streams
+## Files and Streams
 C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either 
 with an `end-of-file (EOF)` marker or at a specific byte number recorded in a system-maintained,
 administrative data structure. When a file is opened, a stream is associated with it. Three
@@ -307,7 +307,7 @@ In the next several sections, we introduce the file-processing equivalents of fu
 |rwrite | Write to random (or binary) file |
 
 
-### Types of file processing 
+## Types of file processing 
 
 - There are two types of files - text and binary files 
 - There are two techniques for processing files - sequential and random
@@ -318,7 +318,7 @@ Every open file has an associated `file position indicator`, which describes whe
 
 - When more control is required, the C library functions that help determine and change the value of the `file position indicator`, have to be used. By controlling the position indicator, random access of a file can be made possible. Here, random means that data can be read from, or written to, any position in a file without reading or writing all the preceding data.
 
-## Creating a Sequential Access file
+# Creating a Sequential Access file
 
 C imposes no structure on a file. Thus, notions such as a record of a file do not exist as part of the C language. The following example shows how you can impose your own record structure on a file.
 
@@ -403,7 +403,7 @@ After the user enters end-of-file, the program closes the clients.dat file with 
 and terminates. Function fclose also receives the file pointer (rather than the filename)
 as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
 
-### File Access Modes
+## File Access Modes
 
 Programs may process no files, one file or several files. Each file used in a program will
 have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). **The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.** 
@@ -427,7 +427,7 @@ If an error occurs while opening a file in any mode, fopen returns **NULL**.
 |wb+	 | opens a binary file in both reading and writing mode |
 
 
-### Reading Sequential Access file
+## Reading Sequential Access file
 
 Data is stored in files so that the data can be retrieved for processing when needed. The
 previous section demonstrated how to create a file for sequential access. This section shows how to read data sequentially from a file.
@@ -483,7 +483,7 @@ sometimes referred to as the file offset. The file position pointer is a member 
 structure associated with each file.
 
 
-### Read numbers from file and calculate Average
+## Read numbers from file and calculate Average
 
 The next program reads five (or more) integer values from the data file `num.dat`. In this program end-of-file marker `EOF` is used to exit the loop.
 
@@ -515,7 +515,7 @@ int main() {
 
 ```
 
-## Random access file 
+# Random access file 
 
 As we stated previously, records in a file created with the formatted output function
 **fprintf** are not necessarily the same length. However, individual records of a random access file are normally fixed in length and may be accessed directly (and thus quickly)
@@ -536,7 +536,7 @@ random-access file, enter data, read the data both sequentially and randomly, up
 data, and delete data no longer needed. 
 
 
-### Creating Random Access File
+## Creating Random Access File
 
 Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using 
 
@@ -594,7 +594,7 @@ int main(void) {
 
 Function **fwrite** writes a block of bytes to a file. Line 29 causes the structure blankClient of size `sizeof(struct clientData)` to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to **fwrite** a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, **fwrite** was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the **fwrite** call. 
 
-### Writing Random Access Data
+## Writing Random Access Data
 
 Figure 11.11 writes data to the file **"credit.dat"**. It uses the combination of **fseek** and **fwrite** to store data at specific locations in the file. Function fseek sets the file position pointer to a specific position in the file, then fwrite writes the data. A sample execution is shown in Fig. 11.12.
 
@@ -674,7 +674,7 @@ The function prototype for **fseek** is where offset is the number of bytes to s
  - Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
 
-### Reading Random Access Data 
+## Reading Random Access Data 
 
 Function **fread** reads a specified number of bytes from a file into memory. For example,
 
@@ -744,10 +744,10 @@ int main(void) {
 **Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2.)**
 
 
-### Transaction processing using random access files 
+## Transaction processing using random access files 
 
 
-We now present a substantial transaction-processing program using **random access** files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 has been executed to create the file **credit.dat**.
+We now present a substantial transaction-processing program using **random access** files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 (see program under ["Creating Random Access File"](#creating-random-access-file) heading) has been executed to create the file **credit.dat**.
 
 The program has five options. 
   
@@ -1001,7 +1001,7 @@ unsigned int enterChoice(void) {
 
 ```
 
-## Command line arguments
+# Command line arguments
 
 ![command](https://files.gitter.im/kgashok/advik/jbXG/commandLineArgv.png)
 
@@ -1014,7 +1014,7 @@ On many UNIX systems, it is possible to pass arguments to **`main`** from the co
 
 It is possible to pass arguments to `C` programs when they are executed. The brackets which follow `main()` are used for this purpose. `argc` refers to the number of arguments passed, and `argv[]` is a pointer array which points to each argument which is passed to `main`. 
 
-### Simple example 
+## Simple example 
 A simple example follows, which checks to see if a single argument is supplied on the command line when the program is invoked. The program is called by the command line,
 
 	 > myprog argument1
@@ -1037,12 +1037,12 @@ int main(int argc, char *argv[]) {
 
 Note that `*argv[0]` is the name of the program invoked, which means that `*argv[1]` is a pointer to the first argument supplied, and `*argv[n]` is the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
 
-### Another example 
+## Another example 
 
 Review the [argument sorting program](https://github.com/kgisl/cs8251/blob/master/code/argsort.c) to see how `argc` and `argv[]` are used to pass as arguments for `qsort` which sorts the input command line arguments. 
 
 
-### Program 5.3
+## Program 5.3
 
 **Program 5.3** below copies a file into another file one character at a time. We assume that the executable file for the program is called **mycopy**. A typical command line for the **mycopy** program on a Linux/UNIX system is  
 
@@ -1104,7 +1104,7 @@ Version 2
 
 
 
-## FAQ 
+# FAQ 
 
 **1. What is file?**  
  A file is a collection of bytes stored on a secondary storage device, which
@@ -1169,12 +1169,12 @@ the value of `FOPEN_MAX` be at least 8, including the standard streams
 `stdin`, `stdout` and `stderr`. Thus, as a minimum, it’s possible to
 work with up to 5 files simultaneously.  
 
-**7. What is the advantage of text files over binary files? **  
+**7. What is the advantage of text files over binary files?**  
 Due to differences in binary data representations across platforms, files written in binary format often are not portable. For more portable file representations, consider using text files.
 
 
 
-## Bonus Material
+# Bonus Material
 
 
 ### Modular Versions
@@ -1248,7 +1248,7 @@ int main(int argc, char* argv[]) {
 
 ```
 
-### Averaging entries from stdin 
+## Averaging entries from stdin 
 
 ```c
 int main() {
@@ -1267,7 +1267,7 @@ int main() {
 ```
 
 
-### Example Program: Average of numbers
+## Example Program: Average of numbers
 
 Write a program to calculate the average of first n numbers. This is the simplest version of calculating averages of a bunch of numbers. 
 
@@ -1297,7 +1297,7 @@ int main(){
     The average of first 20 numbers = 10.05
 
 
-### Using '9999' as EOF 
+## Using '9999' as EOF 
 
 The next program reads five integer values from the keyboard and stores them in the data file `num.dat`. In this program the user-defined character is used, as end-of-file marker instead of standard `EOF`.
 
@@ -1706,5 +1706,6 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbLTgzNTE2NTYwOCwxMzA2MDU2OTU4LC04Mj
+kzNDU4MywxMTYxMTgyNjIzXX0=
 -->
