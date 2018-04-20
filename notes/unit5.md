@@ -747,7 +747,7 @@ int main(void) {
 ## Transaction processing using random access files 
 
 
-We now present a substantial transaction-processing program using **random access** files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of [Fig. 11.10](#creating-random-access-file) has been executed to create the file **credit.dat**.
+We now present a substantial transaction-processing program using **random access** files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 (see [this section](#creating-random-access-file) has been executed to create the file **credit.dat**.
 
 The program has five options. 
   
@@ -1706,6 +1706,6 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTkzNzAxNTgsLTgyOTM0NTgzLDExNj
+eyJoaXN0b3J5IjpbLTE0OTc0MjI5NTgsLTgyOTM0NTgzLDExNj
 ExODI2MjNdfQ==
 -->
