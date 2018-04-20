@@ -16,14 +16,53 @@
 <li><a href="#unit-v-file-processing">UNIT V FILE PROCESSING</a>
 <ul>
 <li></li>
+<li><a href="#pre-unit-exercise---a-show-and-tell-exercise">Pre-Unit exercise - a “Show and Tell” exercise</a></li>
+<li><a href="#post-unit-exercise">Post-Unit exercise</a></li>
+</ul>
+</li>
 <li><a href="#key-terms">Key Terms</a></li>
 <li><a href="#file-handling-in-c-language---quick-reference">File Handling in C Language - Quick Reference</a></li>
-<li><a href="#files">Files</a></li>
-<li><a href="#creating-a-sequential-access-file">Creating a Sequential Access file</a></li>
-<li><a href="#random-access-file">Random access file</a></li>
-<li><a href="#command-line-arguments">Command line arguments</a></li>
+<li><a href="#files">Files</a>
+<ul>
+<li></li>
+<li><a href="#binary-file-characteristics">Binary File Characteristics</a></li>
+<li><a href="#files-and-streams">Files and Streams</a></li>
+<li><a href="#types-of-file-processing">Types of file processing</a></li>
+</ul>
+</li>
+<li><a href="#creating-a-sequential-access-file">Creating a Sequential Access file</a>
+<ul>
+<li><a href="#file-access-modes">File Access Modes</a></li>
+<li><a href="#reading-sequential-access-file">Reading Sequential Access file</a></li>
+<li><a href="#read-numbers-from-file-and-calculate-average">Read numbers from file and calculate Average</a></li>
+</ul>
+</li>
+<li><a href="#random-access-file">Random access file</a>
+<ul>
+<li><a href="#creating-random-access-file">Creating Random Access File</a></li>
+<li><a href="#writing-random-access-data">Writing Random Access Data</a>
+<ul>
+<li></li>
+</ul>
+</li>
+<li><a href="#reading-random-access-data">Reading Random Access Data</a></li>
+<li><a href="#transaction-processing-using-random-access-files">Transaction processing using random access files</a></li>
+</ul>
+</li>
+<li><a href="#command-line-arguments">Command line arguments</a>
+<ul>
+<li><a href="#simple-example">Simple example</a></li>
+<li><a href="#another-example">Another example</a></li>
+<li><a href="#program-5.3">Program 5.3</a></li>
+</ul>
+</li>
 <li><a href="#faq">FAQ</a></li>
-<li><a href="#bonus-material">Bonus Material</a></li>
+<li><a href="#bonus-material">Bonus Material</a>
+<ul>
+<li></li>
+<li><a href="#averaging-entries-from-stdin">Averaging entries from stdin</a></li>
+<li><a href="#example-program-average-of-numbers">Example Program: Average of numbers</a></li>
+<li><a href="#using-9999-as-eof">Using ‘9999’ as EOF</a></li>
 </ul>
 </li>
 </ul>
@@ -86,7 +125,7 @@
 <li>Quick reference on <a href="http://iiti.ac.in/people/~tanimad/FileHandlinginCLanguage.pdf">file handling</a></li>
 <li>All about <a href="https://latedev.wordpress.com/2012/12/04/all-about-eof/">EOF</a></li>
 </ul>
-<h3 id="pre-unit-exercise---a-show-and-tell-exercise">Pre-Unit exercise - a “Show and Tell” exercise</h3>
+<h2 id="pre-unit-exercise---a-show-and-tell-exercise">Pre-Unit exercise - a “Show and Tell” exercise</h2>
 <ol>
 <li>Create your own paper document by writing a few numbers<br>
 and words in 3-4 lines. Do not use cursive writing, instead<br>
@@ -110,7 +149,7 @@ end up with a snapshot of a cloned repo directory similar<br>
 to the image below:</li>
 </ol>
 <p><img src="https://cdn.rawgit.com/kgashok/filesOCR/1d2f5c87/directoryImage.png" alt="ocr"></p>
-<h3 id="post-unit-exercise">Post-Unit exercise</h3>
+<h2 id="post-unit-exercise">Post-Unit exercise</h2>
 <ul>
 <li>
 <p>Read and resolve <a href="https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md">this</a> mystery.</p>
@@ -124,7 +163,7 @@ to the image below:</li>
 </ul>
 </li>
 </ul>
-<h2 id="key-terms">Key Terms</h2>
+<h1 id="key-terms">Key Terms</h1>
 <ul>
 <li><strong>Binary file</strong> : Binary file is a collection of bytes or a character stream. The data that is written into and read from binary file remain unchanged, with no separation between lines and no use of end-of-line characters and the interpretation of the file is left to the programmer.</li>
 <li><strong>Text file</strong> :  A text file is a stream of characters that can be processed sequentially and logically in the forward direction. The maximum number of characters in each line is limited to 255 characters.</li>
@@ -135,7 +174,7 @@ to the image below:</li>
 <li><strong>File management</strong>:  It basically means all operations related to creating, renaming, deleting, merging, reading, writing, etc. of any type of files.</li>
 <li><strong>Path</strong>: The path specifies the drive and/or directory (or folder) where the file is located. On PCs, the backslash character is used to separate directory names in a path. Some systems like Unix use the forward slash (/) as the directory separator.</li>
 </ul>
-<h2 id="file-handling-in-c-language---quick-reference">File Handling in C Language - Quick Reference</h2>
+<h1 id="file-handling-in-c-language---quick-reference">File Handling in C Language - Quick Reference</h1>
 <p>A <strong>file</strong> represents a sequence of bytes on the disk where a group of related data is stored. File is created for permanent storage of data. It is a readymade structure.</p>
 <p>In C language, we use a structure <strong>pointer of file type</strong> to declare a file.</p>
 <pre><code>	FILE *fp;
@@ -285,7 +324,7 @@ FILE <span class="token operator">*</span>bfp <span class="token operator">=</sp
 <li><strong>rewind()</strong> - It moves the control to beginning of the file.</li>
 </ul>
 <hr>
-<h2 id="files">Files</h2>
+<h1 id="files">Files</h1>
 <p><strong>What are files?</strong>  A file is sequential stream of bytes ending with an end-of-file marker.</p>
 <p>As we know, at the time of execution, every program is executed in the main memory. Main memory is volatile and the data would be lost once the program is terminated. If we need the same data again, we have to store the data in a file on the disk. A file is sequential stream of bytes ending with an end-of-file marker.</p>
 <p>Storage of data in variables and arrays is temporary—such data is lost when a program terminates. Files are used for permanent retention of data. Computers store files on secondary storage devices, such as hard drives, CDs, DVDs and flash drives. In this chapter, we explain how data files are created, updated and processed by C programs. We consider both sequential-access and random-access file processing.</p>
@@ -315,13 +354,13 @@ Tabular data: csv, tsv, ...
 <li>The data format is usually line-oriented. Each line could be a separate command, or a list of values could put each item on a different line, etc. The maximum number of characters in each line is usually a reasonable value like 100, not like 1000.</li>
 <li>The text looks readable to a human or at least moderately sane. Even if it contains a heavy proportion of punctuation symbols (like HTML, RTF, and other markup formats), there is some visible structure and it’s not seemingly random garbage.</li>
 </ul>
-<h3 id="binary-file-characteristics">Binary File Characteristics</h3>
+<h2 id="binary-file-characteristics">Binary File Characteristics</h2>
 <ul>
 <li>For most software that people use in their daily lives, the software consumes and produces binary files. Examples of such software include Microsoft Office, Adobe Photoshop, and various audio/video/media players. A typical computer user works with mostly binary files and very few text files.</li>
 <li>A binary file always needs a matching software to read or write it. For example, an MP3 file can be produced by a sound recorder or audio editor, and it can be played in a music player or audio editor. But an MP3 file cannot be played in an image viewer or a database software.</li>
 <li>Some binary formats are popular enough that a wide variety of programs can produce or consume it. Image formats like JPEG are the best example – not only can they be used in image viewers and editors, they can be viewed in web browsers, audio players (for album art), and document software (such as adding a picture into a Word doc).</li>
 </ul>
-<h3 id="files-and-streams">Files and Streams</h3>
+<h2 id="files-and-streams">Files and Streams</h2>
 <p>C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either<br>
 with an <code>end-of-file (EOF)</code> marker or at a specific byte number recorded in a system-maintained,<br>
 administrative data structure. When a file is opened, a stream is associated with it. Three<br>
@@ -370,7 +409,7 @@ In the next several sections, we introduce the file-processing equivalents of fu
 <td align="left">Write to random (or binary) file</td>
 </tr>
 </tbody>
-</table><h3 id="types-of-file-processing">Types of file processing</h3>
+</table><h2 id="types-of-file-processing">Types of file processing</h2>
 <ul>
 <li>There are two types of files - text and binary files</li>
 <li>There are two techniques for processing files - sequential and random</li>
@@ -384,7 +423,7 @@ In the next several sections, we introduce the file-processing equivalents of fu
 <p>When more control is required, the C library functions that help determine and change the value of the <code>file position indicator</code>, have to be used. By controlling the position indicator, random access of a file can be made possible. Here, random means that data can be read from, or written to, any position in a file without reading or writing all the preceding data.</p>
 </li>
 </ul>
-<h2 id="creating-a-sequential-access-file">Creating a Sequential Access file</h2>
+<h1 id="creating-a-sequential-access-file">Creating a Sequential Access file</h1>
 <p>C imposes no structure on a file. Thus, notions such as a record of a file do not exist as part of the C language. The following example shows how you can impose your own record structure on a file.</p>
 <p><img src="http://j.mp/seqFile" alt="sequential"></p>
 <p>Figure 11.2 creates a simple sequential-access file that might be used in an accounts<br>
@@ -457,7 +496,7 @@ using <strong>stdout</strong> as the file pointer, as in:</p>
 <p>After the user enters end-of-file, the program closes the clients.dat file with fclose<br>
 and terminates. Function fclose also receives the file pointer (rather than the filename)<br>
 as an argument. If function <strong>fclose</strong> is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.”</p>
-<h3 id="file-access-modes">File Access Modes</h3>
+<h2 id="file-access-modes">File Access Modes</h2>
 <p>Programs may process no files, one file or several files. Each file used in a program will<br>
 have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). <strong>The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.</strong></p>
 <p>If an error occurs while opening a file in any mode, fopen returns <strong>NULL</strong>.</p>
@@ -521,7 +560,7 @@ have a different file pointer returned by fopen. All subsequent file-processing 
 <td align="left">opens a binary file in both reading and writing mode</td>
 </tr>
 </tbody>
-</table><h3 id="reading-sequential-access-file">Reading Sequential Access file</h3>
+</table><h2 id="reading-sequential-access-file">Reading Sequential Access file</h2>
 <p>Data is stored in files so that the data can be retrieved for processing when needed. The<br>
 previous section demonstrated how to create a file for sequential access. This section shows how to read data sequentially from a file.</p>
 <pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Fig. 11.6: fig11_06.c</span>
@@ -567,7 +606,7 @@ pointed to by cfPtr. The file position pointer is not really a pointer. Rather i
 value that specifies the byte in the file at which the next read or write is to occur. This is<br>
 sometimes referred to as the file offset. The file position pointer is a member of the FILE<br>
 structure associated with each file.</p>
-<h3 id="read-numbers-from-file-and-calculate-average">Read numbers from file and calculate Average</h3>
+<h2 id="read-numbers-from-file-and-calculate-average">Read numbers from file and calculate Average</h2>
 <p>The next program reads five (or more) integer values from the data file <code>num.dat</code>. In this program end-of-file marker <code>EOF</code> is used to exit the loop.</p>
 <pre class=" language-c"><code class="prism  language-c">
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -595,7 +634,7 @@ structure associated with each file.</p>
 <span class="token punctuation">}</span>
 
 </code></pre>
-<h2 id="random-access-file">Random access file</h2>
+<h1 id="random-access-file">Random access file</h1>
 <p>As we stated previously, records in a file created with the formatted output function<br>
 <strong>fprintf</strong> are not necessarily the same length. However, individual records of a random access file are normally fixed in length and may be accessed directly (and thus quickly)<br>
 without searching through other records. This makes random-access files appropriate for<br>
@@ -612,7 +651,7 @@ destroying other data in the file. Data stored previously can also be updated or
 without rewriting the entire file. In the following sections we explain how to create a<br>
 random-access file, enter data, read the data both sequentially and randomly, update the<br>
 data, and delete data no longer needed.</p>
-<h3 id="creating-random-access-file">Creating Random Access File</h3>
+<h2 id="creating-random-access-file">Creating Random Access File</h2>
 <p>Function <strong>fwrite</strong> transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using</p>
 <pre><code>fprintf(fPtr, "%d", number);
 </code></pre>
@@ -660,7 +699,7 @@ data, and delete data no longer needed.</p>
 
 </code></pre>
 <p>Function <strong>fwrite</strong> writes a block of bytes to a file. Line 29 causes the structure blankClient of size <code>sizeof(struct clientData)</code> to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case <code>struct clientData</code>). Function <strong>fwrite</strong> can actually be used to write several elements of an array of objects. To do so, supply in the call to <strong>fwrite</strong> a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, <strong>fwrite</strong> was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the <strong>fwrite</strong> call.</p>
-<h3 id="writing-random-access-data">Writing Random Access Data</h3>
+<h2 id="writing-random-access-data">Writing Random Access Data</h2>
 <p>Figure 11.11 writes data to the file <strong>“credit.dat”</strong>. It uses the combination of <strong>fseek</strong> and <strong>fwrite</strong> to store data at specific locations in the file. Function fseek sets the file position pointer to a specific position in the file, then fwrite writes the data. A sample execution is shown in Fig. 11.12.</p>
 <pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Fig. 11.11: fig11_11.c</span>
 <span class="token comment">// Writing data randomly to a random-access file</span>
@@ -734,7 +773,7 @@ SEEK_END - the seek starts at the end of the file
 <li>Function <strong>fseek</strong> returns a nonzero value if the seek operation cannot be performed.</li>
 <li>Function <strong>fwrite</strong> returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.</li>
 </ul>
-<h3 id="reading-random-access-data">Reading Random Access Data</h3>
+<h2 id="reading-random-access-data">Reading Random Access Data</h2>
 <p>Function <strong>fread</strong> reads a specified number of bytes from a file into memory. For example,</p>
 <pre><code>fread(&amp;client, sizeof(struct clientData), 1, cfPtr);
 </code></pre>
@@ -794,7 +833,7 @@ SEEK_END - the seek starts at the end of the file
   96 Stone     Sam         34.98
 </code></pre>
 <p><strong>Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2.)</strong></p>
-<h3 id="transaction-processing-using-random-access-files">Transaction processing using random access files</h3>
+<h2 id="transaction-processing-using-random-access-files">Transaction processing using random access files</h2>
 <p>We now present a substantial transaction-processing program using <strong>random access</strong> files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 has been executed to create the file <strong>credit.dat</strong>.</p>
 <p>The program has five options.</p>
 <p><strong>Option 1</strong> calls function textFile (lines 63–94) to store a formatted list of all the accounts (typically called a report) in a text file called accounts.txt that may be printed later. The function uses fread and the sequential file access techniques used in the program of Section below.</p>
@@ -1038,7 +1077,7 @@ Enter lastname, firstname, balance
 <span class="token punctuation">}</span>  <span class="token comment">// end function enterChoice</span>
 
 </code></pre>
-<h2 id="command-line-arguments">Command line arguments</h2>
+<h1 id="command-line-arguments">Command line arguments</h1>
 <p><img src="https://files.gitter.im/kgashok/advik/jbXG/commandLineArgv.png" alt="command"></p>
 <p>On many UNIX systems, it is possible to pass arguments to <strong><code>main</code></strong> from the command line by including the parameters <strong><code>int argc</code></strong> and <strong><code>char *argv[]</code></strong> in the parameter list of <strong><code>main()</code></strong>.</p>
 <ul>
@@ -1053,7 +1092,7 @@ Enter lastname, firstname, balance
 </li>
 </ul>
 <p>It is possible to pass arguments to <code>C</code> programs when they are executed. The brackets which follow <code>main()</code> are used for this purpose. <code>argc</code> refers to the number of arguments passed, and <code>argv[]</code> is a pointer array which points to each argument which is passed to <code>main</code>.</p>
-<h3 id="simple-example">Simple example</h3>
+<h2 id="simple-example">Simple example</h2>
 <p>A simple example follows, which checks to see if a single argument is supplied on the command line when the program is invoked. The program is called by the command line,</p>
 <pre><code> &gt; myprog argument1
 </code></pre>
@@ -1071,9 +1110,9 @@ Enter lastname, firstname, balance
 <span class="token punctuation">}</span>
 </code></pre>
 <p>Note that <code>*argv[0]</code> is the name of the program invoked, which means that <code>*argv[1]</code> is a pointer to the first argument supplied, and <code>*argv[n]</code> is the last argument. If no arguments are supplied, <code>argc</code> will be <code>1</code>. Thus for <code>n</code> arguments, <code>argc</code> will be equal to <code>n + 1</code>.</p>
-<h3 id="another-example">Another example</h3>
+<h2 id="another-example">Another example</h2>
 <p>Review the <a href="https://github.com/kgisl/cs8251/blob/master/code/argsort.c">argument sorting program</a> to see how <code>argc</code> and <code>argv[]</code> are used to pass as arguments for <code>qsort</code> which sorts the input command line arguments.</p>
-<h3 id="program-5.3">Program 5.3</h3>
+<h2 id="program-5.3">Program 5.3</h2>
 <p><strong>Program 5.3</strong> below copies a file into another file one character at a time. We assume that the executable file for the program is called <strong>mycopy</strong>. A typical command line for the <strong>mycopy</strong> program on a Linux/UNIX system is</p>
 <pre><code>&gt; `mycopy input output`  
 </code></pre>
@@ -1125,7 +1164,7 @@ int main(int argc, char *argv[]) {
 -  <a href="https://github.com/kgashok/filesOCR/blob/master/hand.c">https://github.com/kgashok/filesOCR/blob/master/hand.c</a></p>
 <p>Version 2<br>
 - test case <code>count_number_of_bytes_in_text_file</code> in <a href="#solutiontestscpp">solutions.test.cpp</a></p>
-<h2 id="faq">FAQ</h2>
+<h1 id="faq">FAQ</h1>
 <p><strong>1. What is file?</strong><br>
 A file is a collection of bytes stored on a secondary storage device, which<br>
 is generally a disk of some kind. It is identified by a name, which is given<br>
@@ -1183,7 +1222,7 @@ the value of <code>FOPEN_MAX</code> be at least 8, including the standard stream
 work with up to 5 files simultaneously.</p>
 <p>**7. What is the advantage of text files over binary files? **<br>
 Due to differences in binary data representations across platforms, files written in binary format often are not portable. For more portable file representations, consider using text files.</p>
-<h2 id="bonus-material">Bonus Material</h2>
+<h1 id="bonus-material">Bonus Material</h1>
 <h3 id="modular-versions">Modular Versions</h3>
 <p>Fork <a href="http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&amp;tag=-1">this CD session</a> to get testable code!</p>
 <h4 id="read_from_stream_into_arrayconst-char-file-int">read_from_stream_into_array(const char*, FILE*, int[])</h4>
@@ -1242,7 +1281,7 @@ Due to differences in binary data representations across platforms, files writte
 <span class="token punctuation">}</span>
 
 </code></pre>
-<h3 id="averaging-entries-from-stdin">Averaging entries from stdin</h3>
+<h2 id="averaging-entries-from-stdin">Averaging entries from stdin</h2>
 <pre class=" language-c"><code class="prism  language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">int</span> n<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
@@ -1257,7 +1296,7 @@ Due to differences in binary data representations across platforms, files writte
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="example-program-average-of-numbers">Example Program: Average of numbers</h3>
+<h2 id="example-program-average-of-numbers">Example Program: Average of numbers</h2>
 <p>Write a program to calculate the average of first n numbers. This is the simplest version of calculating averages of a bunch of numbers.</p>
 <pre class=" language-c"><code class="prism  language-c">
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
@@ -1281,7 +1320,7 @@ Due to differences in binary data representations across platforms, files writte
 The sum of first 20 numbers = 210
 The average of first 20 numbers = 10.05
 </code></pre>
-<h3 id="using-9999-as-eof">Using ‘9999’ as EOF</h3>
+<h2 id="using-9999-as-eof">Using ‘9999’ as EOF</h2>
 <p>The next program reads five integer values from the keyboard and stores them in the data file <code>num.dat</code>. In this program the user-defined character is used, as end-of-file marker instead of standard <code>EOF</code>.</p>
 <pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
