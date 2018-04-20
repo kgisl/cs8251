@@ -76,7 +76,7 @@ to the image below:
    - [reading](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L674) to file
    - Implement a `<Ctrl-O>` option that loads in a new file into the editor
 
-## Key Terms
+# Key Terms
 
 - **Binary file** : Binary file is a collection of bytes or a character stream. The data that is written into and read from binary file remain unchanged, with no separation between lines and no use of end-of-line characters and the interpretation of the file is left to the programmer.
 - **Text file** :  A text file is a stream of characters that can be processed sequentially and logically in the forward direction. The maximum number of characters in each line is limited to 255 characters. 
@@ -1706,5 +1706,5 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbLTg1NjA5OTI4NiwxMTYxMTgyNjIzXX0=
 -->
