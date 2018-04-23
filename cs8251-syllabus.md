@@ -57,9 +57,9 @@ processing
 
 **TEXT BOOKS:**  
 [1.][10a] Reema Thareja, ―Programming in C‖, Oxford University Press, Second
-Edition, 2016.  Online version with resources are [here](https://india.oup.com/orcs/9780199485529/)  
+Edition, 2016.  Online version with resources are [here](https://india.oup.com/orcs/9780199485529/)
 [2.][10] Kernighan, B.W and Ritchie,D.M, ―The C Programming language‖, Second
-Edition, Pearson Education, 2006 [text version][11]  and solutions [online](http://clc-wiki.net/wiki/K%26R2_solutions)  
+Edition, Pearson Education, 2006 [text version][11]  and solutions [online](http://clc-wiki.net/wiki/K%26R2_solutions)
 
 
 ----------
@@ -79,7 +79,8 @@ Asia, 2011.
 5. Byron S. Gottfried, "Schaum's Outline of Theory and Problems of
 Programming with C",McGraw-Hill Education, 1996.  
 6. [Solutions][9] to C Programming   
-7. [Video][v1] description of selection sort
+7. [Video][v1] description of selection sort   
+8. [C for Dummies](http://j.mp/onlineDummiesBookC) - CheatSheet is good!   
 
 ----------
 
