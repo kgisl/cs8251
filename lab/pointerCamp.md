@@ -1,4 +1,4 @@
-## Pointer Camp
+# Pointer Camp
 
 Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
@@ -7,9 +7,9 @@ On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 ## - String based (30)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
-- [vowel counting](https://j.mp/vowelCC),
 
-### String examination  (15)
+### String examination  (16)
+- [vowel counting](https://j.mp/vowelCC),
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringRCharCC),  
 - [strend](http://j.mp/stringEndCC), 
@@ -51,7 +51,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [palindrome](http://j.mp/dPalindromeKG) using double pointers
 
 
-## PDS-1 Practice (4)
+## - PDS-1 Practice (4)
   - Lab 3
 	 - [connect](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190) and 
 [insertBefore](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
