@@ -5,7 +5,7 @@ Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 On CloudCoder, the landing page is http://j.mp/pointerKITE
 
 
-## - String based
+## - String based (30)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 - [vowel counting](https://j.mp/vowelCC),
 
@@ -30,7 +30,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [strflipcase](j.mp/stringFlipCC), 
 - [strrev](http://j.mp/reverseUsingPointers),
 
-### String allocation (dynamic memory) (5)
+### String allocation (dynamic memory) (6)
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [abbreviate](http://j.mp/acronymCC), 
