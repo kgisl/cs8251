@@ -15,7 +15,7 @@
 ### Usage of clang-format
 
     // echo to display
-    clang-format -style=Google <filename.c>
+    clang-format -style=LLVM <filename.c>
 
     // to perform in-place edit,
-    clang-format -i -style=Google <filename.c> 
+    clang-format -i -style=LLVM <filename.c> 
