@@ -75,4 +75,8 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
+
+Two short of 50 
+  - `is_duplicate()`
+  - `count_occurrences()`
 --->
