@@ -34,6 +34,8 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [abbreviate](http://j.mp/acronymCC), 
+- [pangram](http://j.mp/panGramCC), TBD, 
+- [isogram](http://j.mp/isogramCC), TBD,
 - [replaceString](http://j.mp/replaceCC),
 - [binaryAdd](http://j.mp/binaryAddCC) (CapGemini), 
 - [have_no_fives](http://j.mp/haveNoFive) 
