@@ -4,10 +4,10 @@ Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
 On CloudCoder, the landing page is http://j.mp/pointerKITE
 
-## - String based (33 -> 36)
+## - String based (34 -> 40)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
-### String examination  (19 -> 22)
+### String examination  (20 -> 26)
 - [vowel counting](https://j.mp/vowelCC),
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  
@@ -21,9 +21,13 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [subset](http://j.mp/subSetCC), 
 - [subsequence](http://j.mp/subSeqCC), 
 - [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/partialPangramCC) TBD, 
-- [isogram](http://j.mp/isogramCC) and [multiple](http://j.mp/multipleIsogramCC) TBD,
+- [isogram](http://j.mp/isogramCC) and [multiple](http://j.mp/multipleIsogramCC),
 - [anagram](http://j.mp/anagramCC)
 - [vowels in order](http://j.mp/vowelsinorderCC) TBD 
+- [has_duplicates]() TBD
+- [count_occurrences]() TBD
+- [strichr]() TBD and [strrichar]()  TBD
+
 
 
 ### String manipulation (8)
@@ -75,7 +79,4 @@ http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
 
-Two short of 50 
-  - `is_duplicate()`
-  - `count_occurrences()`
 --->
