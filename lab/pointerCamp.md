@@ -4,10 +4,10 @@ Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
 On CloudCoder, the landing page is http://j.mp/pointerKITE
 
-## - String based (34 -> 40)
+## - String based (35 -> 40)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
-### String examination  (20 -> 26)
+### String examination  (21 -> 26)
 - [vowel counting](https://j.mp/vowelCC),
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  
@@ -19,15 +19,15 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [strspn](http://j.mp/stringspnCC), 
 - [strtok](http://j.mp/strTokenizeCC),
 - [subset](http://j.mp/subSetCC), 
-- [subsequence](http://j.mp/subSeqCC), 
-- [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/partialPangramCC) TBD, 
-- [isogram](http://j.mp/isogramCC) and [multiple](http://j.mp/multipleIsogramCC),
-- [anagram](http://j.mp/anagramCC)
-- [vowels in order](http://j.mp/vowelsinorderCC) TBD 
+- [subsequence](http://j.mp/subSeqCC)
+- --- *BREAK here*
+- [strichr]() TBD and [strrichar]()  TBD
 - [has_duplicates]() TBD
 - [count_occurrences]() TBD
-- [strichr]() TBD and [strrichar]()  TBD
-
+- [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
+- [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC),
+- [anagram](http://j.mp/anagramCC)
+- [vowels in order](http://j.mp/vowelsinorderCC) TBD 
 
 
 ### String manipulation (8)
