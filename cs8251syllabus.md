@@ -79,8 +79,8 @@ Asia, 2011.
 5. Byron S. Gottfried, "Schaum's Outline of Theory and Problems of
 Programming with C",McGraw-Hill Education, 1996.  
 6. [Solutions][9] to C Programming   
-7. [Video][v1] description of selection sort   
-8. [C for Dummies](http://j.mp/onlineDummiesBookC) - CheatSheet is good!   
+7. [Video][v1] description of selection sort 
+8. [C for Dummies](http://j.mp/onlineDummiesBookC) - CheatSheet is good! 
 
 ----------
 

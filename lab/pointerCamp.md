@@ -1,17 +1,16 @@
-## Pointer Camp
+# Pointer Camp
 
 Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
 On CloudCoder, the landing page is http://j.mp/pointerKITE
 
-
-## - String based
+## - String based (35 -> 40)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
-- [vowel counting](https://j.mp/vowelCC),
 
-### String examination  (15)
+### String examination  (21 -> 26)
+- [vowel counting](https://j.mp/vowelCC),
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
-- [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringRCharCC),  
+- [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  
 - [strend](http://j.mp/stringEndCC), 
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrWrapCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
@@ -20,20 +19,29 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [strspn](http://j.mp/stringspnCC), 
 - [strtok](http://j.mp/strTokenizeCC),
 - [subset](http://j.mp/subSetCC), 
-- [subsequence](http://j.mp/subSeqCC), 
+- [subsequence](http://j.mp/subSeqCC)
+- --- *BREAK here*
+- [strichr]() TBD and [strrichar]()  TBD
+- [has_duplicates]() TBD
+- [count_occurrences]() TBD
+- [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
+- [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC),
+- [anagram](http://j.mp/anagramCC)
+- [vowels in order](http://j.mp/vowelsinorderCC) TBD 
+
 
 ### String manipulation (8)
 - [strcpy](http://j.mp/stringCopyCC) and [strncpy](http://j.mp/stringNcopyCC),
 - [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC),
 - [strupper](http://j.mp/toUpperCC),
 - [strlower](http://j.mp/toLowerCC),
-- [strflipcase](j.mp/stringFlipCC), 
+- [strflipcase](http://j.mp/stringflipcaseCC), 
 - [strrev](http://j.mp/reverseUsingPointers),
 
-### String allocation (dynamic memory) (5)
+### String allocation (dynamic memory) (6)
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
-- [abbreviate](http://j.mp/acronymCC), 
+- [abbreviate](http://j.mp/acronymCC) (exercism and CapGemini), 
 - [replaceString](http://j.mp/replaceCC),
 - [binaryAdd](http://j.mp/binaryAddCC) (CapGemini), 
 - [have_no_fives](http://j.mp/haveNoFive) 
@@ -51,7 +59,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [palindrome](http://j.mp/dPalindromeKG) using double pointers
 
 
-## PDS-1 Practice (4)
+## - PDS-1 Practice (4)
   - Lab 3
 	 - [connect](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190) and 
 [insertBefore](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
@@ -70,4 +78,5 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 http://clc-wiki.net/wiki/C_standard_library:string.h
 
 ![clibrary]( http://j.mp/pointerProblems)
+
 --->
