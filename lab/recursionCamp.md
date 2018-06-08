@@ -3,6 +3,9 @@
 
 [TOC]
 
+[Understanding recursion](http://j.mp/recursionGrok)
+
+
 
 * [Table of Contents](#table-of-contents)  
 	* [Why Recursion? - Pros and Cons](#why-recursion---pros-and-cons)  
@@ -60,7 +63,7 @@ Almost any iterative code (containing loops) can be re-written as a smaller, sim
 2. Do some computation as required by the problem (e.g. add, multiply or printing) including determining parameter(s) for the next recursive call
 3. A `return` statement containing a recursive function call with new parameters
 
-Also review - https://goo.gl/photos/z6LBsEh6NcZJ3AvN7
+Also review - https://goo.gl/photos/z6LBsEh6NcZJ3AvN7  
 
 #### Quiz 1
 > ##### http://j.mp/halfOfRecKG
