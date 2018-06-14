@@ -4,10 +4,10 @@ Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
 On CloudCoder, the landing page is http://j.mp/pointerKITE
 
-## - String based (38 -> 41)
+# - String based (38 -> 41)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
-### String examination  (24 -> 27)
+## String examination  (24 -> 27)
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  
 - [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC)
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
@@ -32,7 +32,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [vowels in order](http://j.mp/vowelsinorderCC) TBD 
 
 
-### String manipulation (8)
+## String manipulation (8)
 - [strcpy](http://j.mp/stringCopyCC) and [strncpy](http://j.mp/stringNcopyCC),
 - [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC),
 - [strupper](http://j.mp/toUpperCC),
@@ -40,7 +40,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [strflipcase](http://j.mp/stringflipcaseCC), 
 - [strrev](http://j.mp/reverseUsingPointers),
 
-### String allocation (dynamic memory) (6)
+## String allocation (dynamic memory) (6)
 - [subString](http://j.mp/subStringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [abbreviate](http://j.mp/acronymCC) (exercism and CapGemini), 
@@ -48,12 +48,12 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [binaryAdd](http://j.mp/binaryAddCC) (CapGemini), 
 - [have_no_fives](http://j.mp/haveNoFive) 
   
-## - Array Manipulation  (3)
+# - Array Manipulation  (3)
 - [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
 - [day_of_year](http://j.mp/dayYearCC)  - multidimensional array 1
 - [matrixUpdate](http://j.mp/arrayPointer) - multidimensional array 2
 
-## - Function Parameters (5)
+# - Function Parameters (5)
 - [pointerWalk](http://j.mp/pointerWalk)
 - [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
 - [swap](http://j.mp/swapUsingPointers) 
@@ -61,7 +61,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [palindrome](http://j.mp/dPalindromeKG) using double pointers
 
 
-## - PDS-1 Practice (4)
+# - PDS-1 Practice (4)
   - Lab 3
 	 - [connect](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190) and 
 [insertBefore](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
