@@ -2,7 +2,7 @@
 
 Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
-On CloudCoder, the landing page is http://j.mp/pointerKITE
+On CloudCoder, the landing page is http://j.mp/pointKITE
 
 # - String based (38 -> 41)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
@@ -17,6 +17,7 @@ _What is inside the string? Is the needle present in the haystack?_
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrWrapCC), 
 - [strend](http://j.mp/stringEndCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
+- strend (_take  2_)
 - [strpbrk](http://j.mp/strpbrkCC), 
 - [strcspn](http://j.mp/stringcspnCC), 
 - [strspn](http://j.mp/stringspnCC), 
@@ -72,7 +73,7 @@ _How do I generate new strings from existing ones?_
        - Processing strings as linked lists [TBD]
   - Lab 6 
     - [Fixed Array based Stack](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1115)
-      - [PostFix Eval](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1120),  [PostFix to Infix](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1116)
+      - [PostFix Eval](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1120),  [PostFix to Infix](http://j.mp/infixPostfix)
       - [Bracket Matching](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1126)
     - [Linked List based Stack](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1162)
     - [Linked List based Queue](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
