@@ -15,8 +15,8 @@ _What is inside the string? Is the needle present in the haystack?_
 - [vowel counting](https://j.mp/vowelCC),
 - -- BREAK  _here_
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrWrapCC), 
-- [strend](http://j.mp/stringEndCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
+- [strend](http://j.mp/stringEndCC), 
 - [strpbrk](http://j.mp/strpbrkCC), 
 - [strcspn](http://j.mp/stringcspnCC), 
 - [strspn](http://j.mp/stringspnCC), 
