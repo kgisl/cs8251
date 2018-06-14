@@ -4,13 +4,15 @@ Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
 On CloudCoder, the landing page is http://j.mp/pointerKITE
 
-## - String based (35 -> 40)
+## - String based (38 -> 41)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
-### String examination  (21 -> 26)
-- [vowel counting](https://j.mp/vowelCC),
-- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
+### String examination  (24 -> 27)
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  
+- [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC)
+- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
+- [vowel counting](https://j.mp/vowelCC),
+- -- BREAK  _here_
 - [strend](http://j.mp/stringEndCC), 
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrWrapCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
@@ -21,12 +23,12 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 - [subset](http://j.mp/subSetCC), 
 - [subsequence](http://j.mp/subSeqCC)
 - --- *BREAK here*
-- [strichr]() TBD and [strrichar]()  TBD
 - [has_duplicates]() TBD
 - [count_occurrences]() TBD
 - [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
 - [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC),
 - [anagram](http://j.mp/anagramCC)
+- [word count](http://j.mp/wordcountCC)
 - [vowels in order](http://j.mp/vowelsinorderCC) TBD 
 
 
