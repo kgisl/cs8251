@@ -5,6 +5,10 @@ Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 On CloudCoder, the landing page is http://j.mp/pointKITE
 
 Review http://j.mp/fileChallenge - can you quickly write up a C code for the challenge? 
+  - Three concepts - Functions from Unit_3(`fread`, `fwrite`, etc), structures from Unit_4 ([opaque][opaque] `FILE` typedef for`struct iobuf`) and pointers from Unit_3 (FILE *)  come together to accomplish file processing ([Unit_5](http://j.mp/unit5Easy))
+  - One of the most practical use cases for pointers 
+
+[opaque]: j.mp/opaqueC 
 
 # - String based (38 -> 41)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
