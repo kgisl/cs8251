@@ -69,6 +69,7 @@ to the image below:
 ![ocr](https://cdn.rawgit.com/kgashok/filesOCR/1d2f5c87/directoryImage.png)
 
 ## Post-Unit exercise
+- Review 
 - Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
 - Try and understand Kilo project - https://github.com/kgisl/kilo
@@ -1706,6 +1707,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjM4MzA4MjAsLTgzNTE2NTYwOCwxMz
-A2MDU2OTU4LC04MjkzNDU4MywxMTYxMTgyNjIzXX0=
+eyJoaXN0b3J5IjpbLTE3MjAwNDcxODksLTE4NjM4MzA4MjAsLT
+gzNTE2NTYwOCwxMzA2MDU2OTU4LC04MjkzNDU4MywxMTYxMTgy
+NjIzXX0=
 -->
