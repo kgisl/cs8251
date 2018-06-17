@@ -72,9 +72,8 @@ to the image below:
 <!---
 - Review http://j.mp/unitMCQ1 and http://j.mp/unitMCQ2
 <-->
-
+- Ask for the MCQ1 and MCQ2 sheets 
 - Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
-
 - Try and understand Kilo project - https://github.com/kgisl/kilo
    - [writing](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L705) to file 
    - [reading](https://github.com/kgisl/kilo/blob/7a34f41ab091a74fe7ccc3b6fea35f1ab6fb3c5f/kilo.c#L674) to file
@@ -1710,7 +1709,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NTU4NDU4NywtMTg2MzgzMDgyMCwtOD
-M1MTY1NjA4LDEzMDYwNTY5NTgsLTgyOTM0NTgzLDExNjExODI2
-MjNdfQ==
+eyJoaXN0b3J5IjpbLTIwNTYzNjk3MzEsLTE4NjM4MzA4MjAsLT
+gzNTE2NTYwOCwxMzA2MDU2OTU4LC04MjkzNDU4MywxMTYxMTgy
+NjIzXX0=
 -->
