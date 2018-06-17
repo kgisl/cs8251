@@ -69,7 +69,7 @@ to the image below:
 ![ocr](https://cdn.rawgit.com/kgashok/filesOCR/1d2f5c87/directoryImage.png)
 
 ## Post-Unit exercise
-[//]: - Review http://j.mp/unitMCQ1 and http://j.mp/unitMCQ2
+<!--[ // ]: - Review http://j.mp/unitMCQ1 and http://j.mp/unitMCQ2
 - Read and resolve [this](https://github.com/kgisl/cs8251/blob/master/quiz/filereader.c.md) mystery.
 
 - Try and understand Kilo project - https://github.com/kgisl/kilo
@@ -1707,7 +1707,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Nzg3MTA1ODEsLTE4NjM4MzA4MjAsLT
-gzNTE2NTYwOCwxMzA2MDU2OTU4LC04MjkzNDU4MywxMTYxMTgy
-NjIzXX0=
+eyJoaXN0b3J5IjpbMTU1OTQzMjg0OCwtMTg2MzgzMDgyMCwtOD
+M1MTY1NjA4LDEzMDYwNTY5NTgsLTgyOTM0NTgzLDExNjExODI2
+MjNdfQ==
 -->
