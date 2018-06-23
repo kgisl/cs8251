@@ -20,7 +20,7 @@ _What is inside the string? Is the needle present in the haystack?_
 - [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
 - [vowel counting](https://j.mp/vowelCC),
 - -- BREAK  _here_
-- [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrWrapCC), 
+- [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrwrapCC), 
 - [strend](http://j.mp/stringEndCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
 - strend (_take  2_)
