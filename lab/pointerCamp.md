@@ -44,8 +44,8 @@ _What is inside the string? Is the needle present in the haystack?_
 _How can I change the contents inside a string?_ 
 - [strcpy](http://j.mp/stringCopyCC) and [strncpy](http://j.mp/stringNcopyCC),
 - [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC),
-- [strupper](http://j.mp/toUpperCC),
-- [strlower](http://j.mp/toLowerCC),
+- [strupper](http://j.mp/strToUpperCC),
+- [strlower](http://j.mp/strToLowerCC),
 - [strflipcase](http://j.mp/stringflipcaseCC), 
 - [strrev](http://j.mp/reverseUsingPointers),
 
