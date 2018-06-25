@@ -31,7 +31,7 @@ _What is inside the string? Is the needle present in the haystack?_
 - [subsequence](http://j.mp/subSeqCC)
 - --- *BREAK here*
 - [have_no_fives](http://j.mp/haveNoFive) 
-- [has_duplicates]() TBD
+- [has_duplicates](http://j.mp/countDuplicates)
 - [count_occurrences]() TBD
 - [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
 - [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC),
