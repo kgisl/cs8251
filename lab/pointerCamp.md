@@ -1,12 +1,11 @@
 # Pointer Camp
+http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for Immersive Perceptual Learning of Indirection (aka Pointers) - the most important Threshold Concept in programming. This represents what is arguably the largest and progressively difficult programming challenges which is both useful for teaching, learning and assessment of knowledge in pointers. 
 
-Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
+  - Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
-On CloudCoder, the landing page is http://j.mp/pointKITE
-
-Review http://j.mp/fileChallenge - can you quickly write up a C code for the challenge? 
-  - Three concepts - Functions from Unit_3(`fread`, `fwrite`, etc), structures from Unit_4 ([opaque][opaque] `FILE` typedef for`struct iobuf`) and pointers from Unit_3 (FILE *)  come together to accomplish file processing ([Unit_5](http://j.mp/unit5Easy))
-  - One of the most practical use cases for pointers 
+  - Review http://j.mp/fileChallenge - can you quickly write up a C code for the challenge? 
+    - Three concepts - Functions from Unit_3(`fread`, `fwrite`, etc), structures from Unit_4 ([opaque][opaque] `FILE` typedef for`struct iobuf`) and pointers from Unit_3 (FILE *)  come together to accomplish file processing ([Unit_5](http://j.mp/unit5Easy))
+    - One of the most practical use cases for pointers 
 
 [opaque]: j.mp/opaqueC 
 
@@ -31,9 +30,9 @@ _What is inside the string? Is the needle present in the haystack?_
 - [subset](http://j.mp/subSetCC), 
 - [subsequence](http://j.mp/subSeqCC)
 - --- *BREAK here*
+- [have_no_fives](http://j.mp/haveNoFive) 
 - [has_duplicates]() TBD
 - [count_occurrences]() TBD
-- [have_no_fives](http://j.mp/haveNoFive) 
 - [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
 - [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC),
 - [anagram](http://j.mp/anagramCC)
