@@ -12,7 +12,7 @@ http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for
 # - String based (38 -> 41)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
-## String examination  (24 -> 27)
+## String examination  (25 -> 27)
 _What is inside the string? Is the needle present in the haystack?_
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  
 - [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC)
