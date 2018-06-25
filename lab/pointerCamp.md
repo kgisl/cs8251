@@ -72,16 +72,16 @@ _How do I generate new strings from existing ones?_
 
 # - PDS-1 Practice (4)
   - Lab 3
-	 - [connect](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190) and 
-[insertBefore](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
-	 - [Doubly-Linked List](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1189)
+	 - [connect](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190) and 
+[insertBefore](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
+	 - [Doubly-Linked List](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1189)
        - Processing strings as linked lists [TBD]
   - Lab 6 
-    - [Fixed Array based Stack](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1115)
-      - [PostFix Eval](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1120),  [PostFix to Infix](http://j.mp/infixPostfix)
-      - [Bracket Matching](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1126)
-    - [Linked List based Stack](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1162)
-    - [Linked List based Queue](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
+    - [Fixed Array based Stack](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1115)
+      - [PostFix Eval](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1120),  [PostFix to Infix](http://j.mp/infixPostfix)
+      - [Bracket Matching](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1126)
+    - [Linked List based Stack](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1162)
+    - [Linked List based Queue](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
 
 <!---
 ## Another Pointer Problem Set 
