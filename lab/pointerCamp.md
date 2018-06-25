@@ -1,5 +1,5 @@
 # Pointer Camp
-http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for Immersive Perceptual Learning of Indirection (aka Pointers) - the most important **Threshold Concept** in programming. Arguably, this is the largest and progressively difficult problem set (PC-P) that is relevant for learning, teaching and assessment of knowledge/competency in pointers. 
+http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for Immersive Perceptual Learning of Indirection (aka Pointers) - the most important **Threshold Concept** in programming. Arguably, this is the largest and progressively challenging problem set (PC-P) that is relevant for learning, teaching and assessment of knowledge/competency in pointers. 
 
   - Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
