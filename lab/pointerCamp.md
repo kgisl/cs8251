@@ -9,16 +9,16 @@ http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for
 
 [opaque]: j.mp/opaqueC 
 
-# - String based (39 -> 41)
+# - String based (40 -> 41)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
-## String examination  (25 -> 27)
+## String examination  (26 -> 27)
 _What is inside the string? Is the needle present in the haystack?_
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC),
-- [have_no_fives](http://j.mp/haveNoFive), and [count_occurrences]() TBD
+- [have_no_fives](http://j.mp/haveNoFive), and [count_occurrences](http://j.mp/countCC)
 - [strlen](http://j.mp/stringLenCC), [mystrlen](http://j.mp/strlenCC) and [vowel counting](https://j.mp/vowelCC)
 
--- BREAK  _here_
+-- BREAK  _here_ (try **strlower**) 
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrwrapCC), 
 - [strend](http://j.mp/stringEndCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
@@ -44,12 +44,12 @@ _What is inside the string? Is the needle present in the haystack?_
 
 ## String manipulation (8)
 _How can I change the contents inside a string?_ 
+- [strlower](http://j.mp/strToLowerCC) and[strupper](http://j.mp/strToUpperCC)
+- [strflipcase](http://j.mp/stringflipcaseCC)
+-- BREAK _here_ 
 - [strcpy](http://j.mp/stringcopyCC) and [strncpy](http://j.mp/stringNcopyCC),
 - [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC),
-- [strupper](http://j.mp/strToUpperCC),
-- [strlower](http://j.mp/strToLowerCC),
-- [strflipcase](http://j.mp/stringflipcaseCC), 
-- [strrev](http://j.mp/reverseCC),
+- [strrev](http://j.mp/reverseCC)
 
 ## String allocation (dynamic memory) (6)
 _How do I generate new strings from existing ones?_
