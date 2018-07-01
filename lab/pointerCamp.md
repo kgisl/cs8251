@@ -14,26 +14,28 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 
 ## String examination  (25 -> 27)
 _What is inside the string? Is the needle present in the haystack?_
-- [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  
-- [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC)
-- [strlen](http://j.mp/stringLenCC) and [mystrlen](http://j.mp/strlenCC),
-- [vowel counting](https://j.mp/vowelCC),
-- -- BREAK  _here_
+- [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC),
+- [have_no_fives](http://j.mp/haveNoFive), and [count_occurrences]() TBD
+- [strlen](http://j.mp/stringLenCC), [mystrlen](http://j.mp/strlenCC) and [vowel counting](https://j.mp/vowelCC)
+
+-- BREAK  _here_
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrwrapCC), 
 - [strend](http://j.mp/stringEndCC), 
 - [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
 - strend (_take  2_)
+
+-- BREAK  _here_
+
 - [strpbrk](http://j.mp/strpbrkCC), 
 - [strcspn](http://j.mp/stringcspnCC), 
 - [strspn](http://j.mp/stringspnCC), 
 - [strtok](http://j.mp/strTokenizeCC),
 - [subset](http://j.mp/subSetCC), 
 - [subsequence](http://j.mp/subSeqCC)
-- --- *BREAK here*
-- [have_no_fives](http://j.mp/haveNoFive) 
-- [has_duplicates](http://j.mp/countDuplicates)
-- [count_occurrences]() TBD
+
+--- *BREAK here*
 - [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
+- [has_duplicates](http://j.mp/countDuplicates)
 - [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC),
 - [anagram](http://j.mp/anagramCC)
 - [word count](http://j.mp/wordcountCC)
@@ -42,12 +44,12 @@ _What is inside the string? Is the needle present in the haystack?_
 
 ## String manipulation (8)
 _How can I change the contents inside a string?_ 
-- [strcpy](http://j.mp/stringCopyCC) and [strncpy](http://j.mp/stringNcopyCC),
+- [strcpy](http://j.mp/stringcopyCC) and [strncpy](http://j.mp/stringNcopyCC),
 - [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC),
 - [strupper](http://j.mp/strToUpperCC),
 - [strlower](http://j.mp/strToLowerCC),
 - [strflipcase](http://j.mp/stringflipcaseCC), 
-- [strrev](http://j.mp/reverseUsingPointers),
+- [strrev](http://j.mp/reverseCC),
 
 ## String allocation (dynamic memory) (6)
 _How do I generate new strings from existing ones?_
