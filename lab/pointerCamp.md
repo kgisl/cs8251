@@ -9,10 +9,10 @@ http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for
 
 [opaque]: j.mp/opaqueC 
 
-# - String based (40 -> 41)
+# - String based (41)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
-## String examination  (26 -> 27)
+## String examination  (27)
 _What is inside the string? Is the needle present in the haystack?_
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC),
 - [strlen](http://j.mp/stringLenCC), [mystrlen](http://j.mp/strlenCC) and [vowel counting](https://j.mp/vowelCC)
@@ -39,7 +39,7 @@ _What is inside the string? Is the needle present in the haystack?_
 - [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC),
 - [anagram](http://j.mp/anagramCC)
 - [word count](http://j.mp/wordcountCC)
-- [vowels in order](http://j.mp/vowelsinorderCC) TBD 
+- [vowels in order](http://j.mp/vowelsOrderCC)
 
 
 ## String manipulation (8)
