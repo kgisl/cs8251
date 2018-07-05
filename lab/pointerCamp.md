@@ -16,7 +16,8 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 _What is inside the string? Is the needle present in the haystack?_
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC),
 - [strlen](http://j.mp/stringLenCC), [mystrlen](http://j.mp/strlenCC) and [vowel counting](https://j.mp/vowelCC)
-- [count_occurrences](http://j.mp/countCC) and [have_no_fives](http://j.mp/haveNoFive) 
+- [have_no_fives](http://j.mp/haveNoFive)  and 
+- [count_occurrences](http://j.mp/countCC) and [has_duplicates](http://j.mp/countDuplicates)
 
 -- BREAK  _here_ (try **strlower**) 
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrwrapCC), 
@@ -35,8 +36,7 @@ _What is inside the string? Is the needle present in the haystack?_
 
 --- *BREAK here*
 - [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
-- [has_duplicates](http://j.mp/countDuplicates)
-- [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC),
+ - [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC)
 - [anagram](http://j.mp/anagramCC)
 - [word count](http://j.mp/wordcountCC)
 - [vowels in order](http://j.mp/vowelsOrderCC)
