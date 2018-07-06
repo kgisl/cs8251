@@ -1,8 +1,5 @@
 
 
-
-> Written with [StackEdit](https://stackedit.io/).## stringCat
-
 Write a pointer version of the function  `strncat`  that `strncat(s,t, n)`  copies the first `n` characters of string  `t`  to the end of  `s`  .
 
 
@@ -52,6 +49,6 @@ int main(void)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTQ2MjI3NTIsMTA2MTk3MjgxOSwyMD
-Q4ODU1NzZdfQ==
+eyJoaXN0b3J5IjpbMTA0ODQ1MDk5NSwtMTI1NDYyMjc1MiwxMD
+YxOTcyODE5LDIwNDg4NTU3Nl19
 -->
