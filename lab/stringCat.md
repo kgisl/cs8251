@@ -1,19 +1,20 @@
 
 
-Write a pointer version of the function  `strncat`  that `strncat(s,t, n)`  copies the first `n` characters of string  `t`  to the end of  `s`  .
+## stringCat
 
+Write a pointer version of the function`strcat`  that  `strcat(s,t)`  copies the string`t`  to the end of  `s`  .
 
-### Example 
+### Example
 
-**input** 
-abc de 2
-**output** 
+**input**  
+abc de  
+**output**  
 abcde
 
-**input** 
-hello world 3 
-**output** 
-hellowor 
+**input**  
+hello world  
+**output**  
+helloworld
 
 
 ### Solution 
@@ -49,6 +50,6 @@ int main(void)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0ODQ1MDk5NSwtMTI1NDYyMjc1MiwxMD
-YxOTcyODE5LDIwNDg4NTU3Nl19
+eyJoaXN0b3J5IjpbLTE2MzI4NjkwMDIsMTA0ODQ1MDk5NSwtMT
+I1NDYyMjc1MiwxMDYxOTcyODE5LDIwNDg4NTU3Nl19
 -->
