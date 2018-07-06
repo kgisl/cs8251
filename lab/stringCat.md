@@ -7,14 +7,14 @@ Write a pointer version of the function`strcat`  that  `strcat(s,t)`  copies the
 ### Example
 
 **input**  
-abc de  
+`abc` `de`  
 **output**  
-abcde
+`abcde`
 
 **input**  
-hello world  
+`hello` `world`  
 **output**  
-helloworld
+`helloworld
 
 
 ### Solution 
@@ -50,6 +50,7 @@ int main(void)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzI4NjkwMDIsMTA0ODQ1MDk5NSwtMT
-I1NDYyMjc1MiwxMDYxOTcyODE5LDIwNDg4NTU3Nl19
+eyJoaXN0b3J5IjpbLTIzMjc2MDI0MCwtMTYzMjg2OTAwMiwxMD
+Q4NDUwOTk1LC0xMjU0NjIyNzUyLDEwNjE5NzI4MTksMjA0ODg1
+NTc2XX0=
 -->
