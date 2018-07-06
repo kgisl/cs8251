@@ -14,7 +14,7 @@ Write a pointer version of the function`strcat`  that  `strcat(s,t)`  copies the
 **input**  
 `hello` `world`  
 **output**  
-`helloworld
+`helloworld`
 
 
 ### Solution 
@@ -50,7 +50,7 @@ int main(void)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMjc2MDI0MCwtMTYzMjg2OTAwMiwxMD
+eyJoaXN0b3J5IjpbLTc2OTMzOTY0MiwtMTYzMjg2OTAwMiwxMD
 Q4NDUwOTk1LC0xMjU0NjIyNzUyLDEwNjE5NzI4MTksMjA0ODg1
 NTc2XX0=
 -->
