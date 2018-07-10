@@ -22,7 +22,7 @@ _What is inside the string? Is the needle present in the haystack?_
 -- BREAK  _here_ (try **strlower**) 
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrwrapCC), 
 - [strend](http://j.mp/stringEndCC), 
-- [strcmp](http://j.mp/stringCompareCC) and [strncmp](http://j.mp/stringncompareCC)
+- [strcmp](http://j.mp/strcmpCC) and [strncmp](http://j.mp/stringncompareCC)
 - strend (_take  2_)
 
 -- BREAK  _here_
