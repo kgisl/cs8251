@@ -50,6 +50,7 @@ _How can I change the contents inside a string?_
 - [strcpy](http://j.mp/stringcopyCC) and [strncpy](http://j.mp/stringNcopyCC),
 - [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC),
 - [strrev](http://j.mp/reverseCC)
+- [memorymove]()
 
 ## String allocation (dynamic memory) (6)
 _How do I generate new strings from existing ones?_
