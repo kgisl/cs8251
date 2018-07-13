@@ -3,6 +3,8 @@
 # Pointers
 
 "I think the main barrier to understanding pointers is bad teachers." http://bit.ly/pointersAndBadTeachers
+	- _pointers are memory addresses, and nothing but memory addresses
+	-  may be used or thought of interchangeably with memory addresses_
 
 - Credits: http://j.mp/greatPointerConspiracy  
 - Also see http://j.mp/pointerGlossary 
