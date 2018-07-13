@@ -9,7 +9,7 @@ http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for
 
 [opaque]: j.mp/opaqueC 
 
-# - String based (41)
+# - String based (42)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
 ## String examination  (27)
