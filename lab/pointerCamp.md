@@ -42,7 +42,7 @@ _What is inside the string? Is the needle present in the haystack?_
 - [vowels in order](http://j.mp/vowelsOrderCC)
 
 
-## String manipulation (8)
+## String manipulation (9)
 _How can I change the contents inside a string?_ 
 - [strlower](http://j.mp/strToLowerCC) and[strupper](http://j.mp/strToUpperCC)
 - [strflipcase](http://j.mp/stringflipcaseCC)
@@ -50,7 +50,7 @@ _How can I change the contents inside a string?_
 - [strcpy](http://j.mp/stringcopyCC) and [strncpy](http://j.mp/stringNcopyCC),
 - [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC),
 - [strrev](http://j.mp/reverseCC)
-- [memorymove]()
+- [memorymove](http://j.mp/memmoveCC)
 
 ## String allocation (dynamic memory) (6)
 _How do I generate new strings from existing ones?_
