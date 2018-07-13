@@ -58,7 +58,7 @@ _How do I generate new strings from existing ones?_
 - [indexOf](http://j.mp/indexCC),
 - [abbreviate](http://j.mp/acronymCC) (exercism and CapGemini), 
 - [replaceString](http://j.mp/replaceCC),
-- [binaryAdd](http://j.mp/binaryAddCC) (CapGemini), 
+- [binaryAdd](http://j.mp/binaryaddCC) (CapGemini), 
   
 # - Array Manipulation  (3)
 - [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
