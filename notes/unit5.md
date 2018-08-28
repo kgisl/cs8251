@@ -1709,7 +1709,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTYzNjk3MzEsLTE4NjM4MzA4MjAsLT
-gzNTE2NTYwOCwxMzA2MDU2OTU4LC04MjkzNDU4MywxMTYxMTgy
-NjIzXX0=
+eyJoaXN0b3J5IjpbMjA3OTM1OTA3LC0yMDU2MzY5NzMxLC0xOD
+YzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1
+ODMsMTE2MTE4MjYyM119
 -->
