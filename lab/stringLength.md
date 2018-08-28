@@ -20,5 +20,5 @@ Write your own C function that behaves like the built-in `C` function `strlen`.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMTAzMjgzNV19
+eyJoaXN0b3J5IjpbMTk1MTM2ODg5NywtOTIxMDMyODM1XX0=
 -->
