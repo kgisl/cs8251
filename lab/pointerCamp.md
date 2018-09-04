@@ -86,6 +86,8 @@ _How do I generate new strings from existing ones?_
     - [Linked List based Stack](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1162)
     - [Linked List based Queue](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
 
+Do you have any feedback on this problem set? Please send using http://j.mp/thankKG 
+
 <!---
 ## Another Pointer Problem Set 
 
