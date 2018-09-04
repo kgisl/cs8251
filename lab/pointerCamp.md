@@ -1,4 +1,6 @@
 # Pointer Camp
+Send your feedback using http://j.mp/thankKG 
+
 http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for Immersive Perceptual Learning of Indirection (aka Pointers) - the most important **Threshold Concept** in programming. Arguably, this is the largest and progressively challenging problem set (PC-P) that is relevant for learning, teaching and assessment of knowledge/competency in pointers. 
 
   - Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
@@ -86,7 +88,7 @@ _How do I generate new strings from existing ones?_
     - [Linked List based Stack](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1162)
     - [Linked List based Queue](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
 
-Do you have any feedback on this problem set? Please send using http://j.mp/thankKG 
+
 
 <!---
 ## Another Pointer Problem Set 
