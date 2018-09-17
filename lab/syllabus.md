@@ -42,7 +42,7 @@
 
 12. Solve [towers of Hanoi][1] using recursion. Also practice recursion on simpler problems in [Recursion Camp][2] on CC. 
 
-13. Sort the list of numbers using pass by reference.
+13. Sort the list of numbers using pass by reference. Review other simpler problems in [Pointer Camp][3] on CC. 
 
 14. Generate salary slip of employees using structures and pointers.
 
@@ -69,4 +69,5 @@ BONUS
 
 
 [1]: http://j.mp/towerOfHanoiCC 
-[2]: http://rTutorial 
+[2]: http://j.mp/rTutorial 
+[3]: http://j.mp/pointerKITE
