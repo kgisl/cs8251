@@ -21,10 +21,11 @@
    - 5 if it is a perfect cube.
    - 4 if it is a multiple of 4 and divisible by 6.
    - 3 if it is a prime number.
-> Sort the numbers based on the weight in the increasing order as shown below   
-> `<10,its weight>`  
-> `<36,its weight>`  
-> `<89,its weight>`  
+
+	> Sort the numbers based on the weight in the increasing order as shown below   
+	> `<10,its weight>`  
+	> `<36,its weight>`  
+	> `<89,its weight>`  
 
 7. Populate an array with height of persons and find how many persons are above the average height.
 
@@ -61,7 +62,7 @@
 - Cancellation
 - Prepare chart
 
-BONUS
+### BONUS
 
 19. https://github.com/kgisl/kilo  - simple text editor in < 1000 lines of C code
 
