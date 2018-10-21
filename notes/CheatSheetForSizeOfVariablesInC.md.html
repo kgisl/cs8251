@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheatSheetForSizeOfVariablesInC.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <p>For a HTML version, visit this link <a href="https://rawgit.com/kgashok/b7ce940e098fb3a6e69b9dc9dbb8dc13/raw/d360bdc343919bf235fdaf18a4c7908bb8899e30/sizeof3.html">here</a></p>
+<p>[TOC]</p>
+<h3 id="data-types">Data Types</h3>
+<p>There are four data types in C language. They are,</p>
+
+<table>
+<thead>
+<tr>
+<th>Types</th>
+<th>Data Types</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic data types</td>
+<td><code>int, char, float, double</code></td>
+</tr>
+<tr>
+<td>Derived data type</td>
+<td><code>pointer</code><em>*</em><code>, array</code><em>[]</em><code>, struct, union</code></td>
+</tr>
+<tr>
+<td>Void data type</td>
+<td><code>void</code></td>
+</tr>
+<tr>
+<td>Enumeration data type</td>
+<td><code>enum</code></td>
+</tr>
+</tbody>
+</table><h3 id="types-specifiers-and-qualifiers">Types, Specifiers and Qualifiers</h3>
+
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Storage Class Specifier</th>
+<th>Modifier/Specifier</th>
+<th>Type Qualifier</th>
+<th>Composite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>extern (<em>global</em>)</td>
+<td>short</td>
+<td>volatile</td>
+<td>array <em><code>[]</code></em></td>
+</tr>
+<tr>
+<td>char</td>
+<td>static</td>
+<td>signed, unsigned</td>
+<td>const</td>
+<td>struct</td>
+</tr>
+<tr>
+<td>float</td>
+<td>auto</td>
+<td>long</td>
+<td></td>
+<td>union</td>
+</tr>
+<tr>
+<td>double</td>
+<td>register</td>
+<td>long long</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>pointer</em><code>*</code></td>
+<td><em>typedef</em> *</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>void</em></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><h3 id="valid-combinations">Valid combinations</h3>
+<pre><code>char, signed char, unsigned char
+int, signed int, unsigned int
+short int, signed short int, unsigned short int
+long int, signed long int, unsigned long int
+float, double, long double
+</code></pre>
+<p>###Minimum Type Limits</p>
+<p>Any compiler conforming to the Standard must also respect the following limits with respect to the range of values any particular type may accept. Note that these are <em><strong>lower limits</strong></em>: an implementation is free <em>to exceed</em> any or all of these. Note also that the minimum range for a char is dependent on whether or not a char is considered to be signed or unsigned.</p>
+<h4 id="minimum-range-table">Minimum Range Table</h4>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th align="left">Minimum Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>signed char</td>
+<td align="left">-127 to +127</td>
+</tr>
+<tr>
+<td>unsigned char</td>
+<td align="left">0 to 255</td>
+</tr>
+<tr>
+<td>short int</td>
+<td align="left">-32767 to +32767</td>
+</tr>
+<tr>
+<td>int</td>
+<td align="left">-32767 to +32767</td>
+</tr>
+<tr>
+<td>unsigned short int</td>
+<td align="left">0 to 65535</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td align="left">0 to 65535</td>
+</tr>
+<tr>
+<td>long int</td>
+<td align="left">-2147483647 to +2147483647</td>
+</tr>
+<tr>
+<td>unsigned long int</td>
+<td align="left">0 to 4294967295</td>
+</tr>
+</tbody>
+</table><h4 id="minimum-precision-table">Minimum Precision Table</h4>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th align="left">Minimum Precision</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td align="left">6 digits</td>
+<td><em>observed at 8 digits</em></td>
+</tr>
+<tr>
+<td>double</td>
+<td align="left">10 digits</td>
+<td><em>observed at 17 digits</em></td>
+</tr>
+<tr>
+<td>long double</td>
+<td align="left">10 digits</td>
+<td><em>observed at 20 digits</em></td>
+</tr>
+</tbody>
+</table><p>The Standard also specifies that these limits should be present as preprocessor macros in the header file <code>&lt;limits.h&gt;</code></p>
+<h3 id="size-and-range-of-variable-types-in-c">Size and Range of Variable Types in C</h3>
+<p>For a <strong>16-bit</strong> operating system, here’s a parital tabulation borrowed from <a href="http://fresh2refresh.com/c-programming/c-data-types/">this</a> :</p>
+
+<table>
+<thead>
+<tr>
+<th>Modifier</th>
+<th>Variable Type</th>
+<th>sizeof</th>
+<th align="left">Range</th>
+<th align="left">Precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unsigned</td>
+<td>char</td>
+<td>1</td>
+<td align="left">0 to 256</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td>char</td>
+<td>1</td>
+<td align="left">-127 to 127</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>short</td>
+<td>int</td>
+<td>2</td>
+<td align="left"><code>–32,767</code> to <code>32,767</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td>int</td>
+<td>2</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>unsigned</td>
+<td>int</td>
+<td>2</td>
+<td align="left">0 to <code>65,535</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>long</td>
+<td>int</td>
+<td>4</td>
+<td align="left"><code>–2,147,483,647</code> to <code>2,147,483,647</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>unsigned long</td>
+<td>int</td>
+<td>4</td>
+<td align="left">0 to <code>4,294,967,295</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>long long</td>
+<td>int</td>
+<td>8</td>
+<td align="left"><code>-(2^63 –1)</code> to <code>(2^63 –1)</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td>unsigned long long</td>
+<td>int</td>
+<td>8</td>
+<td align="left">0 to 2^(8bits*8bytes -1) = <code>2^64 - 1</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td>float</td>
+<td>4</td>
+<td align="left">1E-37 to 1E+37</td>
+<td align="left">upto 6-9 significant digits e.g. <code>3.141592</code> or <code>3.14159</code>?</td>
+</tr>
+<tr>
+<td></td>
+<td>double</td>
+<td>8</td>
+<td align="left"></td>
+<td align="left">upto 15-17 significant digits</td>
+</tr>
+<tr>
+<td>long</td>
+<td>double</td>
+<td>10</td>
+<td align="left">1E-37 to 1E+37</td>
+<td align="left">precision to 10 decimal digits, e.g. <code>3.1415926535</code> or <code>3.141592653</code>?</td>
+</tr>
+</tbody>
+</table><h3 id="quiz">Quiz</h3>
+<ol>
+<li>
+<p>A bank opened a banking account for Rangarajan who immediately deposited Rs 40,000. When Rangarajan tried to withdraw the entire amount (Rs 40,000) from the bank’s ATM, the ATM terminal refused to issue any money. The reason is:</p>
+<ul>
+<li>No money in the ATM</li>
+<li>Erroneous banking software</li>
+<li>Demonetization (2016) rules until December 31</li>
+<li>Anyone or all of the above</li>
+</ul>
+</li>
+<li>
+<p>Next morning, the demonetization rules had been relaxed to withdraw up to Rs 50,000. Hearing about this, Rangarajan quickly located another ATM which had cash. Surprisingly, the ATM indicates that the customer had a negative bank balance of Rs <code>-25,536</code>. The reason is:</p>
+<ul>
+<li>Someone else withdrew all of the money from Rangarajan’s account during the previous night</li>
+<li>The banking software had a bug</li>
+<li>The computer that powers the <strong>ATM</strong> has a virus</li>
+</ul>
+</li>
+<li>
+<p>Rangarajan is finally convinced that the bank is using a faulty software. What do you think is the main reason as to why the software is not working properly?</p>
+<ul>
+<li>The bank software is designed to allow to dispense only small amounts</li>
+<li>The bank software design adopted the wrong data type for storing customer balances.</li>
+<li>None of the above</li>
+</ul>
+</li>
+<li>
+<p>Meanwhile, Rangarajan found out that the bank was using a server powered by a 32-bit operating system to run its banking software (built using the <strong>C</strong> language). A software engineer himself, he got hold off of the source code of the banking software and started reviewing it. Immediately, he found out that the problem (<em>aka software bug</em>) was because of the data type that was used to store the customer bank balance. Which one was it?</p>
+<ul>
+<li><code>unsigned int</code></li>
+<li><code>int</code></li>
+<li><code>signed short int</code></li>
+<li><code>float</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="programming-exercises">Programming exercises</h3>
+<h4 id="swap-nibbles">Swap nibbles</h4>
+<p>Write a C program to swap value held by two nibble variables<br>
+- <a href="https://bytes.com/topic/c/answers/650530-nibble-variable">https://bytes.com/topic/c/answers/650530-nibble-variable</a></p>
+<h4 id="pointer-snippet">Pointer Snippet</h4>
+<ol start="6">
+<li>
+<p>Is the following code snippet valid? <em><strong>If</strong></em> yes, explain what the following code snippet is trying to do.</p>
+<pre class=" language-c"><code class="prism  language-c"><span class="token keyword">int</span> <span class="token operator">*</span>ip<span class="token punctuation">;</span>
+ip <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token operator">*</span>ip <span class="token operator">=</span> <span class="token number">0xFF</span><span class="token punctuation">;</span>
+</code></pre>
+</li>
+</ol>
+<h4 id="check-odd-or-even">Check Odd or Even</h4>
+<p>Write a program to check whether a number is odd or even without using the modulo  division or multiplication operators?</p>
+<h3 id="sizeof-information">Sizeof Information</h3>
+<pre><code>int ≥ 16 bits ≥ size of short
+long ≥ 32 bits ≥ size of int    
+long long ≥ 64 bits ≥ size of long
+</code></pre>
+<p>No, the standard defines the minimums which for <code>long</code> is <code>4 bytes</code> and <code>int</code> is <code>2 bytes</code>. As per the <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">C99 draft standard</a> section <code>5.2.4.2.1</code> <em>Sizes of integer types limits.h</em> paragraph <em>1</em> says:</p>
+<blockquote>
+<p>[…]Their implementation-defined values shall be equal or greater in magnitude[…]</p>
+</blockquote>
+<p>and for <code>long</code> we have:</p>
+<pre><code> LONG_MIN -2147483647 // -(2^31 - 1)
+ LONG_MAX +2147483647 // 2^31 - 1     
+</code></pre>
+<p>which is <code>4 bytes</code>. For completeness sake, we have the following for <code>int</code>:</p>
+<pre><code> INT_MIN -32767 // -(2^15 - 1)
+ INT_MAX +32767 // 2^15 - 1
+</code></pre>
+<p>which is <code>2 bytes</code>.</p>
+<h4 id="sizeof-program-for-various-data-types"><code>sizeof</code> Program for various data types</h4>
+<p>To run / modify the below program, fork it at <a href="http://bit.ly/sizeofC">http://bit.ly/sizeofC</a></p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;limits.h&gt;
+int main()
+{
+   int a;
+   char b;
+   float c  = 12.34567890123456789;
+   double d = 12.34567890123456789;
+   printf("Storage size for int data type:     %d \n",sizeof(a));
+   printf("Storage size for char data type:    %d \n",sizeof(b));
+   printf("Storage size for float data type:   %d \n",sizeof(c));
+   printf("Storage size for double data type:  %d \n",sizeof(d));
+ 
+   int* aPointer; 
+   void* vPointer; 
+   printf("Storage size for int pointer type:  %d\n",sizeof(aPointer));
+   printf("Storage size for void pointer type: %d\n",sizeof(vPointer));
+ 
+   short int si; 
+   long li;          // same as long int 
+   long long lli;    // same as long long int
+   long double ld = 12.34567890123456789;
+   printf("Storage size for short int type:    %d\n",sizeof(si));
+   printf("Storage size for long int type:     %d\n",sizeof(li));
+   printf("Storage size for long long int type:%d\n",sizeof(lli));
+   printf("Storage size for long double type:  %d\n",sizeof(ld));
+ 
+   float       x  = .12345678901234567891234*10;
+   double      z  = .12345678901234567891234*10;
+   long double lz = .12345678901234567891234*10;
+   printf("x=%f\n", x);
+   printf("z=%f\n", z);
+   printf("x=  %20.18f\n", x);    // precision to 7-8 significant digits
+   // x=  1.234567880630493164
+   printf("z=  %20.18f\n", z);    // precision to 14-17 significant digits
+   // z=  1.234567890123456690
+   printf("lz= %20.18Lf\n", lz);  // precision to 18-20 significant digits
+   // lz= 1.234567890123456789
+   return 0;
+}
+</code></pre>
+<h5 id="output">Output</h5>
+<pre><code>Storage size for int data type:     4  // when is it 2? 
+Storage size for char data type:    1 
+Storage size for float data type:   4 
+Storage size for double data type:  8 
+Storage size for int pointer type:  4
+Storage size for void pointer type: 4
+Storage size for short int type:    2
+Storage size for long int type:     4
+Storage size for long long int type:8
+Storage size for long double type:  12
+x=1.234568
+z=1.234568
+x=  1.234567880630493164
+z=  1.234567890123456690
+lz= 1.234567890123456789
+</code></pre>
+<h3 id="useful-references">Useful References</h3>
+<p><a href="http://publications.gbdirect.co.uk/c_book/chapter8/const_and_volatile.html">http://publications.gbdirect.co.uk/c_book/chapter8/const_and_volatile.html</a><br>
+<a href="http://www.ericgiguere.com/articles/ansi-c-summary.html">http://www.ericgiguere.com/articles/ansi-c-summary.html</a><br>
+<a href="http://www.catonmat.net/blog/low-level-bit-hacks-you-absolutely-must-know/">http://www.catonmat.net/blog/low-level-bit-hacks-you-absolutely-must-know/</a></p>
+
+    </div>
+  </div>
+</body>
+
+</html>
