@@ -13,9 +13,28 @@
     <div class="stackedit__toc">
       
 <ul>
-<li>
+<li><a href="#data-types">Data Types</a>
+<ul>
+<li><a href="#types-specifiers-and-qualifiers">Types, Specifiers and Qualifiers</a></li>
+<li><a href="#valid-combinations">Valid combinations</a></li>
+<li><a href="#minimum-type-limits">Minimum Type Limits</a>
 <ul>
 <li></li>
+</ul>
+</li>
+<li><a href="#size-and-range-of-variable-types-in-c">Size and Range of Variable Types in C</a></li>
+<li><a href="#quiz">Quiz</a></li>
+<li><a href="#programming-exercises">Programming exercises</a>
+<ul>
+<li></li>
+</ul>
+</li>
+<li><a href="#sizeof-information">Sizeof Information</a>
+<ul>
+<li></li>
+</ul>
+</li>
+<li><a href="#useful-references">Useful References</a></li>
 </ul>
 </li>
 </ul>
@@ -24,9 +43,7 @@
   </div>
   <div class="stackedit__right">
     <div class="stackedit__html">
-      <p>For a HTML version, visit this link <a href="https://rawgit.com/kgashok/b7ce940e098fb3a6e69b9dc9dbb8dc13/raw/d360bdc343919bf235fdaf18a4c7908bb8899e30/sizeof3.html">here</a></p>
-<p>[TOC]</p>
-<h3 id="data-types">Data Types</h3>
+      <h1 id="data-types">Data Types</h1>
 <p>There are four data types in C language. They are,</p>
 
 <table>
@@ -54,7 +71,7 @@
 <td><code>enum</code></td>
 </tr>
 </tbody>
-</table><h3 id="types-specifiers-and-qualifiers">Types, Specifiers and Qualifiers</h3>
+</table><h2 id="types-specifiers-and-qualifiers">Types, Specifiers and Qualifiers</h2>
 
 <table>
 <thead>
@@ -110,14 +127,14 @@
 <td></td>
 </tr>
 </tbody>
-</table><h3 id="valid-combinations">Valid combinations</h3>
+</table><h2 id="valid-combinations">Valid combinations</h2>
 <pre><code>char, signed char, unsigned char
 int, signed int, unsigned int
 short int, signed short int, unsigned short int
 long int, signed long int, unsigned long int
 float, double, long double
 </code></pre>
-<p>###Minimum Type Limits</p>
+<h2 id="minimum-type-limits">Minimum Type Limits</h2>
 <p>Any compiler conforming to the Standard must also respect the following limits with respect to the range of values any particular type may accept. Note that these are <em><strong>lower limits</strong></em>: an implementation is free <em>to exceed</em> any or all of these. Note also that the minimum range for a char is dependent on whether or not a char is considered to be signed or unsigned.</p>
 <h4 id="minimum-range-table">Minimum Range Table</h4>
 
@@ -190,7 +207,7 @@ float, double, long double
 </tr>
 </tbody>
 </table><p>The Standard also specifies that these limits should be present as preprocessor macros in the header file <code>&lt;limits.h&gt;</code></p>
-<h3 id="size-and-range-of-variable-types-in-c">Size and Range of Variable Types in C</h3>
+<h2 id="size-and-range-of-variable-types-in-c">Size and Range of Variable Types in C</h2>
 <p>For a <strong>16-bit</strong> operating system, here’s a parital tabulation borrowed from <a href="http://fresh2refresh.com/c-programming/c-data-types/">this</a> :</p>
 
 <table>
@@ -289,7 +306,7 @@ float, double, long double
 <td align="left">precision to 10 decimal digits, e.g. <code>3.1415926535</code> or <code>3.141592653</code>?</td>
 </tr>
 </tbody>
-</table><h3 id="quiz">Quiz</h3>
+</table><h2 id="quiz">Quiz</h2>
 <ol>
 <li>
 <p>A bank opened a banking account for Rangarajan who immediately deposited Rs 40,000. When Rangarajan tried to withdraw the entire amount (Rs 40,000) from the bank’s ATM, the ATM terminal refused to issue any money. The reason is:</p>
@@ -326,7 +343,7 @@ float, double, long double
 </ul>
 </li>
 </ol>
-<h3 id="programming-exercises">Programming exercises</h3>
+<h2 id="programming-exercises">Programming exercises</h2>
 <h4 id="swap-nibbles">Swap nibbles</h4>
 <p>Write a C program to swap value held by two nibble variables<br>
 - <a href="https://bytes.com/topic/c/answers/650530-nibble-variable">https://bytes.com/topic/c/answers/650530-nibble-variable</a></p>
@@ -342,7 +359,7 @@ ip <span class="token operator">=</span> <span class="token punctuation">(</span
 </ol>
 <h4 id="check-odd-or-even">Check Odd or Even</h4>
 <p>Write a program to check whether a number is odd or even without using the modulo  division or multiplication operators?</p>
-<h3 id="sizeof-information">Sizeof Information</h3>
+<h2 id="sizeof-information">Sizeof Information</h2>
 <pre><code>int ≥ 16 bits ≥ size of short
 long ≥ 32 bits ≥ size of int    
 long long ≥ 64 bits ≥ size of long
@@ -420,7 +437,7 @@ x=  1.234567880630493164
 z=  1.234567890123456690
 lz= 1.234567890123456789
 </code></pre>
-<h3 id="useful-references">Useful References</h3>
+<h2 id="useful-references">Useful References</h2>
 <p><a href="http://publications.gbdirect.co.uk/c_book/chapter8/const_and_volatile.html">http://publications.gbdirect.co.uk/c_book/chapter8/const_and_volatile.html</a><br>
 <a href="http://www.ericgiguere.com/articles/ansi-c-summary.html">http://www.ericgiguere.com/articles/ansi-c-summary.html</a><br>
 <a href="http://www.catonmat.net/blog/low-level-bit-hacks-you-absolutely-must-know/">http://www.catonmat.net/blog/low-level-bit-hacks-you-absolutely-must-know/</a></p>
