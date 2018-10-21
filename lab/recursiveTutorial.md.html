@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>recursiveTutorial.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h2 id="table-of-contents">Table of Contents</h2>
+<p>[TOC]</p>
+<p><a href="http://j.mp/recursionGrok">Understanding recursion</a></p>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a>
+<ul>
+<li><a href="#why-recursion---pros-and-cons">Why Recursion? - Pros and Cons</a>
+<ul>
+<li><a href="#quiz-1">Quiz 1</a></li>
+<li><a href="#quiz-2">Quiz 2</a></li>
+</ul>
+</li>
+<li><a href="#recursive-natural-number-summation">Recursive Natural Number Summation</a>
+<ul>
+<li><a href="#httpjmpnaturalreckg">http://j.mp/naturalRecKG</a></li>
+<li><a href="#output">Output</a></li>
+</ul>
+</li>
+<li><a href="#recursive-power-calculation">Recursive Power Calculation</a>
+<ul>
+<li><a href="#httpjmppowerreckg">http://j.mp/powerRecKG</a></li>
+</ul>
+</li>
+<li><a href="#recursive-factorial">Recursive Factorial</a>
+<ul>
+<li><a href="#httpjmpfactorialreckg">http://j.mp/factorialRecKG</a></li>
+</ul>
+</li>
+<li><a href="#recursive-gcd-of-two-numbers">Recursive GCD of Two Numbers</a>
+<ul>
+<li><a href="#httpjmpgcdreckg">http://j.mp/gcdRecKG</a></li>
+</ul>
+</li>
+<li><a href="#recursive-fibonacci-series">Recursive Fibonacci Series</a>
+<ul>
+<li><a href="#httpjmpfiboreckg">http://j.mp/fiboRecKG</a></li>
+<li><a href="#output">Output</a></li>
+</ul>
+</li>
+<li><a href="#recursive-sum-of-integer-array">Recursive Sum of Integer Array</a>
+<ul>
+<li><a href="#httpjmparraysumreckg">http://j.mp/arraysumRecKG</a></li>
+</ul>
+</li>
+<li><a href="#recursive-palindrome">Recursive Palindrome</a>
+<ul>
+<li><a href="#httpjmppalindromereckg">http://j.mp/palindromeRecKG</a></li>
+<li><a href="#output">Output</a></li>
+</ul>
+</li>
+<li><a href="#recursive-palindrome-number">Recursive Palindrome Number</a></li>
+<li><a href="#recursive-linked-list">Recursive Linked List</a>
+<ul>
+<li><a href="#httpjmplinkedreckg">http://j.mp/linkedRecKG</a></li>
+<li><a href="#output">Output</a></li>
+</ul>
+</li>
+<li><a href="#alternative-fibonacci">Alternative Fibonacci</a>
+<ul>
+<li><a href="#output">Output</a></li>
+</ul>
+</li>
+<li><a href="#recursive-halfof">Recursive HalfOf</a>
+<ul>
+<li><a href="#httpjmphalfofreckg">http://j.mp/halfOfRecKG</a></li>
+</ul>
+</li>
+<li><a href="#tower-of-hanoi">Tower of Hanoi</a>
+<ul>
+<li><a href="#httpjmptowerofhanoicc">http://j.mp/towerOfHanoiCC</a></li>
+</ul>
+</li>
+<li><a href="#right-numeric-triangle">Right Numeric Triangle</a>
+<ul>
+<li><a href="#httpjmprecrighttriangle">http://j.mp/recRightTriangle</a></li>
+</ul>
+</li>
+<li><a href="#recursive-sorts">Recursive Sorts</a>
+<ul>
+<li><a href="#selection-sort">Selection Sort</a>
+<ul>
+<li><a href="#httpjmpselectionsortcc">http://j.mp/selectionSortCC</a></li>
+</ul>
+</li>
+<li><a href="#insertion-sort">Insertion Sort</a>
+<ul>
+<li><a href="#httpjmpinsertionsortcc">http://j.mp/insertionSortCC</a></li>
+</ul>
+</li>
+<li><a href="#merge-sort">Merge Sort</a></li>
+<li><a href="#quick-sort">Quick Sort</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="why-recursion---pros-and-cons">Why Recursion? - Pros and Cons</h3>
+<ul>
+<li>Read this reddit <a href="https://www.reddit.com/r/learnprogramming/comments/8axanq/recursion_when_would_i_use_it_beyond_factorials/">article!</a></li>
+</ul>
+<p><em>“Recursive functions are confusing, elegant and fascinating, all the same time!”</em></p>
+<p>Some programs and/or computer algorithms are more readable, concise and less error prone when implemented as recursive calls. The <strong>downside:</strong> low performance and high memory usage, especially when there are innumerable recursive calls, sometimes resulting in memory overflow conditions on the stack.</p>
+<p>Almost any iterative code (containing loops) can be re-written as a smaller, simpler (<em>but not always intuitive</em>) recursive program. The general recipe for writing a recursive calls can be broadly categorized as three steps:</p>
+<ol>
+<li>Determine the <strong>TERMINAL CONDITIONS</strong> under which the recursive calls will terminate and return. This is usually a combination of <code>if</code> statement and a<code>return</code> statement</li>
+<li>Do some computation as required by the problem (e.g. add, multiply or printing) including determining parameter(s) for the next recursive call</li>
+<li>A <code>return</code> statement containing a recursive function call with new parameters</li>
+</ol>
+<p>Also review - <a href="https://goo.gl/photos/z6LBsEh6NcZJ3AvN7">https://goo.gl/photos/z6LBsEh6NcZJ3AvN7</a></p>
+<h4 id="quiz-1">Quiz 1</h4>
+<blockquote>
+<h5 id="httpj.mphalfofreckg"><a href="http://j.mp/halfOfRecKG">http://j.mp/halfOfRecKG</a></h5>
+<p>Given an integer number, write a recursive function <code>halfOf</code> which will generate a sequence of numbers that will be progressively <em>half of</em> what the previous number was. The program must terminate when the value of the number in the sequence is zero. For e.g. <code>halfOf (21) = 21 10 5 2 1</code>.<br>
+To visualize the solution for this exercise, click <a href="http://j.mp/halfOfV">http://j.mp/halfOfV</a></p>
+</blockquote>
+<h4 id="quiz-2">Quiz 2</h4>
+<pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">int</span> x<span class="token punctuation">,</span> num <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> 
+    x <span class="token operator">=</span> <span class="token function">call</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">int</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> y<span class="token punctuation">;</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">&gt;</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        x <span class="token operator">=</span> x<span class="token operator">+</span>num<span class="token number">-1</span><span class="token punctuation">;</span>      
+        y <span class="token operator">=</span> <span class="token function">call</span><span class="token punctuation">(</span>num<span class="token number">-1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> x<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The output is<br>
+<code>A) 10 	B) 8 C) 12 D) 11</code></p>
+<h3 id="recursive-natural-number-summation">Recursive Natural Number Summation</h3>
+<p>####<a href="http://j.mp/naturalRecKG">http://j.mp/naturalRecKG</a></p>
+<pre class=" language-c"><code class="prism  language-c">
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+
+<span class="token keyword">int</span> <span class="token function">naturalSum</span> <span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment">// TERMINAL CONDITION </span>
+		<span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+	<span class="token keyword">return</span> n <span class="token operator">+</span> <span class="token function">naturalSum</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+	<span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> 
+	<span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token function">naturalSum</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"sum of %d natural numbers is %d\n"</span><span class="token punctuation">,</span> n<span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<h4 id="output">Output</h4>
+<pre><code>sum of 10 natural numbers is 55
+</code></pre>
+<h3 id="recursive-power-calculation">Recursive Power Calculation</h3>
+<p>####<a href="http://j.mp/powerRecKG">http://j.mp/powerRecKG</a></p>
+<pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+
+<span class="token keyword">int</span> <span class="token function">power</span> <span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>y <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>     <span class="token comment">// TERMINAL CONDITION</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+        
+    <span class="token keyword">return</span> x <span class="token operator">*</span> <span class="token function">power</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span> 
+    <span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> 
+    <span class="token keyword">int</span> result <span class="token operator">=</span> <span class="token function">power</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"%d to the power of %d is = %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="recursive-factorial">Recursive Factorial</h3>
+<p>####<a href="http://j.mp/factorialRecKG">http://j.mp/factorialRecKG</a></p>
+<pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+
+<span class="token keyword">int</span> <span class="token function">factorial</span> <span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span> n <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">||</span> n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment">// TERMINAL CONDITION</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> n <span class="token operator">*</span> <span class="token function">factorial</span> <span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">*</span> argv<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token keyword">int</span> number <span class="token operator">=</span> <span class="token function">atoi</span> <span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// or do scanf()</span>
+    <span class="token keyword">int</span> fval   <span class="token operator">=</span> <span class="token function">factorial</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"The factorial of %d is %d\n"</span><span class="token punctuation">,</span> number<span class="token punctuation">,</span> fval<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="recursive-gcd-of-two-numbers">Recursive GCD of Two Numbers</h3>
+<h4 id="httpj.mpgcdreckg"><a href="http://j.mp/gcdRecKG">http://j.mp/gcdRecKG</a></h4>
+<pre class=" language-c"><code class="prism  language-c">
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+
+<span class="token keyword">int</span> <span class="token function">gcd</span> <span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>b<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>     <span class="token comment">// TERMINAL CONDITION</span>
+        <span class="token keyword">return</span> a<span class="token punctuation">;</span> 
+        
+    <span class="token keyword">return</span> <span class="token function">gcd</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> a<span class="token operator">%</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">366</span><span class="token punctuation">;</span> 
+    <span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">60</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">int</span> result <span class="token operator">=</span> <span class="token function">gcd</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"GCD of %d and %d is %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<h3 id="recursive-fibonacci-series">Recursive Fibonacci Series</h3>
+<p>####<a href="http://j.mp/fiboRecKG">http://j.mp/fiboRecKG</a></p>
+<p>Here’s a video recording from Khan Academy - worth understanding how it unfolds - <a href="http://j.mp/fiboKG">http://j.mp/fiboKG</a></p>
+<pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
+ 
+<span class="token keyword">int</span> <span class="token function">fibonacci_rec</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span> n <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span>    <span class="token comment">// TERMINAL CONDITION_1</span>
+      <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+   <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> n <span class="token operator">==</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token comment">// TERMINAL CONDITION_2</span>
+      <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+   <span class="token keyword">else</span>
+      <span class="token keyword">return</span> <span class="token function">fibonacci_rec</span><span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fibonacci_rec</span><span class="token punctuation">(</span>n<span class="token number">-2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> 
+ 
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">int</span> n<span class="token punctuation">,</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> c<span class="token punctuation">;</span>
+   <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span><span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Fibonacci series\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">for</span> <span class="token punctuation">(</span> c <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> c <span class="token operator">&lt;=</span> n <span class="token punctuation">;</span> c<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> <span class="token function">fibonacci_rec</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      i<span class="token operator">++</span><span class="token punctuation">;</span> 
+   <span class="token punctuation">}</span>
+   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>####Output</p>
+<pre><code>13
+Fibonacci series
+0 1 1 2 3 5 8 13 21 34 55 89 144
+</code></pre>
+<h3 id="recursive-sum-of-integer-array">Recursive Sum of Integer Array</h3>
+<p>####<a href="http://j.mp/arraysumRecKG">http://j.mp/arraysumRecKG</a></p>
+<pre><code>#include &lt;stdio.h&gt; 
+
+int rec_sum (int* s, int size) { 
+    if (size == 0)  // TERMINAL CONDITION
+        return 0; 
+
+    int sumval = *s; // get element
+    return sumval + rec_sum(++s, size-1); 
+}
+
+int main () {
+    int s[7] = {1, 2, 3, 4, 5, 6, 7};
+    int sum  = rec_sum (s, 7); 
+    
+    printf ("The sum is %d\n", sum); 
+    return 0;
+}
+</code></pre>
+<h3 id="recursive-palindrome">Recursive Palindrome</h3>
+<h4 id="httpj.mppalindromereckg"><a href="http://j.mp/palindromeRecKG">http://j.mp/palindromeRecKG</a></h4>
+<pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span> </span>
+
+<span class="token keyword">int</span> <span class="token function">palin_rec</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span>s<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">static</span> <span class="token keyword">int</span> i   <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+    
+    <span class="token keyword">int</span> front      <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> back       <span class="token operator">=</span> <span class="token function">strlen</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token operator">-</span>i<span class="token number">-1</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>front <span class="token operator">&gt;=</span> back<span class="token punctuation">)</span>   <span class="token comment">// TERMINAL CONDITION_1</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"%c == %c? // "</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>front<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>back<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>front<span class="token punctuation">]</span> <span class="token operator">!=</span> s<span class="token punctuation">[</span>back<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// TERMINAL CONDITION_2</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    i<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">palin_rec</span> <span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token keyword">char</span> input<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token function">scanf</span> <span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> input<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    
+    <span class="token keyword">char</span><span class="token operator">*</span> front <span class="token operator">=</span> input<span class="token punctuation">;</span>
+    <span class="token keyword">char</span><span class="token operator">*</span> back  <span class="token operator">=</span> input <span class="token operator">+</span> <span class="token function">strlen</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> 
+    
+    <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token function">palin_rec</span> <span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"%s is a palindrome: %s\n "</span><span class="token punctuation">,</span> input<span class="token punctuation">,</span> 
+        <span class="token punctuation">(</span>res<span class="token operator">==</span><span class="token number">1</span><span class="token operator">?</span> <span class="token string">"True"</span> <span class="token punctuation">:</span> <span class="token string">"False"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="output-1">Output</h4>
+<pre><code>m == m? // a == a? // l == l? // a == a? // 
+malayalam is a palindrome: True
+
+a == a? // b == b? // c == c? // d == f? // 
+abcdefcba is a palindrome: False
+</code></pre>
+<h3 id="recursive-palindrome-number">Recursive Palindrome Number</h3>
+<p>For checking whether a number is a <strong>palindrome number</strong>, along with the same recursive function above, use the following main() function:</p>
+<pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span>  </span><span class="token comment">// for sprintf () function call</span>
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">23044032</span><span class="token punctuation">;</span> 
+	<span class="token keyword">char</span> input<span class="token punctuation">[</span><span class="token number">30</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token function">sprintf</span> <span class="token punctuation">(</span>input<span class="token punctuation">,</span> <span class="token string">"%d"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// buf ==  "23044032"; </span>
+
+	<span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token function">palin_rec</span> <span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"%s is a palindrome: %s\n "</span><span class="token punctuation">,</span> input<span class="token punctuation">,</span> 
+        <span class="token punctuation">(</span>res<span class="token operator">==</span><span class="token number">1</span><span class="token operator">?</span> <span class="token string">"True"</span> <span class="token punctuation">:</span> <span class="token string">"False"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="recursive-linked-list">Recursive Linked List</h3>
+<h4 id="httpj.mplinkedreckg"><a href="http://j.mp/linkedRecKG">http://j.mp/linkedRecKG</a></h4>
+<pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span> </span>
+
+<span class="token keyword">struct</span> node <span class="token punctuation">{</span> 
+    <span class="token keyword">int</span> data<span class="token punctuation">;</span> 
+    <span class="token keyword">struct</span> node<span class="token operator">*</span> next<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> node Node<span class="token punctuation">;</span> 
+
+Node <span class="token operator">*</span>head <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+
+Node<span class="token operator">*</span> <span class="token function">traverseTail</span> <span class="token punctuation">(</span>Node<span class="token operator">*</span> np<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>np <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>        <span class="token comment">// TERMINAL CONDITION_1</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>np<span class="token operator">-&gt;</span>next <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>  <span class="token comment">// TERMINAL CONDITION_2</span>
+        <span class="token keyword">return</span> np<span class="token punctuation">;</span>
+    
+    <span class="token keyword">return</span> <span class="token function">traverseTail</span> <span class="token punctuation">(</span>np<span class="token operator">-&gt;</span>next<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">traverseSum</span> <span class="token punctuation">(</span>Node<span class="token operator">*</span> np<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>np <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>    <span class="token comment">// TERMINAL CONDITION</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"node %d: %d\n"</span><span class="token punctuation">,</span> i<span class="token operator">++</span><span class="token punctuation">,</span> np<span class="token operator">-&gt;</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> np<span class="token operator">-&gt;</span>data <span class="token operator">+</span> <span class="token function">traverseSum</span><span class="token punctuation">(</span>np<span class="token operator">-&gt;</span>next<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+Node<span class="token operator">*</span> <span class="token function">createNode</span> <span class="token punctuation">(</span><span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    Node<span class="token operator">*</span> n <span class="token operator">=</span> <span class="token punctuation">(</span>Node<span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">malloc</span> <span class="token punctuation">(</span><span class="token keyword">sizeof</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> node<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    n<span class="token operator">-&gt;</span>data <span class="token operator">=</span> val<span class="token punctuation">;</span>
+    n<span class="token operator">-&gt;</span>next <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span> 
+    
+    <span class="token keyword">return</span> n<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token keyword">int</span> numbers<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+
+    <span class="token comment">// forming the linked list</span>
+    Node<span class="token operator">*</span> head <span class="token operator">=</span> <span class="token punctuation">(</span>Node<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span> <span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> node<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Node<span class="token operator">*</span> np <span class="token operator">=</span> head<span class="token punctuation">;</span> 
+    
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">,</span> np <span class="token operator">=</span> np<span class="token operator">-&gt;</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        np<span class="token operator">-&gt;</span>next <span class="token operator">=</span> <span class="token function">createNode</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token function">traverseSum</span> <span class="token punctuation">(</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"Sum of the elements in list %d\n"</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    res <span class="token operator">=</span> <span class="token function">traverseTail</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token operator">-&gt;</span>data<span class="token punctuation">;</span>
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"Tail data is %d\n"</span><span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>####Output</p>
+<pre><code>node 0: 1
+node 1: 2
+node 2: 3
+node 3: 4
+node 4: 5
+node 5: 6
+node 6: 7
+node 7: 8
+Sum of the elements in list 36
+Tail data is 8
+</code></pre>
+<h3 id="alternative-fibonacci">Alternative Fibonacci</h3>
+<pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+
+<span class="token keyword">int</span> <span class="token function">generate_fibo</span> <span class="token punctuation">(</span><span class="token keyword">int</span> fibopp<span class="token punctuation">,</span> <span class="token keyword">int</span> fibop<span class="token punctuation">,</span> <span class="token keyword">int</span> count<span class="token punctuation">,</span> <span class="token keyword">int</span> slen<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token keyword">int</span> fibo <span class="token operator">=</span> fibopp <span class="token operator">+</span> fibop<span class="token punctuation">;</span>
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> fibo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> slen<span class="token punctuation">)</span> <span class="token punctuation">{</span>   <span class="token comment">// TERMINAL CONDITION</span>
+        <span class="token keyword">return</span> fibo<span class="token punctuation">;</span>       <span class="token comment">// for the nth Fibonacci number</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// prepare to generate the next in sequence</span>
+    fibopp   <span class="token operator">=</span> fibop<span class="token punctuation">;</span> 
+    fibop    <span class="token operator">=</span> fibo<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">generate_fibo</span> <span class="token punctuation">(</span>fibopp<span class="token punctuation">,</span> fibop<span class="token punctuation">,</span> count<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> slen<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+
+<span class="token function">main</span> <span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">*</span> argv<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token keyword">int</span> seq_length <span class="token operator">=</span> <span class="token function">atoi</span> <span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>seq_length <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+    
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"The fibonacci sequence (%d) is "</span><span class="token punctuation">,</span> seq_length<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token keyword">int</span> fibo1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> fibo2 <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"%d %d "</span><span class="token punctuation">,</span> fibo1<span class="token punctuation">,</span> fibo2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> fibFinal <span class="token operator">=</span> <span class="token function">generate_fibo</span> <span class="token punctuation">(</span>fibo1<span class="token punctuation">,</span> fibo2<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> seq_length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span> <span class="token punctuation">(</span><span class="token string">"\nThe %d in fibonacci sequence is %d\n"</span><span class="token punctuation">,</span> seq_length<span class="token punctuation">,</span> fibFinal<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<h4 id="output-2">Output</h4>
+<pre><code>The fibonacci sequence (13) is 0 1 1 2 3 5 8 13 21 34 55 89 144 
+The 13 in fibonacci sequence is 144
+
+</code></pre>
+<h3 id="recursive-halfof">Recursive HalfOf</h3>
+<h4 id="httpj.mphalfofreckg-1"><a href="http://j.mp/halfOfRecKG">http://j.mp/halfOfRecKG</a></h4>
+<pre><code>#include &lt;stdio.h&gt; 
+
+void halfOf (int val) { 
+
+    if (val == 0)          // #1 TERMINAL CONDITION
+        return; 
+        
+    printf ("%d ", val);   // #2 Do something 
+    halfOf (val/2); // #3 Make the recursive call    
+}
+
+int main () 
+{
+    int start = 21;
+    halfOf (21); 
+    return 0;
+}
+</code></pre>
+<p>To visualize this code, click <a href="http://j.mp/halfOfV">http://j.mp/halfOfV</a></p>
+<iframe width="800" height="500" src="http://pythontutor.com/iframe-embed.html#code=%23include%20%3Cstdio.h%3E%20%0A%0Avoid%20halfOf%20(int%20val%29%20%7B%20%0A%0A%20%20%20%20if%20(val%20%3D%3D%200%29%20%0A%20%20%20%20%20%20%20%20return%3B%20%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20printf%20(%22%25d%20%22,%20val%29%3B%20%0A%20%20%20%20return%20halfOf%20(val/2%29%3B%0A%20%20%20%20%0A%7D%0A%0Aint%20main%20(%29%20%0A%7B%0A%20%20%20%20int%20start%20%3D%2021%3B%0A%20%20%20%20%0A%20%20%20%20halfOf%20(21%29%3B%20%0A%20%20%20%20%0A%20%20%20%20return%200%3B%0A%0A%7D&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;curInstr=10&amp;origin=opt-frontend.js&amp;py=c&amp;rawInputLstJSON=%5B%5D"> </iframe>
+<h3 id="tower-of-hanoi">Tower of Hanoi</h3>
+<h4 id="httpj.mptowerofhanoicc"><a href="http://j.mp/towerOfHanoiCC">http://j.mp/towerOfHanoiCC</a></h4>
+<h3 id="right-numeric-triangle">Right Numeric Triangle</h3>
+<h4 id="httpj.mprecrighttriangle"><a href="http://j.mp/recRightTriangle">http://j.mp/recRightTriangle</a></h4>
+<h3 id="subsequence">Subsequence</h3>
+<h4 id="httpj.mpsubseqcc"><a href="http://j.mp/subseqCC">http://j.mp/subseqCC</a></h4>
+<h3 id="recursive-sorts">Recursive Sorts</h3>
+<h4 id="selection-sort">Selection Sort</h4>
+<h5 id="httpj.mpselectionsortcc"><a href="http://j.mp/selectionSortCC">http://j.mp/selectionSortCC</a></h5>
+<pre class=" language-python"><code class="prism  language-python"><span class="token comment"># https://code.activestate.com/recipes/576917-functional-selection-sort/#c1 </span>
+
+<span class="token keyword">def</span> <span class="token function">selectsortr</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token operator">not</span> l<span class="token punctuation">:</span> <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    idx<span class="token punctuation">,</span> v <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span><span class="token builtin">enumerate</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">,</span> key<span class="token operator">=</span>operator<span class="token punctuation">.</span>itemgetter<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> l<span class="token punctuation">[</span><span class="token punctuation">:</span>idx<span class="token punctuation">]</span><span class="token punctuation">,</span> l<span class="token punctuation">[</span>idx<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">+</span> selectsortr<span class="token punctuation">(</span>l<span class="token punctuation">[</span><span class="token punctuation">:</span>idx<span class="token punctuation">]</span> <span class="token operator">+</span> l<span class="token punctuation">[</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token operator">or</span> 
+
+<span class="token keyword">def</span> <span class="token function">selectsortr</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token operator">not</span> L<span class="token punctuation">:</span> <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    smallest <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span>
+    L<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>smallest<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>smallest<span class="token punctuation">]</span> <span class="token operator">+</span> selectsortr<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
+    
+</code></pre>
+<h4 id="insertion-sort">Insertion Sort</h4>
+<h5 id="httpj.mpinsertionsortcc"><a href="http://j.mp/insertionSortCC">http://j.mp/insertionSortCC</a></h5>
+<pre class=" language-python"><code class="prism  language-python">
+<span class="token keyword">import</span> bisect
+
+<span class="token keyword">def</span> <span class="token function">insertion_sort</span><span class="token punctuation">(</span>L<span class="token punctuation">,</span> nsorted<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> nsorted <span class="token operator">&gt;=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> L
+    bisect<span class="token punctuation">.</span>insort<span class="token punctuation">(</span>L<span class="token punctuation">,</span> L<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> hi<span class="token operator">=</span>nsorted<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> insertion_sort<span class="token punctuation">(</span>L<span class="token punctuation">,</span> nsorted <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="merge-sort">Merge Sort</h4>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> heapq <span class="token keyword">import</span> merge
+<span class="token keyword">def</span> <span class="token function">mergesort</span><span class="token punctuation">(</span>w<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>w<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> w
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>w<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+        <span class="token keyword">return</span> merge<span class="token punctuation">(</span>mergesort<span class="token punctuation">(</span>w<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                     mergesort<span class="token punctuation">(</span>w<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                     
+</code></pre>
+<h4 id="quick-sort">Quick Sort</h4>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">quicksort</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    len_s <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> len_s <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> s
+
+  pivot <span class="token operator">=</span> s<span class="token punctuation">[</span>random<span class="token punctuation">.</span>randrange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> len_s<span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+  L <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> s <span class="token keyword">if</span> x <span class="token operator">&lt;</span> pivot<span class="token punctuation">]</span>
+  E <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> s <span class="token keyword">if</span> x <span class="token operator">==</span> pivot<span class="token punctuation">]</span>
+  G <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> s <span class="token keyword">if</span> x <span class="token operator">&gt;</span> pivot<span class="token punctuation">]</span>
+
+  <span class="token keyword">return</span> quicksort<span class="token punctuation">(</span>L<span class="token punctuation">)</span> <span class="token operator">+</span> E <span class="token operator">+</span> quicksort<span class="token punctuation">(</span>G<span class="token punctuation">)</span>
+
+</code></pre>
+<p><strong>Javascript alternative for selectsort</strong></p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token comment">// helper function that returns the index of the</span>
+<span class="token comment">// minimum value in the array </span>
+<span class="token keyword">function</span> <span class="token function">indexOfMinValue</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>iMin<span class="token punctuation">,</span> x<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> x <span class="token operator">&gt;</span> arr<span class="token punctuation">[</span>iMin<span class="token punctuation">]</span><span class="token operator">?</span> iMin <span class="token punctuation">:</span> i<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">selectSortR</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>a<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>                     <span class="token comment">// #1</span>
+  <span class="token keyword">let</span> minVal <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token function">indexOfMinValue</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// #2 and #3 </span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span>minVal<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token function">selectSortR</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// #4 and #5</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+    </div>
+  </div>
+</body>
+
+</html>
