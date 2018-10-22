@@ -3,7 +3,7 @@
 
 [TOC]
 
-[Understanding recursion](http://j.mp/recursionGrok)
+[Understanding recursion](http://j.mp/recursionGroknew)
 
 
 
