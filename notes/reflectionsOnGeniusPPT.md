@@ -18,5 +18,5 @@
   - Publish your Progress Publicly on a _daily_ basis 
   - Persevere (by not being afraid to fail *fast*) with Peers 
   - Proactive Conviction ("_what stands between you and your dreams"_) in the Pursuit 
-  - 5th P - Peaceful presence through meditation. Without this, you are not in the frame of mind for all the above 4Ps
+  - 5th P - Peaceful presence through meditation. Without this, you are not in the frame of mind for any/all of the above 4Ps
 
