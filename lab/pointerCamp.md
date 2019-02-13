@@ -69,8 +69,8 @@ _How do I generate new strings from existing ones?_
 
 # - Function Parameters (5)
 - [pointerWalk](http://j.mp/pointerWalk)
-- [add_one](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
-- [swap](http://j.mp/swapUsingPointers) 
+- [add_one](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=967) 
+- [swap](http://j.mp/swapNumbers) 
 - [doubleSwap](http://j.mp/doubleSwap)
 - [palindrome](http://j.mp/dPalindromeKG) using double pointers
 
