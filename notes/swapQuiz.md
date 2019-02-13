@@ -144,35 +144,33 @@ void swapPointers (int** p_pA, int** p_pB) {
 ```
  
 ### Assignment quiz
-Define an integer pointer pointing to an array of 10 integers. Read the integer
-values from the keyboard. Find the sum, average, minimum and maximum of these 10 integers.
+Define an integer pointer pointing to an array of 10 integers. Read the integer values from the keyboard. Find the sum, average, minimum and maximum of these 10 integers.
 
 ```c
-	a = 10;
-	b = 20;
-	swap(a,b);
+a = 10;
+b = 20;
+swap(a,b);
+printf(“%d%d”,a,b);
+swapref(&a,&b);
+printf(“%d%d”,a,b);
+
+void swap(int a, int b) {
+	int t;
+	t = a;
+	a = b;
+	b = t;
 	printf(“%d%d”,a,b);
-	swapref(&a,&b);
-	printf(“%d%d”,a,b);
-	
-	void swap(int a, int b) {
-		int t;
-		t = a;
-		a = b;
-		b = t;
-		printf(“%d%d”,a,b);
-	}
-	
-	void swapref(int *a, int *b) { 
-		int *t;
-		t = a;
-		a = b;
-		b = t;
-		printf(“%d%d”,*a,*b); 
-	}
+}
+
+void swapref(int *a, int *b) { 
+	int *t;
+	t = a;
+	a = b;
+	b = t;
+	printf(“%d%d”,*a,*b); 
+}
 
 ```
-
 
 
 
@@ -373,5 +371,5 @@ int main(void) {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNjU0Njg1MSw2MzAzNTI3ODNdfQ==
+eyJoaXN0b3J5IjpbLTEwOTM2NjY3OTcsNjMwMzUyNzgzXX0=
 -->
