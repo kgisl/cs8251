@@ -301,7 +301,7 @@ Output
 
 ```
 
-###Matrix manipulation using Pointers as Parameters in Functions 
+### Matrix manipulation using Pointers as Parameters in Functions 
 
 Adapted from http://j.mp/dynamicMatrix from GeekforGeeks
 Try out the code on http://j.mp/matrixPointer
@@ -373,5 +373,5 @@ int main(void) {
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMwMzUyNzgzXX0=
+eyJoaXN0b3J5IjpbMjAyNjU0Njg1MSw2MzAzNTI3ODNdfQ==
 -->
