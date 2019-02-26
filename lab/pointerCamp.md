@@ -17,7 +17,7 @@ A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by 
 ## String examination  (27)
 _What is inside the string? Is the needle present in the haystack?_
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC),
-- [strlen](http://j.mp/stringLenCC), [mystrlen](http://j.mp/strlenCC) and [vowel counting](https://j.mp/vowelCC)
+- [strlen](http://j.mp/stringLenCC), [mystrlen](http://j.mp/strlenCC) and [vowel counting](https://j.mp/vowelsCC)
 - [have_no_fives](http://j.mp/haveNoFive)  and 
 - [count_occurrences](http://j.mp/countCC) and [has_duplicates](http://j.mp/countDuplicates)
 
