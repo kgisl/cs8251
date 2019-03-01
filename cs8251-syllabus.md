@@ -1,4 +1,4 @@
-# CS8251 PROGRAMMING OBJECTIVES:
+# CS8251 PROGRAMMING OBJECTIVES
 
  - To develop C Programs using basic programming constructs
  - To develop C programs using arrays and strings  
