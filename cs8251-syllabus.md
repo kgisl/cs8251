@@ -15,10 +15,7 @@ Introduction to Arrays: Declaration, Initialization – One dimensional array �
 
 
 ## UNIT III FUNCTIONS AND POINTERS 9 
-Introduction to functions: Function prototype, function definition, function call, Built-in functions ([string functions][i5], [math functions][i6]) – Recursion – Example Program: *[Simple calculator][7], Computation of [Sine series][7a],   [Scientific calculator][7b] using* *built-in functions, Binary Search using   [recursive functions][recursion]* – [Pointers][5] – Pointer operators –   Pointer arithmetic – [Arrays and pointers][i1] – [Array of pointers][i2] –   *Example Program: [Sorting of names][8]* – [Parameter passing][i4]: Pass
-by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
-*and changing the value of a variable using pass by reference*; [Pointer Camp][3]; 
-visualize pointer arithmetic in the [visualizer][4]
+Introduction to functions: Function prototype, function definition, function call, Built-in functions ([string functions][i5], [math functions][i6]) – Recursion – Example Program: *[Simple calculator][7], Computation of [Sine series][7a],   [Scientific calculator][7b] using* *built-in functions, Binary Search using   [recursive functions][recursion]* – [Pointers][5] – Pointer operators –   Pointer arithmetic – [Arrays and pointers][i1] – [Array of pointers][i2] –   *Example Program: [Sorting of names][8]* – [Parameter passing][i4]: Pass by value, Pass by reference – *Example Program: [Swapping of two numbers][2]* *and changing the value of a variable using pass by reference*; [Pointer Camp][3];  visualize pointer arithmetic in the [visualizer][4]
 
 ## UNIT IV STRUCTURES 9
 Structure - Nested structures – Pointer and Structures – Array of structures – *Example Program using structures and* *pointers* – Self referential structures – Dynamic memory allocation - *Example Program: [Singly linked list][8a]* and [concept][8b]- typedef
