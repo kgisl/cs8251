@@ -6,45 +6,25 @@
  - To do input/output and file handling in C
 
 ## UNIT I BASICS OF C PROGRAMMING 9  
-Introduction to programming paradigms - Structure of C program -   
-C programming: Data Types – Storage classes - Constants –  
-Enumeration Constants - Keywords – Operators:
-Precedence and Associativity - Expressions - Input/Output statements,
-Assignment statements – Decision making statements - Switch statement -
-Looping statements – Pre-processor directives - Compilation process; 
-*Example Program: [PC-1 problems][0] and [video keys][0keys]*
+Introduction to programming paradigms - Structure of C program - C programming: Data Types – Storage classes - Constants –  Enumeration Constants - Keywords – Operators:
+Precedence and Associativity - Expressions - Input/Output statements, Assignment statements – Decision making statements - Switch statement - Looping statements – Pre-processor directives - Compilation process;  *Example Program: [PC-1 problems][0] and [video keys][0keys]*
 
 ## UNIT II ARRAYS AND STRINGS 9 
 
-Introduction to Arrays: Declaration, Initialization – One dimensional array –  *Example Program:* 
-*Computing* *[Mean, Median and Mode][6]* - Two dimensional arrays – *Example Program:*
-*Matrix Operations ([Addition][6a], [Subtraction][6b], Scaling, Determinant and [Transpose][6e])* - String
-operations: length, compare, concatenate, copy – *Example Program:* 
-*[Selection sort][1] (see video link below), [linear and binary search][i3]*
+Introduction to Arrays: Declaration, Initialization – One dimensional array –  *Example Program:*  *Computing* *[Mean, Median and Mode][6]* - Two dimensional arrays – *Example Program:* *Matrix Operations ([Addition][6a], [Subtraction][6b], Scaling, Determinant and [Transpose][6e])* - String operations: length, compare, concatenate, copy – *Example Program:*  *[Selection sort][1] (see video link below), [linear and binary search][i3]*
 
 
 ## UNIT III FUNCTIONS AND POINTERS 9 
-Introduction to functions: Function prototype, function definition, function call,  
-Built-in functions ([string functions][i5], [math functions][i6]) – Recursion –   
-Example Program: *[Simple calculator][7], Computation of [Sine series][7a],  
-[Scientific calculator][7b] using* *built-in functions, Binary Search using  
-[recursive functions][recursion]* – [Pointers][5] – Pointer operators –  
-Pointer arithmetic – [Arrays and pointers][i1] – [Array of pointers][i2] –   
-*Example Program: [Sorting of names][8]* – [Parameter passing][i4]: Pass
+Introduction to functions: Function prototype, function definition, function call, Built-in functions ([string functions][i5], [math functions][i6]) – Recursion – Example Program: *[Simple calculator][7], Computation of [Sine series][7a],   [Scientific calculator][7b] using* *built-in functions, Binary Search using   [recursive functions][recursion]* – [Pointers][5] – Pointer operators –   Pointer arithmetic – [Arrays and pointers][i1] – [Array of pointers][i2] –   *Example Program: [Sorting of names][8]* – [Parameter passing][i4]: Pass
 by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
 *and changing the value of a variable using pass by reference*; [Pointer Camp][3]; 
 visualize pointer arithmetic in the [visualizer][4]
 
 ## UNIT IV STRUCTURES 9
-Structure - Nested structures – Pointer and Structures – Array of structures – *Example Program using structures and* *pointers* – Self referential structures – Dynamic memory allocation -
-*Example Program: [Singly linked list][8a]* and [concept][8b]- typedef
+Structure - Nested structures – Pointer and Structures – Array of structures – *Example Program using structures and* *pointers* – Self referential structures – Dynamic memory allocation - *Example Program: [Singly linked list][8a]* and [concept][8b]- typedef
 
 ## UNIT V FILE PROCESSING 9
-Files – Types of file processing:
-Sequential access, Random access – Sequential access file -  
-*Example* *Program: Finding average of numbers stored in 
-sequential access file* - Random access file - *Example Program: 
-Transaction processing using* *random access files* – Command line arguments
+Files – Types of file processing: Sequential access, Random access – Sequential access file -  *Example* *Program: Finding average of numbers stored in  sequential access file* - Random access file - *Example Program:  Transaction processing using* *random access files* – Command line arguments
 
 ## OUTCOMES:
 ### Upon completion of the course, the students will be able to
