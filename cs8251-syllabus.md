@@ -6,8 +6,9 @@
  - To do input/output and file handling in C
 
 ## UNIT I BASICS OF C PROGRAMMING 9  
-Introduction to programming paradigms - Structure of C program - C programming: Data Types – Storage
-classes - Constants – Enumeration Constants - Keywords – Operators:
+Introduction to programming paradigms - Structure of C program -   
+C programming: Data Types – Storage classes - Constants –  
+Enumeration Constants - Keywords – Operators:
 Precedence and Associativity - Expressions - Input/Output statements,
 Assignment statements – Decision making statements - Switch statement -
 Looping statements – Pre-processor directives - Compilation process; 
@@ -23,10 +24,13 @@ operations: length, compare, concatenate, copy – *Example Program:*
 
 
 ## UNIT III FUNCTIONS AND POINTERS 9 
-Introduction to functions: Function prototype, function definition, function call, Built-in functions ([string functions][i5], [math functions][i6]) – Recursion – Example Program: *[Simple calculator][7], Computation of [Sine series][7a], [Scientific calculator][7b] using*  
-*built-in functions, Binary Search using [recursive functions][recursion]* – [Pointers][5] –
-Pointer operators – Pointer arithmetic – [Arrays and pointers][i1] – [Array of
-pointers][i2] – *Example Program: [Sorting of names][8]* – [Parameter passing][i4]: Pass
+Introduction to functions: Function prototype, function definition, function call,  
+Built-in functions ([string functions][i5], [math functions][i6]) – Recursion –   
+Example Program: *[Simple calculator][7], Computation of [Sine series][7a],  
+[Scientific calculator][7b] using* *built-in functions, Binary Search using  
+[recursive functions][recursion]* – [Pointers][5] – Pointer operators –  
+Pointer arithmetic – [Arrays and pointers][i1] – [Array of pointers][i2] –   
+*Example Program: [Sorting of names][8]* – [Parameter passing][i4]: Pass
 by value, Pass by reference – *Example Program: [Swapping of two numbers][2]*
 *and changing the value of a variable using pass by reference*; [Pointer Camp][3]; 
 visualize pointer arithmetic in the [visualizer][4]
@@ -91,7 +95,7 @@ Programming with C",McGraw-Hill Education, 1996.
 [0]: http://j.mp/clangKITE 
 [0keys]: http://j.mp/clangKeys 
 [1]: http://j.mp/selectionSortCC
-[2]: http://j.mp/swapUsingPointers
+[2]: http://j.mp/swapNumbers
 [3]: http://j.mp/pointerKITE 
 [4]: http://bit.ly/pArithmeticV 
 [5]: http://j.mp/pointerGrok
