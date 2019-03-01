@@ -1,4 +1,7 @@
 # Pointer Camp
+
+**tl;dr**  That they are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.
+
 Send your feedback using http://j.mp/thankKG 
 
 http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for Immersive Perceptual Learning of Indirection (aka Pointers) - the most important **Threshold Concept** in programming. Arguably, this is the largest and progressively challenging problem set (PC-P) that is relevant for learning, teaching and assessment of knowledge/competency in pointers. 
