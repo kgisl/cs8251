@@ -15,15 +15,16 @@ Looping statements – Pre-processor directives - Compilation process;
 
 ## UNIT II ARRAYS AND STRINGS 9 
 
-Introduction to Arrays: Declaration, Initialization – One dimensional array – *Example Program: Computing*
-*[Mean, Median and Mode][6]* - Two dimensional arrays – *Example Program:*
+Introduction to Arrays: Declaration, Initialization – One dimensional array –  *Example Program:* 
+*Computing* *[Mean, Median and Mode][6]* - Two dimensional arrays – *Example Program:*
 *Matrix Operations ([Addition][6a], [Subtraction][6b], Scaling, Determinant and [Transpose][6e])* - String
 operations: length, compare, concatenate, copy – *Example Program:* 
 *[Selection sort][1] (see video link below), [linear and binary search][i3]*
 
 
 ## UNIT III FUNCTIONS AND POINTERS 9 
-Introduction to functions: Function prototype, function definition, function call, Built-in functions ([string functions][i5], [math functions][i6]) – Recursion – Example Program: *[Simple calculator][7], Computation of [Sine series][7a], [Scientific calculator][7b] using*
+Introduction to functions: Function prototype, function definition, function call, Built-in functions ([string functions][i5], [math functions][i6]) – Recursion – Example Program: *[Simple calculator][7], Computation of [Sine series][7a], [Scientific calculator][7b] using*  
+
 *built-in functions, Binary Search using [recursive functions][recursion]* – [Pointers][5] –
 Pointer operators – Pointer arithmetic – [Arrays and pointers][i1] – [Array of
 pointers][i2] – *Example Program: [Sorting of names][8]* – [Parameter passing][i4]: Pass
@@ -37,10 +38,10 @@ Structure - Nested structures – Pointer and Structures – Array of structures
 
 ## UNIT V FILE PROCESSING 9
 Files – Types of file processing:
-Sequential access, Random access – Sequential access file - *Example*
-*Program: Finding average of numbers stored in sequential access file* -
-Random access file - *Example Program: Transaction processing using*
-*random access files* – Command line arguments
+Sequential access, Random access – Sequential access file -  
+*Example* *Program: Finding average of numbers stored in 
+sequential access file* - Random access file - *Example Program: 
+Transaction processing using* *random access files* – Command line arguments
 
 ## OUTCOMES:
 ### Upon completion of the course, the students will be able to
