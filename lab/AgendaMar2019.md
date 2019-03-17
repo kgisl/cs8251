@@ -16,10 +16,10 @@ High level
 
 ## Non-coding 
 
-1. Join http://j.mp/room8251
-	- Github profile building as a preferred social coding resume 
-	- "_Begin with the end in mind_"
-	-  need for wanting to build a reputation
+1. Join http://j.mp/room8251  
+	- Github profile building as a preferred social coding resume   
+	- "_Begin with the end in mind_"  
+	-  need for wanting to build a reputation  
 2. Learn typing for 10 minutes on http://typing.io 
 3. What's **coding** got to with Skills 2022? http://j.mp/skills2022 
 	- Important slide - save it for future reference 
@@ -69,5 +69,5 @@ High level
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNjE4MTE0Nl19
+eyJoaXN0b3J5IjpbMTY0OTc1NTkzMCwyMTE2MTgxMTQ2XX0=
 -->
