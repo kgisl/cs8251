@@ -10,7 +10,9 @@ KITE - **CSE** department
 # Agenda
 
 High level
-	 - **6th construct** - Indirection (using pointers in C) - 'special' variables  
+	 - **6th construct** 
+		 - - Indirection (using pointers in C) 
+		  - 'special' variables  
 	  - **7th construct** Recursion (functions calling functions)  
 
 
@@ -69,5 +71,5 @@ High level
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1ODQ3NDcyNiwyMTE2MTgxMTQ2XX0=
+eyJoaXN0b3J5IjpbMzMwOTE5OTYzLDIxMTYxODExNDZdfQ==
 -->
