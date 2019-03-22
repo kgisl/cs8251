@@ -13,6 +13,11 @@ High level
 	 - **6th construct** -  Indirection (using pointers in C - 'special' variables  
 	  - **7th construct** Recursion (functions calling functions)  
 
+Features of the workshop 
+  - specific construct orientation - pointers in the language 
+  - sub-skills are provided with sub-problem sets 
+  - immediate feedback on progress through CloudCoder 
+  - Walk in the path of the "master" - using videos as keys for specific exercises 
 
 ## Non-coding 
 
@@ -27,7 +32,6 @@ High level
 	- Mystery 7, http://j.mp/revtutor and then http://j.mp/reverseCC 
 5. Introduce repl.it for trying out C code and for printf, etc. 
 6. Learning to learn - Threshold concepts 
-7. 
 
 
 ## Coding
@@ -71,6 +75,6 @@ High level
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTIxNTM0NjcsLTE5MTY5NzYwMDcsLT
+eyJoaXN0b3J5IjpbLTE0NzQzNTA5MDcsLTE5MTY5NzYwMDcsLT
 M5MTQzNDMxLDIxMTYxODExNDZdfQ==
 -->
