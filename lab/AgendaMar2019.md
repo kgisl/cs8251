@@ -5,7 +5,7 @@ KITE - **CSE** department
 ## Pre-requisites
   - Basic C programming (loops, conditionals, variables-arithmetic-operators, functions, sequences) - the 5 constructs
   - Who can demonstrate http://j.mp/rntCKITE or http://j.mp/diagonalKG or http://j.mp/diamondKG 
-
+  - Have an understanding of all the functions in `string.h` library 
 
 # Agenda
 
@@ -26,6 +26,8 @@ High level
 4. Visualize code using Python Tutor 
 	- Mystery 7, http://j.mp/revtutor and then http://j.mp/reverseCC 
 5. Introduce repl.it for trying out C code and for printf, etc. 
+6. Learning to learn - Threshold concepts 
+7. 
 
 
 ## Coding
@@ -69,6 +71,6 @@ High level
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTY5NzYwMDcsLTM5MTQzNDMxLDIxMT
-YxODExNDZdfQ==
+eyJoaXN0b3J5IjpbLTE1MTIxNTM0NjcsLTE5MTY5NzYwMDcsLT
+M5MTQzNDMxLDIxMTYxODExNDZdfQ==
 -->
