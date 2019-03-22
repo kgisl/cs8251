@@ -5,7 +5,7 @@ KITE - **CSE** department
 ## Pre-requisites
   - Basic C programming (loops, conditionals, variables-arithmetic-operators, functions, sequences) - the 5 constructs
   - Who can demonstrate http://j.mp/rntCKITE or http://j.mp/diagonalKG or http://j.mp/diamondKG 
-  - Have an understanding of all the functions in `string.h` library 
+  - Have an understanding of all the functions in the [standard C string](https://www.tutorialspoint.com/c_standard_library/string_h.htm) library  
 
 # Agenda
 
@@ -75,6 +75,6 @@ Features of the workshop
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzQzNTA5MDcsLTE5MTY5NzYwMDcsLT
-M5MTQzNDMxLDIxMTYxODExNDZdfQ==
+eyJoaXN0b3J5IjpbMTI4NDkzNjI5LC0xNDc0MzUwOTA3LC0xOT
+E2OTc2MDA3LC0zOTE0MzQzMSwyMTE2MTgxMTQ2XX0=
 -->
