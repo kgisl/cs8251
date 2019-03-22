@@ -44,6 +44,7 @@ Features of the workshop
 -   [http://j.mp/reverseCC](http://j.mp/reverseCC)
 -   [http://j.mp/strToLowerCC](http://j.mp/strToLowerCC)
 -   [http://j.mp/stringCatCC](http://j.mp/stringCatCC)  and http://bit.ly/strncatCC
+	- video keys
 -   [http://j.mp/stringStrCC](http://j.mp/stringStrCC)
 
 
@@ -76,6 +77,6 @@ Features of the workshop
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxODMzNjg5MywtMTQ3NDM1MDkwNywtMT
-kxNjk3NjAwNywtMzkxNDM0MzEsMjExNjE4MTE0Nl19
+eyJoaXN0b3J5IjpbLTEzNjAxNTkyODksLTE0NzQzNTA5MDcsLT
+E5MTY5NzYwMDcsLTM5MTQzNDMxLDIxMTYxODExNDZdfQ==
 -->
