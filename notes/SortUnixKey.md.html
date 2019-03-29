@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SortUnixKey</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#sortunixkey">SortUnixKey</a>
+<ul>
+<li><a href="#useful-links">Useful links</a></li>
+<li><a href="#array-version">Array version</a></li>
+<li><a href="#pointer-version">Pointer Version</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="sortunixkey">SortUnixKey</h1>
+<h2 id="useful-links">Useful links</h2>
+<p>What sort technique do you use to sort cards? - <a href="http://j.mp/selectionSortVideo">http://j.mp/selectionSortVideo</a><br>
+<a href="http://j.mp/visualSort">http://j.mp/visualSort</a><br>
+<a href="http://j.mp/visualSortVideo">http://j.mp/visualSortVideo</a></p>
+<h2 id="array-version">Array version</h2>
+<pre class=" language-c"><code class="prism  language-c">  
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span>   </span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span>  </span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span>  </span>
+<span class="token macro property">#<span class="token directive keyword">define</span> MAX_LEN 100   </span>
+  
+<span class="token keyword">void</span> <span class="token function">select_sort</span><span class="token punctuation">(</span><span class="token keyword">char</span> strings<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span>MAX_LEN<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">int</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">char</span> minstr<span class="token punctuation">[</span>MAX_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>  
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+        <span class="token keyword">int</span> min_idx <span class="token operator">=</span> i<span class="token punctuation">;</span> <span class="token comment">// choosing a location to swap with  </span>
+        <span class="token function">strcpy</span><span class="token punctuation">(</span>minstr<span class="token punctuation">,</span> strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+          
+        <span class="token comment">// go find the minimum in the sublist[i+1:]  </span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strcmp</span><span class="token punctuation">(</span>minstr<span class="token punctuation">,</span> strings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
+                min_idx <span class="token operator">=</span> j<span class="token punctuation">;</span>   
+                <span class="token function">strcpy</span><span class="token punctuation">(</span>minstr<span class="token punctuation">,</span> strings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+            <span class="token punctuation">}</span>  
+        <span class="token punctuation">}</span>  
+        <span class="token comment">// swap if necessary   </span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>min_idx <span class="token operator">!=</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+            <span class="token keyword">char</span> temp<span class="token punctuation">[</span>MAX_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>  
+            <span class="token function">strcpy</span><span class="token punctuation">(</span>temp<span class="token punctuation">,</span> strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+            <span class="token function">strcpy</span><span class="token punctuation">(</span>strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> strings<span class="token punctuation">[</span>min_idx<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+            <span class="token function">strcpy</span><span class="token punctuation">(</span>strings<span class="token punctuation">[</span>min_idx<span class="token punctuation">]</span><span class="token punctuation">,</span> temp<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+  
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>   
+    <span class="token keyword">char</span> strings<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">[</span>MAX_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>  
+      
+    <span class="token comment">// Step 1 - read all the strings  </span>
+    <span class="token keyword">char</span> temp<span class="token punctuation">[</span>MAX_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>  
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>   
+        strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token function">strlen</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+        <span class="token function">strcpy</span><span class="token punctuation">(</span>strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> temp<span class="token punctuation">)</span><span class="token punctuation">;</span>   
+        i<span class="token operator">++</span><span class="token punctuation">;</span>   
+    <span class="token punctuation">}</span>  
+      
+    <span class="token comment">// Step 2 - sort them!   </span>
+    <span class="token function">select_sort</span><span class="token punctuation">(</span>strings<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token comment">// Step 3 - print them   </span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>   
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s "</span><span class="token punctuation">,</span> strings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+          
+<span class="token punctuation">}</span>  
+  
+</code></pre>
+<h2 id="pointer-version">Pointer Version</h2>
+<pre class=" language-c"><code class="prism  language-c">
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span> </span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">define</span> MAX_LEN 100 </span>
+
+<span class="token comment">//void select_sort(char strings[][MAX_LEN], int size) {</span>
+<span class="token keyword">void</span> <span class="token function">select_sort</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> strings<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">int</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//char minstr[MAX_LEN];</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> min_idx <span class="token operator">=</span> i<span class="token punctuation">;</span> <span class="token comment">// choosing a location to swap with</span>
+        <span class="token comment">//strcpy(minstr, strings[i]); </span>
+        
+        <span class="token comment">// go find the minimum in the sublist[i+1:]</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//if (strcmp(minstr, strings[j]) &gt; 0){</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strcmp</span><span class="token punctuation">(</span>strings<span class="token punctuation">[</span>min_idx<span class="token punctuation">]</span><span class="token punctuation">,</span> strings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                min_idx <span class="token operator">=</span> j<span class="token punctuation">;</span> 
+                <span class="token comment">//strcpy(minstr, strings[j]); </span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// swap if necessary </span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>min_idx <span class="token operator">!=</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">//char temp[MAX_LEN];</span>
+            <span class="token keyword">char</span><span class="token operator">*</span> temp <span class="token operator">=</span> strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> strings<span class="token punctuation">[</span>min_idx<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            strings<span class="token punctuation">[</span>min_idx<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+            <span class="token comment">/*strcpy(temp, strings[i]); 
+            strcpy(strings[i], strings[min_idx]); 
+            strcpy(strings[min_idx], temp);
+            */</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+    <span class="token comment">//char strings[10][MAX_LEN];</span>
+    <span class="token keyword">char</span><span class="token operator">*</span> strings<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    
+    <span class="token comment">// Step 1 - read all the strings</span>
+    <span class="token keyword">char</span> temp<span class="token punctuation">[</span>MAX_LEN<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">//while(scanf("%s", strings[i]) != -1) { </span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> temp<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token function">strlen</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">strcpy</span><span class="token punctuation">(</span>strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> temp<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        i<span class="token operator">++</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// Step 2 - sort them! </span>
+    <span class="token function">select_sort</span><span class="token punctuation">(</span>strings<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token comment">// Step 3 - print them </span>
+    <span class="token comment">// for (int j = 0; j &lt; i; j++) </span>
+    <span class="token comment">//    printf("%s ", strings[j]);</span>
+        
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token operator">*</span>s <span class="token operator">=</span> strings<span class="token punctuation">;</span> <span class="token punctuation">(</span>s <span class="token operator">-</span> strings<span class="token punctuation">)</span> <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> s<span class="token operator">++</span><span class="token punctuation">)</span> 
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s "</span><span class="token punctuation">,</span> <span class="token operator">*</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+
+    </div>
+  </div>
+</body>
+
+</html>
