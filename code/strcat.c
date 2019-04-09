@@ -54,8 +54,8 @@ void mystrcat2(char *dest, const char *source) {
 #include <string.h>
 
 int main(void) {
-  char S1[30] = "String One";
-  char S2[10] = "String Two";
+  char S1[33] = "String One";
+  char S2[11] = "String Two";
 
   printf("String one is (%s)\n", S1);
   printf("String two is (%s)\n", S2);
