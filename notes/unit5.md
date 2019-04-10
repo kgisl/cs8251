@@ -1122,9 +1122,9 @@ tied together to a specific device that is source or destination of data.
 The stream provides a consistent interface and to the programmer one
 hardware device will look much like another. In its most common form,
 a stream is a logical interface to a file. Stream I/O uses some temporary
-storage area, called buffer, for reading from or writing data to a fi le.
+storage area, called buffer, for reading from or writing data to a file.
 A stream is linked to a file by using an open operation. A stream is
-disassociated from a fi le using a close operation.
+disassociated from a file using a close operation.
 The C language provides three “standard” streams that are always
 available to a C program. These are
 
@@ -1150,11 +1150,11 @@ as a block than to send them one by one.
 
 **5. What is **FILE**?**  
 FILE is a structure declared in stdio.h. The members of the
-FILE structure are used by the program in the various fi le access
-operations. For each fi le that is to be opened, a pointer to type FILE
-must be declared. When the function fopen() is called, that function
+FILE structure are used by the program in the various file access
+operations. For each file that is to be opened, a pointer to type FILE
+must be declared. When the function `fopen()` is called, that function
 creates an instance of the FILE structure and returns a pointer to that
-structure. This pointer is used in all subsequent operations on the fi le.
+structure. This pointer is used in all subsequent operations on the file.
 But programmers don’t need to be concerned about the members of the
 structure FILE.
 
@@ -1709,7 +1709,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjY2NzEwNywtMjA1NjM2OTczMSwtMT
-g2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYwNTY5NTgsLTgyOTM0
-NTgzLDExNjExODI2MjNdfQ==
+eyJoaXN0b3J5IjpbOTA5MDQ3OTUzLC0yMDU2MzY5NzMxLC0xOD
+YzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1
+ODMsMTE2MTE4MjYyM119
 -->
