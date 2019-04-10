@@ -1094,7 +1094,7 @@ int main(int argc, char *argv[]) {
  
 ```
 
-_Also refer to the test case `file_copy` in [solutions.test.cpp](#solution.tests.cpp)_ 
+_Also refer to the test case `file_copy` in [solution.test.cpp](#solution.tests.cpp)_ 
 
 ### Count bytes in a file 
 
@@ -1711,7 +1711,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MTA0MTU4NSwtMTc2Mzg3NDk4NywyMj
+eyJoaXN0b3J5IjpbLTgwODg2OTg3OCwtMTc2Mzg3NDk4NywyMj
 AzODE3NSwtNjAzMDE3OTk5LC0xMzk4MjQxNzg0LDE2MzA1Mzg3
 NjEsLTIwNTYzNjk3MzEsLTE4NjM4MzA4MjAsLTgzNTE2NTYwOC
 wxMzA2MDU2OTU4LC04MjkzNDU4MywxMTYxMTgyNjIzXX0=
