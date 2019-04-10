@@ -1173,7 +1173,9 @@ the value of `FOPEN_MAX` be at least 8, including the standard streams
 work with up to 5 files simultaneously.  
 
 **7. What is the advantage of text files over binary files?**  
-Due to differences in binary data representations across platforms, files written in binary format often are not portable. For more portable file representations, consider using text files.
+Due to differences in binary data representations across platforms, 
+files written in binary format often are not portable. 
+For more portable file representations, consider using text files.
 
 
 
@@ -1709,7 +1711,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkwOTgxMjU3LC0yMDU2MzY5NzMxLC0xOD
-YzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1
-ODMsMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbMTYzMDUzODc2MSwtMjA1NjM2OTczMSwtMT
+g2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYwNTY5NTgsLTgyOTM0
+NTgzLDExNjExODI2MjNdfQ==
 -->
