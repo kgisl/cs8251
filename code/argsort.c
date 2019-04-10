@@ -6,7 +6,7 @@ int comparator(const void *a, const void *b) {
   const char *pa = *(const char **)a;
   const char *pb = *(const char **)b;
   printf("%s %s\n", pa, pb);
-  return !strcmp(pa, pb);
+  return strcmp(pa, pb) < 0;
 
   // Cast 'a' to a pointer to a constant pointer to a character and dereference
   // that
