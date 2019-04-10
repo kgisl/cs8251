@@ -1184,7 +1184,7 @@ For more portable file representations, consider using text files.
 
 ### Modular Versions
 
-Fork [this CD session][unit5] to get testable code!  
+Fork [this][unit5] to get testable code!  
 
 unit5: http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1
 
@@ -1711,8 +1711,8 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIwMzgxNzUsMjIwMzgxNzUsLTYwMzAxNz
-k5OSwtMTM5ODI0MTc4NCwxNjMwNTM4NzYxLC0yMDU2MzY5NzMx
-LC0xODYzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtOD
-I5MzQ1ODMsMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbMzQ5NTYxMTg2LDIyMDM4MTc1LC02MDMwMT
+c5OTksLTEzOTgyNDE3ODQsMTYzMDUzODc2MSwtMjA1NjM2OTcz
+MSwtMTg2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYwNTY5NTgsLT
+gyOTM0NTgzLDExNjExODI2MjNdfQ==
 -->
