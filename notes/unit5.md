@@ -1102,7 +1102,7 @@ Version 1 (using command line args)
 	 -  https://github.com/kgashok/filesOCR/blob/master/hand.c  
 
 Version 2  
-	 - test case `count_number_of_bytes_in_text_file` in [solutions.test.cpp](#solutiontestscpp)
+	 - test case `count_number_of_bytes_in_text_file` in [solution.test.cpp](#solution.tests.cpp)
 
 
 
@@ -1712,7 +1712,8 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTgyNDE3ODQsMTYzMDUzODc2MSwtMj
-A1NjM2OTczMSwtMTg2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYw
-NTY5NTgsLTgyOTM0NTgzLDExNjExODI2MjNdfQ==
+eyJoaXN0b3J5IjpbLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwxNj
+MwNTM4NzYxLC0yMDU2MzY5NzMxLC0xODYzODMwODIwLC04MzUx
+NjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1ODMsMTE2MTE4MjYyM1
+19
 -->
