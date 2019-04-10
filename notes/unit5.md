@@ -1118,12 +1118,12 @@ device to another or removed completely when desired.
 **2. What is a stream?**  
 In C, the stream is a common, logical interface to the various devices
 that form the computer. When the program executes, each stream is
-tied together to a specifi c device that is source or destination of data.
+tied together to a specific device that is source or destination of data.
 The stream provides a consistent interface and to the programmer one
 hardware device will look much like another. In its most common form,
-a stream is a logical interface to a fi le. Stream I/O uses some temporary
+a stream is a logical interface to a file. Stream I/O uses some temporary
 storage area, called buffer, for reading from or writing data to a fi le.
-A stream is linked to a fi le by using an open operation. A stream is
+A stream is linked to a file by using an open operation. A stream is
 disassociated from a fi le using a close operation.
 The C language provides three “standard” streams that are always
 available to a C program. These are
@@ -1709,7 +1709,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3OTM1OTA3LC0yMDU2MzY5NzMxLC0xOD
-YzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1
-ODMsMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbLTU0MjY2NzEwNywtMjA1NjM2OTczMSwtMT
+g2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYwNTY5NTgsLTgyOTM0
+NTgzLDExNjExODI2MjNdfQ==
 -->
