@@ -1184,10 +1184,9 @@ For more portable file representations, consider using text files.
 
 ### Modular Versions
 
-Fork [this CD session][unit5] to get testable code!
+Fork [this CD session][unit5] to get testable code!  
 
 unit5: http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1
-
 
 #### read\_from_stream\_into\_array(const char*, FILE*, int[])
 
@@ -1712,8 +1711,8 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwxNj
-MwNTM4NzYxLC0yMDU2MzY5NzMxLC0xODYzODMwODIwLC04MzUx
-NjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1ODMsMTE2MTE4MjYyM1
-19
+eyJoaXN0b3J5IjpbMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5OD
+I0MTc4NCwxNjMwNTM4NzYxLC0yMDU2MzY5NzMxLC0xODYzODMw
+ODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1ODMsMT
+E2MTE4MjYyM119
 -->
