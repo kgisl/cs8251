@@ -1159,12 +1159,12 @@ But programmers don’t need to be concerned about the members of the
 structure FILE.
 
 Because one may use a number of different files in the program,
-he or she must specify when reading or writing which fi le one wishes
+he or she must specify when reading or writing which file one wishes
 to use. This is accomplished by using a variable called a file pointer, a
 pointer variable that points to a structure FILE.  
 
 **6. How many files can I open at once?**  
- The number of fi les that can be opened at once will be determined by
+ The number of files that can be opened at once will be determined by
 the value of the constant FOPEN_MAX that is defined in `<stdio.h>`.
 `FOPEN_MAX` is an integer that specifies the maximum number of streams
 that can be open at one time. The C language standard requires that
@@ -1709,7 +1709,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA5MDQ3OTUzLC0yMDU2MzY5NzMxLC0xOD
+eyJoaXN0b3J5IjpbOTkwOTgxMjU3LC0yMDU2MzY5NzMxLC0xOD
 YzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1
 ODMsMTE2MTE4MjYyM119
 -->
