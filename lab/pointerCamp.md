@@ -32,12 +32,13 @@ _What is inside the string? Is the needle present in the haystack?_
 - [strend](http://j.mp/stringEndCC), 
 - [strcmp](http://j.mp/strcmpCC) and [strncmp](http://j.mp/stringncompareCC)
 - strend (_take  2_)
+
 --- BREAK  _here_
 
 - [strpbrk](http://j.mp/strpbrkCC), 
 - [strcspn](http://j.mp/stringcspnCC), 
 - [strspn](http://j.mp/stringspnCC), 
-- [strtok](http://j.mp/strTokenizeCC),
+- [strtok](http://j.mp/strTokenizeCC)
 
 --- *BREAK here*
 - [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
