@@ -49,7 +49,7 @@ _What is inside the string? Is the needle present in the haystack?_
 
 ## String manipulation (9)
 _How can I change the contents inside a string?_ 
-- [strlower](http://j.mp/strToLowerCC) and[strupper](http://j.mp/strToUpperCC)
+- [strlower](http://j.mp/strToLowerCC) and [strupper](http://j.mp/strToUpperCC)
 - [strflipcase](http://j.mp/stringflipcaseCC)
 -- BREAK _here_ 
 - [strcpy](http://j.mp/stringcopyCC) and [strncpy](http://j.mp/stringNcopyCC),
