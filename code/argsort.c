@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int comparator(const void *a, const void *b) {
   const char *pa = *(const char **)a;
   const char *pb = *(const char **)b;
   printf("%s %s\n", pa, pb);
-  return !strcmp(pa, pb);
+  return strcmp(pa, pb) < 0;
 
   // Cast 'a' to a pointer to a constant pointer to a character and dereference
   // that
@@ -28,7 +29,7 @@ int comparator_char(const void *a, const void *b) {
  *          ./a.out argon zero black -> argon black zero
  *
  */
-int main(int argc, const char *argv[]) {
+int main(int argc, char *argv[]) {
   if (argc == 2) {
     qsort(argv[1], strlen(argv[1]), sizeof(char), comparator_char);
     puts("After sorting letters in argument 1...");
@@ -44,6 +45,4 @@ int main(int argc, const char *argv[]) {
 
   return 0;
 }
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg1MDk3MTFdfQ==
--->
+

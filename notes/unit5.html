@@ -73,7 +73,6 @@
     <div class="stackedit__html">
       <h1 id="unit-v-file-processing">UNIT V FILE PROCESSING</h1>
 <p><em>Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments</em></p>
-<p>[TOC]</p>
 <p><strong>Table of Contents</strong></p>
 <ul>
 <li><a href="#unit-v-file-processing">UNIT V FILE PROCESSING</a>
@@ -1157,12 +1156,12 @@ int main(int argc, char *argv[]) {
 }  // end main
  
 </code></pre>
-<p><em>Also refer to the test case <code>file_copy</code> in <a href="#solutiontestscpp">solutions.test.cpp</a></em></p>
+<p><em>Also refer to the test case <code>file_copy</code> in <a href="#solution.tests.cpp">solution.test.cpp</a></em></p>
 <h3 id="count-bytes-in-a-file">Count bytes in a file</h3>
 <p>Version 1 (using command line args)<br>
 -  <a href="https://github.com/kgashok/filesOCR/blob/master/hand.c">https://github.com/kgashok/filesOCR/blob/master/hand.c</a></p>
 <p>Version 2<br>
-- test case <code>count_number_of_bytes_in_text_file</code> in <a href="#solutiontestscpp">solutions.test.cpp</a></p>
+- test case <code>count_number_of_bytes_in_text_file</code> in <a href="#solution.tests.cpp">solution.test.cpp</a></p>
 <h1 id="faq">FAQ</h1>
 <p><strong>1. What is file?</strong><br>
 A file is a collection of bytes stored on a secondary storage device, which<br>
@@ -1172,13 +1171,13 @@ device to another or removed completely when desired.</p>
 <p><strong>2. What is a stream?</strong><br>
 In C, the stream is a common, logical interface to the various devices<br>
 that form the computer. When the program executes, each stream is<br>
-tied together to a specifi c device that is source or destination of data.<br>
+tied together to a specific device that is source or destination of data.<br>
 The stream provides a consistent interface and to the programmer one<br>
 hardware device will look much like another. In its most common form,<br>
-a stream is a logical interface to a fi le. Stream I/O uses some temporary<br>
-storage area, called buffer, for reading from or writing data to a fi le.<br>
-A stream is linked to a fi le by using an open operation. A stream is<br>
-disassociated from a fi le using a close operation.<br>
+a stream is a logical interface to a file. Stream I/O uses some temporary<br>
+storage area, called buffer, for reading from or writing data to a file.<br>
+A stream is linked to a file by using an open operation. A stream is<br>
+disassociated from a file using a close operation.<br>
 The C language provides three “standard” streams that are always<br>
 available to a C program. These are</p>
 <pre><code>	Name   Description      Example
@@ -1200,19 +1199,19 @@ times. That is, it is less time-consuming to transmit several characters<br>
 as a block than to send them one by one.</p>
 <p><strong>5. What is <strong>FILE</strong>?</strong><br>
 FILE is a structure declared in stdio.h. The members of the<br>
-FILE structure are used by the program in the various fi le access<br>
-operations. For each fi le that is to be opened, a pointer to type FILE<br>
-must be declared. When the function fopen() is called, that function<br>
+FILE structure are used by the program in the various file access<br>
+operations. For each file that is to be opened, a pointer to type FILE<br>
+must be declared. When the function <code>fopen()</code> is called, that function<br>
 creates an instance of the FILE structure and returns a pointer to that<br>
-structure. This pointer is used in all subsequent operations on the fi le.<br>
+structure. This pointer is used in all subsequent operations on the file.<br>
 But programmers don’t need to be concerned about the members of the<br>
 structure FILE.</p>
 <p>Because one may use a number of different files in the program,<br>
-he or she must specify when reading or writing which fi le one wishes<br>
+he or she must specify when reading or writing which file one wishes<br>
 to use. This is accomplished by using a variable called a file pointer, a<br>
 pointer variable that points to a structure FILE.</p>
 <p><strong>6. How many files can I open at once?</strong><br>
-The number of fi les that can be opened at once will be determined by<br>
+The number of files that can be opened at once will be determined by<br>
 the value of the constant FOPEN_MAX that is defined in <code>&lt;stdio.h&gt;</code>.<br>
 <code>FOPEN_MAX</code> is an integer that specifies the maximum number of streams<br>
 that can be open at one time. The C language standard requires that<br>
@@ -1220,7 +1219,9 @@ the value of <code>FOPEN_MAX</code> be at least 8, including the standard stream
 <code>stdin</code>, <code>stdout</code> and <code>stderr</code>. Thus, as a minimum, it’s possible to<br>
 work with up to 5 files simultaneously.</p>
 <p><strong>7. What is the advantage of text files over binary files?</strong><br>
-Due to differences in binary data representations across platforms, files written in binary format often are not portable. For more portable file representations, consider using text files.</p>
+Due to differences in binary data representations across platforms,<br>
+files written in binary format often are not portable.<br>
+For more portable file representations, consider using text files.</p>
 <h1 id="bonus-material">Bonus Material</h1>
 <h3 id="modular-versions">Modular Versions</h3>
 <p>Fork <a href="http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&amp;tag=-1">this CD session</a> to get testable code!</p>

@@ -4,7 +4,6 @@
 # UNIT V FILE PROCESSING  
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
-[TOC]
 
 **Table of Contents**
 
@@ -1094,7 +1093,7 @@ int main(int argc, char *argv[]) {
  
 ```
 
-_Also refer to the test case `file_copy` in [solutions.test.cpp](#solutiontestscpp)_ 
+_Also refer to the test case `file_copy` in [solution.test.cpp](#solution.tests.cpp)_ 
 
 ### Count bytes in a file 
 
@@ -1102,7 +1101,7 @@ Version 1 (using command line args)
 	 -  https://github.com/kgashok/filesOCR/blob/master/hand.c  
 
 Version 2  
-	 - test case `count_number_of_bytes_in_text_file` in [solutions.test.cpp](#solutiontestscpp)
+	 - test case `count_number_of_bytes_in_text_file` in [solution.test.cpp](#solution.tests.cpp)
 
 
 
@@ -1118,13 +1117,13 @@ device to another or removed completely when desired.
 **2. What is a stream?**  
 In C, the stream is a common, logical interface to the various devices
 that form the computer. When the program executes, each stream is
-tied together to a specifi c device that is source or destination of data.
+tied together to a specific device that is source or destination of data.
 The stream provides a consistent interface and to the programmer one
 hardware device will look much like another. In its most common form,
-a stream is a logical interface to a fi le. Stream I/O uses some temporary
-storage area, called buffer, for reading from or writing data to a fi le.
-A stream is linked to a fi le by using an open operation. A stream is
-disassociated from a fi le using a close operation.
+a stream is a logical interface to a file. Stream I/O uses some temporary
+storage area, called buffer, for reading from or writing data to a file.
+A stream is linked to a file by using an open operation. A stream is
+disassociated from a file using a close operation.
 The C language provides three “standard” streams that are always
 available to a C program. These are
 
@@ -1150,21 +1149,21 @@ as a block than to send them one by one.
 
 **5. What is **FILE**?**  
 FILE is a structure declared in stdio.h. The members of the
-FILE structure are used by the program in the various fi le access
-operations. For each fi le that is to be opened, a pointer to type FILE
-must be declared. When the function fopen() is called, that function
+FILE structure are used by the program in the various file access
+operations. For each file that is to be opened, a pointer to type FILE
+must be declared. When the function `fopen()` is called, that function
 creates an instance of the FILE structure and returns a pointer to that
-structure. This pointer is used in all subsequent operations on the fi le.
+structure. This pointer is used in all subsequent operations on the file.
 But programmers don’t need to be concerned about the members of the
 structure FILE.
 
 Because one may use a number of different files in the program,
-he or she must specify when reading or writing which fi le one wishes
+he or she must specify when reading or writing which file one wishes
 to use. This is accomplished by using a variable called a file pointer, a
 pointer variable that points to a structure FILE.  
 
 **6. How many files can I open at once?**  
- The number of fi les that can be opened at once will be determined by
+ The number of files that can be opened at once will be determined by
 the value of the constant FOPEN_MAX that is defined in `<stdio.h>`.
 `FOPEN_MAX` is an integer that specifies the maximum number of streams
 that can be open at one time. The C language standard requires that
@@ -1173,7 +1172,9 @@ the value of `FOPEN_MAX` be at least 8, including the standard streams
 work with up to 5 files simultaneously.  
 
 **7. What is the advantage of text files over binary files?**  
-Due to differences in binary data representations across platforms, files written in binary format often are not portable. For more portable file representations, consider using text files.
+Due to differences in binary data representations across platforms, 
+files written in binary format often are not portable. 
+For more portable file representations, consider using text files.
 
 
 
@@ -1182,9 +1183,9 @@ Due to differences in binary data representations across platforms, files writte
 
 ### Modular Versions
 
-Fork [this CD session](http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1) to get testable code!
+Fork [this CD session][unit5] to get testable code!  
 
-
+[unit5]: http://cyberdojo1.kgfsl.com/forker/fork/6EA156F740?avatar=hyena&tag=-1
 
 #### read\_from_stream\_into\_array(const char*, FILE*, int[])
 
@@ -1709,7 +1710,9 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3OTM1OTA3LC0yMDU2MzY5NzMxLC0xOD
-YzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1
-ODMsMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbLTE1NTk2MDU1MjAsLTgwODg2OTg3OCwtMT
+c2Mzg3NDk4NywyMjAzODE3NSwtNjAzMDE3OTk5LC0xMzk4MjQx
+Nzg0LDE2MzA1Mzg3NjEsLTIwNTYzNjk3MzEsLTE4NjM4MzA4Mj
+AsLTgzNTE2NTYwOCwxMzA2MDU2OTU4LC04MjkzNDU4MywxMTYx
+MTgyNjIzXX0=
 -->

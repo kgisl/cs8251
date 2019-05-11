@@ -24,42 +24,42 @@ _What is inside the string? Is the needle present in the haystack?_
 - [have_no_fives](http://j.mp/haveNoFive)  and 
 - [count_occurrences](http://j.mp/countCC) and [has_duplicates](http://j.mp/countDuplicates)
 
--- BREAK  _here_ (try **strlower**) 
+--- BREAK  _here_ (try **strlower**)  
+- [subset](http://j.mp/subSetCC),  
+- [subsequence](http://j.mp/subSeqCC),  
+- [vowels in order](http://j.mp/vowelsOrderCC)  
 - [strstr](http://j.mp/stringStrCC) and [strstrw](http://j.mp/strstrwrapCC), 
 - [strend](http://j.mp/stringEndCC), 
 - [strcmp](http://j.mp/strcmpCC) and [strncmp](http://j.mp/stringncompareCC)
 - strend (_take  2_)
 
--- BREAK  _here_
+--- BREAK  _here_
 
 - [strpbrk](http://j.mp/strpbrkCC), 
 - [strcspn](http://j.mp/stringcspnCC), 
 - [strspn](http://j.mp/stringspnCC), 
-- [strtok](http://j.mp/strTokenizeCC),
-- [subset](http://j.mp/subSetCC), 
-- [subsequence](http://j.mp/subSeqCC)
+- [strtok](http://j.mp/strTokenizeCC)
 
 --- *BREAK here*
 - [pangram](http://j.mp/panGramCC) and [partial](http://j.mp/pangramCC), 
  - [isogram](http://j.mp/isogramCC) and [higher](http://j.mp/multipleIsogramCC)
 - [anagram](http://j.mp/anagramCC)
 - [word count](http://j.mp/wordcountCC)
-- [vowels in order](http://j.mp/vowelsOrderCC)
 
 
 ## String manipulation (9)
 _How can I change the contents inside a string?_ 
-- [strlower](http://j.mp/strToLowerCC) and[strupper](http://j.mp/strToUpperCC)
+- [strlower](http://j.mp/strToLowerCC) and [strupper](http://j.mp/strToUpperCC)
 - [strflipcase](http://j.mp/stringflipcaseCC)
 -- BREAK _here_ 
 - [strcpy](http://j.mp/stringcopyCC) and [strncpy](http://j.mp/stringNcopyCC),
-- [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/stringNcatCC),
+- [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/strncatCC),
 - [strrev](http://j.mp/reverseCC)
 - [memorymove](http://j.mp/memmoveCC)
 
 ## String allocation (dynamic memory) (6)
 _How do I generate new strings from existing ones?_
-- [subString](http://j.mp/subStringCC), 
+- [subString](http://j.mp/substringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [abbreviate](http://j.mp/acronymCC) (exercism and CapGemini), 
 - [replaceString](http://j.mp/replaceCC),
