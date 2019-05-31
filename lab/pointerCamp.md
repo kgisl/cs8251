@@ -1,5 +1,12 @@
 # Pointer Camp
 
+## But why? 
+
+Golang and Rust are two new languages that are becoming popular for various reasons. Both use and implement pointer concepts. 
+
+“For beginners, this may slightly be difficult to learn because Go relies heavily on pointers which may not be easy to grasp as a new programmer.” — @timcodestoo https://medium.com/p/3-programming-languages-to-learn-in-2019-2eb035936f65
+
+
 **tl;dr**  That they are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.
 
 Send your feedback using http://j.mp/thankKG 
