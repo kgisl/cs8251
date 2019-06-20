@@ -87,7 +87,7 @@ _How do I generate new strings from existing ones?_
 
 # - PDS-1 Practice (4)
   - Lab 3
-	 - [connect](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190) and 
+	 - [connect](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190), [getnode](http://j.mp/tailCC) and 
 [insertBefore](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
 	 - [Doubly-Linked List](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1189)
        - Processing strings as linked lists [TBD]
