@@ -85,7 +85,7 @@ _How do I generate new strings from existing ones?_
 - [palindrome](http://j.mp/dPalindromeKG) using double pointers
 
 
-# - PDS-1 Practice (4)
+# - PDS-1 Practice (5)
   - Lab 3
 	 - [connect](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190), [getnode](http://j.mp/tailCC) and 
 [insertBefore](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
