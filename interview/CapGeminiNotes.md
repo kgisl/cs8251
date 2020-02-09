@@ -47,8 +47,8 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 
 # Preparation Strategy
 
-### Complexity Analysis - Common sense perspective and By Heart Strategy 
-   - The bare minimum 
+### Complexity Analysis - Common sense perspective and Mugging up!
+   - The most likely ones 
        - for searching, sorting 
        - for hashtable, linked list, graphs 
       
@@ -56,7 +56,7 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 	   - http://j.mp/complexityThis
 	   - http://j.mp/complexityThis2 
 
-![graph]([https://github.com/kgisl/cs8251/blob/master/interview/complexityGraph.png](https://github.com/kgisl/cs8251/blob/master/interview/complexityGraph.png))
+![graph](https://github.com/kgisl/cs8251/blob/master/interview/complexityGraph.png)
 ![explain](https://github.com/kgisl/cs8251/blob/master/interview/quickComparison.png)
 
 
