@@ -60,9 +60,9 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 ![explain](https://github.com/kgisl/cs8251/blob/master/interview/quickComparison.png)
 
 #### Minimum tables 
-![data](https://github.com/kgisl/cs8251/blob/master/interview/dataO.png)
 ![sorting](https://github.com/kgisl/cs8251/blob/master/interview/sortingO.png)
 ![search](https://github.com/kgisl/cs8251/blob/master/interview/searchingO.jpg)
+![data](https://github.com/kgisl/cs8251/blob/master/interview/dataO.png)
 
 ### Data Structures Review
    - Linked lists Searching 
