@@ -56,8 +56,8 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 	   - http://j.mp/complexityThis
 	   - http://j.mp/complexityThis2 
 
-![graph](https://github.com/kgisl/cs8251/blob/master/interview/complexityGraph.png)
-![explain](https://github.com/kgisl/cs8251/blob/master/interview/quickComparison.png)
+![graph](https://j.mp/graphO)
+![explain](https://j.mp/complexityO)
 
 #### Minimum tables 
 ![sorting](https://j.mp/sortingO)
