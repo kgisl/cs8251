@@ -1,5 +1,5 @@
 
-[![Join the chat at https://gitter.im/cs8251/Lobby](https://badges.gitter.im/cs8251/Lobby.svg) ](https://gitter.im/cs8251/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  - ask questions / clarifications on Gitter Room
+[![Join the chat at https://gitter.im/cs8251/](https://badges.gitter.im/cs8251/Lobby.svg) ](https://gitter.im/cs8251/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  - ask questions / clarifications on Gitter Room
 
 In Capgemini, this is a very crucial round. Though Capgemini has never announced sectional cutoff, yet the overall test cutoff is high. Hence you need to answer the maximum number of questions to clear the test. Generally, a minimum of 70% questions needs to be answered rightly in each section.
 
@@ -38,23 +38,24 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 ![data](https://bit.ly/2SzqdGO)
 
 
-## Coding and Pseudo Code Review 
+## 1 Coding and Pseudo Code Review 
    - Loops  (for loops and while loops)
    - Conditionals (very very easy ) 
    - Recursion Calls
 
 Finish all 20 challenges (PSEUDO code in C/C++) in http://j.mp/capGMCQ
 
-## Data Structures Review
+## 2 Data Structures Review
    - Linked lists Searching 
    - Hashtables Entry and Chaining, 
    - Tree Traversal
 
-## Pointer Quiz 
+## 3 Pointer Quiz 
 
+Only if you are VERY THOROUGH with Step 1 and Step2, spend time on **pointers**. Be ***absolutely*** sure about Step 1 and Step 2 before stepping into more advanced material. 
   - http://j.mp/pointerQuizTOC
 
-   [![Join the chat at https://gitter.im/cs8251/Lobby](https://badges.gitter.im/cs8251/Lobby.svg)](https://gitter.im/cs8251/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) - ask for feedback on the chat 
+[![Gitter](https://badges.gitter.im/kgisl/cs8251.svg)](https://gitter.im/kgisl/cs8251?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) - ask for feedback on the chat 
 
 # Brief 
 
