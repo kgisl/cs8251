@@ -1,7 +1,9 @@
 #include <stdio.h>
-
 #include <time.h>
 #include <stdlib.h>
+#include <assert.h>
+#include <math.h>
+#include <stdint.h>
 
 int rnd(int n) {
     int r = rand() % n;      // Returns a pseudo-random integer between 0 and RAND_MAX.
@@ -24,12 +26,12 @@ void qsort (void* base, size_t num, size_t size,
 
 
 int main () { 
-    
+
     srand(time(NULL));   // Initialization, should only be called once.
     
     for (int i = 1; i < 10000; i *= 10) {
-        int maxsize = 1000 *i;
-        int array[maxsize];// = (int *)malloc(10 * sizeof(int)); 
+        int maxsize = 1000 * i;
+        int array[maxsize]; 
         for (int i = 0; i < maxsize; i++) {
             array[i] = rnd(100);
             //printf("%d %d\n", i, array[i]); 
@@ -44,7 +46,15 @@ int main () {
         end = clock();
         cpu_time_used = ((double) (end - start));
 
-        printf("%d : %.2f\n", maxsize, cpu_time_used);
+        double base_time;
+
+        if (maxsize == 1000) base_time = cpu_time_used;
+
+        printf("%d : %.2f ", maxsize, cpu_time_used); 
+        printf(" ratio: %.2f", 
+            log2(1000)/base_time * cpu_time_used/(log2(maxsize) * i));
+
+        //assert (cpu_time_used == maxsize * log10(msize));
 
         /*for (int i = 0; i < maxsize; i++)
             printf("%d, ", array[i]); 
@@ -52,5 +62,4 @@ int main () {
     }
 
     return 0;
-
 }
