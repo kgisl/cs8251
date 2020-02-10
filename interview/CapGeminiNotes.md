@@ -23,8 +23,7 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 
 # Preparation Strategy
 
-
-[![Join the chat at https://gitter.im/cs8251/](https://badges.gitter.im/cs8251/Lobby.svg) ](https://gitter.im/cs8251/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  - ask questions / clarifications on Gitter Room
+[![Gitter](https://badges.gitter.im/kgisl/cs8251.svg)](https://gitter.im/kgisl/cs8251?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) - ask questions / clarifications on Gitter Room
 
 ## Complexity Analysis - Common sense perspective and Mugging up!
    - The most likely ones 
@@ -73,7 +72,7 @@ The best way to grok Recursion is by writing recursive code. There is no other b
 Only if you are VERY THOROUGH with Step 1 and Step2, spend time on **pointers**. Be ***absolutely*** sure about Step 1 and Step 2 before stepping into more advanced material. 
   - http://j.mp/pointerQuizTOC
 
-[![Gitter](https://badges.gitter.im/kgisl/cs8251.svg)](https://gitter.im/kgisl/cs8251?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) - ask for feedback on the chat 
+[![Gitter](https://badges.gitter.im/kgisl/cs8251.svg)](https://gitter.im/kgisl/cs8251?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) - ask questions / clarifications on Gitter Room
 
 
 # Brief 
