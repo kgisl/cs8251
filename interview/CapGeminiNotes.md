@@ -47,7 +47,7 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 
 # Preparation Strategy
 
-### Complexity Analysis - Common sense perspective and Mugging up!
+## Complexity Analysis - Common sense perspective and Mugging up!
    - The most likely ones 
        - for searching, sorting 
        - for hashtable, linked list, graphs 
@@ -64,7 +64,15 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 ![search](https://github.com/kgisl/cs8251/blob/master/interview/searchingO.jpg)
 ![data](https://github.com/kgisl/cs8251/blob/master/interview/dataO.png)
 
-### Data Structures Review
+
+## Coding and Pseudo Code Review 
+   - Loops  (for loops and while loops)
+   - Conditionals (very very easy ) 
+   - Recursion Calls
+
+Finish all 20 challenges (PSEUDO code in C/C++) in http://j.mp/capGMCQ
+
+## Data Structures Review
    - Linked lists Searching 
    - Hashtables Entry and Chaining, 
    - Tree Traversal
@@ -72,8 +80,5 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 
 
    
-### Coding and Pseudo Code Review 
-   - Loops  (for loops and while loops)
-   - Conditionals (very very easy ) 
-   - Recursion Calls
+
 
