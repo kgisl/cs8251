@@ -49,7 +49,9 @@ Finish all 20 challenges (PSEUDO code in C/C++) in http://j.mp/capGMCQ
    - Hashtables Entry and Chaining, 
    - Tree Traversal
 
+## Pointer Quiz 
 
+  - http://j.mp/pointerQuizTOC
 
    
 
