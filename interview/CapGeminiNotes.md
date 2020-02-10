@@ -1,32 +1,4 @@
-# Brief 
 
-## **Capgemini Pseudo Code Test**
-
--   **Total Questions**: 25
--   **Time Allotted:** 25 minutes
--   **Cut-Off:** 70%
--   **Negative Marking:**  No
-
-This section of Capgemini Test Pattern checks the basics knowledge about programming language of the candidates. It consists of questions mainly from  **Data Structure, C/C++, and Digital, Data Structure commands, and syntaxes types**  of questions like 
-  - finding the error in the code, 
-  - binary search tree, 
-  - recursion, 
-  - functions, 
-  - loop, 
-  - pointers, and 
-  - algorithm (searching, sorting) 
-  - complexity analysis 
-
-A total of 25 Questions are asked in this section in the allotted time of 25 minutes. The overall pattern is given below.
-
-|Capgemini Pseudo Coding Test | Expected number of Questions | Level of Difficulty  
-|------|------|--------|
-|Algorithm (output prediction, finding the error, calculating time complexity)  |8  | Easy
-| Data Structure   | 5  | Medium
-| OOPS  | 3-4  | Medium
-
-
-The pattern for Capgemini pseudo code MCQs is given below. Capgemini pseudo code Mcqs section consists of **25 questions to be answered in 25 minute**s. This means approximately 1 minute is the maximum amount you can take to answer each question.
 
 In Capgemini, this is a very crucial round. Though Capgemini has never announced sectional cutoff, yet the overall test cutoff is high. Hence you need to answer the maximum number of questions to clear the test. Generally, a minimum of 70% questions needs to be answered rightly in each section.
 
@@ -81,4 +53,33 @@ Finish all 20 challenges (PSEUDO code in C/C++) in http://j.mp/capGMCQ
 
    
 
+# Brief 
+
+## **Capgemini Pseudo Code Test**
+
+-   **Total Questions**: 25
+-   **Time Allotted:** 25 minutes
+-   **Cut-Off:** 70%
+-   **Negative Marking:**  No
+
+This section of Capgemini Test Pattern checks the basics knowledge about programming language of the candidates. It consists of questions mainly from  **Data Structure, C/C++, and Digital, Data Structure commands, and syntaxes types**  of questions like 
+  - finding the error in the code, 
+  - binary search tree, 
+  - recursion, 
+  - functions, 
+  - loop, 
+  - pointers, and 
+  - algorithm (searching, sorting) 
+  - complexity analysis 
+
+A total of 25 Questions are asked in this section in the allotted time of 25 minutes. The overall pattern is given below.
+
+|Capgemini Pseudo Coding Test | Expected number of Questions | Level of Difficulty  
+|------|------|--------|
+|Algorithm (output prediction, finding the error, calculating time complexity)  |8  | Easy
+| Data Structure   | 5  | Medium
+| OOPS  | 3-4  | Medium
+
+
+The pattern for Capgemini pseudo code MCQs is given below. Capgemini pseudo code Mcqs section consists of **25 questions to be answered in 25 minute**s. This means approximately 1 minute is the maximum amount you can take to answer each question.
 
