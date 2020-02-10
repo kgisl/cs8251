@@ -1,5 +1,8 @@
 
-[![Join the chat at https://gitter.im/cs8251/](https://badges.gitter.im/cs8251/Lobby.svg) ](https://gitter.im/cs8251/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  - ask questions / clarifications on Gitter Room
+## Practice Tests
+ - [https://www.prep.youth4work.com/placement-papers/accenture-test/accenture-technical-questions-paper-test](https://www.prep.youth4work.com/placement-papers/accenture-test/accenture-technical-questions-paper-test)
+	 - very useful to take and understand / difficult level is high 
+	 - Take the C++ and the Data Structure test
 
 In Capgemini, this is a very crucial round. Though Capgemini has never announced sectional cutoff, yet the overall test cutoff is high. Hence you need to answer the maximum number of questions to clear the test. Generally, a minimum of 70% questions needs to be answered rightly in each section.
 
@@ -19,6 +22,9 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
 
 
 # Preparation Strategy
+
+
+[![Join the chat at https://gitter.im/cs8251/](https://badges.gitter.im/cs8251/Lobby.svg) ](https://gitter.im/cs8251/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  - ask questions / clarifications on Gitter Room
 
 ## Complexity Analysis - Common sense perspective and Mugging up!
    - The most likely ones 
