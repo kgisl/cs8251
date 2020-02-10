@@ -28,9 +28,9 @@ void qsort (void* base, size_t num, size_t size,
 int main () { 
 
     srand(time(NULL));   // Initialization, should only be called once.
-    
-    for (int i = 1; i < 10000; i *= 10) {
-        int maxsize = 1000 * i;
+    int maxsize = 100;
+    for (int i = 1; i < 10000; i *= 5) {
+        int maxsize = 100 * i;
         int array[maxsize]; 
         for (int i = 0; i < maxsize; i++) {
             array[i] = rnd(100);
@@ -48,11 +48,11 @@ int main () {
 
         double base_time;
 
-        if (maxsize == 1000) base_time = cpu_time_used;
+        if (maxsize == 100) base_time = cpu_time_used;
 
         printf("%d : %.2f ", maxsize, cpu_time_used); 
         printf(" ratio: %.2f", 
-            log2(1000)/base_time * cpu_time_used/(log2(maxsize) * i));
+            log10(100)/base_time * cpu_time_used/(log10(maxsize) * i));
 
         //assert (cpu_time_used == maxsize * log10(msize));
 
@@ -60,6 +60,7 @@ int main () {
             printf("%d, ", array[i]); 
         */
     }
+    puts("\n-----end----");
 
     return 0;
 }
