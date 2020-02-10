@@ -50,8 +50,8 @@ int main () {
 
         if (maxsize == 100) base_time = cpu_time_used;
 
-        printf("%d : %.2f ", maxsize, cpu_time_used); 
-        printf(" ratio: %.2f", 
+        printf("%6d %4.2f ", maxsize, cpu_time_used); 
+        printf(" ratio: %.1f", 
             log10(100)/base_time * cpu_time_used/(log10(maxsize) * i));
 
         //assert (cpu_time_used == maxsize * log10(msize));
