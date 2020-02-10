@@ -48,7 +48,7 @@ The syllabus for Capgemini pseudo code MCQs section is as given below.  **Questi
    - Conditionals (very very easy ) 
    - Recursion Calls
 
-Finish all 20 challenges (PSEUDO code in C/C++) in http://j.mp/capGMCQ
+Finish all 20 challenges (PSEUDO code in C/C++)  - get invited to the REPL course and complete all the challenges. 
 
 ## 2 Data Structures Review
    - Linked lists Searching 
