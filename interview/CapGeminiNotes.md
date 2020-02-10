@@ -2,7 +2,7 @@
 ## Practice Tests
  - [https://www.prep.youth4work.com/placement-papers/accenture-test/accenture-technical-questions-paper-test](https://www.prep.youth4work.com/placement-papers/accenture-test/accenture-technical-questions-paper-test)
 	 - very useful to take and understand / difficult level is high 
-	 - Take the C++ and the Data Structure test
+	 - Take the C, C++ and the Data Structure test, in that order
 
 In Capgemini, this is a very crucial round. Though Capgemini has never announced sectional cutoff, yet the overall test cutoff is high. Hence you need to answer the maximum number of questions to clear the test. Generally, a minimum of 70% questions needs to be answered rightly in each section.
 
@@ -56,12 +56,25 @@ Finish all 20 challenges (PSEUDO code in C/C++) in http://j.mp/capGMCQ
    - Hashtables Entry and Chaining, 
    - Tree Traversal
 
-## 3 Pointer Quiz 
+## 3 Recursion Tutorial
+The best way to grok Recursion is by writing recursive code. There is no other better way. Pick and choose any 5 of the problems and pass all the test cases. The link to the recursion code camp is http://j.mp/rTutorial
+
+1. For a moment though, first watch this and get convinced of how recursion works. 
+
+![recurse](http://j.mp/recurseGIF)
+
+2. This CloudCoder problem should not take more than a minute if you know where to fix it - http://j.mp/bugFix4 
+
+3. Read about recursion at http://j.mp/recursionTutorial  (OPTIONAL)
+
+
+## 4 Pointer Quiz 
 
 Only if you are VERY THOROUGH with Step 1 and Step2, spend time on **pointers**. Be ***absolutely*** sure about Step 1 and Step 2 before stepping into more advanced material. 
   - http://j.mp/pointerQuizTOC
 
 [![Gitter](https://badges.gitter.im/kgisl/cs8251.svg)](https://gitter.im/kgisl/cs8251?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) - ask for feedback on the chat 
+
 
 # Brief 
 
