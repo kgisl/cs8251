@@ -1,4 +1,5 @@
 
+[![Join the chat at https://gitter.im/cs8251/Lobby](https://badges.gitter.im/cs8251/Lobby.svg) ](https://gitter.im/cs8251/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  - ask questions / clarifications on Gitter Room
 
 In Capgemini, this is a very crucial round. Though Capgemini has never announced sectional cutoff, yet the overall test cutoff is high. Hence you need to answer the maximum number of questions to clear the test. Generally, a minimum of 70% questions needs to be answered rightly in each section.
 
@@ -53,7 +54,7 @@ Finish all 20 challenges (PSEUDO code in C/C++) in http://j.mp/capGMCQ
 
   - http://j.mp/pointerQuizTOC
 
-   
+   [![Join the chat at https://gitter.im/cs8251/Lobby](https://badges.gitter.im/cs8251/Lobby.svg)](https://gitter.im/cs8251/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) - ask for feedback on the chat 
 
 # Brief 
 
