@@ -71,7 +71,7 @@ Programming with C",McGraw-Hill Education, 1996.
 
 [0]: http://j.mp/clangKITE 
 [0keys]: http://j.mp/clangKeys 
-[1]: http://j.mp/sortUnix
+[1]: http://bit.ly/selectionSortC
 [2]: http://j.mp/swapNumbers
 [3]: http://j.mp/pointerKITE 
 [4]: http://bit.ly/pArithmeticV 
