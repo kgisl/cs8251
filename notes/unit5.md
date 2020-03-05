@@ -1,5 +1,5 @@
 
-
+![cloud](http://bit.ly/unit5Words)
 
 # UNIT V FILE PROCESSING  
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
@@ -1710,9 +1710,9 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTk2MDU1MjAsLTgwODg2OTg3OCwtMT
-c2Mzg3NDk4NywyMjAzODE3NSwtNjAzMDE3OTk5LC0xMzk4MjQx
-Nzg0LDE2MzA1Mzg3NjEsLTIwNTYzNjk3MzEsLTE4NjM4MzA4Mj
-AsLTgzNTE2NTYwOCwxMzA2MDU2OTU4LC04MjkzNDU4MywxMTYx
-MTgyNjIzXX0=
+eyJoaXN0b3J5IjpbNzQ5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MD
+g4Njk4NzgsLTE3NjM4NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5
+OSwtMTM5ODI0MTc4NCwxNjMwNTM4NzYxLC0yMDU2MzY5NzMxLC
+0xODYzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5
+MzQ1ODMsMTE2MTE4MjYyM119
 -->
