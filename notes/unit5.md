@@ -555,7 +555,13 @@ Functions **fwrite** and **fread** are capable of reading and writing arrays of 
 
 Consider the following problem statement:
 
-	Create a credit-processing system capable of storing up to 100 fixed-length records. Each record should consist of an account number that will be used as the record key, a last name, a first name and a balance. The resulting program should be able to update an account, insert a new account record, delete an account and list all the account records in a formatted text file for printing. Use a random-access file.
+> Create a credit-processing system capable of storing up to 100
+> fixed-length records. Each record should consist of an account number
+> that will be used as the record key, a last name, a first name and a
+> balance. The resulting program should be able to update an account,
+> insert a new account record, delete an account and list all the
+> account records in a formatted text file for printing. Use a
+> random-access file.
 
 The next several sections introduce the techniques necessary to create the credit-processing program. Figure 11.10 shows how to open a random-access file, define a record format using a struct, write data to the disk and close the file. This program initializes all 100 records of the file "credit.dat" with empty structs using the function fwrite. Each empty struct contains `0` for the account number, `""` (the empty string) for the last name, `""` for the first name and 0.0 for the balance. The file is initialized in this manner to create space on disk in which the file will be stored and to make it possible to determine whether a record contains data.
 
@@ -1711,10 +1717,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NTAxMTEyNywtMjQyOTM5ODk1LC0xMj
-U3MTExNzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLTE1NTk2MDU1
-MjAsLTgwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAzODE3NSwtNj
-AzMDE3OTk5LC0xMzk4MjQxNzg0LDE2MzA1Mzg3NjEsLTIwNTYz
-Njk3MzEsLTE4NjM4MzA4MjAsLTgzNTE2NTYwOCwxMzA2MDU2OT
-U4LC04MjkzNDU4MywxMTYxMTgyNjIzXX0=
+eyJoaXN0b3J5IjpbLTI5MDU1MzcxMSwtNzg1MDExMTI3LC0yND
+I5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5ODE5
+NiwtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OTg3LD
+IyMDM4MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYzMDUz
+ODc2MSwtMjA1NjM2OTczMSwtMTg2MzgzMDgyMCwtODM1MTY1Nj
+A4LDEzMDYwNTY5NTgsLTgyOTM0NTgzLDExNjExODI2MjNdfQ==
+
 -->
