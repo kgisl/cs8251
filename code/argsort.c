@@ -10,7 +10,7 @@ int comparator(const void *a, const void *b) {
 
   // Cast 'a' to a pointer to a constant pointer to a character and dereference
   // that
-  // Credits: https://bewuethr.github.io/sorting-strings-in-c-with-qsort/
+  // Credits: https://bewuethr.github.io/2015-03-07-sorting-strings-in-c-with-qsort.html
   // return strcmp(*(char* const*) a, *(char* const*) b);
 }
 
