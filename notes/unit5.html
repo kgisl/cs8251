@@ -661,8 +661,15 @@ data, and delete data no longer needed.</p>
 <p>which always writes four bytes on a system with four-byte integers from a variable number to the file represented by <code>fPtr</code> (we’ll explain the <code>1</code> argument shortly). Later, <strong>fread</strong> can be used to read those four bytes into an integer variable number. Although fread and fwrite read and write data, such as integers, in fixed-size rather than variable-size format, the data they handle are processed in computer “raw data” format (i.e., bytes of data) rather than in <strong>printf</strong>’s and <strong>scanf</strong>’s human-readable text format. Because the “raw” representation of data is <em>system dependent</em>, “raw data” may not be readable on other systems, or by programs produced by other compilers or with other compiler options.</p>
 <p>Functions <strong>fwrite</strong> and <strong>fread</strong> are capable of reading and writing arrays of data to and from disk. The third argument of both fread and fwrite is the number of elements in the array that should be read from or written to disk. The preceding fwrite function call writes a single integer to disk, so the third argument is 1 (as if one element of an array is being written). File-processing programs rarely write a single field to a file. Normally, they write one struct at a time, as we show in the following examples.</p>
 <p>Consider the following problem statement:</p>
-<pre><code>Create a credit-processing system capable of storing up to 100 fixed-length records. Each record should consist of an account number that will be used as the record key, a last name, a first name and a balance. The resulting program should be able to update an account, insert a new account record, delete an account and list all the account records in a formatted text file for printing. Use a random-access file.
-</code></pre>
+<blockquote>
+<p>Create a credit-processing system capable of storing up to 100<br>
+fixed-length records. Each record should consist of an account number<br>
+that will be used as the record key, a last name, a first name and a<br>
+balance. The resulting program should be able to update an account,<br>
+insert a new account record, delete an account and list all the<br>
+account records in a formatted text file for printing. Use a<br>
+random-access file.</p>
+</blockquote>
 <p>The next several sections introduce the techniques necessary to create the credit-processing program. Figure 11.10 shows how to open a random-access file, define a record format using a struct, write data to the disk and close the file. This program initializes all 100 records of the file “credit.dat” with empty structs using the function fwrite. Each empty struct contains <code>0</code> for the account number, <code>""</code> (the empty string) for the last name, <code>""</code> for the first name and 0.0 for the balance. The file is initialized in this manner to create space on disk in which the file will be stored and to make it possible to determine whether a record contains data.</p>
 <pre class=" language-c"><code class="prism  language-c">
 <span class="token comment">// Fig. 11.10: fig11_10.c</span>
