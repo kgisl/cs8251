@@ -148,14 +148,14 @@ In the above table we have discussed about various file I/O functions to perform
 main() {
 	FILE *fp;
 	char ch;
-	// open a textfile for writing into it
+	// open a text file for writing into it
 	fp = fopen ("one.txt", "w");
 	printf("Enter data");
 	while( (ch = getchar()) != EOF) {
 		putc(ch, fp);
 	}
 	fclose(fp);
-	// open a file for reading from it 
+	// open a text file for reading from it 
 	fp = fopen("one.txt", "r");
 	while( (ch = getc(fp)) != EOF)
 		printf("%c", ch);
@@ -1711,7 +1711,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTA5NTAxODUsMjQ2NDMyNTIwLDc0OT
+eyJoaXN0b3J5IjpbLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OT
 c5ODE5NiwtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0
 OTg3LDIyMDM4MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMT
 YzMDUzODc2MSwtMjA1NjM2OTczMSwtMTg2MzgzMDgyMCwtODM1
