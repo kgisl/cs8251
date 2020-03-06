@@ -402,8 +402,8 @@ using **stdout** as the file pointer, as in:
 
 	`fprintf( stdout, "%d %s %.2f\n", account, name, balance );`
 
-After the user enters end-of-file, the program closes the clients.dat file with fclose
-and terminates. Function fclose also receives the file pointer (rather than the filename)
+After the user enters end-of-file, the program closes the **clients.dat** file with **fclose**
+and terminates. Function **fclose** also receives the file pointer (rather than the filename)
 as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
 
 ## File Access Modes
@@ -1711,7 +1711,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NDI2MTg3OSwtMjQyOTM5ODk1LC0xMj
+eyJoaXN0b3J5IjpbLTc4NTAxMTEyNywtMjQyOTM5ODk1LC0xMj
 U3MTExNzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLTE1NTk2MDU1
 MjAsLTgwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAzODE3NSwtNj
 AzMDE3OTk5LC0xMzk4MjQxNzg0LDE2MzA1Mzg3NjEsLTIwNTYz
