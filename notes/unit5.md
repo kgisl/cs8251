@@ -290,7 +290,7 @@ C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file 
   - The standard library provides many functions for reading data from files and for writing data to files. Function `fgetc`, like `getchar`, reads one character from a file. Function `fgetc` receives as an argument a FILE pointer for the file from which a character will be read. The call `fgetc(stdin)` reads one character from `stdin`—the standard input. This call is equivalent to the call `getchar()`.
 	  - Function `fputc`, like `putchar`, writes one character to a file. Function `fputc` receives as arguments a character to be written and a pointer for the file to which the character will be written. The function call `fputc('a', stdout)` writes the character 'a' to `stdout`— the standard output. This call is equivalent to `putchar('a')`.
 
-Several other functions used to read data from standard input and write data to standard output have similarly named file-processing functions. The fgets and fputs functions, for example, can be used to read a line from a file and write a line to a file, respectively. In the next several sections, we introduce the file-processing equivalents of functions `scanf` and `printf`— `fscanf` and `fprintf`. 
+  - Several other functions used to read data from standard input and write data to standard output have similarly named file-processing functions. The fgets and fputs functions, for example, can be used to read a line from a file and write a line to a file, respectively. In the next several sections, we introduce the file-processing equivalents of functions `scanf` and `printf`— `fscanf` and `fprintf`. 
 
 
 |Function	| Description |
@@ -1710,11 +1710,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMTY4MTYxNCwxNTM3NDI1NTE5LC0yOT
-A1NTM3MTEsLTc4NTAxMTEyNywtMjQyOTM5ODk1LC0xMjU3MTEx
-NzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLTE1NTk2MDU1MjAsLT
-gwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAzODE3NSwtNjAzMDE3
-OTk5LC0xMzk4MjQxNzg0LDE2MzA1Mzg3NjEsLTIwNTYzNjk3Mz
-EsLTE4NjM4MzA4MjAsLTgzNTE2NTYwOCwxMzA2MDU2OTU4LC04
-MjkzNDU4M119
+eyJoaXN0b3J5IjpbNzQwNTA5NTMxLDE1Mzc0MjU1MTksLTI5MD
+U1MzcxMSwtNzg1MDExMTI3LC0yNDI5Mzk4OTUsLTEyNTcxMTE3
+MzYsMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMTU1OTYwNTUyMCwtOD
+A4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4MTc1LC02MDMwMTc5
+OTksLTEzOTgyNDE3ODQsMTYzMDUzODc2MSwtMjA1NjM2OTczMS
+wtMTg2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYwNTY5NTgsLTgy
+OTM0NTgzXX0=
 -->
