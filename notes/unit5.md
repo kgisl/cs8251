@@ -384,7 +384,7 @@ Now let’s examine this program. Line 11 states that `cfPtr` is a pointer to a 
 Each open file must have a separately declared pointer of type FILE that’s used to refer
 to the file. Line 14 names the file— **"clients.dat"** —to be used by the program and establishes a “line of communication” with the file. The file pointer **cfPtr** is assigned a pointer to the FILE structure for the file opened with **fopen**. Function fopen takes two arguments: a **filename** (which can include path information leading to the file’s location) and a **file open mode**. 
 
-The file open mode "w" indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, fopen creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file. 
+The file open mode "w" indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, **fopen** creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file. 
 
 The program prompts the user to enter the various fields for each record or to enter
 end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering **end-of-file** (**`EOF`**)for various computer systems. 
@@ -1711,10 +1711,10 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyND
-Y0MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4
-NzgsLTE3NjM4NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMT
-M5ODI0MTc4NCwxNjMwNTM4NzYxLC0yMDU2MzY5NzMxLC0xODYz
-ODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5MzQ1OD
-MsMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbMzQwMzkwMTUzLC0yNDI5Mzk4OTUsLTEyNT
+cxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMTU1OTYwNTUy
+MCwtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4MTc1LC02MD
+MwMTc5OTksLTEzOTgyNDE3ODQsMTYzMDUzODc2MSwtMjA1NjM2
+OTczMSwtMTg2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYwNTY5NT
+gsLTgyOTM0NTgzLDExNjExODI2MjNdfQ==
 -->
