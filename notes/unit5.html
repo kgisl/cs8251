@@ -244,7 +244,7 @@ to the image below:</li>
 </table><p><strong>Opening a File or Creating a File</strong></p>
 <p>The <code>fopen()</code> function is used to create a new file or to open an existing file.</p>
 <p><strong>General Syntax :</strong></p>
-<p><code>*fp = FILE fopen(const char _*filename_ , const char _*mode_ );</code></p>
+<p>FILE *fp = fopen(const char <em>*filename</em> , const char <em>*mode</em> );</p>
 <p>Here <strong>filename</strong> is the name of the file to be opened and <strong>mode</strong> specifies the purpose of opening the file. Mode can be of following types,</p>
 <p><strong>*fp</strong> is the FILE pointer (*<em>FILE <em>fp</em></em> ), which will hold the reference to the opened (or created) file.</p>
 <p><strong>Closing a File</strong></p>
@@ -259,13 +259,14 @@ Here fclose() function closes the file and returns <strong>zero</strong> on succ
 <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	FILE <span class="token operator">*</span>fp<span class="token punctuation">;</span>
 	<span class="token keyword">char</span> ch<span class="token punctuation">;</span>
+	<span class="token comment">// open a text file for writing into it</span>
 	fp <span class="token operator">=</span> <span class="token function">fopen</span> <span class="token punctuation">(</span><span class="token string">"one.txt"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Enter data"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>ch <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">EOF</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 		<span class="token function">putc</span><span class="token punctuation">(</span>ch<span class="token punctuation">,</span> fp<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span>
-
 	<span class="token function">fclose</span><span class="token punctuation">(</span>fp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token comment">// open a text file for reading from it </span>
 	fp <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"one.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">while</span><span class="token punctuation">(</span> <span class="token punctuation">(</span>ch <span class="token operator">=</span> <span class="token function">getc</span><span class="token punctuation">(</span>fp<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">EOF</span><span class="token punctuation">)</span>
 		<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -299,7 +300,7 @@ Here fclose() function closes the file and returns <strong>zero</strong> on succ
 <span class="token punctuation">}</span>
 
 </code></pre>
-<p>In this program, we have create two FILE pointers and both are refering to the same file but in different modes. <strong>fprintf()</strong> function directly writes into the file, while <strong>fscanf()</strong> reads from the file, which can then be printed on console usinf standard <strong>printf()</strong> function.</p>
+<p>In this program, we have create two FILE pointers and both are refering to the same file but in different modes. <strong>fprintf()</strong> function directly writes into the file, while <strong>fscanf()</strong> reads from the file, which can then be printed on console using standard <strong>printf()</strong> function.</p>
 <p><strong>Difference between Append and Write Mode</strong></p>
 <p>Write (w) mode and Append (a) mode, while opening a file are almost the same. Both are used to write in a file. In both the modes, new file is created if it doesn’t exists already.</p>
 <p>The only difference they have is, when you open a file in the write mode, the file is reset, resulting in deletion of any data already present in the file. While in append mode this will not happen. Append mode is used to append or add data to the existing data of file (if any). Hence, when you open a file in Append(a) mode, the cursor is positioned at the end of the present data in the file.</p>
@@ -477,14 +478,14 @@ Enter EOF to end input.
 <p>Now let’s examine this program. Line 11 states that <code>cfPtr</code> is a pointer to a FILE structure. A C program administers each file with a separate FILE structure.</p>
 <p>Each open file must have a separately declared pointer of type FILE that’s used to refer<br>
 to the file. Line 14 names the file— <strong>“clients.dat”</strong> —to be used by the program and establishes a “line of communication” with the file. The file pointer <strong>cfPtr</strong> is assigned a pointer to the FILE structure for the file opened with <strong>fopen</strong>. Function fopen takes two arguments: a <strong>filename</strong> (which can include path information leading to the file’s location) and a <strong>file open mode</strong>.</p>
-<p>The file open mode “w” indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, fopen creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file.</p>
+<p>The file open mode “w” indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, <strong>fopen</strong> creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file.</p>
 <p>The program prompts the user to enter the various fields for each record or to enter<br>
 end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering <strong>end-of-file</strong> (<strong><code>EOF</code></strong>)for various computer systems.</p>
 <pre><code>Operating system       Key combination
 Linux/Mac OS X/UNIX    &lt;Ctrl&gt; d
 Windows                &lt;Ctrl&gt; z
 </code></pre>
-<p>Line 24 uses function feof to determine whether the end-of-file indicator is set for<br>
+<p>Line 24 uses function <strong>feof</strong> to determine whether the end-of-file indicator is set for<br>
 the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function <strong>feof</strong> is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.<br>
 Line 25 writes data to the file <code>clients.dat</code>. The data may be retrieved later by a program<br>
 designed to read the file (see Section 11.4). Function <strong>fprintf</strong> is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which<br>
@@ -492,8 +493,8 @@ the data will be written. Function <strong>fprintf</strong> can output data to t
 using <strong>stdout</strong> as the file pointer, as in:</p>
 <pre><code>`fprintf( stdout, "%d %s %.2f\n", account, name, balance );`
 </code></pre>
-<p>After the user enters end-of-file, the program closes the clients.dat file with fclose<br>
-and terminates. Function fclose also receives the file pointer (rather than the filename)<br>
+<p>After the user enters end-of-file, the program closes the <strong>clients.dat</strong> file with <strong>fclose</strong><br>
+and terminates. Function <strong>fclose</strong> also receives the file pointer (rather than the filename)<br>
 as an argument. If function <strong>fclose</strong> is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.”</p>
 <h2 id="file-access-modes">File Access Modes</h2>
 <p>Programs may process no files, one file or several files. Each file used in a program will<br>
