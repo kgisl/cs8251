@@ -280,7 +280,7 @@ By convention, the data in every text file obeys a number of rules:
 
 
 ## Files and Streams
-C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either  with an `end-of-file (EOF)` marker or at a specific byte number recorded in a system-maintained, administrative data structure. When a file is opened, a stream is associated with it. Three files and their associated streams are automatically opened when program execution begins — the standard input, the standard output and the standard error. Streams provide communication channels between files and programs. For example, the standard input stream enables a program to read data from the keyboard, and the standard output stream enables a program to print data on the screen. Opening a file returns a pointer to a FILE structure (defined in `<stdio.h>`) that contains information used to process the file. In some operating systems, this structure includes a file descriptor, i.e., an index into an operating system array called the open file table. Each array element contains a file control block (FCB)—information that the operating system uses to administer a particular file. 
+C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either  with an `end-of-file (EOF)` marker or at a specific byte number recorded in a system-maintained, administrative data structure. When a file is opened, a stream is associated with it. Three files and their associated streams are automatically opened when program execution begins — the standard input, the standard output and the standard error. Streams provide communication channels between files and programs. For example, the standard input stream enables a program to read data from the keyboard, and the standard output stream enables a program to print data on the screen. Opening a file returns a pointer to a FILE structure (defined in `<stdio.h>`) that contains information used to process the file. In some operating systems, this structure includes a file descriptor, i.e., an index into an operating system array called the open file table. Each array element contains a file control block (**FCB**)—information that the operating system uses to administer a particular file. 
 
 The standard input, standard output and standard error are manipulated using file pointers `stdin`, `stdout` and `stderr`. 
 
@@ -1712,7 +1712,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzNTA3OTg1NSwtMjkwNTUzNzExLC03OD
+eyJoaXN0b3J5IjpbMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03OD
 UwMTExMjcsLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1
 MjAsNzQ5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4NzgsLT
 E3NjM4NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5ODI0
