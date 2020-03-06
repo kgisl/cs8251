@@ -361,20 +361,23 @@ Tabular data: csv, tsv, ...
 <li>Some binary formats are popular enough that a wide variety of programs can produce or consume it. Image formats like JPEG are the best example – not only can they be used in image viewers and editors, they can be viewed in web browsers, audio players (for album art), and document software (such as adding a picture into a Word doc).</li>
 </ul>
 <h2 id="files-and-streams">Files and Streams</h2>
-<p>C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either<br>
-with an <code>end-of-file (EOF)</code> marker or at a specific byte number recorded in a system-maintained,<br>
-administrative data structure. When a file is opened, a stream is associated with it. Three<br>
-files and their associated streams are automatically opened when program execution begins — the standard input, the standard output and the standard error. Streams provide<br>
-communication channels between files and programs. For example, the standard input<br>
-stream enables a program to read data from the keyboard, and the standard output stream enables a program to print data on the screen. Opening a file returns a pointer to a FILE structure (defined in <code>&lt;stdio.h&gt;</code>) that contains information used to process the file. In some operating systems, this structure includes a file descriptor, i.e., an index into an operating system array called the open file table. Each array element contains a file control block (FCB)—information that the operating system uses to administer a particular file.</p>
-<p>The standard input, standard output and standard error are manipulated using file pointers <code>stdin</code>, <code>stdout</code> and <code>stderr</code>.</p>
+<p>C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either  with an <code>end-of-file (EOF)</code> marker or at a specific byte number recorded in a system-maintained, administrative data structure. When a file is opened, a stream is associated with it.<br>
+- Three files and their associated streams are automatically opened when program execution begins — the standard input, the standard output and the standard error. Streams provide communication channels between files and programs.<br>
+- For example, the standard input stream enables a program to read data from the keyboard, and the standard output stream enables a program to print data on the screen.<br>
+- The standard input, standard output and standard error are manipulated using file pointers <code>stdin</code>, <code>stdout</code> and <code>stderr</code>.<br>
+- Opening a file returns a pointer to a FILE structure (defined in <code>&lt;stdio.h&gt;</code>) that contains information used to process the file.<br>
+- In some operating systems, this structure includes a file descriptor, i.e., an index into an operating system array called the open file table. Each array element contains a file control block (<strong>FCB</strong>)—information that the operating system uses to administer a particular file.</p>
+<ul>
+<li>
 <p>The standard library provides many functions for reading data from files and for writing data to files. Function <code>fgetc</code>, like <code>getchar</code>, reads one character from a file. Function <code>fgetc</code> receives as an argument a FILE pointer for the file from which a character will be read. The call <code>fgetc(stdin)</code> reads one character from <code>stdin</code>—the standard input. This call is equivalent to the call <code>getchar()</code>.</p>
-<p>Function <code>fputc</code>, like <code>putchar</code>, writes one character to a file. Function <code>fputc</code> receives<br>
-as arguments a character to be written and a pointer for the file to which the character will be written. The function call <code>fputc('a', stdout)</code> writes the character ‘a’ to <code>stdout</code>— the standard output. This call is equivalent to <code>putchar('a')</code>.</p>
-<p>Several other functions used to read data from standard input and write data to standard<br>
-output have similarly named file-processing functions. The fgets and fputs functions,<br>
-for example, can be used to read a line from a file and write a line to a file, respectively.<br>
-In the next several sections, we introduce the file-processing equivalents of functions <code>scanf</code> and <code>printf</code>— <code>fscanf</code> and <code>fprintf</code>.</p>
+<ul>
+<li>Function <code>fputc</code>, like <code>putchar</code>, writes one character to a file. Function <code>fputc</code> receives as arguments a character to be written and a pointer for the file to which the character will be written. The function call <code>fputc('a', stdout)</code> writes the character ‘a’ to <code>stdout</code>— the standard output. This call is equivalent to <code>putchar('a')</code>.</li>
+</ul>
+</li>
+<li>
+<p>Several other functions used to read data from standard input and write data to standard output have similarly named file-processing functions. The fgets and fputs functions, for example, can be used to read a line from a file and write a line to a file, respectively. In the next several sections, we introduce the file-processing equivalents of functions <code>scanf</code> and <code>printf</code>— <code>fscanf</code> and <code>fprintf</code>.</p>
+</li>
+</ul>
 
 <table>
 <thead>
