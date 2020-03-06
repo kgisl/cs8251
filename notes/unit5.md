@@ -148,13 +148,14 @@ In the above table we have discussed about various file I/O functions to perform
 main() {
 	FILE *fp;
 	char ch;
+	// open a textfile for writing into it
 	fp = fopen ("one.txt", "w");
 	printf("Enter data");
 	while( (ch = getchar()) != EOF) {
 		putc(ch, fp);
 	}
-
 	fclose(fp);
+	// open a file for reading from it 
 	fp = fopen("one.txt", "r");
 	while( (ch = getc(fp)) != EOF)
 		printf("%c", ch);
@@ -1710,9 +1711,10 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMTU1OT
-YwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4MTc1
-LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYzMDUzODc2MSwtMj
-A1NjM2OTczMSwtMTg2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYw
-NTY5NTgsLTgyOTM0NTgzLDExNjExODI2MjNdfQ==
+eyJoaXN0b3J5IjpbLTEzNTA5NTAxODUsMjQ2NDMyNTIwLDc0OT
+c5ODE5NiwtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0
+OTg3LDIyMDM4MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMT
+YzMDUzODc2MSwtMjA1NjM2OTczMSwtMTg2MzgzMDgyMCwtODM1
+MTY1NjA4LDEzMDYwNTY5NTgsLTgyOTM0NTgzLDExNjExODI2Mj
+NdfQ==
 -->
