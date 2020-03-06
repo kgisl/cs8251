@@ -283,13 +283,12 @@ By convention, the data in every text file obeys a number of rules:
 C views each file simply as a sequential stream of bytes (Fig. 11.1). Each file ends either  with an `end-of-file (EOF)` marker or at a specific byte number recorded in a system-maintained, administrative data structure. When a file is opened, a stream is associated with it. 
 	- Three files and their associated streams are automatically opened when program execution begins — the standard input, the standard output and the standard error. Streams provide communication channels between files and programs. 
 		- For example, the standard input stream enables a program to read data from the keyboard, and the standard output stream enables a program to print data on the screen. 
-	- Opening a file returns a pointer to a FILE structure (defined in `<stdio.h>`) that contains information used to process the file. In some operating systems, this structure includes a file descriptor, i.e., an index into an operating system array called the open file table. Each array element contains a file control block (**FCB**)—information that the operating system uses to administer a particular file. 
+		- The standard input, standard output and standard error are manipulated using file pointers `stdin`, `stdout` and `stderr`. 
+	- Opening a file returns a pointer to a FILE structure (defined in `<stdio.h>`) that contains information used to process the file. 
+		- In some operating systems, this structure includes a file descriptor, i.e., an index into an operating system array called the open file table. Each array element contains a file control block (**FCB**)—information that the operating system uses to administer a particular file. 
 
-The standard input, standard output and standard error are manipulated using file pointers `stdin`, `stdout` and `stderr`. 
-
-The standard library provides many functions for reading data from files and for writing data to files. Function `fgetc`, like `getchar`, reads one character from a file. Function `fgetc` receives as an argument a FILE pointer for the file from which a character will be read. The call `fgetc(stdin)` reads one character from `stdin`—the standard input. This call is equivalent to the call `getchar()`.
-
-Function `fputc`, like `putchar`, writes one character to a file. Function `fputc` receives as arguments a character to be written and a pointer for the file to which the character will be written. The function call `fputc('a', stdout)` writes the character 'a' to `stdout`— the standard output. This call is equivalent to `putchar('a')`.
+  - The standard library provides many functions for reading data from files and for writing data to files. Function `fgetc`, like `getchar`, reads one character from a file. Function `fgetc` receives as an argument a FILE pointer for the file from which a character will be read. The call `fgetc(stdin)` reads one character from `stdin`—the standard input. This call is equivalent to the call `getchar()`.
+	  - Function `fputc`, like `putchar`, writes one character to a file. Function `fputc` receives as arguments a character to be written and a pointer for the file to which the character will be written. The function call `fputc('a', stdout)` writes the character 'a' to `stdout`— the standard output. This call is equivalent to `putchar('a')`.
 
 Several other functions used to read data from standard input and write data to standard output have similarly named file-processing functions. The fgets and fputs functions, for example, can be used to read a line from a file and write a line to a file, respectively. In the next several sections, we introduce the file-processing equivalents of functions `scanf` and `printf`— `fscanf` and `fprintf`. 
 
@@ -1711,7 +1710,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDM3MDY1OCwxNTM3NDI1NTE5LC0yOT
+eyJoaXN0b3J5IjpbMTkxMTY4MTYxNCwxNTM3NDI1NTE5LC0yOT
 A1NTM3MTEsLTc4NTAxMTEyNywtMjQyOTM5ODk1LC0xMjU3MTEx
 NzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLTE1NTk2MDU1MjAsLT
 gwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAzODE3NSwtNjAzMDE3
