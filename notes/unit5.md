@@ -123,7 +123,7 @@ The `fopen()` function is used to create a new file or to open an existing file.
 
 **General Syntax :**
 
-`*fp = FILE fopen(const char _*filename_ , const char _*mode_ );`
+FILE *fp = fopen(const char _*filename_ , const char _*mode_ );
 
 Here **filename** is the name of the file to be opened and **mode** specifies the purpose of opening the file. Mode can be of following types,
 
@@ -1710,9 +1710,9 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MD
-g4Njk4NzgsLTE3NjM4NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5
-OSwtMTM5ODI0MTc4NCwxNjMwNTM4NzYxLC0yMDU2MzY5NzMxLC
-0xODYzODMwODIwLC04MzUxNjU2MDgsMTMwNjA1Njk1OCwtODI5
-MzQ1ODMsMTE2MTE4MjYyM119
+eyJoaXN0b3J5IjpbMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMTU1OT
+YwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4MTc1
+LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYzMDUzODc2MSwtMj
+A1NjM2OTczMSwtMTg2MzgzMDgyMCwtODM1MTY1NjA4LDEzMDYw
+NTY5NTgsLTgyOTM0NTgzLDExNjExODI2MjNdfQ==
 -->
