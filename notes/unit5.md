@@ -225,7 +225,7 @@ if (bfp) {
 
 **fseek(), ftell() and rewind() functions**
 
-- **fseek()** - It is used to move the reading control to different positions using fseek function.
+- **fseek()** - It is used to move the reading control to different positions in file.
 - **ftell()** - It tells the byte location of current position of cursor in file pointer.
 - **rewind()** - It moves the control to beginning of the file.
 
@@ -1709,11 +1709,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyODUyNzAxMSwxNTM3NDI1NTE5LC0yOT
-A1NTM3MTEsLTc4NTAxMTEyNywtMjQyOTM5ODk1LC0xMjU3MTEx
-NzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLTE1NTk2MDU1MjAsLT
-gwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAzODE3NSwtNjAzMDE3
-OTk5LC0xMzk4MjQxNzg0LDE2MzA1Mzg3NjEsLTIwNTYzNjk3Mz
-EsLTE4NjM4MzA4MjAsLTgzNTE2NTYwOCwxMzA2MDU2OTU4LC04
-MjkzNDU4M119
+eyJoaXN0b3J5IjpbLTY5MzkyMDUxOCwtMjI4NTI3MDExLDE1Mz
+c0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC0yNDI5Mzk4
+OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMT
+U1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4
+MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYzMDUzODc2MS
+wtMjA1NjM2OTczMSwtMTg2MzgzMDgyMCwtODM1MTY1NjA4LDEz
+MDYwNTY5NThdfQ==
 -->
