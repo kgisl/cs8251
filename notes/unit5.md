@@ -433,8 +433,7 @@ If an error occurs while opening a file in any mode, fopen returns **NULL**.
 
 ## Reading Sequential Access file
 
-Data is stored in files so that the data can be retrieved for processing when needed. The
-previous section demonstrated how to create a file for sequential access. This section shows how to read data sequentially from a file.
+Data is stored in files so that the data can be retrieved for processing when needed. The previous section demonstrated how to create a file for sequential access. This section shows how to read data sequentially from a file.
 
 ```c
 // Fig. 11.6: fig11_06.c
@@ -1720,11 +1719,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMjk3Njk2MSwtMTczNjM5NjM5NSwxND
-QyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUyNzAxMSwxNTM3NDI1
-NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNywtMjQyOTM5ODk1LC
-0xMjU3MTExNzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLTE1NTk2
-MDU1MjAsLTgwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAzODE3NS
-wtNjAzMDE3OTk5LC0xMzk4MjQxNzg0LDE2MzA1Mzg3NjEsLTIw
-NTYzNjk3MzFdfQ==
+eyJoaXN0b3J5IjpbLTE3MDIzNzgyNjEsLTE3MzYzOTYzOTUsMT
+Q0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQy
+NTUxOSwtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0MjkzOTg5NS
+wtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5
+NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4NzQ5ODcsMjIwMzgxNz
+UsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwxNjMwNTM4NzYxLC0y
+MDU2MzY5NzMxXX0=
 -->
