@@ -100,7 +100,7 @@ In C language, we use a structure **pointer of file type** to declare a file.
 
 C provides a number of functions that helps to perform basic file operations. Following are the functions,
 
-|Function 	 |description    | prototype |
+|Function 	 |description    | Prototype |
 |:-----------|:--------------|:--------|
 | fopen()	| create a new file or open a existing file | FILE *fp =**fopen** (“filename”, ”‘mode”); |
 | fclose() 	| closes a file	| int **fclose**(FILE *fp); |
@@ -1724,11 +1724,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTI4MTYxODksLTE1NjU3NDIzNzYsLT
-E3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1
-MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTExMj
-csLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5
-Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4Nz
-Q5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwx
-NjMwNTM4NzYxXX0=
+eyJoaXN0b3J5IjpbNTQ3OTkzMzEsLTE1NjU3NDIzNzYsLTE3Mz
+YzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1Mjcw
+MTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTExMjcsLT
+I0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5Nzk4
+MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4NzQ5OD
+csMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwxNjMw
+NTM4NzYxXX0=
 -->
