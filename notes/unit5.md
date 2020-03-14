@@ -467,10 +467,12 @@ int main(void) {
 
 ```
 
+### Sample Output (TBA)
+
+
 Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line 14 attempts to open the file "clients.dat" for reading ("r") and determines whether it opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
 
-Each time the second fscanf statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function feof returns true only after the program attempts to
-read the nonexistent data following the last line. 
+Each time the second fscanf statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function feof returns true only after the program attempts to read the nonexistent data following the last line. 
 
 
 **Resetting the File Position Pointer**
@@ -478,12 +480,7 @@ To retrieve data sequentially from a file, a program normally starts reading fro
 
 	rewind( cfPtr );
 
-causes a program’s file position pointer—which indicates the number of the next byte in
-the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0)
-pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer
-value that specifies the byte in the file at which the next read or write is to occur. This is
-sometimes referred to as the file offset. The file position pointer is a member of the FILE
-structure associated with each file.
+causes a program’s file position pointer—which indicates the number of the next byte in the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0) pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer value that specifies the byte in the file at which the next read or write is to occur. This is sometimes referred to as the file offset. The file position pointer is a member of the FILE structure associated with each file.
 
 
 ## Read numbers from file and calculate Average
@@ -1719,11 +1716,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDIzNzgyNjEsLTE3MzYzOTYzOTUsMT
-Q0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQy
-NTUxOSwtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0MjkzOTg5NS
-wtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5
-NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4NzQ5ODcsMjIwMzgxNz
-UsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwxNjMwNTM4NzYxLC0y
-MDU2MzY5NzMxXX0=
+eyJoaXN0b3J5IjpbLTg5OTIwMzUxOSwtMTczNjM5NjM5NSwxND
+QyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUyNzAxMSwxNTM3NDI1
+NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNywtMjQyOTM5ODk1LC
+0xMjU3MTExNzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLTE1NTk2
+MDU1MjAsLTgwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAzODE3NS
+wtNjAzMDE3OTk5LC0xMzk4MjQxNzg0LDE2MzA1Mzg3NjEsLTIw
+NTYzNjk3MzFdfQ==
 -->
