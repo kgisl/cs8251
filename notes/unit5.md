@@ -467,7 +467,14 @@ int main(void) {
 
 ```
 
-### Sample Output (TBA)
+### Sample Output ( to be confirmed)
+
+	100 Jones     24.98
+	200 Doe       345.67
+	300 White     0.00
+	400 Stone     -42.16
+	500 Rich      224.62
+
 
 
 Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line 14 attempts to open the file "clients.dat" for reading ("r") and determines whether it opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
@@ -1716,11 +1723,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5OTIwMzUxOSwtMTczNjM5NjM5NSwxND
-QyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUyNzAxMSwxNTM3NDI1
-NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNywtMjQyOTM5ODk1LC
-0xMjU3MTExNzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLTE1NTk2
-MDU1MjAsLTgwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAzODE3NS
-wtNjAzMDE3OTk5LC0xMzk4MjQxNzg0LDE2MzA1Mzg3NjEsLTIw
-NTYzNjk3MzFdfQ==
+eyJoaXN0b3J5IjpbMzI3MjIzOTEsLTE3MzYzOTYzOTUsMTQ0Mj
+Y5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQyNTUx
+OSwtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0MjkzOTg5NSwtMT
+I1NzExMTczNiwyNDY0MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5NjA1
+NTIwLC04MDg4Njk4NzgsLTE3NjM4NzQ5ODcsMjIwMzgxNzUsLT
+YwMzAxNzk5OSwtMTM5ODI0MTc4NCwxNjMwNTM4NzYxLC0yMDU2
+MzY5NzMxXX0=
 -->
