@@ -104,8 +104,8 @@ C provides a number of functions that helps to perform basic file operations. Fo
 |:-----------|:--------------|:--------|
 | fopen()	| create a new file or open a existing file | FILE *fp =**fopen** (“filename”, ”‘mode”); |
 | fclose() 	| closes a file	| int **fclose**(FILE *fp); |
-| fgets()   | get a string from file | char ***fgets**(char *string, int n, FILE *fp); |
-| getc() 	| reads a character from a file| int  getc(void); |
+| fgets()   | get a string from file | char  *fgets(  char  *str, int count, [FILE](http://en.cppreference.com/w/c/io)  *stream ); |
+| getc() 	| reads a character from a file| int  getc(  [FILE](http://en.cppreference.com/w/c/io)  *stream  ); |
 | putc()	| writes a character to a file| int  putc(  int  ch,  [FILE](http://en.cppreference.com/w/c/io)  *stream  ); |
 | fscanf()  | reads a set of data from a file| int fscanf(  [FILE](http://en.cppreference.com/w/c/io)  *stream, const  char  *format, ... ); |
 | fprintf() | writes a set of data to a file | int **fprintf**(FILE *fp, const char *format, …) |
@@ -1724,7 +1724,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTIzMjEzOTIsLTE1NjU3NDIzNzYsLT
+eyJoaXN0b3J5IjpbLTE3MTI4MTYxODksLTE1NjU3NDIzNzYsLT
 E3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1
 MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTExMj
 csLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5
