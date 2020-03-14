@@ -106,7 +106,7 @@ C provides a number of functions that helps to perform basic file operations. Fo
 | fclose() 	| closes a file	| int **fclose**(FILE *fp); |
 | fgets()   | get a string from file | char ***fgets**(char *string, int n, FILE *fp); |
 | getc() 	| reads a character from a file| int  getc(void); |
-| putc()	| writes a character to a file| 
+| putc()	| writes a character to a file| int  putchar(  int  ch  ); |
 | fscanf()  | reads a set of data from a file|
 | fprintf() | writes a set of data to a file | int **fprintf**(FILE *fp, const char *format, …) |
 | getw() 	| reads a integer from a file|
@@ -1724,11 +1724,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTczOTA2NDYwLC0xNTY1NzQyMzc2LC0xNz
-M2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3
-MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC
-0yNDI5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5
-ODE5NiwtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OT
-g3LDIyMDM4MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYz
-MDUzODc2MV19
+eyJoaXN0b3J5IjpbMTM4NzAwNDg0NCwtMTU2NTc0MjM3NiwtMT
+czNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUy
+NzAxMSwxNTM3NDI1NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNy
+wtMjQyOTM5ODk1LC0xMjU3MTExNzM2LDI0NjQzMjUyMCw3NDk3
+OTgxOTYsLTE1NTk2MDU1MjAsLTgwODg2OTg3OCwtMTc2Mzg3ND
+k4NywyMjAzODE3NSwtNjAzMDE3OTk5LC0xMzk4MjQxNzg0LDE2
+MzA1Mzg3NjFdfQ==
 -->
