@@ -109,8 +109,8 @@ C provides a number of functions that helps to perform basic file operations. Fo
 | putc()	| writes a character to a file| int  putc(  int  ch,  [FILE](http://en.cppreference.com/w/c/io)  *stream  ); |
 | fscanf()  | reads a set of data from a file| int fscanf(  [FILE](http://en.cppreference.com/w/c/io)  *stream, const  char  *format, ... ); |
 | fprintf() | writes a set of data to a file | int **fprintf**(FILE *fp, const char *format, …) |
-| getw() 	| reads a integer from a file| wint_t getw(void);|
-| putw() 	| writes a integer to a file| int putw(int w, FILE *stream);  (*deprecated, legacy*)|
+| getw() 	| reads a integer from a file| int **getw**(FILE *fp);|
+| putw() 	| writes a integer to a file| int **putw**(int w, FILE *stream);  (*deprecated, legacy*)|
 | fseek() 	| set the position to desire point | int  fseek(  [FILE](http://en.cppreference.com/w/c/io)  *stream,  long  offset,  int  origin  );| 
 | ftell()	| gives current position in the file | long  ftell(  [FILE](http://en.cppreference.com/w/c/io)  *stream  );|
 | rewind()	| set the position to the beginning point | void  rewind(  [FILE](http://en.cppreference.com/w/c/io)  *stream  );
@@ -1724,11 +1724,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDMwMzkzOTcsLTE1NjU3NDIzNzYsLT
-E3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1
-MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTExMj
-csLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5
-Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4Nz
-Q5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwx
-NjMwNTM4NzYxXX0=
+eyJoaXN0b3J5IjpbODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNz
+M2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3
+MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC
+0yNDI5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5
+ODE5NiwtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OT
+g3LDIyMDM4MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYz
+MDUzODc2MV19
 -->
