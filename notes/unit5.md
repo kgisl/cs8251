@@ -109,10 +109,10 @@ C provides a number of functions that helps to perform basic file operations. Fo
 | putc()	| writes a character to a file| int  putchar(  int  ch  ); |
 | fscanf()  | reads a set of data from a file| int fscanf(  [FILE](http://en.cppreference.com/w/c/io)  *stream, const  char  *format, ... ); |
 | fprintf() | writes a set of data to a file | int **fprintf**(FILE *fp, const char *format, …) |
-| getw() 	| reads a integer from a file| wint_t getwchar(void)|
+| getw() 	| reads a integer from a file| wint_t getw(void);|
 | putw() 	| writes a integer to a file|
-| fseek() 	| set the position to desire point | 
-| ftell()	| gives current position in the file | 
+| fseek() 	| set the position to desire point | int  fseek(  [FILE](http://en.cppreference.com/w/c/io)  *stream,  long  offset,  int  origin  );| 
+| ftell()	| gives current position in the file | long  ftell(  [FILE](http://en.cppreference.com/w/c/io)  *stream  );|
 | rewind()	| set the position to the beginning point |
 | fread()   | reads specific number of bytes from binary file | 
 | fwrite()	| writes specific number of bytes to binary files | 
@@ -1724,11 +1724,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3ODkzNzMzLC0xNTY1NzQyMzc2LC0xNz
-M2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3
-MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC
-0yNDI5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5
-ODE5NiwtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OT
-g3LDIyMDM4MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYz
-MDUzODc2MV19
+eyJoaXN0b3J5IjpbLTkzMjAwODUxNiwtMTU2NTc0MjM3NiwtMT
+czNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUy
+NzAxMSwxNTM3NDI1NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNy
+wtMjQyOTM5ODk1LC0xMjU3MTExNzM2LDI0NjQzMjUyMCw3NDk3
+OTgxOTYsLTE1NTk2MDU1MjAsLTgwODg2OTg3OCwtMTc2Mzg3ND
+k4NywyMjAzODE3NSwtNjAzMDE3OTk5LC0xMzk4MjQxNzg0LDE2
+MzA1Mzg3NjFdfQ==
 -->
