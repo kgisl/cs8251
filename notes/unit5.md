@@ -1004,6 +1004,8 @@ unsigned int enterChoice(void) {
 
 # Command line arguments
 
+**Command line arguments** are simply **arguments** that are specified after the name of the program in the system's **command line**, and these **argument** values are passed on to your program during program execution.
+
 ![command](https://files.gitter.im/kgashok/advik/jbXG/commandLineArgv.png)
 
 On many UNIX systems, it is possible to pass arguments to **`main`** from the command line by including the parameters **`int argc`** and **`char *argv[]`** in the parameter list of **`main()`**. 
@@ -1709,11 +1711,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MzkyMDUxOCwtMjI4NTI3MDExLDE1Mz
-c0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC0yNDI5Mzk4
-OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMT
-U1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4
-MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYzMDUzODc2MS
-wtMjA1NjM2OTczMSwtMTg2MzgzMDgyMCwtODM1MTY1NjA4LDEz
-MDYwNTY5NThdfQ==
+eyJoaXN0b3J5IjpbMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMj
+g1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTEx
+MjcsLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1MjAsNz
+Q5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4
+NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NC
+wxNjMwNTM4NzYxLC0yMDU2MzY5NzMxLC0xODYzODMwODIwLC04
+MzUxNjU2MDhdfQ==
 -->
