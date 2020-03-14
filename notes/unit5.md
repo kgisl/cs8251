@@ -113,10 +113,9 @@ C provides a number of functions that helps to perform basic file operations. Fo
 | putw() 	| writes a integer to a file|
 | fseek() 	| set the position to desire point | int  fseek(  [FILE](http://en.cppreference.com/w/c/io)  *stream,  long  offset,  int  origin  );| 
 | ftell()	| gives current position in the file | long  ftell(  [FILE](http://en.cppreference.com/w/c/io)  *stream  );|
-| rewind()	| set the position to the beginning point |
-| fread()   | reads specific number of bytes from binary file | [size_t](http://en.cppreference.com/w/c/types/size_t) fread(  void  *buffer, [size_t](http://en.cppreference.com/w/c/types/size_t) size, [size_t](http://en.cppreference.com/w/c/types/size_t) count,  [FILE](http://en.cppreference.com/w/c/io)  *stream ) |
-| fwrite()	| writes specific number of bytes to binary files | [size_t](http://en.cppreference.com/w/c/types/size_t) fwrite(  const  void  *buffer, [size_t](http://en.cppreference.com/w/c/types/size_t) size, [size_t](http://en.cppreference.com/w/c/types/size_t) count,  
-[FILE](http://en.cppreference.com/w/c/io)  *stream );
+| rewind()	| set the position to the beginning point | 
+| fread()   | reads specific number of bytes from binary file | [size_t](http://en.cppreference.com/w/c/types/size_t) fread(  void  *buffer, [size_t](http://en.cppreference.com/w/c/types/size_t) size, [size_t](http://en.cppreference.com/w/c/types/size_t) count,  [FILE](http://en.cppreference.com/w/c/io)  *stream); |
+| fwrite()	| writes specific number of bytes to binary files | [size_t](http://en.cppreference.com/w/c/types/size_t) fwrite(  const  void  *buffer, [size_t](http://en.cppreference.com/w/c/types/size_t) size, [size_t](http://en.cppreference.com/w/c/types/size_t) count,  [FILE](http://en.cppreference.com/w/c/io)  *stream);
 
   
    **Opening a File or Creating a File**
@@ -1725,11 +1724,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNzY2MjE1OSwtMTU2NTc0MjM3NiwtMT
-czNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUy
-NzAxMSwxNTM3NDI1NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNy
-wtMjQyOTM5ODk1LC0xMjU3MTExNzM2LDI0NjQzMjUyMCw3NDk3
-OTgxOTYsLTE1NTk2MDU1MjAsLTgwODg2OTg3OCwtMTc2Mzg3ND
-k4NywyMjAzODE3NSwtNjAzMDE3OTk5LC0xMzk4MjQxNzg0LDE2
-MzA1Mzg3NjFdfQ==
+eyJoaXN0b3J5IjpbLTE5NTE2NTA0MzgsLTE1NjU3NDIzNzYsLT
+E3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1
+MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTExMj
+csLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5
+Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4Nz
+Q5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwx
+NjMwNTM4NzYxXX0=
 -->
