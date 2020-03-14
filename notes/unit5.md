@@ -398,6 +398,10 @@ After the user enters end-of-file, the program closes the **clients.dat** file w
 and terminates. Function **fclose** also receives the file pointer (rather than the filename)
 as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
 
+### Sample clients.dat file contents 
+
+
+
 ## File Access Modes
 
 Programs may process no files, one file or several files. Each file used in a program will
@@ -1711,11 +1715,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMj
-g1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTEx
-MjcsLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1MjAsNz
-Q5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4
-NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NC
-wxNjMwNTM4NzYxLC0yMDU2MzY5NzMxLC0xODYzODMwODIwLC04
-MzUxNjU2MDhdfQ==
+eyJoaXN0b3J5IjpbLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNj
+kzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUz
+NzExLC03ODUwMTExMjcsLTI0MjkzOTg5NSwtMTI1NzExMTczNi
+wyNDY0MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4
+Njk4NzgsLTE3NjM4NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OS
+wtMTM5ODI0MTc4NCwxNjMwNTM4NzYxLC0yMDU2MzY5NzMxLC0x
+ODYzODMwODIwXX0=
 -->
