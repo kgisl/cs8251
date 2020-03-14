@@ -102,10 +102,10 @@ C provides a number of functions that helps to perform basic file operations. Fo
 
 |Function 	 |description    | prototype |
 |:-----------|:--------------|:--------|
-| fopen()	| create a new file or open a existing file | FILE *fp; fp=**fopen** (“filename”, ”‘mode”); |
-| fclose() 	| closes a file	|
-| getc() 	| reads a character from a file|
-| putc()	| writes a character to a file|
+| fopen()	| create a new file or open a existing file | FILE *fp =**fopen** (“filename”, ”‘mode”); |
+| fclose() 	| closes a file	| int **fclose**(FILE *fp); |
+| getc() 	| reads a character from a file| char ***fgets**(char *string, int n, FILE *fp); |
+| putc()	| writes a character to a file| 
 | fscanf()  | reads a set of data from a file|
 | fprintf() | writes a set of data to a file | 
 | getw() 	| reads a integer from a file|
@@ -1723,11 +1723,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcyMDAwNTMwLC0xNzM2Mzk2Mzk1LDE0ND
-I2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3MDExLDE1Mzc0MjU1
-MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC0yNDI5Mzk4OTUsLT
-EyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMTU1OTYw
-NTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4MTc1LC
-02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYzMDUzODc2MSwtMjA1
-NjM2OTczMV19
+eyJoaXN0b3J5IjpbLTExNjUxNjkwMTUsLTE3MzYzOTYzOTUsMT
+Q0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQy
+NTUxOSwtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0MjkzOTg5NS
+wtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5
+NjA1NTIwLC04MDg4Njk4NzgsLTE3NjM4NzQ5ODcsMjIwMzgxNz
+UsLTYwMzAxNzk5OSwtMTM5ODI0MTc4NCwxNjMwNTM4NzYxLC0y
+MDU2MzY5NzMxXX0=
 -->
