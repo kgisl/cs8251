@@ -194,7 +194,7 @@ void main(){
 	fclose(p);
 	do
 	{
-	    fscanf(q,"%s %d", e.name, e.age);
+	    fscanf(q,"%s %d", e.name, &e.age);
 	    printf("%s %d", e.name, e.age);
 	} while(!feof(q));
 	getch();
@@ -1742,11 +1742,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTY2MDg0MiwxNDQ3MjUxNjE4LC0xNT
-k2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgxMzU4NjYy
-MSwtNjMxMDAxNzc3LDg0OTM1ODE3NywtMTU2NTc0MjM3NiwtMT
-czNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUy
-NzAxMSwxNTM3NDI1NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNy
-wtMjQyOTM5ODk1LC0xMjU3MTExNzM2LDI0NjQzMjUyMCw3NDk3
-OTgxOTZdfQ==
+eyJoaXN0b3J5IjpbODAwMjc3MjEwLDE0NDcyNTE2MTgsLTE1OT
+Y2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsODEzNTg2NjIx
+LC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNz
+M2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3
+MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC
+0yNDI5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5
+ODE5Nl19
 -->
