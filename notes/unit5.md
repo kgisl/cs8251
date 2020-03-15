@@ -415,10 +415,10 @@ as an argument. If function **fclose** is not called explicitly, the operating s
 
 ### Sample `clients.dat` file contents 
 
-	100 Jones     24.98
-	200 Doe       345.67
-	300 White     0.00
-	400 Stone     -42.16
+	100 Jones 24.98
+	200 Doe 345.67
+	300 White 0.00
+	400 Stone -42.16
 	500 Rich      224.62
 
 
@@ -1738,11 +1738,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5Mz
-M1NDcyNjUsODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3
-LC0xNTY1NzQyMzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5ODksLT
-Y5MzkyMDUxOCwtMjI4NTI3MDExLDE1Mzc0MjU1MTksLTI5MDU1
-MzcxMSwtNzg1MDExMTI3LC0yNDI5Mzk4OTUsLTEyNTcxMTE3Mz
-YsMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMTU1OTYwNTUyMCwtODA4
-ODY5ODc4XX0=
+eyJoaXN0b3J5IjpbLTQ4MTUzMDg0NiwtMTU5NjY3NjYzOCwtNj
+k5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLTYzMTAwMTc3
+Nyw4NDkzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYzOTYzOTUsMT
+Q0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQy
+NTUxOSwtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0MjkzOTg5NS
+wtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5
+NjA1NTIwXX0=
 -->
