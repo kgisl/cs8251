@@ -458,6 +458,7 @@ Data is stored in files so that the data can be retrieved for processing when ne
 // Fig. 11.6: fig11_06.c
 // Reading and printing a sequential file
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) {
   unsigned int account;  // account number
@@ -469,19 +470,19 @@ int main(void) {
   // fopen opens file; exits program if file cannot be opened
   if ((cfPtr = fopen("clients.dat", "r")) == NULL) {
     puts("File could not be opened");
-  }       // end if
-  else {  // read account, name and balance from file
-    printf("%-10s%-13s%s\n", "Account", "Name", "Balance");
-    fscanf(cfPtr, "%d%29s%lf", &account, name, &balance);
+		exit(0);
+  }
+  
+  printf("%-10s%-13s%s\n", "Account", "Name", "Balance");
+  fscanf(cfPtr, "%d%29s%lf", &account, name, &balance);
 
-    // while not end of file
-    while (!feof(cfPtr)) {
-      printf("%-10d%-13s%7.2f\n", account, name, balance);
-      fscanf(cfPtr, "%d%29s%lf", &account, name, &balance);
-    }  // end while
+  // while not end of file
+  while (!feof(cfPtr)) {
+    printf("%-10d%-13s%7.2f\n", account, name, balance);
+scanf(cfPtr, "%d%29s%lf", &account, name, &balance);
+	}  // end while
 
-    fclose(cfPtr);  // fclose closes the file
-  }                 // end else
+  fclose(cfPtr);  // fclose closes the file
 }  // end main
 
 ```
@@ -1745,11 +1746,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0ND
-cyNTE2MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcy
-NjUsODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNT
-Y1NzQyMzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5Mzky
-MDUxOCwtMjI4NTI3MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMS
-wtNzg1MDExMTI3LC0yNDI5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2
-NDMyNTIwXX0=
+eyJoaXN0b3J5IjpbMTc1MzY0NzAyMCwtMTYyMDgwOTY0Myw4MD
+AyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5NjY3NjYzOCwtNjk5MDE2
+MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLTYzMTAwMTc3Nyw4ND
+kzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYzOTYzOTUsMTQ0MjY5
+Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQyNTUxOS
+wtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0MjkzOTg5NSwtMTI1
+NzExMTczNl19
 -->
