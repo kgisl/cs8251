@@ -506,7 +506,7 @@ To retrieve data sequentially from a file, a program normally starts reading fro
 
 	rewind( cfPtr );
 
-causes a program’s file position pointer—which indicates the number of the next byte in the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0) pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer value that specifies the byte in the file at which the next read or write is to occur. This is sometimes referred to as the file offset. The file position pointer is a member of the FILE structure associated with each file.
+causes a program’s file position pointer—which indicates the number of the next byte in the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0) pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer value that specifies the byte in the file at which the next read or write is to occur. This is sometimes referred to as the file offset. The file position pointer is a member of the **FILE** structure associated with each file.
 
 
 ## Read numbers from file and calculate Average
@@ -1742,11 +1742,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxODIzNDQ5MywtNzIwMDg3Mjc2LC0xNj
-IwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNTk2Njc2
-NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgxMzU4NjYyMSwtNj
-MxMDAxNzc3LDg0OTM1ODE3NywtMTU2NTc0MjM3NiwtMTczNjM5
-NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUyNzAxMS
-wxNTM3NDI1NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNywtMjQy
-OTM5ODk1XX0=
+eyJoaXN0b3J5IjpbOTM0MDE1MzYzLC03MjAwODcyNzYsLTE2Mj
+A4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2MTgsLTE1OTY2NzY2
+MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsODEzNTg2NjIxLC02Mz
+EwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNzM2Mzk2
+Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3MDExLD
+E1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC0yNDI5
+Mzk4OTVdfQ==
 -->
