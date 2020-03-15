@@ -340,7 +340,6 @@ receivable system to keep track of the amounts owed by a company’s credit clie
 
 - For each client, the program obtains an account number, the client’s name and the client’s balance (i.e., the amount the client owes the company for goods and services received in the past). The data obtained for each client constitutes a **“record”** for that client. 
 - The **account number** is used as the record key in this application—the file will be created and maintained in account-number order. This program assumes the user enters the records in account number order. 
-- In a comprehensive accounts receivable system, a sorting capability would be provided so the user could enter the records in any order. The records would then be sorted and written to the file. 
 
 ```c
 // Fig. 11.2: fig11_02.c
@@ -403,9 +402,9 @@ Run `prog13` in the http://bit.ly/replUnit5
 	500 Rich      224.62
 
 
-Now let’s examine this program. Line 11 states that `cfPtr` is a pointer to a FILE structure. A C program administers each file with a separate FILE structure. 
-
-Each open file must have a separately declared pointer of type FILE that’s used to refer to the file. Line 14 names the file— **"clients.dat"** —to be used by the program and establishes a “line of communication” with the file. The file pointer **cfPtr** is assigned a pointer to the FILE structure for the file opened with **fopen**. Function fopen takes two arguments: a **filename** (which can include path information leading to the file’s location) and a **file open mode**. 
+Now let’s examine this program. 
+- `cfPtr` is a pointer to a FILE structure. A C program administers each file with a separate FILE structure. 
+- Each open file must have a separately declared pointer of type FILE that’s used to refer to the file. The file named  **"clients.dat"** —to be used by the program and establishes a “line of communication” with the file. The file pointer **cfPtr** is assigned a pointer to the FILE structure for the file opened with **fopen**. Function fopen takes two arguments: a **filename** (which can include path information leading to the file’s location) and a **file open mode**. 
 
 The file open mode "w" indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, **fopen** creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file. 
 
@@ -1760,11 +1759,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwMTY4MjY0MywzMDMxMzEyNywtMTQ4OD
-M3OTIyNSw5MzQwMTUzNjMsLTcyMDA4NzI3NiwtMTYyMDgwOTY0
-Myw4MDAyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5NjY3NjYzOCwtNj
-k5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLTYzMTAwMTc3
-Nyw4NDkzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYzOTYzOTUsMT
-Q0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQy
-NTUxOV19
+eyJoaXN0b3J5IjpbMjkzMzY0MjY0LDE5MDE2ODI2NDMsMzAzMT
+MxMjcsLTE0ODgzNzkyMjUsOTM0MDE1MzYzLC03MjAwODcyNzYs
+LTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2MTgsLTE1OT
+Y2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsODEzNTg2NjIx
+LC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNz
+M2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3
+MDExXX0=
 -->
