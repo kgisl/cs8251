@@ -501,9 +501,11 @@ Run `prog14` in the http://bit.ly/replUnit5
 
 
 Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. 
-- cfPtr is a pointer to a FILE. The file "clients.dat"  is opened for reading ("r"). We determine whether it has opened successfully (i.e., fopen does not return NULL). We then attempt to read a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
+- cfPtr is a pointer to a FILE. The file "clients.dat"  is opened for reading ("r"). We determine whether it has opened successfully (i.e., fopen does not return NULL). We then attempt to read a “record” from the file. 
+- Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
+- Each time the second **fscanf** statement executes, the program reads another record from the file and account, name and balance take on new values. 
+- When the program reaches the end of the file, the file is closed and the program terminates. Function **feof** returns true only after the program attempts to read the nonexistent data following the last line. 
 
-Each time the second **fscanf** statement executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function **feof** returns true only after the program attempts to read the nonexistent data following the last line. 
 
 
 **Resetting the File Position Pointer**
@@ -1764,11 +1766,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNjA1NzA0MywxNjAzNzIxMTI0LDE5MD
-E2ODI2NDMsMzAzMTMxMjcsLTE0ODgzNzkyMjUsOTM0MDE1MzYz
-LC03MjAwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0ND
-cyNTE2MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcy
-NjUsODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNT
-Y1NzQyMzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5Mzky
-MDUxOF19
+eyJoaXN0b3J5IjpbLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOT
+AxNjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2
+MywtNzIwMDg3Mjc2LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxND
+Q3MjUxNjE4LC0xNTk2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3
+MjY1LDgxMzU4NjYyMSwtNjMxMDAxNzc3LDg0OTM1ODE3NywtMT
+U2NTc0MjM3NiwtMTczNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5
+MjA1MThdfQ==
 -->
