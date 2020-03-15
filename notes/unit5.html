@@ -21,7 +21,11 @@
 </ul>
 </li>
 <li><a href="#key-terms">Key Terms</a></li>
-<li><a href="#file-handling-in-c-language---quick-reference">File Handling in C Language - Quick Reference</a></li>
+<li><a href="#file-handling-in-c-language---quick-reference">File Handling in C Language - Quick Reference</a>
+<ul>
+<li></li>
+</ul>
+</li>
 <li><a href="#files">Files</a>
 <ul>
 <li></li>
@@ -32,6 +36,7 @@
 </li>
 <li><a href="#creating-a-sequential-access-file">Creating a Sequential Access file</a>
 <ul>
+<li></li>
 <li><a href="#file-access-modes">File Access Modes</a></li>
 <li><a href="#reading-sequential-access-file">Reading Sequential Access file</a></li>
 <li><a href="#read-numbers-from-file-and-calculate-average">Read numbers from file and calculate Average</a></li>
@@ -185,60 +190,79 @@ to the image below:</li>
 <tr>
 <th align="left">Function</th>
 <th align="left">description</th>
+<th align="left">Prototype</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">fopen()</td>
 <td align="left">create a new file or open a existing file</td>
+<td align="left">FILE *fp =<strong>fopen</strong> (“filename”, ”‘mode”);</td>
 </tr>
 <tr>
 <td align="left">fclose()</td>
 <td align="left">closes a file</td>
+<td align="left">int <strong>fclose</strong>(FILE *fp);</td>
+</tr>
+<tr>
+<td align="left">fgets()</td>
+<td align="left">get a string from file</td>
+<td align="left">char  *fgets(  char  *str, int count, <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream );</td>
 </tr>
 <tr>
 <td align="left">getc()</td>
 <td align="left">reads a character from a file</td>
+<td align="left">int  getc(  <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream  );</td>
 </tr>
 <tr>
 <td align="left">putc()</td>
 <td align="left">writes a character to a file</td>
+<td align="left">int  putc(  int  ch,  <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream  );</td>
 </tr>
 <tr>
 <td align="left">fscanf()</td>
 <td align="left">reads a set of data from a file</td>
+<td align="left">int fscanf(  <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream, const  char  *format, … );</td>
 </tr>
 <tr>
 <td align="left">fprintf()</td>
 <td align="left">writes a set of data to a file</td>
+<td align="left">int <strong>fprintf</strong>(FILE *fp, const char *format, …)</td>
 </tr>
 <tr>
 <td align="left">getw()</td>
 <td align="left">reads a integer from a file</td>
+<td align="left">int <strong>getw</strong>(FILE *fp);</td>
 </tr>
 <tr>
 <td align="left">putw()</td>
 <td align="left">writes a integer to a file</td>
+<td align="left">int <strong>putw</strong>(int w, FILE *stream);  (<em>deprecated, legacy</em>)</td>
 </tr>
 <tr>
 <td align="left">fseek()</td>
 <td align="left">set the position to desire point</td>
+<td align="left">int  fseek(  <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream,  long  offset,  int  origin  );</td>
 </tr>
 <tr>
 <td align="left">ftell()</td>
 <td align="left">gives current position in the file</td>
+<td align="left">long  ftell(  <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream  );</td>
 </tr>
 <tr>
 <td align="left">rewind()</td>
 <td align="left">set the position to the beginning point</td>
+<td align="left">void  rewind(  <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream  );</td>
 </tr>
 <tr>
 <td align="left">fread()</td>
 <td align="left">reads specific number of bytes from binary file</td>
+<td align="left"><a href="http://en.cppreference.com/w/c/types/size_t">size_t</a> fread(  void  *buffer, <a href="http://en.cppreference.com/w/c/types/size_t">size_t</a> size, <a href="http://en.cppreference.com/w/c/types/size_t">size_t</a> count,  <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream);</td>
 </tr>
 <tr>
 <td align="left">fwrite()</td>
 <td align="left">writes specific number of bytes to binary files</td>
+<td align="left"><a href="http://en.cppreference.com/w/c/types/size_t">size_t</a> fwrite(  const  void  *buffer, <a href="http://en.cppreference.com/w/c/types/size_t">size_t</a> size, <a href="http://en.cppreference.com/w/c/types/size_t">size_t</a> count,  <a href="http://en.cppreference.com/w/c/io">FILE</a>  *stream);</td>
 </tr>
 </tbody>
 </table><p><strong>Opening a File or Creating a File</strong></p>
@@ -253,7 +277,7 @@ to the image below:</li>
 <p>int <strong>fclose</strong> ( FILE <em>*fp</em> );<br>
 Here fclose() function closes the file and returns <strong>zero</strong> on success, or <strong>EOF</strong> if there is an error in closing the file. This <strong>EOF</strong> is a constant defined in the header file <strong>stdio.h</strong>.</p>
 <p><strong>Input/Output operation on File</strong></p>
-<p>In the above table we have discussed about various file I/O functions to perform reading and writing on file. getc() and putc() are simplest functions used to read and write individual characters to a file.</p>
+<p>In the above table we have discussed about various file I/O functions to perform reading and writing on file. <strong>getc</strong>() and <strong>putc</strong>() are simplest functions used to read and write individual characters to a file.</p>
 <pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;conio.h&gt;</span></span>
 <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -273,17 +297,21 @@ Here fclose() function closes the file and returns <strong>zero</strong> on succ
 	<span class="token function">fclose</span><span class="token punctuation">(</span>fp<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<h3 id="demo">Demo</h3>
+<p>Run <code>prog11</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a></p>
+<h3 id="sample-output">Sample Output</h3>
+<p><img src="https://i.imgur.com/XNZ75Nr.jpg" alt="prog11"></p>
 <p><strong>Reading and Writing from File using fprintf() and fscanf()</strong></p>
 <pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h&gt;</span></span>
 <span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;conio.h&gt;</span></span>
-<span class="token keyword">struct</span> emp
+<span class="token keyword">struct</span> employee
 <span class="token punctuation">{</span>
 	<span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 	<span class="token keyword">int</span> age<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
 <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-	<span class="token keyword">struct</span> emp e<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> employee e<span class="token punctuation">;</span>
 	FILE <span class="token operator">*</span>p<span class="token punctuation">,</span> <span class="token operator">*</span>q<span class="token punctuation">;</span>
 	p <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"one.txt"</span><span class="token punctuation">,</span> <span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	q <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"one.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -293,14 +321,18 @@ Here fclose() function closes the file and returns <strong>zero</strong> on succ
 	<span class="token function">fclose</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">do</span>
 	<span class="token punctuation">{</span>
-	    <span class="token function">fscanf</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span><span class="token string">"%s %d"</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>name<span class="token punctuation">,</span> e<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	    <span class="token function">fscanf</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span><span class="token string">"%s %d"</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>e<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s %d"</span><span class="token punctuation">,</span> e<span class="token punctuation">.</span>name<span class="token punctuation">,</span> e<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span>q<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token function">getch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 </code></pre>
-<p>In this program, we have create two FILE pointers and both are refering to the same file but in different modes. <strong>fprintf()</strong> function directly writes into the file, while <strong>fscanf()</strong> reads from the file, which can then be printed on console using standard <strong>printf()</strong> function.</p>
+<h3 id="demo-1">Demo</h3>
+<p>Run <code>prog12</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a></p>
+<h3 id="sample-output-1">Sample Output</h3>
+<p><img src="https://i.imgur.com/gTvEpdY.jpg" alt="prog12"></p>
+<p>In this program, we have create two FILE pointers and both are referring to the same file but in different modes. <strong>fprintf()</strong> function directly writes into the file, while <strong>fscanf()</strong> reads from the file, which can then be printed on console using standard <strong>printf()</strong> function.</p>
 <p><strong>Difference between Append and Write Mode</strong></p>
 <p>Write (w) mode and Append (a) mode, while opening a file are almost the same. Both are used to write in a file. In both the modes, new file is created if it doesn’t exists already.</p>
 <p>The only difference they have is, when you open a file in the write mode, the file is reset, resulting in deletion of any data already present in the file. While in append mode this will not happen. Append mode is used to append or add data to the existing data of file (if any). Hence, when you open a file in Append(a) mode, the cursor is positioned at the end of the present data in the file.</p>
@@ -465,7 +497,7 @@ receivable system to keep track of the amounts owed by a company’s credit clie
 
     <span class="token comment">// write account, name and balance into file with fprintf</span>
     <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span><span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">fprintf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d %s %.2f\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">fprintf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d %-10s %.2f\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"? "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>  <span class="token comment">// end while</span>
@@ -474,6 +506,8 @@ receivable system to keep track of the amounts owed by a company’s credit clie
   <span class="token punctuation">}</span>                 <span class="token comment">// end else</span>
 <span class="token punctuation">}</span>  <span class="token comment">// end main</span>
 </code></pre>
+<h3 id="demo-2">Demo</h3>
+<p>Run <code>prog13</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a></p>
 <p><strong>OUTPUT</strong></p>
 <pre><code>Enter the account, name, and balance.
 Enter EOF to end input.
@@ -484,9 +518,15 @@ Enter EOF to end input.
 ? 500 Rich 224.62
 ? ^D (or ^Z)
 </code></pre>
+<h3 id="sample-clients.dat-file-contents">Sample <code>clients.dat</code> file contents</h3>
+<pre><code>100 Jones     24.98
+200 Doe       345.67
+300 White     0.00
+400 Stone     -42.16
+500 Rich      224.62
+</code></pre>
 <p>Now let’s examine this program. Line 11 states that <code>cfPtr</code> is a pointer to a FILE structure. A C program administers each file with a separate FILE structure.</p>
-<p>Each open file must have a separately declared pointer of type FILE that’s used to refer<br>
-to the file. Line 14 names the file— <strong>“clients.dat”</strong> —to be used by the program and establishes a “line of communication” with the file. The file pointer <strong>cfPtr</strong> is assigned a pointer to the FILE structure for the file opened with <strong>fopen</strong>. Function fopen takes two arguments: a <strong>filename</strong> (which can include path information leading to the file’s location) and a <strong>file open mode</strong>.</p>
+<p>Each open file must have a separately declared pointer of type FILE that’s used to refer to the file. Line 14 names the file— <strong>“clients.dat”</strong> —to be used by the program and establishes a “line of communication” with the file. The file pointer <strong>cfPtr</strong> is assigned a pointer to the FILE structure for the file opened with <strong>fopen</strong>. Function fopen takes two arguments: a <strong>filename</strong> (which can include path information leading to the file’s location) and a <strong>file open mode</strong>.</p>
 <p>The file open mode “w” indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, <strong>fopen</strong> creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file.</p>
 <p>The program prompts the user to enter the various fields for each record or to enter<br>
 end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering <strong>end-of-file</strong> (<strong><code>EOF</code></strong>)for various computer systems.</p>
@@ -570,8 +610,7 @@ have a different file pointer returned by fopen. All subsequent file-processing 
 </tr>
 </tbody>
 </table><h2 id="reading-sequential-access-file">Reading Sequential Access file</h2>
-<p>Data is stored in files so that the data can be retrieved for processing when needed. The<br>
-previous section demonstrated how to create a file for sequential access. This section shows how to read data sequentially from a file.</p>
+<p>Data is stored in files so that the data can be retrieved for processing when needed. The previous section demonstrated how to create a file for sequential access. This section shows how to read data sequentially from a file.</p>
 <pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Fig. 11.6: fig11_06.c</span>
 <span class="token comment">// Reading and printing a sequential file</span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
@@ -602,19 +641,20 @@ previous section demonstrated how to create a file for sequential access. This s
 <span class="token punctuation">}</span>  <span class="token comment">// end main</span>
 
 </code></pre>
+<h3 id="sample-output--to-be-confirmed">Sample Output ( to be confirmed)</h3>
+<pre><code>100 Jones     24.98
+200 Doe       345.67
+300 White     0.00
+400 Stone     -42.16
+500 Rich      224.62
+</code></pre>
 <p>Figure 11.6 reads records from the file “clients.dat” created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line 14 attempts to open the file “clients.dat” for reading (“r”) and determines whether it opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value “Jones” and balance will have the value 24.98.</p>
-<p>Each time the second fscanf statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function feof returns true only after the program attempts to<br>
-read the nonexistent data following the last line.</p>
+<p>Each time the second fscanf statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function feof returns true only after the program attempts to read the nonexistent data following the last line.</p>
 <p><strong>Resetting the File Position Pointer</strong><br>
 To retrieve data sequentially from a file, a program normally starts reading from the beginning of the file and reads all data consecutively until the desired data is found. It may be desirable to process the data sequentially in a file several times (from the beginning of the file) during the execution of a program. The statement</p>
 <pre><code>rewind( cfPtr );
 </code></pre>
-<p>causes a program’s file position pointer—which indicates the number of the next byte in<br>
-the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0)<br>
-pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer<br>
-value that specifies the byte in the file at which the next read or write is to occur. This is<br>
-sometimes referred to as the file offset. The file position pointer is a member of the FILE<br>
-structure associated with each file.</p>
+<p>causes a program’s file position pointer—which indicates the number of the next byte in the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0) pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer value that specifies the byte in the file at which the next read or write is to occur. This is sometimes referred to as the file offset. The file position pointer is a member of the FILE structure associated with each file.</p>
 <h2 id="read-numbers-from-file-and-calculate-average">Read numbers from file and calculate Average</h2>
 <p>The next program reads five (or more) integer values from the data file <code>num.dat</code>. In this program end-of-file marker <code>EOF</code> is used to exit the loop.</p>
 <pre class=" language-c"><code class="prism  language-c">
@@ -1094,6 +1134,7 @@ Enter lastname, firstname, balance
 
 </code></pre>
 <h1 id="command-line-arguments">Command line arguments</h1>
+<p><strong>Command line arguments</strong> are simply <strong>arguments</strong> that are specified after the name of the program in the system’s <strong>command line</strong>, and these <strong>argument</strong> values are passed on to your program during program execution.</p>
 <p><img src="https://files.gitter.im/kgashok/advik/jbXG/commandLineArgv.png" alt="command"></p>
 <p>On many UNIX systems, it is possible to pass arguments to <strong><code>main</code></strong> from the command line by including the parameters <strong><code>int argc</code></strong> and <strong><code>char *argv[]</code></strong> in the parameter list of <strong><code>main()</code></strong>.</p>
 <ul>
