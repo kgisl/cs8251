@@ -194,7 +194,7 @@ void main(){
 
 ```
 
-In this program, we have create two FILE pointers and both are refering to the same file but in different modes. **fprintf()** function directly writes into the file, while **fscanf()** reads from the file, which can then be printed on console using standard **printf()** function.
+In this program, we have create two FILE pointers and both are referring to the same file but in different modes. **fprintf()** function directly writes into the file, while **fscanf()** reads from the file, which can then be printed on console using standard **printf()** function.
 
 
 **Difference between Append and Write Mode**
@@ -1724,7 +1724,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjE1Mzg4OSw4NDkzNTgxNzcsLTE1Nj
+eyJoaXN0b3J5IjpbLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1Nj
 U3NDIzNzYsLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIw
 NTE4LC0yMjg1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC
 03ODUwMTExMjcsLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0
