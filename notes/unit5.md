@@ -194,6 +194,9 @@ void main(){
 
 ```
 
+### Demo 
+Run `prog11` in the repl.it http://
+
 In this program, we have create two FILE pointers and both are referring to the same file but in different modes. **fprintf()** function directly writes into the file, while **fscanf()** reads from the file, which can then be printed on console using standard **printf()** function.
 
 
@@ -1724,11 +1727,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5Mz
-U4MTc3LC0xNTY1NzQyMzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5
-ODksLTY5MzkyMDUxOCwtMjI4NTI3MDExLDE1Mzc0MjU1MTksLT
-I5MDU1MzcxMSwtNzg1MDExMTI3LC0yNDI5Mzk4OTUsLTEyNTcx
-MTE3MzYsMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMTU1OTYwNTUyMC
-wtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4MTc1LC02MDMw
-MTc5OTldfQ==
+eyJoaXN0b3J5IjpbLTExMjExOTMzNTYsODEzNTg2NjIxLC02Mz
+EwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNzM2Mzk2
+Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3MDExLD
+E1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC0yNDI5
+Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5ODE5Ni
+wtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIy
+MDM4MTc1XX0=
 -->
