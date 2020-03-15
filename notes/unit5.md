@@ -365,7 +365,7 @@ int main(void) {
 
     // write account, name and balance into file with fprintf
     while (!feof(stdin)) {
-      fprintf(cfPtr, "%d %s %.2f\n", account, name, balance);
+      fprintf(cfPtr, "%d %-10s %.2f\n", account, name, balance);
       printf("%s", "? ");
       scanf("%d%29s%lf", &account, name, &balance);
     }  // end while
@@ -374,6 +374,8 @@ int main(void) {
   }                 // end else
 }  // end main
 ```
+
+### Demo 
 
 **OUTPUT**
 
@@ -386,10 +388,18 @@ int main(void) {
 	? 500 Rich 224.62
 	? ^D (or ^Z)
 
+### Sample `clients.dat` file contents 
+
+	100 Jones     24.98
+	200 Doe       345.67
+	300 White     0.00
+	400 Stone     -42.16
+	500 Rich      224.62
+
+
 Now let’s examine this program. Line 11 states that `cfPtr` is a pointer to a FILE structure. A C program administers each file with a separate FILE structure. 
 
-Each open file must have a separately declared pointer of type FILE that’s used to refer
-to the file. Line 14 names the file— **"clients.dat"** —to be used by the program and establishes a “line of communication” with the file. The file pointer **cfPtr** is assigned a pointer to the FILE structure for the file opened with **fopen**. Function fopen takes two arguments: a **filename** (which can include path information leading to the file’s location) and a **file open mode**. 
+Each open file must have a separately declared pointer of type FILE that’s used to refer to the file. Line 14 names the file— **"clients.dat"** —to be used by the program and establishes a “line of communication” with the file. The file pointer **cfPtr** is assigned a pointer to the FILE structure for the file opened with **fopen**. Function fopen takes two arguments: a **filename** (which can include path information leading to the file’s location) and a **file open mode**. 
 
 The file open mode "w" indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, **fopen** creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file. 
 
@@ -412,14 +422,6 @@ using **stdout** as the file pointer, as in:
 After the user enters end-of-file, the program closes the **clients.dat** file with **fclose**
 and terminates. Function **fclose** also receives the file pointer (rather than the filename)
 as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
-
-### Sample `clients.dat` file contents 
-
-	100 Jones 24.98
-	200 Doe 345.67
-	300 White 0.00
-	400 Stone -42.16
-	500 Rich 224.62
 
 
 ## File Access Modes
@@ -1738,11 +1740,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NzI1MTYxOCwtMTU5NjY3NjYzOCwtNj
-k5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLTYzMTAwMTc3
-Nyw4NDkzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYzOTYzOTUsMT
-Q0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQy
-NTUxOSwtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0MjkzOTg5NS
-wtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5
-NjA1NTIwXX0=
+eyJoaXN0b3J5IjpbLTE2MTM2NjIzODgsMTQ0NzI1MTYxOCwtMT
+U5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2
+MjEsLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1NjU3NDIzNzYsLT
+E3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1
+MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTExMj
+csLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0MzI1MjAsNzQ5
+Nzk4MTk2XX0=
 -->
