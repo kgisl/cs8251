@@ -479,8 +479,8 @@ int main(void) {
   // while not end of file
   while (!feof(cfPtr)) {
     printf("%-10d%-13s%7.2f\n", account, name, balance);
-scanf(cfPtr, "%d%29s%lf", &account, name, &balance);
-	}  // end while
+    scanf(cfPtr, "%d%29s%lf", &account, name, &balance);
+  }  // end while
 
   fclose(cfPtr);  // fclose closes the file
 }  // end main
@@ -1746,7 +1746,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MzY0NzAyMCwtMTYyMDgwOTY0Myw4MD
+eyJoaXN0b3J5IjpbLTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4MD
 AyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5NjY3NjYzOCwtNjk5MDE2
 MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLTYzMTAwMTc3Nyw4ND
 kzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYzOTYzOTUsMTQ0MjY5
