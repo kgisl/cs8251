@@ -477,6 +477,9 @@ receivable system to keep track of the amounts owed by a company’s credit clie
 <pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Fig. 11.2: fig11_02.c</span>
 <span class="token comment">// Creating a sequential file</span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> DATAFILE "clients.dat"</span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">unsigned</span> <span class="token keyword">int</span> account<span class="token punctuation">;</span>  <span class="token comment">// account number</span>
@@ -486,24 +489,24 @@ receivable system to keep track of the amounts owed by a company’s credit clie
   FILE<span class="token operator">*</span> cfPtr<span class="token punctuation">;</span>  <span class="token comment">// cfPtr = clients.dat file pointer</span>
 
   <span class="token comment">// fopen opens file. Exit program if unable to create file</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>cfPtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"clients.dat"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>cfPtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>DATAFILE<span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"File could not be opened"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>  <span class="token comment">// end if</span>
-  <span class="token keyword">else</span> <span class="token punctuation">{</span>
-    <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Enter the account, name, and balance."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Enter EOF to end input."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Enter the account, name, and balance."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Enter EOF to end input."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"? "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// write account, name and balance into file with fprintf</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span><span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fprintf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%3d %-10s %.2f\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"? "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// write account, name and balance into file with fprintf</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span><span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">fprintf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d %-10s %.2f\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"? "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>  <span class="token comment">// end while</span>
-
-    <span class="token function">fclose</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// fclose closes file</span>
-  <span class="token punctuation">}</span>                 <span class="token comment">// end else</span>
+  <span class="token punctuation">}</span>  <span class="token comment">// end while</span>
+  <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Done"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">fclose</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// fclose closes file</span>
 <span class="token punctuation">}</span>  <span class="token comment">// end main</span>
 </code></pre>
 <h3 id="demo-2">Demo</h3>
@@ -528,26 +531,18 @@ Enter EOF to end input.
 <p>Now let’s examine this program. Line 11 states that <code>cfPtr</code> is a pointer to a FILE structure. A C program administers each file with a separate FILE structure.</p>
 <p>Each open file must have a separately declared pointer of type FILE that’s used to refer to the file. Line 14 names the file— <strong>“clients.dat”</strong> —to be used by the program and establishes a “line of communication” with the file. The file pointer <strong>cfPtr</strong> is assigned a pointer to the FILE structure for the file opened with <strong>fopen</strong>. Function fopen takes two arguments: a <strong>filename</strong> (which can include path information leading to the file’s location) and a <strong>file open mode</strong>.</p>
 <p>The file open mode “w” indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, <strong>fopen</strong> creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file.</p>
-<p>The program prompts the user to enter the various fields for each record or to enter<br>
-end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering <strong>end-of-file</strong> (<strong><code>EOF</code></strong>)for various computer systems.</p>
+<p>The program prompts the user to enter the various fields for each record or to enter end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering <strong>end-of-file</strong> (<strong><code>EOF</code></strong>) for various computer systems.</p>
 <pre><code>Operating system       Key combination
 Linux/Mac OS X/UNIX    &lt;Ctrl&gt; d
 Windows                &lt;Ctrl&gt; z
 </code></pre>
-<p>Line 24 uses function <strong>feof</strong> to determine whether the end-of-file indicator is set for<br>
-the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function <strong>feof</strong> is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.<br>
-Line 25 writes data to the file <code>clients.dat</code>. The data may be retrieved later by a program<br>
-designed to read the file (see Section 11.4). Function <strong>fprintf</strong> is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which<br>
-the data will be written. Function <strong>fprintf</strong> can output data to the standard output by<br>
-using <strong>stdout</strong> as the file pointer, as in:</p>
+<p>Line 24 uses function <strong>feof</strong> to determine whether the end-of-file indicator is set for the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function <strong>feof</strong> is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.</p>
+<p>Line 25 writes data to the file <code>clients.dat</code>. The data may be retrieved later by a program designed to read the file (see Section 11.4). Function <strong>fprintf</strong> is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which the data will be written. Function <strong>fprintf</strong> can output data to the standard output by using <strong>stdout</strong> as the file pointer, as in:</p>
 <pre><code>`fprintf( stdout, "%d %s %.2f\n", account, name, balance );`
 </code></pre>
-<p>After the user enters end-of-file, the program closes the <strong>clients.dat</strong> file with <strong>fclose</strong><br>
-and terminates. Function <strong>fclose</strong> also receives the file pointer (rather than the filename)<br>
-as an argument. If function <strong>fclose</strong> is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.”</p>
+<p>After the user enters end-of-file, the program closes the <strong>clients.dat</strong> file with <strong>fclose</strong> and terminates. Function <strong>fclose</strong> also receives the file pointer (rather than the filename) as an argument. If function <strong>fclose</strong> is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.”</p>
 <h2 id="file-access-modes">File Access Modes</h2>
-<p>Programs may process no files, one file or several files. Each file used in a program will<br>
-have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). <strong>The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.</strong></p>
+<p>Programs may process no files, one file or several files. Each file used in a program will have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). <strong>The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.</strong></p>
 <p>If an error occurs while opening a file in any mode, fopen returns <strong>NULL</strong>.</p>
 
 <table>
@@ -614,6 +609,7 @@ have a different file pointer returned by fopen. All subsequent file-processing 
 <pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Fig. 11.6: fig11_06.c</span>
 <span class="token comment">// Reading and printing a sequential file</span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">unsigned</span> <span class="token keyword">int</span> account<span class="token punctuation">;</span>  <span class="token comment">// account number</span>
@@ -625,61 +621,75 @@ have a different file pointer returned by fopen. All subsequent file-processing 
   <span class="token comment">// fopen opens file; exits program if file cannot be opened</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>cfPtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"clients.dat"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"File could not be opened"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>       <span class="token comment">// end if</span>
-  <span class="token keyword">else</span> <span class="token punctuation">{</span>  <span class="token comment">// read account, name and balance from file</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%-10s%-13s%s\n"</span><span class="token punctuation">,</span> <span class="token string">"Account"</span><span class="token punctuation">,</span> <span class="token string">"Name"</span><span class="token punctuation">,</span> <span class="token string">"Balance"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">fscanf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%-10s%-13s%s\n"</span><span class="token punctuation">,</span> <span class="token string">"Account"</span><span class="token punctuation">,</span> <span class="token string">"Name"</span><span class="token punctuation">,</span> <span class="token string">"Balance"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">fscanf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token comment">// while not end of file</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%-10d%-13s%7.2f\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">fscanf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>  <span class="token comment">// end while</span>
+  <span class="token comment">// while not end of file</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%-10d%-13s%7.2f\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>  <span class="token comment">// end while</span>
 
-    <span class="token function">fclose</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// fclose closes the file</span>
-  <span class="token punctuation">}</span>                 <span class="token comment">// end else</span>
+  <span class="token function">fclose</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// fclose closes the file</span>
 <span class="token punctuation">}</span>  <span class="token comment">// end main</span>
 
 </code></pre>
-<h3 id="sample-output--to-be-confirmed">Sample Output ( to be confirmed)</h3>
-<pre><code>100 Jones     24.98
-200 Doe       345.67
-300 White     0.00
-400 Stone     -42.16
-500 Rich      224.62
+<h3 id="demo-3">Demo</h3>
+<p>Run <code>prog14</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a></p>
+<h3 id="sample-output-2">Sample Output</h3>
+<pre><code>Account   Name         Balance
+100       Jones        9023.00
+200       Frank         234.00
+300       Mano         29023.00
+400       Bala         2344.00
 </code></pre>
 <p>Figure 11.6 reads records from the file “clients.dat” created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line 14 attempts to open the file “clients.dat” for reading (“r”) and determines whether it opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value “Jones” and balance will have the value 24.98.</p>
-<p>Each time the second fscanf statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function feof returns true only after the program attempts to read the nonexistent data following the last line.</p>
+<p>Each time the second <strong>fscanf</strong> statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function <strong>feof</strong> returns true only after the program attempts to read the nonexistent data following the last line.</p>
 <p><strong>Resetting the File Position Pointer</strong><br>
 To retrieve data sequentially from a file, a program normally starts reading from the beginning of the file and reads all data consecutively until the desired data is found. It may be desirable to process the data sequentially in a file several times (from the beginning of the file) during the execution of a program. The statement</p>
 <pre><code>rewind( cfPtr );
 </code></pre>
-<p>causes a program’s file position pointer—which indicates the number of the next byte in the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0) pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer value that specifies the byte in the file at which the next read or write is to occur. This is sometimes referred to as the file offset. The file position pointer is a member of the FILE structure associated with each file.</p>
+<p>causes a program’s file position pointer—which indicates the number of the next byte in the file to be read or written—to be repositioned to the beginning of the file (i.e., byte 0) pointed to by cfPtr. The file position pointer is not really a pointer. Rather it’s an integer value that specifies the byte in the file at which the next read or write is to occur. This is sometimes referred to as the file offset. The file position pointer is a member of the <strong>FILE</strong> structure associated with each file.</p>
 <h2 id="read-numbers-from-file-and-calculate-average">Read numbers from file and calculate Average</h2>
 <p>The next program reads five (or more) integer values from the data file <code>num.dat</code>. In this program end-of-file marker <code>EOF</code> is used to exit the loop.</p>
 <pre class=" language-c"><code class="prism  language-c">
+<span class="token comment">/* Program to read from the num.dat file
+ * and find the average of the numbers 
+ */</span> 
+
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span> </span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> DATAFILE "prog15.dat"</span>
+
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   FILE<span class="token operator">*</span> fp<span class="token punctuation">;</span>
   <span class="token keyword">int</span> n<span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">]</span><span class="token punctuation">,</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
   <span class="token keyword">float</span> sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>fp <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"num.dat"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Reading numbers from num.dat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span>fp<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token function">fscanf</span><span class="token punctuation">(</span>fp<span class="token punctuation">,</span> <span class="token string">"%d "</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d %d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> n<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      sum <span class="token operator">+</span><span class="token operator">=</span> n<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-      i<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">fclose</span><span class="token punctuation">(</span>fp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>fp <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>DATAFILE<span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Unable to open %s...\n"</span><span class="token punctuation">,</span> DATAFILE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Reading numbers from num.dat"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span>fp<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">fscanf</span><span class="token punctuation">(</span>fp<span class="token punctuation">,</span> <span class="token string">"%d "</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d %d\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> n<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sum <span class="token operator">+</span><span class="token operator">=</span> n<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    i<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">fclose</span><span class="token punctuation">(</span>fp<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">float</span> average <span class="token operator">=</span> sum <span class="token operator">/</span> i<span class="token punctuation">;</span>
-      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The average is %f for %d numbers\n"</span><span class="token punctuation">,</span> average<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-      <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"No data available in num.dat!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span> <span class="token keyword">else</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Unable to open num.dat...\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// if no data is available in the file</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"No data available in %s"</span><span class="token punctuation">,</span> DATAFILE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">float</span> average <span class="token operator">=</span> sum <span class="token operator">/</span> i<span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The average is %.3f for %d numbers\n"</span><span class="token punctuation">,</span> average<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 </code></pre>
