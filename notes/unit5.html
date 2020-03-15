@@ -665,7 +665,7 @@ Enter EOF to end input.
   <span class="token comment">// while not end of file</span>
   <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">feof</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%-10d%-13s%7.2f\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">fscanf</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">,</span> <span class="token string">"%d%29s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>account<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">&amp;</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>  <span class="token comment">// end while</span>
 
   <span class="token function">fclose</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// fclose closes the file</span>
@@ -677,7 +677,7 @@ Enter EOF to end input.
 <h3 id="sample-output-2">Sample Output</h3>
 <pre><code>Account   Name         Balance
 100       Jones        9023.00
-200       Frank         234.00
+200       Frank        234.00
 300       Mano         29023.00
 400       Bala         2344.00
 </code></pre>
