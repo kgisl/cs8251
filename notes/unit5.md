@@ -486,13 +486,14 @@ int main(void) {
 
 ```
 
-### Sample Output ( to be confirmed)
 
-	100 Jones     24.98
-	200 Doe       345.67
-	300 White     0.00
-	400 Stone     -42.16
-	500 Rich      224.62
+### Sample Output 
+
+	Account   Name         Balance
+	100       Jones        9023.00
+	200       Frank         234.00
+	300       Mano         29023.00
+	400       Bala         2344.00
 
 
 
@@ -1742,11 +1743,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAwMjc3MjEwLDE0NDcyNTE2MTgsLTE1OT
-Y2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsODEzNTg2NjIx
-LC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNz
-M2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3
-MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC
-0yNDI5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5
-ODE5Nl19
+eyJoaXN0b3J5IjpbMTkzNTE4MzkxMCw4MDAyNzcyMTAsMTQ0Nz
+I1MTYxOCwtMTU5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2
+NSw4MTM1ODY2MjEsLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1Nj
+U3NDIzNzYsLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIw
+NTE4LC0yMjg1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC
+03ODUwMTExMjcsLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0
+MzI1MjBdfQ==
 -->
