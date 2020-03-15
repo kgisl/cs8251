@@ -556,12 +556,7 @@ Run `prog15` in the http://bit.ly/replUnit5
 
 ### Sample Output 
 
-	Account   Name         Balance
-	100       Jones        9023.00
-	200       Frank         234.00
-	300       Mano         29023.00
-	400       Bala         2344.00
-
+!{aver](https://i.imgur.com/eY0HcUB.jpg)
 
 # Random access file 
 
@@ -1764,7 +1759,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2OTUzOTI4NCw5MzQwMTUzNjMsLTcyMD
+eyJoaXN0b3J5IjpbMTAxNDM5MzM3Myw5MzQwMTUzNjMsLTcyMD
 A4NzI3NiwtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYx
 OCwtMTU5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MT
 M1ODY2MjEsLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1NjU3NDIz
