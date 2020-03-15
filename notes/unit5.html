@@ -691,8 +691,11 @@ To retrieve data sequentially from a file, a program normally starts reading fro
 
   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-
 </code></pre>
+<h3 id="demo-4">Demo</h3>
+<p>Run <code>prog15</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a> in conjunction with <code>prog15.txt</code></p>
+<h3 id="sample-output-3">Sample Output</h3>
+<p><img src="https://i.imgur.com/eY0HcUB.jpg" alt="average"></p>
 <h1 id="random-access-file">Random access file</h1>
 <p>As we stated previously, records in a file created with the formatted output function<br>
 <strong>fprintf</strong> are not necessarily the same length. However, individual records of a random access file are normally fixed in length and may be accessed directly (and thus quickly)<br>
@@ -711,7 +714,7 @@ without rewriting the entire file. In the following sections we explain how to c
 random-access file, enter data, read the data both sequentially and randomly, update the<br>
 data, and delete data no longer needed.</p>
 <h2 id="creating-random-access-file">Creating Random Access File</h2>
-<p>Function <strong>fwrite</strong> transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using</p>
+<p>Function <strong>fwrite</strong> transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function <strong>fread</strong> transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using</p>
 <pre><code>fprintf(fPtr, "%d", number);
 </code></pre>
 <p>which could print a single digit or as many as 11 digits (10 digits plus a sign, each of which requires 1 byte of storage) for a four-byte integer, we can use</p>
