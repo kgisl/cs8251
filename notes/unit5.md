@@ -479,7 +479,7 @@ int main(void) {
   // while not end of file
   while (!feof(cfPtr)) {
     printf("%-10d%-13s%7.2f\n", account, name, balance);
-    scanf(cfPtr, "%d%29s%lf", &account, name, &balance);
+    fscanf(cfPtr, "%d%29s%lf", &account, name, &balance);
   }  // end while
 
   fclose(cfPtr);  // fclose closes the file
@@ -494,7 +494,7 @@ Run `prog14` in the http://bit.ly/replUnit5
 
 	Account   Name         Balance
 	100       Jones        9023.00
-	200       Frank         234.00
+	200       Frank        234.00
 	300       Mano         29023.00
 	400       Bala         2344.00
 
@@ -1766,11 +1766,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOT
-AxNjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2
-MywtNzIwMDg3Mjc2LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxND
-Q3MjUxNjE4LC0xNTk2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3
-MjY1LDgxMzU4NjYyMSwtNjMxMDAxNzc3LDg0OTM1ODE3NywtMT
-U2NTc0MjM3NiwtMTczNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5
-MjA1MThdfQ==
+eyJoaXN0b3J5IjpbLTE3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMT
+YwMzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5
+MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC0xNjIwODA5NjQzLD
+gwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNTk2Njc2NjM4LC02OTkw
+MTYxNjAsOTMzNTQ3MjY1LDgxMzU4NjYyMSwtNjMxMDAxNzc3LD
+g0OTM1ODE3NywtMTU2NTc0MjM3NiwtMTczNjM5NjM5NSwxNDQy
+NjkzOTg5XX0=
 -->
