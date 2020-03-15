@@ -345,6 +345,9 @@ receivable system to keep track of the amounts owed by a company’s credit clie
 // Fig. 11.2: fig11_02.c
 // Creating a sequential file
 #include <stdio.h>
+#include <stdlib.h>
+
+#define DATAFILE "clients.dat"
 
 int main(void) {
   unsigned int account;  // account number
@@ -354,24 +357,24 @@ int main(void) {
   FILE* cfPtr;  // cfPtr = clients.dat file pointer
 
   // fopen opens file. Exit program if unable to create file
-  if ((cfPtr = fopen("clients.dat", "w")) == NULL) {
+  if ((cfPtr = fopen(DATAFILE, "w")) == NULL) {
     puts("File could not be opened");
+    exit(0);
   }  // end if
-  else {
-    puts("Enter the account, name, and balance.");
-    puts("Enter EOF to end input.");
+
+  puts("Enter the account, name, and balance.");
+  puts("Enter EOF to end input.");
+  printf("%s", "? ");
+  scanf("%d%29s%lf", &account, name, &balance);
+
+  // write account, name and balance into file with fprintf
+  while (!feof(stdin)) {
+    fprintf(cfPtr, "%3d %-10s %.2f\n", account, name, balance);
     printf("%s", "? ");
     scanf("%d%29s%lf", &account, name, &balance);
-
-    // write account, name and balance into file with fprintf
-    while (!feof(stdin)) {
-      fprintf(cfPtr, "%d %-10s %.2f\n", account, name, balance);
-      printf("%s", "? ");
-      scanf("%d%29s%lf", &account, name, &balance);
-    }  // end while
-
-    fclose(cfPtr);  // fclose closes file
-  }                 // end else
+  }  // end while
+  puts("Done");
+  fclose(cfPtr);  // fclose closes file
 }  // end main
 ```
 
@@ -1746,11 +1749,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4MD
-AyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5NjY3NjYzOCwtNjk5MDE2
-MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLTYzMTAwMTc3Nyw4ND
-kzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYzOTYzOTUsMTQ0MjY5
-Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQyNTUxOS
-wtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0MjkzOTg5NSwtMTI1
-NzExMTczNl19
+eyJoaXN0b3J5IjpbLTExNTI2NjQ5ODcsLTcyMDA4NzI3NiwtMT
+YyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5NjY3
+NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLT
+YzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYz
+OTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMT
+EsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0
+MjkzOTg5NV19
 -->
