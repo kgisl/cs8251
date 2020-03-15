@@ -552,11 +552,11 @@ int main() {
 }
 ```
 ### Demo 
-Run `prog15` in the http://bit.ly/replUnit5
+Run `prog15` in the http://bit.ly/replUnit5 in conjunction with `prog15.txt`
 
 ### Sample Output 
 
-!{aver](https://i.imgur.com/eY0HcUB.jpg)
+![average](https://i.imgur.com/eY0HcUB.jpg)
 
 # Random access file 
 
@@ -1759,11 +1759,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxNDM5MzM3Myw5MzQwMTUzNjMsLTcyMD
-A4NzI3NiwtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYx
-OCwtMTU5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MT
-M1ODY2MjEsLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1NjU3NDIz
-NzYsLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC
-0yMjg1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUw
-MTExMjddfQ==
+eyJoaXN0b3J5IjpbLTE0NDI4MDg0MDksOTM0MDE1MzYzLC03Mj
+AwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2
+MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsOD
+EzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQy
+Mzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOC
+wtMjI4NTI3MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1
+MDExMTI3XX0=
 -->
