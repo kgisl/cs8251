@@ -410,13 +410,14 @@ Now let’s examine this program.
 	- If an existing file is opened for writing, the contents of the file are discarded without warning. 
 	- In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. 
 	- Otherwise, the program processes the input and writes it to the file. 
-		- The program prompts the user to enter the various fields for each record or to enter end-of-file when data entry is complete. The tabulation below lists the key combinations for entering **end-of-file** (**`EOF`**) for various computer systems. 
-		- | Operating system |   Key combination |
-		- |:-----------------|:------------------|
+	- The program prompts the user to enter the various fields for each record or to enter end-of-file when data entry is complete. The tabulation below lists the key combinations for entering **end-of-file** (**`EOF`**) for various computer systems. 
+
+| Operating system |   Key combination |
+|:-----------------|:------------------|
 |Linux/ Mac OS X   |   `<Ctrl> d`
 |Windows           |   `<Ctrl> z`
 
-The function **feof** to determine whether the end-of-file indicator is set for the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
+- The function **feof** is used to determine whether the end-of-file indicator is set for the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
 
 Line 25 writes data to the file `clients.dat`. The data may be retrieved later by a program designed to read the file (see Section 11.4). Function **fprintf** is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which the data will be written. Function **fprintf** can output data to the standard output by using **stdout** as the file pointer, as in:
 
@@ -1761,11 +1762,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTU4NTIwMDYsMTkwMTY4MjY0MywzMD
-MxMzEyNywtMTQ4ODM3OTIyNSw5MzQwMTUzNjMsLTcyMDA4NzI3
-NiwtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYxOCwtMT
-U5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2
-MjEsLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1NjU3NDIzNzYsLT
-E3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1
-MjcwMTFdfQ==
+eyJoaXN0b3J5IjpbMTQ4MzkyOTUwMiwxOTAxNjgyNjQzLDMwMz
+EzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2
+LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNT
+k2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgxMzU4NjYy
+MSwtNjMxMDAxNzc3LDg0OTM1ODE3NywtMTU2NTc0MjM3NiwtMT
+czNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUy
+NzAxMV19
 -->
