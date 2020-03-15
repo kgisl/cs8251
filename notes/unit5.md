@@ -500,7 +500,8 @@ Run `prog14` in the http://bit.ly/replUnit5
 
 
 
-Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line 14 attempts to open the file "clients.dat" for reading ("r") and determines whether it opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
+Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. 
+- cfPtr is a pointer to a FILE. The file "clients.dat"  is opened for reading ("r") and is determines whether it opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
 
 Each time the second **fscanf** statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function **feof** returns true only after the program attempts to read the nonexistent data following the last line. 
 
@@ -1763,11 +1764,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MjU0NzQ2MywxNjAzNzIxMTI0LDE5MD
-E2ODI2NDMsMzAzMTMxMjcsLTE0ODgzNzkyMjUsOTM0MDE1MzYz
-LC03MjAwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0ND
-cyNTE2MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcy
-NjUsODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNT
-Y1NzQyMzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5Mzky
-MDUxOF19
+eyJoaXN0b3J5IjpbNTQzNTQyODkwLDE2MDM3MjExMjQsMTkwMT
+Y4MjY0MywzMDMxMzEyNywtMTQ4ODM3OTIyNSw5MzQwMTUzNjMs
+LTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0Nz
+I1MTYxOCwtMTU5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2
+NSw4MTM1ODY2MjEsLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1Nj
+U3NDIzNzYsLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIw
+NTE4XX0=
 -->
