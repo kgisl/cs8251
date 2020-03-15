@@ -550,8 +550,19 @@ int main() {
 
   return 0;
 }
-
 ```
+### Demo 
+Run `prog15` in the http://bit.ly/replUnit5
+
+
+### Sample Output 
+
+	Account   Name         Balance
+	100       Jones        9023.00
+	200       Frank         234.00
+	300       Mano         29023.00
+	400       Bala         2344.00
+
 
 # Random access file 
 
@@ -1754,11 +1765,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MDc1MTQxNiw5MzQwMTUzNjMsLTcyMD
-A4NzI3NiwtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYx
-OCwtMTU5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MT
-M1ODY2MjEsLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1NjU3NDIz
-NzYsLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC
-0yMjg1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUw
-MTExMjddfQ==
+eyJoaXN0b3J5IjpbODM2NjU5MzAyLDkzNDAxNTM2MywtNzIwMD
+g3Mjc2LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4
+LC0xNTk2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgxMz
+U4NjYyMSwtNjMxMDAxNzc3LDg0OTM1ODE3NywtMTU2NTc0MjM3
+NiwtMTczNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLT
+IyODUyNzAxMSwxNTM3NDI1NTE5LC0yOTA1NTM3MTEsLTc4NTAx
+MTEyN119
 -->
