@@ -408,31 +408,24 @@ Each open file must have a separately declared pointer of type FILE that’s use
 
 The file open mode "w" indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, **fopen** creates the file. If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file. 
 
-The program prompts the user to enter the various fields for each record or to enter
-end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering **end-of-file** (**`EOF`**)for various computer systems. 
+The program prompts the user to enter the various fields for each record or to enter end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering **end-of-file** (**`EOF`**) for various computer systems. 
 
 	Operating system       Key combination
 	Linux/Mac OS X/UNIX    <Ctrl> d
 	Windows                <Ctrl> z
 
-Line 24 uses function **feof** to determine whether the end-of-file indicator is set for
-the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
-Line 25 writes data to the file `clients.dat`. The data may be retrieved later by a program
-designed to read the file (see Section 11.4). Function **fprintf** is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which
-the data will be written. Function **fprintf** can output data to the standard output by
-using **stdout** as the file pointer, as in:
+Line 24 uses function **feof** to determine whether the end-of-file indicator is set for the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
+
+Line 25 writes data to the file `clients.dat`. The data may be retrieved later by a program designed to read the file (see Section 11.4). Function **fprintf** is equivalent to printf except that fprintf also receives as an argument a file pointer for the file to which the data will be written. Function **fprintf** can output data to the standard output by using **stdout** as the file pointer, as in:
 
 	`fprintf( stdout, "%d %s %.2f\n", account, name, balance );`
 
-After the user enters end-of-file, the program closes the **clients.dat** file with **fclose**
-and terminates. Function **fclose** also receives the file pointer (rather than the filename)
-as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
+After the user enters end-of-file, the program closes the **clients.dat** file with **fclose** and terminates. Function **fclose** also receives the file pointer (rather than the filename) as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
 
 
 ## File Access Modes
 
-Programs may process no files, one file or several files. Each file used in a program will
-have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). **The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.** 
+Programs may process no files, one file or several files. Each file used in a program will have a different file pointer returned by fopen. All subsequent file-processing functions after the file is opened must refer to the file with the appropriate file pointer. Files may be opened in one of several modes (Fig. 11.5). **The binary modes are used in Sections 11.5–11.9 when we introduce random-access files.** 
 
 If an error occurs while opening a file in any mode, fopen returns **NULL**. 
 
@@ -505,7 +498,7 @@ Run `prog14` in the http://bit.ly/replUnit5
 
 Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. Line 11 indicates that cfPtr is a pointer to a FILE. Line 14 attempts to open the file "clients.dat" for reading ("r") and determines whether it opened successfully (i.e., fopen does not return NULL). Line 19 reads a “record” from the file. Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
 
-Each time the second fscanf statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function feof returns true only after the program attempts to read the nonexistent data following the last line. 
+Each time the second **fscanf** statement (line 24) executes, the program reads another record from the file and account, name and balance take on new values. When the program reaches the end of the file, the file is closed (line 27) and the program terminates. Function **feof** returns true only after the program attempts to read the nonexistent data following the last line. 
 
 
 **Resetting the File Position Pointer**
@@ -1749,11 +1742,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTI2NjQ5ODcsLTcyMDA4NzI3NiwtMT
-YyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5NjY3
-NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLT
-YzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYz
-OTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMT
-EsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUwMTExMjcsLTI0
-MjkzOTg5NV19
+eyJoaXN0b3J5IjpbLTMxODIzNDQ5MywtNzIwMDg3Mjc2LC0xNj
+IwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNTk2Njc2
+NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgxMzU4NjYyMSwtNj
+MxMDAxNzc3LDg0OTM1ODE3NywtMTU2NTc0MjM3NiwtMTczNjM5
+NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUyNzAxMS
+wxNTM3NDI1NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNywtMjQy
+OTM5ODk1XX0=
 -->
