@@ -164,6 +164,14 @@ main() {
 }
 ```
 
+### Demo 
+Run `prog11` in the http://bit.ly/replUnit5
+
+### Sample Output 
+![prog12](https://i.imgur.com/gTvEpdY.jpg)
+
+
+
 **Reading and Writing from File using fprintf() and fscanf()**
 
 ```c
@@ -195,10 +203,10 @@ void main(){
 ```
 
 ### Demo 
-Run `prog11` in the http://bit.ly/replUnit5
+Run `prog12` in the http://bit.ly/replUnit5
 
 ### Sample Output 
-
+![prog12](https://i.imgur.com/gTvEpdY.jpg)
 
 In this program, we have create two FILE pointers and both are referring to the same file but in different modes. **fprintf()** function directly writes into the file, while **fscanf()** reads from the file, which can then be printed on console using standard **printf()** function.
 
@@ -1730,11 +1738,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMzNTQ3MjY1LDgxMzU4NjYyMSwtNjMxMD
-AxNzc3LDg0OTM1ODE3NywtMTU2NTc0MjM3NiwtMTczNjM5NjM5
-NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUyNzAxMSwxNT
-M3NDI1NTE5LC0yOTA1NTM3MTEsLTc4NTAxMTEyNywtMjQyOTM5
-ODk1LC0xMjU3MTExNzM2LDI0NjQzMjUyMCw3NDk3OTgxOTYsLT
-E1NTk2MDU1MjAsLTgwODg2OTg3OCwtMTc2Mzg3NDk4NywyMjAz
-ODE3NV19
+eyJoaXN0b3J5IjpbLTY5OTAxNjE2MCw5MzM1NDcyNjUsODEzNT
+g2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQyMzc2
+LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMj
+I4NTI3MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDEx
+MTI3LC0yNDI5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLD
+c0OTc5ODE5NiwtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYz
+ODc0OTg3XX0=
 -->
