@@ -407,13 +407,16 @@ Now let’s examine this program.
 - Each open file must have a separately declared pointer of type FILE that’s used to refer to the file. The file name — **"clients.dat"** — will be used by the program and establishes a “line of communication” with the file. The file pointer **cfPtr** is assigned a pointer to the FILE structure for the file opened with **fopen**. 
 - Function fopen takes two arguments: a **filename** (which can include path information leading to the file’s location) and a **file open mode**. 
 	- The file open mode "w" indicates that the file is to be opened for writing. If a file does not exist and it’s opened for writing, **fopen** creates the file. 
-	- If an existing file is opened for writing, the contents of the file are discarded without warning. In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. Otherwise, the program processes the input and writes it to the file. 
+	- If an existing file is opened for writing, the contents of the file are discarded without warning. 
+	- In the program, the if statement is used to determine whether the file pointer cfPtr is NULL (i.e., the file is not opened). If it’s NULL, the program prints an error message and terminates. 
+	- Otherwise, the program processes the input and writes it to the file. 
 
-The program prompts the user to enter the various fields for each record or to enter end-of-file when data entry is complete. Figure 11.3 lists the key combinations for entering **end-of-file** (**`EOF`**) for various computer systems. 
+The program prompts the user to enter the various fields for each record or to enter end-of-file when data entry is complete. The tabulation below lists the key combinations for entering **end-of-file** (**`EOF`**) for various computer systems. 
 
-	Operating system       Key combination
-	Linux/Mac OS X/UNIX    <Ctrl> d
-	Windows                <Ctrl> z
+| Operating system |   Key combination |
+|:------|:-------|
+|Linux/Mac OS X/UNIX |    <Ctrl> d
+|Windows                <Ctrl> z
 
 Line 24 uses function **feof** to determine whether the end-of-file indicator is set for the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the feof call in this program continues executing while the end-of-file indicator is not set.
 
@@ -1760,11 +1763,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY0NjYzNzM2LDE5MDE2ODI2NDMsMzAzMT
-MxMjcsLTE0ODgzNzkyMjUsOTM0MDE1MzYzLC03MjAwODcyNzYs
-LTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2MTgsLTE1OT
-Y2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsODEzNTg2NjIx
-LC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNz
-M2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3
-MDExXX0=
+eyJoaXN0b3J5IjpbLTE3NTI4NjkwNSwxOTAxNjgyNjQzLDMwMz
+EzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2
+LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNT
+k2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgxMzU4NjYy
+MSwtNjMxMDAxNzc3LDg0OTM1ODE3NywtMTU2NTc0MjM3NiwtMT
+czNjM5NjM5NSwxNDQyNjkzOTg5LC02OTM5MjA1MTgsLTIyODUy
+NzAxMV19
 -->
