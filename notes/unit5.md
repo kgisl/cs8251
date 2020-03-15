@@ -636,7 +636,7 @@ int main(void) {
     } 
 
     fclose(cfPtr);  // fclose closes the file
-  }                 // end else
+  } // end else
 }  // end main
 
 ```
@@ -1759,11 +1759,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODgzNzkyMjUsOTM0MDE1MzYzLC03Mj
-AwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2
-MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsOD
-EzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQy
-Mzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOC
-wtMjI4NTI3MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1
-MDExMTI3XX0=
+eyJoaXN0b3J5IjpbMzAzMTMxMjcsLTE0ODgzNzkyMjUsOTM0MD
+E1MzYzLC03MjAwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEw
+LDE0NDcyNTE2MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5Mz
+M1NDcyNjUsODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3
+LC0xNTY1NzQyMzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5ODksLT
+Y5MzkyMDUxOCwtMjI4NTI3MDExLDE1Mzc0MjU1MTksLTI5MDU1
+MzcxMV19
 -->
