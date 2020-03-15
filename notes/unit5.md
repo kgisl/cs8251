@@ -169,14 +169,14 @@ main() {
 ```c
 #include<stdio.h>
 #include<conio.h>
-struct emp
+struct employee
 {
 	char name[10];
 	int age;
 };
 
 void main(){
-	struct emp e;
+	struct employee e;
 	FILE *p, *q;
 	p = fopen("one.txt", "a");
 	q = fopen("one.txt", "r");
@@ -1724,11 +1724,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1Nj
-U3NDIzNzYsLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIw
-NTE4LC0yMjg1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC
-03ODUwMTExMjcsLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0
-MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4Nz
-gsLTE3NjM4NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5
-ODI0MTc4NF19
+eyJoaXN0b3J5IjpbODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5Mz
+U4MTc3LC0xNTY1NzQyMzc2LC0xNzM2Mzk2Mzk1LDE0NDI2OTM5
+ODksLTY5MzkyMDUxOCwtMjI4NTI3MDExLDE1Mzc0MjU1MTksLT
+I5MDU1MzcxMSwtNzg1MDExMTI3LC0yNDI5Mzk4OTUsLTEyNTcx
+MTE3MzYsMjQ2NDMyNTIwLDc0OTc5ODE5NiwtMTU1OTYwNTUyMC
+wtODA4ODY5ODc4LC0xNzYzODc0OTg3LDIyMDM4MTc1LC02MDMw
+MTc5OTldfQ==
 -->
