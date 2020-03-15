@@ -419,7 +419,7 @@ as an argument. If function **fclose** is not called explicitly, the operating s
 	200 Doe 345.67
 	300 White 0.00
 	400 Stone -42.16
-	500 Rich      224.62
+	500 Rich 224.62
 
 
 ## File Access Modes
@@ -1738,7 +1738,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MTUzMDg0NiwtMTU5NjY3NjYzOCwtNj
+eyJoaXN0b3J5IjpbMTQ0NzI1MTYxOCwtMTU5NjY3NjYzOCwtNj
 k5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLTYzMTAwMTc3
 Nyw4NDkzNTgxNzcsLTE1NjU3NDIzNzYsLTE3MzYzOTYzOTUsMT
 Q0MjY5Mzk4OSwtNjkzOTIwNTE4LC0yMjg1MjcwMTEsMTUzNzQy
