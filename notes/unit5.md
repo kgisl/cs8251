@@ -581,7 +581,7 @@ data, and delete data no longer needed.
 
 ## Creating Random Access File
 
-Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function fread transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using 
+Function **fwrite** transfers a specified number of bytes beginning at a specified location in memory to a file. The data is written beginning at the location in the file indicated by the file position pointer. Function **fread** transfers a specified number of bytes from the location in the file specified by the file position pointer to an area in memory beginning with a specified address. Now, when writing an integer, instead of using 
 
 	fprintf(fPtr, "%d", number);
 
@@ -1759,7 +1759,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDI4MDg0MDksOTM0MDE1MzYzLC03Mj
+eyJoaXN0b3J5IjpbLTE0ODgzNzkyMjUsOTM0MDE1MzYzLC03Mj
 AwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2
 MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsOD
 EzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQy
