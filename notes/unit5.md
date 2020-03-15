@@ -515,28 +515,40 @@ The next program reads five (or more) integer values from the data file `num.dat
 
 ```c
 
+/* Program to read from the num.dat file
+ * and find the average of the numbers 
+ */ 
+
+#include <stdio.h>
+#include <stdlib.h> 
+
+#define DATAFILE "prog15.dat"
+
 int main() {
   FILE* fp;
   int n[50], i = 0;
   float sum = 0;
-  if ((fp = fopen("num.dat", "r")) != NULL) {
-    puts("Reading numbers from num.dat");
-    while (!feof(fp)) {
-      fscanf(fp, "%d ", &n[i]);
-      printf("%d %d\n", i, n[i]);
-      sum += n[i];
-      i++;
-    }
-    fclose(fp);
+  if ((fp = fopen(DATAFILE, "r")) == NULL) {
+    printf("Unable to open %s...\n", DATAFILE);
+    exit(0);
+  }
+  puts("Reading numbers from num.dat");
+  while (!feof(fp)) {
+    fscanf(fp, "%d ", &n[i]);
+    printf("%d %d\n", i, n[i]);
+    sum += n[i];
+    i++;
+  }
+  fclose(fp);
 
-    if (i > 0) {
-      float average = sum / i;
-      printf("The average is %f for %d numbers\n", average, i);
-    } else {
-      puts("No data available in num.dat!");
-    }
-  } else
-    printf("Unable to open num.dat...\n");
+  // if no data is available in the file
+  if (i == 0)
+    printf("No data available in %s", DATAFILE);
+  
+  float average = sum / i;
+  printf("The average is %.3f for %d numbers\n", average, i);
+
+  return 0;
 }
 
 ```
@@ -1742,11 +1754,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM0MDE1MzYzLC03MjAwODcyNzYsLTE2Mj
-A4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2MTgsLTE1OTY2NzY2
-MzgsLTY5OTAxNjE2MCw5MzM1NDcyNjUsODEzNTg2NjIxLC02Mz
-EwMDE3NzcsODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNzM2Mzk2
-Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3MDExLD
-E1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC0yNDI5
-Mzk4OTVdfQ==
+eyJoaXN0b3J5IjpbMTU0MDc1MTQxNiw5MzQwMTUzNjMsLTcyMD
+A4NzI3NiwtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYx
+OCwtMTU5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MT
+M1ODY2MjEsLTYzMTAwMTc3Nyw4NDkzNTgxNzcsLTE1NjU3NDIz
+NzYsLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIwNTE4LC
+0yMjg1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC03ODUw
+MTExMjddfQ==
 -->
