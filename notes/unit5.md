@@ -141,7 +141,7 @@ Here fclose() function closes the file and returns **zero** on success, or **EOF
 
 **Input/Output operation on File**
 
-In the above table we have discussed about various file I/O functions to perform reading and writing on file. getc() and putc() are simplest functions used to read and write individual characters to a file.
+In the above table we have discussed about various file I/O functions to perform reading and writing on file. **getc**() and **putc**() are simplest functions used to read and write individual characters to a file.
 
 ```c
 #include <stdio.h>
@@ -1724,11 +1724,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ5MzU4MTc3LC0xNTY1NzQyMzc2LC0xNz
-M2Mzk2Mzk1LDE0NDI2OTM5ODksLTY5MzkyMDUxOCwtMjI4NTI3
-MDExLDE1Mzc0MjU1MTksLTI5MDU1MzcxMSwtNzg1MDExMTI3LC
-0yNDI5Mzk4OTUsLTEyNTcxMTE3MzYsMjQ2NDMyNTIwLDc0OTc5
-ODE5NiwtMTU1OTYwNTUyMCwtODA4ODY5ODc4LC0xNzYzODc0OT
-g3LDIyMDM4MTc1LC02MDMwMTc5OTksLTEzOTgyNDE3ODQsMTYz
-MDUzODc2MV19
+eyJoaXN0b3J5IjpbMTMxMjE1Mzg4OSw4NDkzNTgxNzcsLTE1Nj
+U3NDIzNzYsLTE3MzYzOTYzOTUsMTQ0MjY5Mzk4OSwtNjkzOTIw
+NTE4LC0yMjg1MjcwMTEsMTUzNzQyNTUxOSwtMjkwNTUzNzExLC
+03ODUwMTExMjcsLTI0MjkzOTg5NSwtMTI1NzExMTczNiwyNDY0
+MzI1MjAsNzQ5Nzk4MTk2LC0xNTU5NjA1NTIwLC04MDg4Njk4Nz
+gsLTE3NjM4NzQ5ODcsMjIwMzgxNzUsLTYwMzAxNzk5OSwtMTM5
+ODI0MTc4NF19
 -->
