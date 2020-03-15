@@ -420,11 +420,11 @@ Now let’s examine this program.
 - The function **feof** is used to determine whether the end-of-file indicator is set for the file to which stdin refers. The end-of-file indicator informs the program that there’s no more data to be processed. 
 	- In Fig. 11.2, the end-of-file indicator is set for the standard input when the user enters the end-of-file key combination. The argument to function **feof** is a pointer to the file being tested for the end-of-file indicator (stdin in this case). 
 	- The function returns a nonzero (true) value when the end-of-file indicator has been set; otherwise, the function returns zero. The while statement that includes the **feof** call in this program continues executing while the end-of-file indicator is not set.
-- Now, data to the file `clients.dat`. The data may be retrieved later by a program designed to read the file (see Section 11.4). Function **fprintf** is equivalent to printf except that **fprintf** also receives as an argument a file pointer for the file to which the data will be written. Function **fprintf** can output data to the standard output by using **stdout** as the file pointer, as in:
+- Now, data is written to the file `clients.dat`. The data may be retrieved later by a program designed to read the file (see Section 11.4). Function **fprintf** is equivalent to printf except that **fprintf** also receives as an argument a file pointer for the file to which the data will be written. Function **fprintf** can output data to the standard output by using **stdout** as the file pointer, as in:
 
 	`fprintf( stdout, "%d %s %.2f\n", account, name, balance );`
 
-After the user enters end-of-file, the program closes the **clients.dat** file with **fclose** and terminates. Function **fclose** also receives the file pointer (rather than the filename) as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
+- Finally, te program closes the **clients.dat** file with **fclose** and terminates. Function **fclose** also receives the file pointer (rather than the filename) as an argument. If function **fclose** is not called explicitly, the operating system normally will close the file when program execution terminates. This is an example of operating system “housekeeping.” 
 
 
 ## File Access Modes
@@ -1763,7 +1763,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMDcwNTQ2LDE2MDM3MjExMjQsMTkwMT
+eyJoaXN0b3J5IjpbNjYxODI3NDY4LDE2MDM3MjExMjQsMTkwMT
 Y4MjY0MywzMDMxMzEyNywtMTQ4ODM3OTIyNSw5MzQwMTUzNjMs
 LTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0Nz
 I1MTYxOCwtMTU5NjY3NjYzOCwtNjk5MDE2MTYwLDkzMzU0NzI2
