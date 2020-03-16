@@ -845,10 +845,11 @@ After **option 1** is chosen, the file **accounts.txt** contains:
 
 **Option 4** calls function deleteRecord to delete a record from the file. Deletion is accomplished by asking the user for the account number and reinitializing the record. If the account contains no information, deleteRecord displays an error message indicating that the account does not exist. 
 
-**Option 5** terminates program execution. The program is shown in Fig. 11.15. The file "credit.dat" is opened for update (reading and writing) using "rb+" mode.  
+**Option 5** terminates program execution. 
+
+The program is shown in Fig. 11.15. The file "credit.dat" is opened for update (reading and writing) using "rb+" mode (*very* important). 
 
 ```c
-
 // Bank-account program reads a random-access file sequentially,
 // updates data already written to the file, creates new data to
 // be placed in the file, and deletes data previously in the file.
@@ -879,30 +880,31 @@ int main(int argc, char *argv[]) {
     exit(-1);
   }
 
+  // enable user to specify action
   while ((choice = enterChoice()) != 5) {
     switch (choice) {
-      // create text file from record file
-      case 1:
-        textFile(cfPtr);
-        break;
-      // update record
-      case 2:
-        updateRecord(cfPtr);
-        break;
-      // create record
-      case 3:
-        newRecord(cfPtr);
-        break;
-      // delete existing record
-      case 4:
-        deleteRecord(cfPtr);
-        break;
-      // display message if user does not select valid choice
-      default:
-        puts("Incorrect choice");
-        break;
+    // create text file from record file
+    case 1:
+      textFile(cfPtr);
+      break;
+    // update record
+    case 2:
+      updateRecord(cfPtr);
+      break;
+    // create record
+    case 3:
+      newRecord(cfPtr);
+      break;
+    // delete existing record
+    case 4:
+      deleteRecord(cfPtr);
+      break;
+    // display if user does not select valid choice
+    default:
+      puts("Incorrect choice");
+      break;
     } // end switch
-  } // end while
+  }   // end while
 
   fclose(cfPtr); // fclose closes the file
 } // end main
@@ -911,7 +913,6 @@ int main(int argc, char *argv[]) {
 void textFile(FILE *readPtr) {
   FILE *writePtr; // accounts.txt file pointer
   int result;     // used to test whether fread read any bytes
-
   // create clientData with default information
   struct clientData client = {0, "", "", 0.0};
 
@@ -943,7 +944,6 @@ void textFile(FILE *readPtr) {
 void updateRecord(FILE *fPtr) {
   unsigned int account; // account number
   double transaction;   // transaction amount
-
   // create clientData with no information
   struct clientData client = {0, "", "", 0.0};
 
@@ -953,15 +953,12 @@ void updateRecord(FILE *fPtr) {
 
   // move file pointer to correct record in file
   fseek(fPtr, (account - 1) * sizeof(struct clientData), SEEK_SET);
-
   // read record from file
   fread(&client, sizeof(struct clientData), 1, fPtr);
-
   // display error if account does not exist
   if (client.acctNum == 0) {
     printf("Account #%d has no information.\n", account);
-  }      // end if
-  else { // update record
+  } else { // update record
     printf("%-6d%-16s%-11s%10.2f\n\n", client.acctNum, client.lastName,
            client.firstName, client.balance);
 
@@ -976,7 +973,6 @@ void updateRecord(FILE *fPtr) {
     // move file pointer to correct record in file
     // move back by 1 record length
     fseek(fPtr, -sizeof(struct clientData), SEEK_CUR);
-
     // write updated record over old record in file
     fwrite(&client, sizeof(struct clientData), 1, fPtr);
   } // end else
@@ -986,8 +982,7 @@ void updateRecord(FILE *fPtr) {
 void deleteRecord(FILE *fPtr) {
   struct clientData client; // stores record read from file
   struct clientData blankClient = {0, "", "", 0}; // blank client
-
-  unsigned int accountNum; // account number
+  unsigned int accountNum;                        // account number
 
   // obtain number of account to delete
   printf("%s", "Enter account number to delete ( 1 - 100 ): ");
@@ -995,10 +990,8 @@ void deleteRecord(FILE *fPtr) {
 
   // move file pointer to correct record in file
   fseek(fPtr, (accountNum - 1) * sizeof(struct clientData), SEEK_SET);
-
   // read record from file
   fread(&client, sizeof(struct clientData), 1, fPtr);
-
   // display error if record does not exist
   if (client.acctNum == 0) {
     printf("Account %d does not exist.\n", accountNum);
@@ -1016,7 +1009,6 @@ void deleteRecord(FILE *fPtr) {
 void newRecord(FILE *fPtr) {
   // create clientData with default information
   struct clientData client = {0, "", "", 0.0};
-
   unsigned int accountNum; // account number
 
   // obtain number of account to create
@@ -1025,10 +1017,8 @@ void newRecord(FILE *fPtr) {
 
   // move file pointer to correct record in file
   fseek(fPtr, (accountNum - 1) * sizeof(struct clientData), SEEK_SET);
-
   // read record from file
   fread(&client, sizeof(struct clientData), 1, fPtr);
-
   // display error if account already exists
   if (client.acctNum != 0) {
     printf("Account #%d already contains information.\n", client.acctNum);
@@ -1039,10 +1029,8 @@ void newRecord(FILE *fPtr) {
     scanf("%14s%9s%lf", client.lastName, client.firstName, &client.balance);
 
     client.acctNum = accountNum;
-
     // move file pointer to correct record in file
     fseek(fPtr, (client.acctNum - 1) * sizeof(struct clientData), SEEK_SET);
-
     // insert record in file
     fwrite(&client, sizeof(struct clientData), 1, fPtr);
   } // end else
@@ -1051,7 +1039,6 @@ void newRecord(FILE *fPtr) {
 // enable user to input menu choice
 unsigned int enterChoice(void) {
   unsigned int menuChoice; // variable to store user's choice
-
   // display available options
   printf("%s", "\nEnter your choice\n"
                "1 - store a formatted text file of accounts called\n"
@@ -1805,11 +1792,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mzg1ODQxODUsMjA0NjQyNjc1LDExNj
-g4MTcyNDIsMTY3MTcxMTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIx
-LDUyNTQ4NDYyNywyNjM2NTg3NywtNTc1MTA5MzY4LDE5NTg3Mz
-QwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkwOCwxMjM1MDY3MjI3
-LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLTU4OTAyMzgzMSwzND
-Q2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC01MDk1NTM0
-MDddfQ==
+eyJoaXN0b3J5IjpbNTQ5NDMzMjYzLC0xODM4NTg0MTg1LDIwND
+Y0MjY3NSwxMTY4ODE3MjQyLDE2NzE3MTE2MTgsMTYzODE2NTI4
+OCw2MDY2NzYyMSw1MjU0ODQ2MjcsMjYzNjU4NzcsLTU3NTEwOT
+M2OCwxOTU4NzM0MDY5LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgs
+MTIzNTA2NzIyNywxNjc1OTM0OTQ2LC0yMTE1NDU2ODI5LC01OD
+kwMjM4MzEsMzQ0NjE1OTQxLDIxMjYxNzQ5NTYsMjA1NDkwNDkw
+OV19
 -->
