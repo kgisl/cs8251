@@ -1070,6 +1070,7 @@ unsigned int enterChoice(void) {
 ### Sample Output
 ![trans](https://i.imgur.com/UT0q9AO.jpg)
 
+
 # Command line arguments
 
 **Command line arguments** are simply **arguments** that are specified after the name of the program in the system's **command line**, and these **argument** values are passed on to your program during program execution.
@@ -1803,11 +1804,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI1NDg0NjI3LDI2MzY1ODc3LC01NzUxMD
-kzNjgsMTk1ODczNDA2OSwtMTYyODMxMDAxMCwxMDU2MDAxOTA4
-LDEyMzUwNjcyMjcsMTY3NTkzNDk0NiwtMjExNTQ1NjgyOSwtNT
-g5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0OTU2LDIwNTQ5MDQ5
-MDksLTUwOTU1MzQwNywtMTc4NTQ4NjY0OCwtMTI2OTYyMTg1Mi
-wtMTcyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAzNzIxMTI0LDE5
-MDE2ODI2NDNdfQ==
+eyJoaXN0b3J5IjpbNjA2Njc2MjEsNTI1NDg0NjI3LDI2MzY1OD
+c3LC01NzUxMDkzNjgsMTk1ODczNDA2OSwtMTYyODMxMDAxMCwx
+MDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkzNDk0NiwtMjExNT
+Q1NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0OTU2
+LDIwNTQ5MDQ5MDksLTUwOTU1MzQwNywtMTc4NTQ4NjY0OCwtMT
+I2OTYyMTg1MiwtMTcyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAz
+NzIxMTI0XX0=
 -->
