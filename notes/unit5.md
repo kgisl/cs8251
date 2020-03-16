@@ -733,6 +733,8 @@ The function prototype for **fseek** is where offset is the number of bytes to s
 ### Sample Output 
 ![seqRand](https://i.imgur.com/UX7bpnJ.jpg)
 
+### Demo
+Run the `prog21` (source is `prog21.c`) program on http://j.mp/replUnit5 
 
 
 ## Reading Random Access Data 
@@ -1795,11 +1797,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDIzODE1NzMsLTE2MjgzMTAwMTAsMT
-A1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0
-NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1Ni
-wyMDU0OTA0OTA5LC01MDk1NTM0MDcsLTE3ODU0ODY2NDgsLTEy
-Njk2MjE4NTIsLTE3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYwMz
-cyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1
-LDkzNDAxNTM2M119
+eyJoaXN0b3J5IjpbMTk1ODczNDA2OSwtMTYyODMxMDAxMCwxMD
+U2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkzNDk0NiwtMjExNTQ1
+NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0OTU2LD
+IwNTQ5MDQ5MDksLTUwOTU1MzQwNywtMTc4NTQ4NjY0OCwtMTI2
+OTYyMTg1MiwtMTcyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAzNz
+IxMTI0LDE5MDE2ODI2NDMsMzAzMTMxMjcsLTE0ODgzNzkyMjUs
+OTM0MDE1MzYzXX0=
 -->
