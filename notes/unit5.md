@@ -238,7 +238,7 @@ Storage of data in variables and arrays is temporary—such data is lost when a 
 
 ### File Extensions
 File extensions
-We can usually tell if a file is binary or text based on its file extension. This is because by convention the extension reflects the file format, and it is ultimately the file format that dictates whether the file data is binary or text.
+We can usually tell if a file is binary or text based on its file extension. This is because by convention the extension reflects the file format, but *ultimately* it is the file format that dictates whether the file data is binary or text.
 
 Common extensions that are binary file formats:
 
@@ -1767,11 +1767,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTI5NTcwNSwtMTM3MDA3MDU0MSwxND
-Q1NjgyMjIzLC03Nzc3ODE0MTEsLTI3ODQ1NDk0OCwtNTUwMjYw
-MzA0LC0xOTkxODczNzA5LC0xODM4NTg0MTg1LDIwNDY0MjY3NS
-wxMTY4ODE3MjQyLDE2NzE3MTE2MTgsMTYzODE2NTI4OCw2MDY2
-NzYyMSw1MjU0ODQ2MjcsMjYzNjU4NzcsLTU3NTEwOTM2OCwxOT
-U4NzM0MDY5LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2
-NzIyN119
+eyJoaXN0b3J5IjpbMTE4OTkwNTY5NSwtMTUxMjk1NzA1LC0xMz
+cwMDcwNTQxLDE0NDU2ODIyMjMsLTc3Nzc4MTQxMSwtMjc4NDU0
+OTQ4LC01NTAyNjAzMDQsLTE5OTE4NzM3MDksLTE4Mzg1ODQxOD
+UsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwxNjM4
+MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NTg3NywtNT
+c1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAw
+MTkwOF19
 -->
