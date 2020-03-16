@@ -729,6 +729,8 @@ The function prototype for **fseek** is where offset is the number of bytes to s
  - Function **fseek** returns a nonzero value if the seek operation cannot be performed.
  - Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
+A sample execution is shown below the code.
+
 ### Sample Output 
 ![seqRand](https://i.imgur.com/UX7bpnJ.jpg)
 
@@ -797,13 +799,6 @@ int main(void) {
 **Sample Output**
 
 ![prog22](https://i.imgur.com/UbhkekT.jpg)
-
-	Acct Last Name First Name Balance
-	  29 Brown     Nancy      -24.54
-	  33 Dunn      Stacey     314.33
-	  37 Barker    Doug         0.00
-	  88 Smith     Dave       258.34
-	  96 Stone     Sam         34.98
 	
 **Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2)**
 
@@ -811,7 +806,6 @@ int main(void) {
 Run `prog22` on http://j.mp/replUnit5 
 
 ## Transaction processing using random access files 
-
 
 We now present a substantial transaction-processing program using **random access** files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 (see program under ["Creating Random Access File"](#creating-random-access-file) heading) has been executed to create the file **credit.dat**.
 
@@ -1786,7 +1780,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyODM3Nzc2MiwtMTk5MTg3MzcwOSwtMT
+eyJoaXN0b3J5IjpbLTU1MDI2MDMwNCwtMTk5MTg3MzcwOSwtMT
 gzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0MiwxNjcxNzEx
 NjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNTI1NDg0NjI3LDI2Mz
 Y1ODc3LC01NzUxMDkzNjgsMTk1ODczNDA2OSwtMTYyODMxMDAx
