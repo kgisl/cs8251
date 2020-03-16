@@ -901,7 +901,7 @@ int main(int argc, char *argv[]) {
       default:
         puts("Incorrect choice");
         break;
-     } // end switch
+    } // end switch
   } // end while
 
   fclose(cfPtr); // fclose closes the file
@@ -1805,11 +1805,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc1OTgxNTc3LDIwNDY0MjY3NSwxMTY4OD
-E3MjQyLDE2NzE3MTE2MTgsMTYzODE2NTI4OCw2MDY2NzYyMSw1
-MjU0ODQ2MjcsMjYzNjU4NzcsLTU3NTEwOTM2OCwxOTU4NzM0MD
-Y5LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIyNywx
-Njc1OTM0OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMzQ0Nj
-E1OTQxLDIxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3
-XX0=
+eyJoaXN0b3J5IjpbLTE4Mzg1ODQxODUsMjA0NjQyNjc1LDExNj
+g4MTcyNDIsMTY3MTcxMTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIx
+LDUyNTQ4NDYyNywyNjM2NTg3NywtNTc1MTA5MzY4LDE5NTg3Mz
+QwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkwOCwxMjM1MDY3MjI3
+LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLTU4OTAyMzgzMSwzND
+Q2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC01MDk1NTM0
+MDddfQ==
 -->
