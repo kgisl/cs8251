@@ -79,7 +79,8 @@
       <p><img src="http://bit.ly/unit5Words" alt="cloud"></p>
 <h1 id="unit-v-file-processing">UNIT V FILE PROCESSING</h1>
 <p><em>Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments</em></p>
-<p><a href="http://j.mp/memUnit5">http://j.mp/memUnit5</a>  -50 flashcards to review the contents of file.</p>
+<p><a href="http://j.mp/memUnit5">http://j.mp/memUnit5</a>  -50 flashcards to review the contents of this unit.<br>
+<a href="http://j.mp/replUnit5">http://j.mp/replUnit5</a> - list of illustrative C programs provided in this unit.</p>
 <p><strong>Table of Contents</strong></p>
 <ul>
 <li><a href="#unit-v-file-processing">UNIT V FILE PROCESSING</a>
@@ -1210,16 +1211,25 @@ Enter lastname, firstname, balance
 <pre class=" language-c"><code class="prism  language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s: "</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">if</span><span class="token punctuation">(</span>argc <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"The argument supplied is %s\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>argc <span class="token operator">&gt;</span> <span class="token number">2</span><span class="token punctuation">)</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Too many arguments supplied.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">else</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"One argument expected.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s: '%s' is the last argument!\n"</span><span class="token punctuation">,</span> 
+    argv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span>argc<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
+
 </code></pre>
-<p>Note that <code>*argv[0]</code> is the name of the program invoked, which means that <code>*argv[1]</code> is a pointer to the first argument supplied, and <code>*argv[n]</code> is the last argument. If no arguments are supplied, <code>argc</code> will be <code>1</code>. Thus for <code>n</code> arguments, <code>argc</code> will be equal to <code>n + 1</code>.</p>
+<p>Note that <code>argv[0]</code> is the name of the program invoked, which means that <code>argv[1]</code> is a pointer to the first argument supplied, and <code>argv[argc-1]</code> is a pointer to the last argument. If no arguments are supplied, <code>argc</code> will be <code>1</code>. Thus for <code>n</code> arguments, <code>argc</code> will be equal to <code>n + 1</code>.</p>
+<h3 id="sample-output-4">Sample Output</h3>
+<p><img src="https://i.imgur.com/FNss2oE.jpg" alt="cargs"></p>
+<h3 id="demo-5">Demo</h3>
+<p>Compile and run <code>prog31</code> in <a href="http://j.mp/replUnit5">http://j.mp/replUnit5</a></p>
 <h2 id="another-example">Another example</h2>
 <p>Review the <a href="https://github.com/kgisl/cs8251/blob/master/code/argsort.c">argument sorting program</a> to see how <code>argc</code> and <code>argv[]</code> are used to pass as arguments for <code>qsort</code> which sorts the input command line arguments.</p>
 <h2 id="program-5.3">Program 5.3</h2>
