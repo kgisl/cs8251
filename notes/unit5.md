@@ -875,7 +875,7 @@ int main(int argc, char *argv[]) {
   unsigned int choice; // user's choice
 
   // fopen opens the file; exits if file cannot be opened
-  // Do not change the mode "rb+"
+  // Do not change the mode "rb+" - it will not work!
   if ((cfPtr = fopen("credit.dat", "rb+")) == NULL) {
     printf("%s: File could not be opened.\n", argv[0]);
     exit(-1);
@@ -1787,11 +1787,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0Mjk3MDM1OCwtMTk5MTg3MzcwOSwtMT
-gzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0MiwxNjcxNzEx
-NjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNTI1NDg0NjI3LDI2Mz
-Y1ODc3LC01NzUxMDkzNjgsMTk1ODczNDA2OSwtMTYyODMxMDAx
-MCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkzNDk0NiwtMj
-ExNTQ1NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0
-OTU2XX0=
+eyJoaXN0b3J5IjpbNjQ5MTE0NDMsLTE5OTE4NzM3MDksLTE4Mz
+g1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYx
+OCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NT
+g3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAs
+MTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMT
+U0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1
+Nl19
 -->
