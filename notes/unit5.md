@@ -1163,6 +1163,7 @@ int main(int argc, char *argv[]) {
 
   fclose(outFilePtr); // close the output file
   fclose(inFilePtr);  // close the input file
+  return 0;
 } // end of main
 ```
 
@@ -1790,11 +1791,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ1NTg0OTM0LDE2NzU5MzQ5NDYsLTIxMT
-U0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1
-NiwyMDU0OTA0OTA5LC01MDk1NTM0MDcsLTE3ODU0ODY2NDgsLT
-EyNjk2MjE4NTIsLTE3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYw
-MzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5Mj
-I1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC0xNjIwODA5NjQzLDgw
-MDI3NzIxMF19
+eyJoaXN0b3J5IjpbMTIzNTA2NzIyNywxNjc1OTM0OTQ2LC0yMT
+E1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQxLDIxMjYxNzQ5
+NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNzg1NDg2NjQ4LC
+0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkwNTYwNTY4LDE2
+MDM3MjExMjQsMTkwMTY4MjY0MywzMDMxMzEyNywtMTQ4ODM3OT
+IyNSw5MzQwMTUzNjMsLTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4
+MDAyNzcyMTBdfQ==
 -->
