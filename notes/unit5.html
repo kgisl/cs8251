@@ -345,7 +345,7 @@ FILE <span class="token operator">*</span>bfp <span class="token operator">=</sp
 <p>Storage of data in variables and arrays is temporary—such data is lost when a program terminates. Files are used for permanent retention of data. Computers store files on secondary storage devices, such as hard drives, CDs, DVDs and flash drives. In this chapter, we explain how data files are created, updated and processed by C programs. We consider both sequential-access and random-access file processing.</p>
 <h3 id="file-extensions">File Extensions</h3>
 <p>File extensions<br>
-We can usually tell if a file is binary or text based on its file extension. This is because by convention the extension reflects the file format, and it is ultimately the file format that dictates whether the file data is binary or text.</p>
+We can usually tell if a file is binary or text based on its file extension. This is because by convention the extension reflects the file format, but <em>ultimately</em> it is the file format that dictates whether the file data is binary or text.</p>
 <p>Common extensions that are binary file formats:</p>
 <pre><code>Images: jpg, png, gif, bmp, tiff, psd, ...
 Videos: mp4, mkv, avi, mov, mpg, vob, ...
@@ -565,7 +565,7 @@ Enter EOF to end input.
 <table>
 <thead>
 <tr>
-<th align="left">Mode</th>
+<th align="left">Text Mode</th>
 <th align="left">Description</th>
 </tr>
 </thead>
@@ -590,16 +590,10 @@ Enter EOF to end input.
 <td align="left">w+</td>
 <td align="left">Create a file for update. If the file already exists, discard the current contents.</td>
 </tr>
-</tbody>
-</table>
-<table>
-<thead>
 <tr>
-<th align="left">Mode</th>
-<th align="left">Description</th>
+<td align="left"><strong>Binary Mode</strong></td>
+<td align="left"><strong>Description</strong></td>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td align="left">rb</td>
 <td align="left">opens a binary file in reading mode</td>
