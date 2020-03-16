@@ -1127,20 +1127,20 @@ Run `prog32` in http://j.mp/replUnit5
 - Then the program terminates. The result is an exact copy of file input (if no errors occur during processing).  
 
 ```c
-/* Program to copy contents from one file to 
- * another using command line arguments 
- * 
+/* Program to copy contents from one file to
+ * another using command line arguments
+ *
  * Usage: mycopy file1.dat file2.dat
  *
- */ 
- 
+ */
+
 #include <stdio.h>
-#include <stdlib.h> 
+#include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-  FILE *inFilePtr;   // input file pointer
-  FILE *outFilePtr;  // output file pointer
-  int c;             // to hold characters read from the source file
+  FILE *inFilePtr;  // input file pointer
+  FILE *outFilePtr; // output file pointer
+  int c;            // to hold chars read from the source file
 
   // check number of command-line arguments
   if (argc != 3) {
@@ -1157,14 +1157,13 @@ int main(int argc, char *argv[]) {
     printf("File \"%s\" could not be opened\n", argv[2]);
     exit(-1);
   }
-      // read and output characters
+  // read and output characters
   while ((c = fgetc(inFilePtr)) != EOF)
     fputc(c, outFilePtr);
-  
-  fclose(outFilePtr);  // close the output file
-  fclose(inFilePtr);  // close the input file
-} // end of main 
 
+  fclose(outFilePtr); // close the output file
+  fclose(inFilePtr);  // close the input file
+} // end of main
 ```
 
 ### Sample Output
@@ -1791,11 +1790,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMDY2NDc0OSwxNjc1OTM0OTQ2LC0yMT
-E1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQxLDIxMjYxNzQ5
-NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNzg1NDg2NjQ4LC
-0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkwNTYwNTY4LDE2
-MDM3MjExMjQsMTkwMTY4MjY0MywzMDMxMzEyNywtMTQ4ODM3OT
-IyNSw5MzQwMTUzNjMsLTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4
-MDAyNzcyMTBdfQ==
+eyJoaXN0b3J5IjpbNTQ1NTg0OTM0LDE2NzU5MzQ5NDYsLTIxMT
+U0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1
+NiwyMDU0OTA0OTA5LC01MDk1NTM0MDcsLTE3ODU0ODY2NDgsLT
+EyNjk2MjE4NTIsLTE3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYw
+MzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5Mj
+I1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC0xNjIwODA5NjQzLDgw
+MDI3NzIxMF19
 -->
