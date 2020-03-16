@@ -46,7 +46,7 @@ http://j.mp/replUnit5 - list of illustrative C programs provided in this unit.
 
 ## Pre-Unit exercise - a "Show and Tell" exercise
 
-A template repo titled "Challenge 3 - Learning about Files" is available in the [Projects section](http://j.mp/project8251) - please read the `README.md` for instructions. 
+A template repo titled **Challenge 3 - Learning about Files** is available in the [Projects section](http://j.mp/project8251) - please read the [README.md]([https://github.com/kgisl/filesOCR/blob/master/README.md#handwritten-image-and-its-ocred-text-file](https://github.com/kgisl/filesOCR/blob/master/README.md#handwritten-image-and-its-ocred-text-file)) for instructions. 
 
 ## Post-Unit exercise
 <!---
@@ -1767,11 +1767,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzAwNzA1NDEsMTQ0NTY4MjIyMywtNz
-c3NzgxNDExLC0yNzg0NTQ5NDgsLTU1MDI2MDMwNCwtMTk5MTg3
-MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0Mi
-wxNjcxNzExNjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNTI1NDg0
-NjI3LDI2MzY1ODc3LC01NzUxMDkzNjgsMTk1ODczNDA2OSwtMT
-YyODMxMDAxMCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkz
-NDk0Nl19
+eyJoaXN0b3J5IjpbLTE1MTI5NTcwNSwtMTM3MDA3MDU0MSwxND
+Q1NjgyMjIzLC03Nzc3ODE0MTEsLTI3ODQ1NDk0OCwtNTUwMjYw
+MzA0LC0xOTkxODczNzA5LC0xODM4NTg0MTg1LDIwNDY0MjY3NS
+wxMTY4ODE3MjQyLDE2NzE3MTE2MTgsMTYzODE2NTI4OCw2MDY2
+NzYyMSw1MjU0ODQ2MjcsMjYzNjU4NzcsLTU3NTEwOTM2OCwxOT
+U4NzM0MDY5LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2
+NzIyN119
 -->
