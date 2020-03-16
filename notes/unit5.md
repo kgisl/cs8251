@@ -1081,19 +1081,25 @@ A simple example follows, which checks to see if a single argument is supplied o
 The actual `C` code for the program is presented below: 
 
 ```c
+#include <stdio.h>
+
 int main(int argc, char *argv[]) {
   printf("%s: ", argv[0]);
   if(argc == 2)
-    printf("The argument supplied is %s.\n", argv[1]);
+    printf("The argument supplied is %s\n", argv[1]);
   else if(argc > 2)
     printf("Too many arguments supplied.\n");
   else
     printf("One argument expected.\n");
+  
+  printf("%s: '%s' is the last argument!\n", 
+    argv[0], argv[argc-1]);
   return 0;
 }
+
 ```
 
-Note that `argv[0]` is the name of the program invoked, which means that `argv[1]` is a pointer to the first argument supplied, and `argv[argc]` is a pointer to the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
+Note that `argv[0]` is the name of the program invoked, which means that `argv[1]` is a pointer to the first argument supplied, and `argv[argc-1]` is a pointer to the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
 
 ### Sample Output
 ![cargs](https://i.imgur.com/FNss2oE.jpg)
@@ -1773,11 +1779,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLT
-E3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAx
-NjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2My
-wtNzIwMDg3Mjc2LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3
-MjUxNjE4LC0xNTk2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3Mj
-Y1LDgxMzU4NjYyMSwtNjMxMDAxNzc3LDg0OTM1ODE3NywtMTU2
-NTc0MjM3Nl19
+eyJoaXN0b3J5IjpbLTUwOTU1MzQwNywtMTc4NTQ4NjY0OCwtMT
+I2OTYyMTg1MiwtMTcyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAz
+NzIxMTI0LDE5MDE2ODI2NDMsMzAzMTMxMjcsLTE0ODgzNzkyMj
+UsOTM0MDE1MzYzLC03MjAwODcyNzYsLTE2MjA4MDk2NDMsODAw
+Mjc3MjEwLDE0NDcyNTE2MTgsLTE1OTY2NzY2MzgsLTY5OTAxNj
+E2MCw5MzM1NDcyNjUsODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5
+MzU4MTc3XX0=
 -->
