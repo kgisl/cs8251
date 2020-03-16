@@ -20,8 +20,10 @@ Introduction to functions: Function prototype, function definition, function cal
 ## UNIT IV STRUCTURES 9
 Structure - Nested structures – Pointer and Structures – Array of structures – *Example Program using structures and* *pointers* – Self referential structures – Dynamic memory allocation - *Example Program: [Singly linked list][8a]* and [concept][8b]- typedef
 
-## UNIT V FILE PROCESSING 9
+## [UNIT V FILE PROCESSING 9](http://j.mp/unit5Easy)
 Files – Types of file processing: Sequential access, Random access – Sequential access file -  *Example* *Program: Finding average of numbers stored in  sequential access file* - Random access file - *Example Program:  Transaction processing using* *random access files* – Command line arguments
+
+http://j.mp/unit5Easy 
 
 ## OUTCOMES:
 ### Upon completion of the course, the students will be able to
@@ -83,7 +85,7 @@ Programming with C",McGraw-Hill Education, 1996.
 [7]: http://j.mp/simpleCalculatorCC 
 [7a]:  http://j.mp/sineSeriesCC
 [7b]: http://j.mp/scalculatorCC
-[8]: http://j.mp/sortUnix 
+[8]: http://j.mp/selectionSortC 
 [9]: http://www.eng.uerj.br/~fariasol/disciplinas/LABPROG/C_language/Kernighan_and_Ritchie/solved-exercises/solved-exercises.html/
 [8a]: http://bit.ly/linkedStack
 [8b]: https://github.com/kgisl/cs8251/blob/master/files/monkeys.pdf
