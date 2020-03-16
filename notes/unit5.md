@@ -420,7 +420,7 @@ If an error occurs while opening a file in any mode, fopen returns **NULL**.
 |a, a+ 	| Append: open or create a file for writing at the end of the file.
 |r+		| Open an existing file for update (reading and writing).
 |w+		| Create a file for update. If the file already exists, discard the current contents.
-|Binary Mode 	| Description |
+|**Binary Mode** 	| **Description** |
 |rb 		 | opens a binary file in reading mode |
 |wb		 | opens or create a binary file in writing mode |
 |ab, ab+ | opens a binary file in append mode |
@@ -1765,7 +1765,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTEyOTI1ODYsMTE4OTkwNTY5NSwtMT
+eyJoaXN0b3J5IjpbLTExMjI5NjE5NjIsMTE4OTkwNTY5NSwtMT
 UxMjk1NzA1LC0xMzcwMDcwNTQxLDE0NDU2ODIyMjMsLTc3Nzc4
 MTQxMSwtMjc4NDU0OTQ4LC01NTAyNjAzMDQsLTE5OTE4NzM3MD
 ksLTE4Mzg1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3
