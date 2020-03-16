@@ -818,7 +818,7 @@ We now present a substantial transaction-processing program using **random acces
 
 The program has five options. 
   
-**Option 1** calls function `textFile`  to store a formatted list of all the accounts (typically called a report) in a text file called accounts.txt that may be printed later. The function uses fread and the sequential file access techniques used in the program of Section below. 
+**Option 1** calls function `textFile`  to store a formatted list of all the accounts (typically called a report) in a text file called `accounts.txt` that may be printed later. The function uses `fread` and the sequential file access techniques used in the program of Section below. 
 
 After **option 1** is chosen, the file **accounts.txt** contains:
 
@@ -829,15 +829,15 @@ After **option 1** is chosen, the file **accounts.txt** contains:
 		88   Smith     Dave         258.34
 		96   Stone     Sam           34.98
 
-**Option 2** calls the function **updateRecord** (lines 97–141) to update an account. The function will update only a record that already exists, so the function first checks whether the record specified by the user is empty. The record is read into structure client with fread, then member acctNum is compared to 0. If it’s 0, the record contains no information, and a message is printed stating that the record is empty. Then the menu choices are displayed. If the record contains information, function updateRecord inputs the transaction amount, calculates the new balance and rewrites the record to the file. A typical output for option 2 is
+**Option 2** calls the function **updateRecord**  to update an account. The function will update only a record that already exists, so the function first checks whether the record specified by the user is empty. The record is read into structure client with fread, then member acctNum is compared to 0. If it’s 0, the record contains no information, and a message is printed stating that the record is empty. Then the menu choices are displayed. If the record contains information, function updateRecord inputs the transaction amount, calculates the new balance and rewrites the record to the file. A typical output for option 2 is
 
 	Enter account to update ( 1 - 100 ): 37
 	37 Barker Doug 0.00
 	Enter charge ( + ) or payment ( - ): +87.99
-	37 Barker Do
+	37 Barker Doug 87.99
 
 
-**Option 3** calls the function newRecord to add a new account to the file. If the user enters an account number for an existing account, newRecord displays an error message indicating that the record already contains information, and the menu choices are printed again. This function uses the same process to add a new account as does the program in Fig. 11.11. A typical output for option 3 is
+**Option 3** calls the function **newRecord** to add a new account to the file. If the user enters an account number for an existing account, newRecord displays an error message indicating that the record already contains information, and the menu choices are printed again. This function uses the same process to add a new account as does the program in Fig. 11.11. A typical output for option 3 is
 
 	Enter new account number ( 1 - 100 ): 22
 	Enter lastname, firstname, balance
@@ -1786,11 +1786,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjQ2Njg0NzYsLTE5OTE4NzM3MDksLT
-E4Mzg1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcx
-MTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNj
-M2NTg3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAw
-MTAsMTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLT
-IxMTU0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3
-NDk1Nl19
+eyJoaXN0b3J5IjpbODYzNDY5MDAsLTE5OTE4NzM3MDksLTE4Mz
+g1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYx
+OCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NT
+g3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAs
+MTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMT
+U0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1
+Nl19
 -->
