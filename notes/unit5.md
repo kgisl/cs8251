@@ -100,7 +100,7 @@ In C language, we use a structure **pointer of file type** to declare a file.
 
 		FILE *fp;
 
-C provides a number of functions that helps to perform basic file operations. Following are the functions,
+C provides a number of functions that helps to perform basic file operations. Following are the functions,  [FILE]
 
 |Function 	 |description    | Prototype |
 |:-----------|:--------------|:--------|
@@ -1806,11 +1806,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzODE2NTI4OCw2MDY2NzYyMSw1MjU0OD
-Q2MjcsMjYzNjU4NzcsLTU3NTEwOTM2OCwxOTU4NzM0MDY5LC0x
-NjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIyNywxNjc1OT
-M0OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQx
-LDIxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNz
-g1NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkw
-NTYwNTY4XX0=
+eyJoaXN0b3J5IjpbMTY3MTcxMTYxOCwxNjM4MTY1Mjg4LDYwNj
+Y3NjIxLDUyNTQ4NDYyNywyNjM2NTg3NywtNTc1MTA5MzY4LDE5
+NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkwOCwxMjM1MD
+Y3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLTU4OTAyMzgz
+MSwzNDQ2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC01MD
+k1NTM0MDcsLTE3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLTE3MjI0
+OTY2ODBdfQ==
 -->
