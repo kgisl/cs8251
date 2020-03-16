@@ -982,14 +982,14 @@ Enter lastname, firstname, balance
 <span class="token comment">// updates data already written to the file, creates new data to</span>
 <span class="token comment">// be placed in the file, and deletes data previously in the file.</span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
-
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
 <span class="token comment">// clientData structure definition</span>
 <span class="token keyword">struct</span> clientData <span class="token punctuation">{</span>
-  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> acctNum<span class="token punctuation">;</span>  <span class="token comment">// account number</span>
-  <span class="token keyword">char</span> lastName<span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// account last name</span>
-  <span class="token keyword">char</span> firstName<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token comment">// account first name</span>
-  <span class="token keyword">double</span> balance<span class="token punctuation">;</span>        <span class="token comment">// account balance</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>                       <span class="token comment">// end structure clientData</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> acctNum<span class="token punctuation">;</span> <span class="token comment">// account number</span>
+  <span class="token keyword">char</span> lastName<span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token comment">// account last name</span>
+  <span class="token keyword">char</span> firstName<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment">// account first name</span>
+  <span class="token keyword">double</span> balance<span class="token punctuation">;</span>       <span class="token comment">// account balance</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>                      <span class="token comment">// end structure clientData</span>
 
 <span class="token comment">// prototypes</span>
 <span class="token keyword">unsigned</span> <span class="token keyword">int</span> <span class="token function">enterChoice</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -998,49 +998,49 @@ Enter lastname, firstname, balance
 <span class="token keyword">void</span> <span class="token function">newRecord</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>fPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">void</span> <span class="token function">deleteRecord</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>fPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  FILE <span class="token operator">*</span>cfPtr<span class="token punctuation">;</span>          <span class="token comment">// credit.dat file pointer</span>
-  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> choice<span class="token punctuation">;</span>  <span class="token comment">// user's choice</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  FILE <span class="token operator">*</span>cfPtr<span class="token punctuation">;</span>         <span class="token comment">// credit.dat file pointer</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> choice<span class="token punctuation">;</span> <span class="token comment">// user's choice</span>
 
   <span class="token comment">// fopen opens the file; exits if file cannot be opened</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>cfPtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"credit.dat"</span><span class="token punctuation">,</span> <span class="token string">"rb+"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"File could not be opened."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>  <span class="token comment">// end if</span>
-  <span class="token keyword">else</span> <span class="token punctuation">{</span>
-    <span class="token comment">// enable user to specify action</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>choice <span class="token operator">=</span> <span class="token function">enterChoice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">switch</span> <span class="token punctuation">(</span>choice<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// create text file from record file</span>
-        <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
-          <span class="token function">textFile</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token comment">// update record</span>
-        <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
-          <span class="token function">updateRecord</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token comment">// create record</span>
-        <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
-          <span class="token function">newRecord</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token comment">// delete existing record</span>
-        <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
-          <span class="token function">deleteRecord</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">break</span><span class="token punctuation">;</span>
-        <span class="token comment">// display message if user does not select valid choice</span>
-        <span class="token keyword">default</span><span class="token punctuation">:</span>
-          <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Incorrect choice"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">break</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>  <span class="token comment">// end switch</span>
-    <span class="token punctuation">}</span>    <span class="token comment">// end while</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s: File could not be opened.\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-    <span class="token function">fclose</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// fclose closes the file</span>
-  <span class="token punctuation">}</span>                 <span class="token comment">// end else</span>
-<span class="token punctuation">}</span>  <span class="token comment">// end main</span>
+  <span class="token comment">// enable user to specify action</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>choice <span class="token operator">=</span> <span class="token function">enterChoice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>choice<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// create text file from record file</span>
+    <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span>
+      <span class="token function">textFile</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token comment">// update record</span>
+    <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span>
+      <span class="token function">updateRecord</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token comment">// create record</span>
+    <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span>
+      <span class="token function">newRecord</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token comment">// delete existing record</span>
+    <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span>
+      <span class="token function">deleteRecord</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token comment">// display message if user does not select valid choice</span>
+    <span class="token keyword">default</span><span class="token punctuation">:</span>
+      <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Incorrect choice"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token comment">// end switch</span>
+  <span class="token punctuation">}</span>   <span class="token comment">// end while</span>
+
+  <span class="token function">fclose</span><span class="token punctuation">(</span>cfPtr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// fclose closes the file</span>
+<span class="token punctuation">}</span> <span class="token comment">// end main</span>
 
 <span class="token comment">// create formatted text file for printing</span>
 <span class="token keyword">void</span> <span class="token function">textFile</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>readPtr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  FILE <span class="token operator">*</span>writePtr<span class="token punctuation">;</span>  <span class="token comment">// accounts.txt file pointer</span>
-  <span class="token keyword">int</span> result<span class="token punctuation">;</span>      <span class="token comment">// used to test whether fread read any bytes</span>
+  FILE <span class="token operator">*</span>writePtr<span class="token punctuation">;</span> <span class="token comment">// accounts.txt file pointer</span>
+  <span class="token keyword">int</span> result<span class="token punctuation">;</span>     <span class="token comment">// used to test whether fread read any bytes</span>
 
   <span class="token comment">// create clientData with default information</span>
   <span class="token keyword">struct</span> clientData client <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -1048,9 +1048,9 @@ Enter lastname, firstname, balance
   <span class="token comment">// fopen opens the file; exits if file cannot be opened</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>writePtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"accounts.txt"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"File could not be opened."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>  <span class="token comment">// end if</span>
+  <span class="token punctuation">}</span> <span class="token comment">// end if</span>
   <span class="token keyword">else</span> <span class="token punctuation">{</span>
-    <span class="token function">rewind</span><span class="token punctuation">(</span>readPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// sets pointer to beginning of file</span>
+    <span class="token function">rewind</span><span class="token punctuation">(</span>readPtr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// sets pointer to beginning of file</span>
     <span class="token function">fprintf</span><span class="token punctuation">(</span>writePtr<span class="token punctuation">,</span> <span class="token string">"%-6s%-16s%-11s%10s\n"</span><span class="token punctuation">,</span> <span class="token string">"Acct"</span><span class="token punctuation">,</span> <span class="token string">"Last Name"</span><span class="token punctuation">,</span> <span class="token string">"First Name"</span><span class="token punctuation">,</span>
             <span class="token string">"Balance"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -1062,17 +1062,17 @@ Enter lastname, firstname, balance
       <span class="token keyword">if</span> <span class="token punctuation">(</span>result <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> client<span class="token punctuation">.</span>acctNum <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">fprintf</span><span class="token punctuation">(</span>writePtr<span class="token punctuation">,</span> <span class="token string">"%-6d%-16s%-11s%10.2f\n"</span><span class="token punctuation">,</span> client<span class="token punctuation">.</span>acctNum<span class="token punctuation">,</span>
                 client<span class="token punctuation">.</span>lastName<span class="token punctuation">,</span> client<span class="token punctuation">.</span>firstName<span class="token punctuation">,</span> client<span class="token punctuation">.</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>  <span class="token comment">// end if</span>
-    <span class="token punctuation">}</span>    <span class="token comment">// end while</span>
+      <span class="token punctuation">}</span> <span class="token comment">// end if</span>
+    <span class="token punctuation">}</span>   <span class="token comment">// end while</span>
 
-    <span class="token function">fclose</span><span class="token punctuation">(</span>writePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// fclose closes the file</span>
-  <span class="token punctuation">}</span>                    <span class="token comment">// end else</span>
-<span class="token punctuation">}</span>  <span class="token comment">// end function textFile</span>
+    <span class="token function">fclose</span><span class="token punctuation">(</span>writePtr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// fclose closes the file</span>
+  <span class="token punctuation">}</span>                   <span class="token comment">// end else</span>
+<span class="token punctuation">}</span> <span class="token comment">// end function textFile</span>
 
 <span class="token comment">// update balance in record</span>
 <span class="token keyword">void</span> <span class="token function">updateRecord</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>fPtr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> account<span class="token punctuation">;</span>  <span class="token comment">// account number</span>
-  <span class="token keyword">double</span> transaction<span class="token punctuation">;</span>    <span class="token comment">// transaction amount</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> account<span class="token punctuation">;</span> <span class="token comment">// account number</span>
+  <span class="token keyword">double</span> transaction<span class="token punctuation">;</span>   <span class="token comment">// transaction amount</span>
 
   <span class="token comment">// create clientData with no information</span>
   <span class="token keyword">struct</span> clientData client <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
@@ -1090,33 +1090,34 @@ Enter lastname, firstname, balance
   <span class="token comment">// display error if account does not exist</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>client<span class="token punctuation">.</span>acctNum <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Account #%d has no information.\n"</span><span class="token punctuation">,</span> account<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>       <span class="token comment">// end if</span>
-  <span class="token keyword">else</span> <span class="token punctuation">{</span>  <span class="token comment">// update record</span>
+  <span class="token punctuation">}</span>      <span class="token comment">// end if</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token comment">// update record</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%-6d%-16s%-11s%10.2f\n\n"</span><span class="token punctuation">,</span> client<span class="token punctuation">.</span>acctNum<span class="token punctuation">,</span> client<span class="token punctuation">.</span>lastName<span class="token punctuation">,</span>
            client<span class="token punctuation">.</span>firstName<span class="token punctuation">,</span> client<span class="token punctuation">.</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">// request transaction amount from user</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"Enter charge ( + ) or payment ( - ): "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>transaction<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    client<span class="token punctuation">.</span>balance <span class="token operator">+</span><span class="token operator">=</span> transaction<span class="token punctuation">;</span>  <span class="token comment">// update record balance</span>
+    client<span class="token punctuation">.</span>balance <span class="token operator">+</span><span class="token operator">=</span> transaction<span class="token punctuation">;</span> <span class="token comment">// update record balance</span>
 
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%-6d%-16s%-11s%10.2f\n"</span><span class="token punctuation">,</span> client<span class="token punctuation">.</span>acctNum<span class="token punctuation">,</span> client<span class="token punctuation">.</span>lastName<span class="token punctuation">,</span>
            client<span class="token punctuation">.</span>firstName<span class="token punctuation">,</span> client<span class="token punctuation">.</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">// move file pointer to correct record in file</span>
-    <span class="token function">fseek</span><span class="token punctuation">(</span>fPtr<span class="token punctuation">,</span> <span class="token punctuation">(</span>account <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> clientData<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">SEEK_SET</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// move back by 1 record length</span>
+    <span class="token function">fseek</span><span class="token punctuation">(</span>fPtr<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> clientData<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">SEEK_CUR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">// write updated record over old record in file</span>
     <span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>client<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> clientData<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> fPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>  <span class="token comment">// end else</span>
-<span class="token punctuation">}</span>  <span class="token comment">// end function updateRecord</span>
+  <span class="token punctuation">}</span> <span class="token comment">// end else</span>
+<span class="token punctuation">}</span> <span class="token comment">// end function updateRecord</span>
 
 <span class="token comment">// delete an existing record</span>
 <span class="token keyword">void</span> <span class="token function">deleteRecord</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>fPtr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">struct</span> clientData client<span class="token punctuation">;</span>  <span class="token comment">// stores record read from file</span>
-  <span class="token keyword">struct</span> clientData blankClient <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>  <span class="token comment">// blank client</span>
+  <span class="token keyword">struct</span> clientData client<span class="token punctuation">;</span> <span class="token comment">// stores record read from file</span>
+  <span class="token keyword">struct</span> clientData blankClient <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// blank client</span>
 
-  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> accountNum<span class="token punctuation">;</span>  <span class="token comment">// account number</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> accountNum<span class="token punctuation">;</span> <span class="token comment">// account number</span>
 
   <span class="token comment">// obtain number of account to delete</span>
   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"Enter account number to delete ( 1 - 100 ): "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1131,22 +1132,22 @@ Enter lastname, firstname, balance
   <span class="token comment">// display error if record does not exist</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>client<span class="token punctuation">.</span>acctNum <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Account %d does not exist.\n"</span><span class="token punctuation">,</span> accountNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>       <span class="token comment">// end if</span>
-  <span class="token keyword">else</span> <span class="token punctuation">{</span>  <span class="token comment">// delete record</span>
+  <span class="token punctuation">}</span>      <span class="token comment">// end if</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token comment">// delete record</span>
     <span class="token comment">// move file pointer to correct record in file</span>
     <span class="token function">fseek</span><span class="token punctuation">(</span>fPtr<span class="token punctuation">,</span> <span class="token punctuation">(</span>accountNum <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> clientData<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">SEEK_SET</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     <span class="token comment">// replace existing record with blank record</span>
     <span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>blankClient<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> clientData<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> fPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>  <span class="token comment">// end else</span>
-<span class="token punctuation">}</span>  <span class="token comment">// end function deleteRecord</span>
+  <span class="token punctuation">}</span> <span class="token comment">// end else</span>
+<span class="token punctuation">}</span> <span class="token comment">// end function deleteRecord</span>
 
 <span class="token comment">// create and insert record</span>
 <span class="token keyword">void</span> <span class="token function">newRecord</span><span class="token punctuation">(</span>FILE <span class="token operator">*</span>fPtr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// create clientData with default information</span>
   <span class="token keyword">struct</span> clientData client <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> accountNum<span class="token punctuation">;</span>  <span class="token comment">// account number</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> accountNum<span class="token punctuation">;</span> <span class="token comment">// account number</span>
 
   <span class="token comment">// obtain number of account to create</span>
   <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"Enter new account number ( 1 - 100 ): "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1161,11 +1162,11 @@ Enter lastname, firstname, balance
   <span class="token comment">// display error if account already exists</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>client<span class="token punctuation">.</span>acctNum <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Account #%d already contains information.\n"</span><span class="token punctuation">,</span> client<span class="token punctuation">.</span>acctNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>       <span class="token comment">// end if</span>
-  <span class="token keyword">else</span> <span class="token punctuation">{</span>  <span class="token comment">// create record</span>
+  <span class="token punctuation">}</span>      <span class="token comment">// end if</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token comment">// create record</span>
     <span class="token comment">// user enters last name, first name and balance</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"Enter lastname, firstname, balance\n? "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%14s%9s%lf"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>client<span class="token punctuation">.</span>lastName<span class="token punctuation">,</span> <span class="token operator">&amp;</span>client<span class="token punctuation">.</span>firstName<span class="token punctuation">,</span> <span class="token operator">&amp;</span>client<span class="token punctuation">.</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%14s%9s%lf"</span><span class="token punctuation">,</span> client<span class="token punctuation">.</span>lastName<span class="token punctuation">,</span> client<span class="token punctuation">.</span>firstName<span class="token punctuation">,</span> <span class="token operator">&amp;</span>client<span class="token punctuation">.</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
     client<span class="token punctuation">.</span>acctNum <span class="token operator">=</span> accountNum<span class="token punctuation">;</span>
 
@@ -1174,26 +1175,25 @@ Enter lastname, firstname, balance
 
     <span class="token comment">// insert record in file</span>
     <span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>client<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> clientData<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> fPtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>  <span class="token comment">// end else</span>
-<span class="token punctuation">}</span>  <span class="token comment">// end function newRecord</span>
+  <span class="token punctuation">}</span> <span class="token comment">// end else</span>
+<span class="token punctuation">}</span> <span class="token comment">// end function newRecord</span>
 
 <span class="token comment">// enable user to input menu choice</span>
 <span class="token keyword">unsigned</span> <span class="token keyword">int</span> <span class="token function">enterChoice</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> menuChoice<span class="token punctuation">;</span>  <span class="token comment">// variable to store user's choice</span>
+  <span class="token keyword">unsigned</span> <span class="token keyword">int</span> menuChoice<span class="token punctuation">;</span> <span class="token comment">// variable to store user's choice</span>
 
   <span class="token comment">// display available options</span>
-  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span>
-         <span class="token string">"\nEnter your choice\n"</span>
-         <span class="token string">"1 - store a formatted text file of accounts called\n"</span>
-         <span class="token string">"    \"accounts.txt\" for printing\n"</span>
-         <span class="token string">"2 - update an account\n"</span>
-         <span class="token string">"3 - add a new account\n"</span>
-         <span class="token string">"4 - delete an account\n"</span>
-         <span class="token string">"5 - end program\n? "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s"</span><span class="token punctuation">,</span> <span class="token string">"\nEnter your choice\n"</span>
+               <span class="token string">"1 - store a formatted text file of accounts called\n"</span>
+               <span class="token string">"    \"accounts.txt\" for printing\n"</span>
+               <span class="token string">"2 - update an account\n"</span>
+               <span class="token string">"3 - add a new account\n"</span>
+               <span class="token string">"4 - delete an account\n"</span>
+               <span class="token string">"5 - end program\n? "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%u"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>menuChoice<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// receive choice from user</span>
+  <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%u"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>menuChoice<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// receive choice from user</span>
   <span class="token keyword">return</span> menuChoice<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>  <span class="token comment">// end function enterChoice</span>
+<span class="token punctuation">}</span> <span class="token comment">// end function enterChoice</span>
 
 </code></pre>
 <h3 id="sample-output-5">Sample Output</h3>
