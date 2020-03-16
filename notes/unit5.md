@@ -1067,6 +1067,8 @@ unsigned int enterChoice(void) {
 }  // end function enterChoice
 
 ```
+### Sample Output
+![trans](![Image](https://pbs.twimg.com/media/ETIp7jPUUAA8ZhQ?format=png&name=900x900))
 
 # Command line arguments
 
@@ -1801,11 +1803,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYzNjU4NzcsLTU3NTEwOTM2OCwxOTU4Nz
-M0MDY5LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIy
-NywxNjc1OTM0OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMz
-Q0NjE1OTQxLDIxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUz
-NDA3LC0xNzg1NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2Nj
-gwLC0xMDkwNTYwNTY4LDE2MDM3MjExMjQsMTkwMTY4MjY0Mywz
-MDMxMzEyN119
+eyJoaXN0b3J5IjpbMTAwOTAyMzIzNSwyNjM2NTg3NywtNTc1MT
+A5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkw
+OCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLT
+U4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0
+OTA5LC01MDk1NTM0MDcsLTE3ODU0ODY2NDgsLTEyNjk2MjE4NT
+IsLTE3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwx
+OTAxNjgyNjQzXX0=
 -->
