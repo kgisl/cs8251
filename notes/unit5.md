@@ -808,7 +808,9 @@ int main(void) {
 
 ### Demo 
 
-Run `prog22` on http://j.mp
+Run `prog22` on http://j.mp/replUnit5 
+
+![prog22](https://i.imgur.com/UbhkekT.jpg)
 
 ## Transaction processing using random access files 
 
@@ -1800,7 +1802,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTYwNzkzOTIsMTk1ODczNDA2OSwtMT
+eyJoaXN0b3J5IjpbLTE5ODE3NTIxOTIsMTk1ODczNDA2OSwtMT
 YyODMxMDAxMCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkz
 NDk0NiwtMjExNTQ1NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MS
 wyMTI2MTc0OTU2LDIwNTQ5MDQ5MDksLTUwOTU1MzQwNywtMTc4
