@@ -659,55 +659,54 @@ Figure 11.11 writes data to the file **"credit.dat"**. It uses the combination o
 // Fig. 11.11: fig11_11.c
 // Writing data randomly to a random-access file
 #include <stdio.h>
+#include <stdlib.h>
 
 // clientData structure definition
 struct clientData {
-  unsigned int acctNum;  // account number
-  char lastName[15];     // account last name
-  char firstName[10];    // account first name
-  double balance;        // account balance
-};                       // end structure clientData
+  unsigned int acctNum; // account number
+  char lastName[15];    // account last name
+  char firstName[10];   // account first name
+  double balance;       // account balance
+};                      // end structure clientData
 
-int main(void) {
-  FILE *cfPtr;  // credit.dat file pointer
+int main(int argc, char *argv[]) {
+  FILE *cfPtr; // credit.dat file pointer
 
   // create clientData with default information
   struct clientData client = {0, "", "", 0.0};
 
   // fopen opens the file; exits if file cannot be opened
   if ((cfPtr = fopen("credit.dat", "rb+")) == NULL) {
-    puts("File could not be opened.");
-  }  // end if
-  else {
-    // require user to specify account number
-    printf("%s",
-           "Enter account number"
-           "(1 to 100, 0 to end input)\n?");
+    printf("%s: File could not be opened.\n", argv[0]);
+    exit(-1);
+  } // end if
+  // require user to specify account number
+  printf("%s", "Enter account number"
+               "(1 to 100, 0 to end input)\n?");
+  scanf("%d", &client.acctNum);
+
+  // user enters information, which is copied into file
+  while (client.acctNum != 0) {
+    // user enters last name, first name and balance
+    printf("%s", "Enter lastname, firstname, balance\n? ");
+
+    // set record lastName, firstName and balance value
+    fscanf(stdin, "%14s%9s%lf", client.lastName, client.firstName,
+           &client.balance);
+
+    // seek position in file to user-specified record
+    fseek(cfPtr, (client.acctNum - 1) * sizeof(struct clientData), SEEK_SET);
+
+    // write user-specified information in file
+    fwrite(&client, sizeof(struct clientData), 1, cfPtr);
+
+    // enable user to input another account number
+    printf("%s", "Enter account number\n? ");
     scanf("%d", &client.acctNum);
+  } // end while
 
-    // user enters information, which is copied into file
-    while (client.acctNum != 0) {
-      // user enters last name, first name and balance
-      printf("%s", "Enter lastname, firstname, balance\n? ");
-
-      // set record lastName, firstName and balance value
-      fscanf(stdin, "%14s%9s%lf", client.lastName, client.firstName,
-             &client.balance);
-
-      // seek position in file to user-specified record
-      fseek(cfPtr, (client.acctNum - 1) * sizeof(struct clientData), SEEK_SET);
-
-      // write user-specified information in file
-      fwrite(&client, sizeof(struct clientData), 1, cfPtr);
-
-      // enable user to input another account number
-      printf("%s", "Enter account number\n? ");
-      scanf("%d", &client.acctNum);
-    }  // end while
-
-    fclose(cfPtr);  // fclose closes the file
-  }                 // end else
-}  // end main
+  fclose(cfPtr); // fclose closes the file
+} // end main
 
 ```
 We position the file position pointer for the file referenced by cfPtr to the
@@ -1791,11 +1790,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNTA2NzIyNywxNjc1OTM0OTQ2LC0yMT
-E1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQxLDIxMjYxNzQ5
-NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNzg1NDg2NjQ4LC
-0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkwNTYwNTY4LDE2
-MDM3MjExMjQsMTkwMTY4MjY0MywzMDMxMzEyNywtMTQ4ODM3OT
-IyNSw5MzQwMTUzNjMsLTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4
-MDAyNzcyMTBdfQ==
+eyJoaXN0b3J5IjpbMTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2Nz
+U5MzQ5NDYsLTIxMTU0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5
+NDEsMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC01MDk1NTM0MDcsLT
+E3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLTE3MjI0OTY2ODAsLTEw
+OTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMT
+I3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC0x
+NjIwODA5NjQzXX0=
 -->
