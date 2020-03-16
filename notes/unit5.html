@@ -1227,11 +1227,13 @@ Enter lastname, firstname, balance
 </code></pre>
 <p>Note that <code>argv[0]</code> is the name of the program invoked, which means that <code>argv[1]</code> is a pointer to the first argument supplied, and <code>argv[argc-1]</code> is a pointer to the last argument. If no arguments are supplied, <code>argc</code> will be <code>1</code>. Thus for <code>n</code> arguments, <code>argc</code> will be equal to <code>n + 1</code>.</p>
 <h3 id="sample-output-4">Sample Output</h3>
-<p><img src="https://i.imgur.com/FNss2oE.jpg" alt="cargs"></p>
+<p><img src="https://i.imgur.com/k2fQLUG.jpg" alt="cargs"></p>
 <h3 id="demo-5">Demo</h3>
 <p>Compile and run <code>prog31</code> in <a href="http://j.mp/replUnit5">http://j.mp/replUnit5</a></p>
 <h2 id="another-example">Another example</h2>
 <p>Review the <a href="https://github.com/kgisl/cs8251/blob/master/code/argsort.c">argument sorting program</a> to see how <code>argc</code> and <code>argv[]</code> are used to pass as arguments for <code>qsort</code> which sorts the input command line arguments.</p>
+<h3 id="demo-6">Demo</h3>
+<p>Run <code>prog32</code> in <a href="http://j.mp/replUnit5">http://j.mp/replUnit5</a></p>
 <h2 id="program-5.3">Program 5.3</h2>
 <p><strong>Program 5.3</strong> below copies a file into another file one character at a time. We assume that the executable file for the program is called <strong>mycopy</strong>. A typical command line for the <strong>mycopy</strong> program on a Linux/UNIX system is</p>
 <pre><code>&gt; `mycopy input output`  
@@ -1241,49 +1243,55 @@ Enter lastname, firstname, balance
 <li>The second and third arguments on the command line are used as file names by the program. The files are opened using function <strong>fopen</strong>. If both files are opened successfully, characters are read from file <strong>input</strong> and written to file <strong>output</strong> until the <strong>end-of-file indicator</strong> for file input is set.</li>
 <li>Then the program terminates. The result is an exact copy of file input (if no errors occur during processing).</li>
 </ul>
-<pre><code>// Using command-line arguments
-#include &lt;stdio.h&gt;
+<pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Using command-line arguments</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
 
-int main(int argc, char *argv[]) {
-  FILE *inFilePtr;   // input file pointer
-  FILE *outFilePtr;  // output file pointer
-  int c;             // define c to hold characters read from the source file
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  FILE <span class="token operator">*</span>inFilePtr<span class="token punctuation">;</span>   <span class="token comment">// input file pointer</span>
+  FILE <span class="token operator">*</span>outFilePtr<span class="token punctuation">;</span>  <span class="token comment">// output file pointer</span>
+  <span class="token keyword">int</span> c<span class="token punctuation">;</span>             <span class="token comment">// define c to hold characters read from the source file</span>
 
-  // check number of command-line arguments
-  if (argc != 3) {
-    puts("Usage: mycopy infile outfile");
-  }  // end if
-  else {
-    // if input file can be opened
-    if ((inFilePtr = fopen(argv[1], "r")) != NULL) {
-      // if output file can be opened
-      if ((outFilePtr = fopen(argv[2], "w")) != NULL) {
-        // read and output characters
-        while ((c = fgetc(inFilePtr)) != EOF) {
-          fputc(c, outFilePtr);
-        }  // end while
+  <span class="token comment">// check number of command-line arguments</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>argc <span class="token operator">!=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Usage: mycopy infile outfile"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>  <span class="token comment">// end if</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// if input file can be opened</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>inFilePtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// if output file can be opened</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>outFilePtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// read and output characters</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>c <span class="token operator">=</span> <span class="token function">fgetc</span><span class="token punctuation">(</span>inFilePtr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">EOF</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">fputc</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> outFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>  <span class="token comment">// end while</span>
 
-        fclose(outFilePtr);  // close the output file
-      }                      // end if
-      else {                 // output file could not be opened
-        printf("File \"%s\" could not be opened\n", argv[2]);
-      }  // end else
+        <span class="token function">fclose</span><span class="token punctuation">(</span>outFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// close the output file</span>
+      <span class="token punctuation">}</span>                      <span class="token comment">// end if</span>
+      <span class="token keyword">else</span> <span class="token punctuation">{</span>                 <span class="token comment">// output file could not be opened</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"File \"%s\" could not be opened\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>  <span class="token comment">// end else</span>
 
-      fclose(inFilePtr);  // close the input file
-    }                     // end if
-    else {                // input file could not be opened
-      printf("File \"%s\" could not be opened\n", argv[1]);
-    }  // end else
-  }    // end else
-}  // end main
- 
+      <span class="token function">fclose</span><span class="token punctuation">(</span>inFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// close the input file</span>
+    <span class="token punctuation">}</span>                     <span class="token comment">// end if</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>                <span class="token comment">// input file could not be opened</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"File \"%s\" could not be opened\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>  <span class="token comment">// end else</span>
+  <span class="token punctuation">}</span>    <span class="token comment">// end else</span>
+<span class="token punctuation">}</span>  <span class="token comment">// end main</span>
+
 </code></pre>
-<p><em>Also refer to the test case <code>file_copy</code> in <a href="#solution.tests.cpp">solution.test.cpp</a></em></p>
+<h3 id="sample-output-5">Sample Output</h3>
+<p><img src="https://i.imgur.com/YkzSrb9.jpg" alt="mycopy"></p>
+<h3 id="demo-7">Demo</h3>
+<p>Run <code>mycopy</code> in <a href="http://j.mp/replUnit5">http://j.mp/replUnit5</a></p>
+<ul>
+<li>For a functional version of <strong>mycopy</strong>, refer to the function <code>file_copy</code> in <a href="#solution.c">solution.c</a>.</li>
+</ul>
 <h3 id="count-bytes-in-a-file">Count bytes in a file</h3>
 <p>Version 1 (using command line args)<br>
 -  <a href="https://github.com/kgashok/filesOCR/blob/master/hand.c">https://github.com/kgashok/filesOCR/blob/master/hand.c</a></p>
-<p>Version 2<br>
-- test case <code>count_number_of_bytes_in_text_file</code> in <a href="#solution.tests.cpp">solution.test.cpp</a></p>
+<p>Version 2 (functional version)<br>
+- test case <code>count_number_of_bytes_in_text_file</code> in <a href="#solution.c">solution.c</a></p>
 <h1 id="faq">FAQ</h1>
 <p><strong>1. What is file?</strong><br>
 A file is a collection of bytes stored on a secondary storage device, which<br>
