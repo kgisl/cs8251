@@ -1112,6 +1112,9 @@ Compile and run `prog31` in http://j.mp/replUnit5
 
 Review the [argument sorting program](https://github.com/kgisl/cs8251/blob/master/code/argsort.c) to see how `argc` and `argv[]` are used to pass as arguments for `qsort` which sorts the input command line arguments. 
 
+### Demo 
+Run `prog32` in http://j.mp/replUnit5
+
 
 ## Program 5.3
 
@@ -1779,11 +1782,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC01MD
-k1NTM0MDcsLTE3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLTE3MjI0
-OTY2ODAsLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAxNjgyNj
-QzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2MywtNzIw
-MDg3Mjc2LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNj
-E4LC0xNTk2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgx
-MzU4NjYyMV19
+eyJoaXN0b3J5IjpbMTg5NjcyMTUyMywyMTI2MTc0OTU2LDIwNT
+Q5MDQ5MDksLTUwOTU1MzQwNywtMTc4NTQ4NjY0OCwtMTI2OTYy
+MTg1MiwtMTcyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAzNzIxMT
+I0LDE5MDE2ODI2NDMsMzAzMTMxMjcsLTE0ODgzNzkyMjUsOTM0
+MDE1MzYzLC03MjAwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3Mj
+EwLDE0NDcyNTE2MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5
+MzM1NDcyNjVdfQ==
 -->
