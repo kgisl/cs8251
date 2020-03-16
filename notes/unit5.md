@@ -1016,7 +1016,7 @@ void newRecord(FILE *fPtr) {
   // display error if account already exists
   if (client.acctNum != 0) {
     printf("Account #%d already contains information.\n", client.acctNum);
-  }      // end if
+  } // end if
   else { // create record
     // user enters last name, first name and balance
     printf("%s", "Enter lastname, firstname, balance\n? ");
@@ -1786,7 +1786,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDI5OTUzNDcsLTE4Mzg1ODQxODUsMj
+eyJoaXN0b3J5IjpbLTE5OTE4NzM3MDksLTE4Mzg1ODQxODUsMj
 A0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwxNjM4MTY1
 Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NTg3NywtNTc1MT
 A5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkw
