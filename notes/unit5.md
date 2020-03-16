@@ -46,7 +46,7 @@ http://j.mp/replUnit5 - list of illustrative C programs provided in this unit.
 
 ## Pre-Unit exercise - a "Show and Tell" exercise
 
-A template repo titled "Challenge 3 - Learning about Files" is available in the [Projects section](http://j.mp/project8251) 
+A template repo titled "Challenge 3 - Learning about Files" is available in the [Projects section](http://j.mp/project8251) - please read the `README.md` for instructions. 
 
 ## Post-Unit exercise
 <!---
@@ -1767,7 +1767,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzU0ODIwOTgsMTQ0NTY4MjIyMywtNz
+eyJoaXN0b3J5IjpbLTEzNzAwNzA1NDEsMTQ0NTY4MjIyMywtNz
 c3NzgxNDExLC0yNzg0NTQ5NDgsLTU1MDI2MDMwNCwtMTk5MTg3
 MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0Mi
 wxNjcxNzExNjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNTI1NDg0
