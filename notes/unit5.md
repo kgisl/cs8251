@@ -413,16 +413,14 @@ Programs may process no files, one file or several files. Each file used in a pr
 
 If an error occurs while opening a file in any mode, fopen returns **NULL**. 
 
-|Mode 	| Description |
+|Text Mode 	| Description |
 |:-------	|:--------------|
 |r			| Open an existing file for reading. |
 |w		| Create a file for writing. If the file already exists, discard the current contents.
 |a, a+ 	| Append: open or create a file for writing at the end of the file.
 |r+		| Open an existing file for update (reading and writing).
 |w+		| Create a file for update. If the file already exists, discard the current contents.
-
-|Mode 	| Description |
-|:-------	|:--------------|
+|Binary Mode 	| Description |
 |rb 		 | opens a binary file in reading mode |
 |wb		 | opens or create a binary file in writing mode |
 |ab, ab+ | opens a binary file in append mode |
@@ -1767,11 +1765,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4OTkwNTY5NSwtMTUxMjk1NzA1LC0xMz
-cwMDcwNTQxLDE0NDU2ODIyMjMsLTc3Nzc4MTQxMSwtMjc4NDU0
-OTQ4LC01NTAyNjAzMDQsLTE5OTE4NzM3MDksLTE4Mzg1ODQxOD
-UsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwxNjM4
-MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NTg3NywtNT
-c1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAw
-MTkwOF19
+eyJoaXN0b3J5IjpbLTIxMTEyOTI1ODYsMTE4OTkwNTY5NSwtMT
+UxMjk1NzA1LC0xMzcwMDcwNTQxLDE0NDU2ODIyMjMsLTc3Nzc4
+MTQxMSwtMjc4NDU0OTQ4LC01NTAyNjAzMDQsLTE5OTE4NzM3MD
+ksLTE4Mzg1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3
+MTcxMTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNy
+wyNjM2NTg3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2Mjgz
+MTAwMTBdfQ==
 -->
