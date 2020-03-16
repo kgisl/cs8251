@@ -885,26 +885,21 @@ int main(int argc, char *argv[]) {
     switch (choice) {
     // create text file from record file
     case 1:
-      textFile(cfPtr);
-      break;
+      textFile(cfPtr); break;
     // update record
     case 2:
-      updateRecord(cfPtr);
-      break;
+      updateRecord(cfPtr); break;
     // create record
     case 3:
-      newRecord(cfPtr);
-      break;
+      newRecord(cfPtr); break;
     // delete existing record
     case 4:
-      deleteRecord(cfPtr);
-      break;
+      deleteRecord(cfPtr); break;
     // display if user does not select valid choice
     default:
-      puts("Incorrect choice");
-      break;
+      puts("Incorrect choice"); break;
     } // end switch
-  }   // end while
+  } // end while
 
   fclose(cfPtr); // fclose closes the file
 } // end main
@@ -922,8 +917,7 @@ void textFile(FILE *readPtr) {
   } // end if
   else {
     rewind(readPtr); // sets pointer to beginning of file
-    fprintf(writePtr, "%-6s%-16s%-11s%10s\n", "Acct", "Last Name", "First Name",
-            "Balance");
+    fprintf(writePtr, "%-6s%-16s%-11s%10s\n", "Acct", "Last Name", "First Name","Balance");
 
     // copy all records from random-access file into text file
     while (!feof(readPtr)) {
@@ -1792,11 +1786,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ5NDMzMjYzLC0xODM4NTg0MTg1LDIwND
-Y0MjY3NSwxMTY4ODE3MjQyLDE2NzE3MTE2MTgsMTYzODE2NTI4
-OCw2MDY2NzYyMSw1MjU0ODQ2MjcsMjYzNjU4NzcsLTU3NTEwOT
-M2OCwxOTU4NzM0MDY5LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgs
-MTIzNTA2NzIyNywxNjc1OTM0OTQ2LC0yMTE1NDU2ODI5LC01OD
-kwMjM4MzEsMzQ0NjE1OTQxLDIxMjYxNzQ5NTYsMjA1NDkwNDkw
-OV19
+eyJoaXN0b3J5IjpbLTE4MjE1NzcwMDEsLTE4Mzg1ODQxODUsMj
+A0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwxNjM4MTY1
+Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NTg3NywtNTc1MT
+A5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkw
+OCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLT
+U4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0
+OTA5XX0=
 -->
