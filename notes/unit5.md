@@ -649,6 +649,7 @@ int main(void) {
 
 ```
 
+
 Function **fwrite** writes a block of bytes to a file. Line 29 causes the structure blankClient of size `sizeof(struct clientData)` to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to **fwrite** a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, **fwrite** was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the **fwrite** call. 
 
 ## Writing Random Access Data
@@ -1790,11 +1791,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2Nz
-U5MzQ5NDYsLTIxMTU0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5
-NDEsMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC01MDk1NTM0MDcsLT
-E3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLTE3MjI0OTY2ODAsLTEw
-OTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMT
-I3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC0x
-NjIwODA5NjQzXX0=
+eyJoaXN0b3J5IjpbLTE2MjgzMTAwMTAsMTA1NjAwMTkwOCwxMj
+M1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLTU4OTAy
+MzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC
+01MDk1NTM0MDcsLTE3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLTE3
+MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAxNj
+gyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2Mywt
+NzIwMDg3Mjc2XX0=
 -->
