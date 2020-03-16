@@ -837,17 +837,17 @@ After **option 1** is chosen, the file **accounts.txt** contains:
 	37 Barker Doug 87.99
 
 
-**Option 3** calls the function **newRecord** to add a new account to the file. If the user enters an account number for an existing account, newRecord displays an error message indicating that the record already contains information, and the menu choices are printed again. This function uses the same process to add a new account as does the program in Fig. 11.11. A typical output for option 3 is
+**Option 3** calls the function **newRecord** to add a new account to the file. If the user enters an account number for an existing account, newRecord displays an error message indicating that the record already contains information, and the menu choices are printed again.  A typical output for option 3 is
 
 	Enter new account number ( 1 - 100 ): 22
 	Enter lastname, firstname, balance
 	? Johnston Sarah 247.45
 
-**Option 4** calls function deleteRecord to delete a record from the file. Deletion is accomplished by asking the user for the account number and reinitializing the record. If the account contains no information, deleteRecord displays an error message indicating that the account does not exist. 
+**Option 4** calls function **deleteRecord** to delete a record from the file. Deletion is accomplished by asking the user for the account number and re-initialising the record. If the account contains no information, **deleteRecord** displays an error message indicating that the account does not exist. 
 
 **Option 5** terminates program execution. 
 
-The program is shown in Fig. 11.15. The file "credit.dat" is opened for update (reading and writing) using "rb+" mode (*very* important). 
+The program is shown in Fig. 11.15. The file **"credit.dat"** is opened for update (reading and writing) using **"rb+"** mode (*very* important). 
 
 ```c
 // Bank-account program reads a random-access file sequentially,
@@ -875,6 +875,7 @@ int main(int argc, char *argv[]) {
   unsigned int choice; // user's choice
 
   // fopen opens the file; exits if file cannot be opened
+  // Do not change the mode "rb+"
   if ((cfPtr = fopen("credit.dat", "rb+")) == NULL) {
     printf("%s: File could not be opened.\n", argv[0]);
     exit(-1);
@@ -1786,11 +1787,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYzNDY5MDAsLTE5OTE4NzM3MDksLTE4Mz
-g1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYx
-OCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NT
-g3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAs
-MTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMT
-U0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1
-Nl19
+eyJoaXN0b3J5IjpbLTU0Mjk3MDM1OCwtMTk5MTg3MzcwOSwtMT
+gzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0MiwxNjcxNzEx
+NjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNTI1NDg0NjI3LDI2Mz
+Y1ODc3LC01NzUxMDkzNjgsMTk1ODczNDA2OSwtMTYyODMxMDAx
+MCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkzNDk0NiwtMj
+ExNTQ1NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0
+OTU2XX0=
 -->
