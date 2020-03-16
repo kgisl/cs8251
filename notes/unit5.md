@@ -649,8 +649,7 @@ int main(void) {
 
 ```
 
-
-Function **fwrite** writes a block of bytes to a file. Line 29 causes the structure blankClient of size `sizeof(struct clientData)` to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to **fwrite** a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, **fwrite** was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the **fwrite** call. 
+Function **fwrite** writes a block of bytes to a file. The structure **blankClient** of size `sizeof(struct clientData)` is written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case `struct clientData`). Function **fwrite** can actually be used to write several elements of an array of objects. To do so, supply in the call to **fwrite** a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, **fwrite** was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the **fwrite** call. 
 
 ## Writing Random Access Data
 
@@ -1787,11 +1786,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ5MTE0NDMsLTE5OTE4NzM3MDksLTE4Mz
-g1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYx
-OCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NT
-g3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAs
-MTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMT
-U0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1
-Nl19
+eyJoaXN0b3J5IjpbMTU2Nzc4ODQ3OCwtMTk5MTg3MzcwOSwtMT
+gzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0MiwxNjcxNzEx
+NjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNTI1NDg0NjI3LDI2Mz
+Y1ODc3LC01NzUxMDkzNjgsMTk1ODczNDA2OSwtMTYyODMxMDAx
+MCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkzNDk0NiwtMj
+ExNTQ1NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0
+OTU2XX0=
 -->
