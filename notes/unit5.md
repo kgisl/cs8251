@@ -46,6 +46,8 @@ http://j.mp/replUnit5 - list of illustrative C programs provided in this unit.
 
 ## Pre-Unit exercise - a "Show and Tell" exercise
 
+Under Projects/Challenge_3 in the http://j.mp/repl_8251 classroom. 
+
 1. Create your own paper document by writing a few numbers 
 and words in 3-4 lines. Do not use cursive writing, instead 
 use capital letters and write as neatly as possible. Here's 
@@ -1788,11 +1790,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3ODQ1NDk0OCwtNTUwMjYwMzA0LC0xOT
-kxODczNzA5LC0xODM4NTg0MTg1LDIwNDY0MjY3NSwxMTY4ODE3
-MjQyLDE2NzE3MTE2MTgsMTYzODE2NTI4OCw2MDY2NzYyMSw1Mj
-U0ODQ2MjcsMjYzNjU4NzcsLTU3NTEwOTM2OCwxOTU4NzM0MDY5
-LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIyNywxNj
-c1OTM0OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1
-OTQxXX0=
+eyJoaXN0b3J5IjpbLTc3Nzc4MTQxMSwtMjc4NDU0OTQ4LC01NT
+AyNjAzMDQsLTE5OTE4NzM3MDksLTE4Mzg1ODQxODUsMjA0NjQy
+Njc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwxNjM4MTY1Mjg4LD
+YwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NTg3NywtNTc1MTA5MzY4
+LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkwOCwxMj
+M1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLTU4OTAy
+MzgzMV19
 -->
