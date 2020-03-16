@@ -1169,9 +1169,9 @@ int main(int argc, char *argv[]) {
 ![mycopy](https://i.imgur.com/YkzSrb9.jpg)
 
 ### Demo
-Run `mycopy` in http://j.mp/replUnit5
+- Run `mycopy` in http://j.mp/replUnit5
 
-- For a functional version of **mycopy**, refer to the function `file_copy` in [solution.c](#solution.c).
+- For a functional version of the same program, refer to the function `file_copy` in [solution.c](#solution.c) in the **Bonus Material** section.
 
 
 ### Count bytes in a file 
@@ -1788,11 +1788,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY4MzkxNTgzLC01ODkwMjM4MzEsMzQ0Nj
-E1OTQxLDIxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3
-LC0xNzg1NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC
-0xMDkwNTYwNTY4LDE2MDM3MjExMjQsMTkwMTY4MjY0MywzMDMx
-MzEyNywtMTQ4ODM3OTIyNSw5MzQwMTUzNjMsLTcyMDA4NzI3Ni
-wtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5
-NjY3NjYzOF19
+eyJoaXN0b3J5IjpbLTIxMTU0NTY4MjksLTU4OTAyMzgzMSwzND
+Q2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC01MDk1NTM0
+MDcsLTE3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLTE3MjI0OTY2OD
+AsLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAxNjgyNjQzLDMw
+MzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2MywtNzIwMDg3Mj
+c2LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4LC0x
+NTk2Njc2NjM4XX0=
 -->
