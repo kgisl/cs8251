@@ -818,7 +818,7 @@ We now present a substantial transaction-processing program using **random acces
 
 The program has five options. 
   
-**Option 1** calls function textFile (lines 63–94) to store a formatted list of all the accounts (typically called a report) in a text file called accounts.txt that may be printed later. The function uses fread and the sequential file access techniques used in the program of Section below. 
+**Option 1** calls function `textFile`  to store a formatted list of all the accounts (typically called a report) in a text file called accounts.txt that may be printed later. The function uses fread and the sequential file access techniques used in the program of Section below. 
 
 After **option 1** is chosen, the file **accounts.txt** contains:
 
@@ -1786,11 +1786,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTE4NzM3MDksLTE4Mzg1ODQxODUsMj
-A0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwxNjM4MTY1
-Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NTg3NywtNTc1MT
-A5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkw
-OCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLT
-U4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0
-OTA5XX0=
+eyJoaXN0b3J5IjpbLTE1NjQ2Njg0NzYsLTE5OTE4NzM3MDksLT
+E4Mzg1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcx
+MTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNj
+M2NTg3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAw
+MTAsMTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLT
+IxMTU0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3
+NDk1Nl19
 -->
