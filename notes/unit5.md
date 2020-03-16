@@ -1095,10 +1095,11 @@ int main(int argc, char *argv[]) {
 
 Note that `argv[0]` is the name of the program invoked, which means that `argv[1]` is a pointer to the first argument supplied, and `argv[argc]` is a pointer to the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
 
+### Sample Output
+
+
 ### Demo 
 Compile and run `prog31` in http://j.mp/replUnit5 
-
-### Sample Oupt
 
 
 ## Another example 
@@ -1772,7 +1773,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMTQyNDc4NiwtMTI2OTYyMTg1MiwtMT
+eyJoaXN0b3J5IjpbMTMzNDA5Nzg2NywtMTI2OTYyMTg1MiwtMT
 cyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAzNzIxMTI0LDE5MDE2
 ODI2NDMsMzAzMTMxMjcsLTE0ODgzNzkyMjUsOTM0MDE1MzYzLC
 03MjAwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcy
