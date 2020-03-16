@@ -1166,6 +1166,8 @@ int main(int argc, char *argv[]) {
 ```
 
 
+
+
 _Also refer to the test case `file_copy` in [solution.test.cpp](#solution.tests.cpp)_ 
 
 ### Count bytes in a file 
@@ -1783,11 +1785,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ0NjE1OTQxLDIxMjYxNzQ5NTYsMjA1ND
-kwNDkwOSwtNTA5NTUzNDA3LC0xNzg1NDg2NjQ4LC0xMjY5NjIx
-ODUyLC0xNzIyNDk2NjgwLC0xMDkwNTYwNTY4LDE2MDM3MjExMj
-QsMTkwMTY4MjY0MywzMDMxMzEyNywtMTQ4ODM3OTIyNSw5MzQw
-MTUzNjMsLTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4MDAyNzcyMT
-AsMTQ0NzI1MTYxOCwtMTU5NjY3NjYzOCwtNjk5MDE2MTYwLDkz
-MzU0NzI2NV19
+eyJoaXN0b3J5IjpbLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNj
+E3NDk1NiwyMDU0OTA0OTA5LC01MDk1NTM0MDcsLTE3ODU0ODY2
+NDgsLTEyNjk2MjE4NTIsLTE3MjI0OTY2ODAsLTEwOTA1NjA1Nj
+gsMTYwMzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMTI3LC0xNDg4
+Mzc5MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC0xNjIwODA5Nj
+QzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNTk2Njc2NjM4LC02
+OTkwMTYxNjBdfQ==
 -->
