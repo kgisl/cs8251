@@ -499,8 +499,13 @@ Run `prog14` in the http://bit.ly/replUnit5
 	300       Mano         29023.00
 	400       Bala         2344.00
 
+### Sample `clients.dat` file contents 
 
-
+	100       Jones        9023.00
+	200       Frank        234.00
+	300       Mano         29023.00
+	400       Bala         2344.00
+	
 Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. 
 - cfPtr is a pointer to a FILE. The file "clients.dat"  is opened for reading ("r"). We determine whether it has opened successfully (i.e., fopen does not return NULL). We then attempt to read a “record” from the file. 
 - Function fscanf is equivalent to function scanf, except fscanf receives as an argument a file pointer for the file from which the data is read. After this statement executes the first time, account will have the value 100, name will have the value "Jones" and balance will have the value 24.98. 
@@ -1780,11 +1785,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MDI2MDMwNCwtMTk5MTg3MzcwOSwtMT
-gzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0MiwxNjcxNzEx
-NjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNTI1NDg0NjI3LDI2Mz
-Y1ODc3LC01NzUxMDkzNjgsMTk1ODczNDA2OSwtMTYyODMxMDAx
-MCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkzNDk0NiwtMj
-ExNTQ1NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0
-OTU2XX0=
+eyJoaXN0b3J5IjpbLTE5ODc3NDkxOTgsLTU1MDI2MDMwNCwtMT
+k5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgx
+NzI0MiwxNjcxNzExNjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNT
+I1NDg0NjI3LDI2MzY1ODc3LC01NzUxMDkzNjgsMTk1ODczNDA2
+OSwtMTYyODMxMDAxMCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMT
+Y3NTkzNDk0NiwtMjExNTQ1NjgyOSwtNTg5MDIzODMxLDM0NDYx
+NTk0MV19
 -->
