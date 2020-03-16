@@ -46,29 +46,7 @@ http://j.mp/replUnit5 - list of illustrative C programs provided in this unit.
 
 ## Pre-Unit exercise - a "Show and Tell" exercise
 
-A template repo is available in the [Projects section(https://repl.it/teacher/classrooms/179068/projects]
-1. Create your own paper document by writing a few numbers 
-and words in 3-4 lines. Do not use cursive writing, instead 
-use capital letters and write as neatly as possible. Here's 
-an [example](http://j.mp/numberWords). 
-2. Create a digital copy of the same (what will you use to 
-create a scanned copy?)
-3. Look inside the digital copy and examine it using a hex 
-editor 
-5. Do an **OCR** of your digital copy and download a text 
-version of your digital essay. Write down and share what 
-you used to do an OCR on your own handwritten document.
-6. Send the digital copy and the text file (created using 
-your OCR effort) to your faculty's email; 
-7. Create a github repository containing a digital scan of 
-your document and an OCR'ed text file of your document 
-8. Bring the written document to class;  Bring a print out 
-of the OCR'ed text file to class
-9. If you do everything as per the steps above, you should 
-end up with a snapshot of a cloned repo directory similar 
-to the image below: 
-
-![ocr](https://cdn.rawgit.com/kgashok/filesOCR/1d2f5c87/directoryImage.png)
+A template repo titled "Challenge 3 - Learning about Files" is available in the [Projects section](https://repl.it/teacher/classrooms/179068/projects) 
 
 ## Post-Unit exercise
 <!---
@@ -1789,7 +1767,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1Njk3ODg1NSwtNzc3NzgxNDExLC0yNz
+eyJoaXN0b3J5IjpbMTQ0NTY4MjIyMywtNzc3NzgxNDExLC0yNz
 g0NTQ5NDgsLTU1MDI2MDMwNCwtMTk5MTg3MzcwOSwtMTgzODU4
 NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0MiwxNjcxNzExNjE4LD
 E2MzgxNjUyODgsNjA2Njc2MjEsNTI1NDg0NjI3LDI2MzY1ODc3
