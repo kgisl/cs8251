@@ -1244,42 +1244,43 @@ Enter lastname, firstname, balance
 <li>The second and third arguments on the command line are used as file names by the program. The files are opened using function <strong>fopen</strong>. If both files are opened successfully, characters are read from file <strong>input</strong> and written to file <strong>output</strong> until the <strong>end-of-file indicator</strong> for file input is set.</li>
 <li>Then the program terminates. The result is an exact copy of file input (if no errors occur during processing).</li>
 </ul>
-<pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Using command-line arguments</span>
+<pre class=" language-c"><code class="prism  language-c"><span class="token comment">/* Program to copy contents from one file to
+ * another using command line arguments
+ *
+ * Usage: mycopy file1.dat file2.dat
+ *
+ */</span>
+
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
 
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span>argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  FILE <span class="token operator">*</span>inFilePtr<span class="token punctuation">;</span>   <span class="token comment">// input file pointer</span>
-  FILE <span class="token operator">*</span>outFilePtr<span class="token punctuation">;</span>  <span class="token comment">// output file pointer</span>
-  <span class="token keyword">int</span> c<span class="token punctuation">;</span>             <span class="token comment">// define c to hold characters read from the source file</span>
+  FILE <span class="token operator">*</span>inFilePtr<span class="token punctuation">;</span>  <span class="token comment">// input file pointer</span>
+  FILE <span class="token operator">*</span>outFilePtr<span class="token punctuation">;</span> <span class="token comment">// output file pointer</span>
+  <span class="token keyword">int</span> c<span class="token punctuation">;</span>            <span class="token comment">// to hold chars read from the source file</span>
 
   <span class="token comment">// check number of command-line arguments</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>argc <span class="token operator">!=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Usage: mycopy infile outfile"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>  <span class="token comment">// end if</span>
-  <span class="token keyword">else</span> <span class="token punctuation">{</span>
-    <span class="token comment">// if input file can be opened</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>inFilePtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment">// if output file can be opened</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>outFilePtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// read and output characters</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>c <span class="token operator">=</span> <span class="token function">fgetc</span><span class="token punctuation">(</span>inFilePtr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">EOF</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token function">fputc</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> outFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>  <span class="token comment">// end while</span>
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// if input file cannot be opened</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>inFilePtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"File \"%s\" could not be opened\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// if output file can be opened</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>outFilePtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>argv<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"File \"%s\" could not be opened\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// read and output characters</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>c <span class="token operator">=</span> <span class="token function">fgetc</span><span class="token punctuation">(</span>inFilePtr<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">EOF</span><span class="token punctuation">)</span>
+    <span class="token function">fputc</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> outFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        <span class="token function">fclose</span><span class="token punctuation">(</span>outFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// close the output file</span>
-      <span class="token punctuation">}</span>                      <span class="token comment">// end if</span>
-      <span class="token keyword">else</span> <span class="token punctuation">{</span>                 <span class="token comment">// output file could not be opened</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"File \"%s\" could not be opened\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>  <span class="token comment">// end else</span>
-
-      <span class="token function">fclose</span><span class="token punctuation">(</span>inFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// close the input file</span>
-    <span class="token punctuation">}</span>                     <span class="token comment">// end if</span>
-    <span class="token keyword">else</span> <span class="token punctuation">{</span>                <span class="token comment">// input file could not be opened</span>
-      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"File \"%s\" could not be opened\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>  <span class="token comment">// end else</span>
-  <span class="token punctuation">}</span>    <span class="token comment">// end else</span>
-<span class="token punctuation">}</span>  <span class="token comment">// end main</span>
-
+  <span class="token function">fclose</span><span class="token punctuation">(</span>outFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// close the output file</span>
+  <span class="token function">fclose</span><span class="token punctuation">(</span>inFilePtr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// close the input file</span>
+<span class="token punctuation">}</span> <span class="token comment">// end of main</span>
 </code></pre>
 <h3 id="sample-output-5">Sample Output</h3>
 <p><img src="https://i.imgur.com/YkzSrb9.jpg" alt="mycopy"></p>
