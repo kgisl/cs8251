@@ -1127,8 +1127,15 @@ Run `prog32` in http://j.mp/replUnit5
 - Then the program terminates. The result is an exact copy of file input (if no errors occur during processing).  
 
 ```c
-// Using command-line arguments
+/* Program to copy contents from one file to 
+ * another using command line arguments 
+ * 
+ * Usage: mycopy file1.dat file2.dat
+ *
+ */ 
+ 
 #include <stdio.h>
+#include <stdlib.h> 
 
 int main(int argc, char *argv[]) {
   FILE *inFilePtr;   // input file pointer
@@ -1138,30 +1145,27 @@ int main(int argc, char *argv[]) {
   // check number of command-line arguments
   if (argc != 3) {
     puts("Usage: mycopy infile outfile");
-  }  // end if
-  else {
-    // if input file can be opened
-    if ((inFilePtr = fopen(argv[1], "r")) != NULL) {
-      // if output file can be opened
-      if ((outFilePtr = fopen(argv[2], "w")) != NULL) {
-        // read and output characters
-        while ((c = fgetc(inFilePtr)) != EOF) {
-          fputc(c, outFilePtr);
-        }  // end while
-
-        fclose(outFilePtr);  // close the output file
-      }                      // end if
-      else {                 // output file could not be opened
-        printf("File \"%s\" could not be opened\n", argv[2]);
-      }  // end else
-
-      fclose(inFilePtr);  // close the input file
-    }                     // end if
-    else {                // input file could not be opened
-      printf("File \"%s\" could not be opened\n", argv[1]);
-    }  // end else
-  }    // end else
-}  // end main
+    exit(-1);
+  }
+  // if input file cannot be opened
+  if ((inFilePtr = fopen(argv[1], "r")) == NULL) {
+    printf("File \"%s\" could not be opened\n", 
+      argv[1]);
+    exit(-1);
+  }
+  // if output file can be opened
+  if ((outFilePtr = fopen(argv[2], "w")) == NULL) {
+    printf("File \"%s\" could not be opened\n", 
+      argv[2]);
+    exit(-1);
+  }
+      // read and output characters
+  while ((c = fgetc(inFilePtr)) != EOF)
+    fputc(c, outFilePtr);
+  
+  fclose(outFilePtr);  // close the output file
+  fclose(inFilePtr);  // close the input file
+} // end of main 
 
 ```
 
@@ -1789,11 +1793,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NTkzNDk0NiwtMjExNTQ1NjgyOSwtNT
-g5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0OTU2LDIwNTQ5MDQ5
-MDksLTUwOTU1MzQwNywtMTc4NTQ4NjY0OCwtMTI2OTYyMTg1Mi
-wtMTcyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAzNzIxMTI0LDE5
-MDE2ODI2NDMsMzAzMTMxMjcsLTE0ODgzNzkyMjUsOTM0MDE1Mz
-YzLC03MjAwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0
-NDcyNTE2MThdfQ==
+eyJoaXN0b3J5IjpbMTU1MzYyNDc2OSwxNjc1OTM0OTQ2LC0yMT
+E1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQxLDIxMjYxNzQ5
+NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNzg1NDg2NjQ4LC
+0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkwNTYwNTY4LDE2
+MDM3MjExMjQsMTkwMTY4MjY0MywzMDMxMzEyNywtMTQ4ODM3OT
+IyNSw5MzQwMTUzNjMsLTcyMDA4NzI3NiwtMTYyMDgwOTY0Myw4
+MDAyNzcyMTBdfQ==
 -->
