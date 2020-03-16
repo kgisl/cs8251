@@ -676,8 +676,6 @@ Enter EOF to end input.
 <span class="token punctuation">}</span>  <span class="token comment">// end main</span>
 
 </code></pre>
-<h3 id="demo-3">Demo</h3>
-<p>Run <code>prog14</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a></p>
 <h3 id="sample-output-2">Sample Output</h3>
 <pre><code>Account   Name         Balance
 100       Jones        9023.00
@@ -685,6 +683,14 @@ Enter EOF to end input.
 300       Mano         29023.00
 400       Bala         2344.00
 </code></pre>
+<h3 id="sample-clients.dat-file-contents-1">Sample <code>clients.dat</code> file contents</h3>
+<pre><code>100       Jones        9023.00
+200       Frank        234.00
+300       Mano         29023.00
+400       Bala         2344.00
+</code></pre>
+<h3 id="demo-3">Demo</h3>
+<p>Run <code>prog14</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a></p>
 <p>Figure 11.6 reads records from the file “clients.dat” created by the program of Fig. 11.2 and prints their contents.</p>
 <ul>
 <li>cfPtr is a pointer to a FILE. The file “clients.dat”  is opened for reading (“r”). We determine whether it has opened successfully (i.e., fopen does not return NULL). We then attempt to read a “record” from the file.</li>
@@ -736,10 +742,10 @@ To retrieve data sequentially from a file, a program normally starts reading fro
   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="demo-4">Demo</h3>
-<p>Run <code>prog15</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a> in conjunction with <code>prog15.txt</code></p>
 <h3 id="sample-output-3">Sample Output</h3>
 <p><img src="https://i.imgur.com/eY0HcUB.jpg" alt="average"></p>
+<h3 id="demo-4">Demo</h3>
+<p>Run <code>prog15</code> in the <a href="http://bit.ly/replUnit5">http://bit.ly/replUnit5</a> in conjunction with <code>prog15.txt</code></p>
 <h1 id="random-access-file">Random access file</h1>
 <p>As we stated previously, records in a file created with the formatted output function<br>
 <strong>fprintf</strong> are not necessarily the same length. However, individual records of a random access file are normally fixed in length and may be accessed directly (and thus quickly)<br>
