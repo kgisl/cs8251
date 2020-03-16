@@ -5,7 +5,7 @@
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
 http://j.mp/memUnit5  -50 flashcards to review the contents of file.
-
+http://j.mp/replUnit5 - list of p
 **Table of Contents**
 
 * [UNIT V FILE PROCESSING](#unit-v-file-processing)  
@@ -1093,7 +1093,8 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-Note that `*argv[0]` is the name of the program invoked, which means that `*argv[1]` is a pointer to the first argument supplied, and `*argv[n]` is the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
+Note that `argv[0]` is the name of the program invoked, which means that `argv[1]` is a pointer to the first argument supplied, and `argv[n]` is the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
+
 
 ## Another example 
 
@@ -1766,11 +1767,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMT
-YwMzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5
-MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC0xNjIwODA5NjQzLD
-gwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNTk2Njc2NjM4LC02OTkw
-MTYxNjAsOTMzNTQ3MjY1LDgxMzU4NjYyMSwtNjMxMDAxNzc3LD
-g0OTM1ODE3NywtMTU2NTc0MjM3NiwtMTczNjM5NjM5NSwxNDQy
-NjkzOTg5XX0=
+eyJoaXN0b3J5IjpbLTE3NzA2ODQxNzgsLTE3MjI0OTY2ODAsLT
+EwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEz
+MTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC
+0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNTk2
+Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgxMzU4NjYyMS
+wtNjMxMDAxNzc3LDg0OTM1ODE3NywtMTU2NTc0MjM3NiwtMTcz
+NjM5NjM5NV19
 -->
