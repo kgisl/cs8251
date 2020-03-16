@@ -1068,8 +1068,10 @@ unsigned int enterChoice(void) {
 
 ```
 ### Sample Output
-![trans](https://i.imgur.com/UT0q9AO.jpg)
+![trans](https://i.imgur.com/W06Y1SQ.jpg)
 
+### Demo
+Use `trans` (source `trans.c`) and `prog22` (source `prog22.c`) in http://j.mp/replUnit5
 
 # Command line arguments
 
@@ -1804,11 +1806,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA2Njc2MjEsNTI1NDg0NjI3LDI2MzY1OD
-c3LC01NzUxMDkzNjgsMTk1ODczNDA2OSwtMTYyODMxMDAxMCwx
-MDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkzNDk0NiwtMjExNT
-Q1NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MSwyMTI2MTc0OTU2
-LDIwNTQ5MDQ5MDksLTUwOTU1MzQwNywtMTc4NTQ4NjY0OCwtMT
-I2OTYyMTg1MiwtMTcyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAz
-NzIxMTI0XX0=
+eyJoaXN0b3J5IjpbMTYzODE2NTI4OCw2MDY2NzYyMSw1MjU0OD
+Q2MjcsMjYzNjU4NzcsLTU3NTEwOTM2OCwxOTU4NzM0MDY5LC0x
+NjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIyNywxNjc1OT
+M0OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQx
+LDIxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNz
+g1NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkw
+NTYwNTY4XX0=
 -->
