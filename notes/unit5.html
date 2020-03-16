@@ -811,9 +811,9 @@ random-access file.</p>
 <span class="token punctuation">}</span>  <span class="token comment">// end main</span>
 
 </code></pre>
-<p>Function <strong>fwrite</strong> writes a block of bytes to a file. Line 29 causes the structure blankClient of size <code>sizeof(struct clientData)</code> to be written to the file pointed to by cfPtr. The operator sizeof returns the size in bytes of its operand in parentheses (in this case <code>struct clientData</code>). Function <strong>fwrite</strong> can actually be used to write several elements of an array of objects. To do so, supply in the call to <strong>fwrite</strong> a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, <strong>fwrite</strong> was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the <strong>fwrite</strong> call.</p>
+<p>Function <strong>fwrite</strong> writes a block of bytes to a file. The structure <strong>blankClient</strong> of size <code>sizeof(struct clientData)</code> is written to the file pointed to by cfPtr. The operator <strong>sizeof</strong> returns the size in bytes of its operand in parentheses (in this case <code>struct clientData</code>). Function <strong>fwrite</strong> can actually be used to write several elements of an array of objects. To do so, supply in the call to <strong>fwrite</strong> a pointer to an array as the first argument and the number of elements to be written as the third argument. In the preceding statement, <strong>fwrite</strong> was used to write a single object that was not an array element. Writing a single object is equivalent to writing one element of an array, hence the 1 in the <strong>fwrite</strong> call.</p>
 <h2 id="writing-random-access-data">Writing Random Access Data</h2>
-<p>Figure 11.11 writes data to the file <strong>“credit.dat”</strong>. It uses the combination of <strong>fseek</strong> and <strong>fwrite</strong> to store data at specific locations in the file. Function fseek sets the file position pointer to a specific position in the file, then fwrite writes the data. A sample execution is shown in Fig. 11.12.</p>
+<p>Figure 11.11 writes data to the file <strong>“credit.dat”</strong>. It uses the combination of <strong>fseek</strong> and <strong>fwrite</strong> to store data at specific locations in the file. Function fseek sets the file position pointer to a specific position in the file, then fwrite writes the data.</p>
 <pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Fig. 11.11: fig11_11.c</span>
 <span class="token comment">// Writing data randomly to a random-access file</span>
 <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
@@ -885,6 +885,7 @@ SEEK_END - the seek starts at the end of the file
 <li>Function <strong>fseek</strong> returns a nonzero value if the seek operation cannot be performed.</li>
 <li>Function <strong>fwrite</strong> returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.</li>
 </ul>
+<p>A sample execution is shown below the code.</p>
 <h3 id="sample-output-4">Sample Output</h3>
 <p><img src="https://i.imgur.com/UX7bpnJ.jpg" alt="seqRand"></p>
 <h3 id="demo-5">Demo</h3>
@@ -942,20 +943,13 @@ SEEK_END - the seek starts at the end of the file
 </code></pre>
 <p><strong>Sample Output</strong></p>
 <p><img src="https://i.imgur.com/UbhkekT.jpg" alt="prog22"></p>
-<pre><code>Acct Last Name First Name Balance
-  29 Brown     Nancy      -24.54
-  33 Dunn      Stacey     314.33
-  37 Barker    Doug         0.00
-  88 Smith     Dave       258.34
-  96 Stone     Sam         34.98
-</code></pre>
 <p><strong>Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2)</strong></p>
 <h3 id="demo-6">Demo</h3>
 <p>Run <code>prog22</code> on <a href="http://j.mp/replUnit5">http://j.mp/replUnit5</a></p>
 <h2 id="transaction-processing-using-random-access-files">Transaction processing using random access files</h2>
 <p>We now present a substantial transaction-processing program using <strong>random access</strong> files. The program maintains a bank’s account information—updating existing accounts, adding new accounts, deleting accounts and storing a listing of all the current accounts in a text file for printing. We assume that the program of Fig. 11.10 (see program under <a href="#creating-random-access-file">“Creating Random Access File”</a> heading) has been executed to create the file <strong>credit.dat</strong>.</p>
 <p>The program has five options.</p>
-<p><strong>Option 1</strong> calls function textFile (lines 63–94) to store a formatted list of all the accounts (typically called a report) in a text file called accounts.txt that may be printed later. The function uses fread and the sequential file access techniques used in the program of Section below.</p>
+<p><strong>Option 1</strong> calls function <code>textFile</code>  to store a formatted list of all the accounts (typically called a report) in a text file called <code>accounts.txt</code> that may be printed later. The function uses <code>fread</code> and the sequential file access techniques used in the program of Section below.</p>
 <p>After <strong>option 1</strong> is chosen, the file <strong>accounts.txt</strong> contains:</p>
 <pre><code>Acct Last Name First Name Balance
 	29   Brown     Nancy        -24.54
@@ -964,20 +958,20 @@ SEEK_END - the seek starts at the end of the file
 	88   Smith     Dave         258.34
 	96   Stone     Sam           34.98
 </code></pre>
-<p><strong>Option 2</strong> calls the function <strong>updateRecord</strong> (lines 97–141) to update an account. The function will update only a record that already exists, so the function first checks whether the record specified by the user is empty. The record is read into structure client with fread, then member acctNum is compared to 0. If it’s 0, the record contains no information, and a message is printed stating that the record is empty. Then the menu choices are displayed. If the record contains information, function updateRecord inputs the transaction amount, calculates the new balance and rewrites the record to the file. A typical output for option 2 is</p>
+<p><strong>Option 2</strong> calls the function <strong>updateRecord</strong>  to update an account. The function will update only a record that already exists, so the function first checks whether the record specified by the user is empty. The record is read into structure client with fread, then member acctNum is compared to 0. If it’s 0, the record contains no information, and a message is printed stating that the record is empty. Then the menu choices are displayed. If the record contains information, function updateRecord inputs the transaction amount, calculates the new balance and rewrites the record to the file. A typical output for option 2 is</p>
 <pre><code>Enter account to update ( 1 - 100 ): 37
 37 Barker Doug 0.00
 Enter charge ( + ) or payment ( - ): +87.99
-37 Barker Do
+37 Barker Doug 87.99
 </code></pre>
-<p><strong>Option 3</strong> calls the function newRecord to add a new account to the file. If the user enters an account number for an existing account, newRecord displays an error message indicating that the record already contains information, and the menu choices are printed again. This function uses the same process to add a new account as does the program in Fig. 11.11. A typical output for option 3 is</p>
+<p><strong>Option 3</strong> calls the function <strong>newRecord</strong> to add a new account to the file. If the user enters an account number for an existing account, newRecord displays an error message indicating that the record already contains information, and the menu choices are printed again.  A typical output for option 3 is</p>
 <pre><code>Enter new account number ( 1 - 100 ): 22
 Enter lastname, firstname, balance
 ? Johnston Sarah 247.45
 </code></pre>
-<p><strong>Option 4</strong> calls function deleteRecord to delete a record from the file. Deletion is accomplished by asking the user for the account number and reinitializing the record. If the account contains no information, deleteRecord displays an error message indicating that the account does not exist.</p>
+<p><strong>Option 4</strong> calls function <strong>deleteRecord</strong> to delete a record from the file. Deletion is accomplished by asking the user for the account number and re-initialising the record. If the account contains no information, <strong>deleteRecord</strong> displays an error message indicating that the account does not exist.</p>
 <p><strong>Option 5</strong> terminates program execution.</p>
-<p>The program is shown in Fig. 11.15. The file “credit.dat” is opened for update (reading and writing) using “rb+” mode (<em>very</em> important).</p>
+<p>The program is shown in Fig. 11.15. The file <strong>“credit.dat”</strong> is opened for update (reading and writing) using <strong>“rb+”</strong> mode (<em>very</em> important).</p>
 <pre class=" language-c"><code class="prism  language-c"><span class="token comment">// Bank-account program reads a random-access file sequentially,</span>
 <span class="token comment">// updates data already written to the file, creates new data to</span>
 <span class="token comment">// be placed in the file, and deletes data previously in the file.</span>
@@ -1003,6 +997,7 @@ Enter lastname, firstname, balance
   <span class="token keyword">unsigned</span> <span class="token keyword">int</span> choice<span class="token punctuation">;</span> <span class="token comment">// user's choice</span>
 
   <span class="token comment">// fopen opens the file; exits if file cannot be opened</span>
+  <span class="token comment">// Do not change the mode "rb+" - it will not work!</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>cfPtr <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"credit.dat"</span><span class="token punctuation">,</span> <span class="token string">"rb+"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s: File could not be opened.\n"</span><span class="token punctuation">,</span> argv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">exit</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
