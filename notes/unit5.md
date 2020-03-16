@@ -487,9 +487,6 @@ int main(void) {
 }  // end main
 
 ```
-### Demo 
-Run `prog14` in the http://bit.ly/replUnit5
-
 
 ### Sample Output 
 
@@ -505,6 +502,10 @@ Run `prog14` in the http://bit.ly/replUnit5
 	200       Frank        234.00
 	300       Mano         29023.00
 	400       Bala         2344.00
+
+
+### Demo 
+Run `prog14` in the http://bit.ly/replUnit5
 	
 Figure 11.6 reads records from the file "clients.dat" created by the program of Fig. 11.2 and prints their contents. 
 - cfPtr is a pointer to a FILE. The file "clients.dat"  is opened for reading ("r"). We determine whether it has opened successfully (i.e., fopen does not return NULL). We then attempt to read a “record” from the file. 
@@ -564,12 +565,14 @@ int main() {
   return 0;
 }
 ```
-### Demo 
-Run `prog15` in the http://bit.ly/replUnit5 in conjunction with `prog15.txt`
 
 ### Sample Output 
 
 ![average](https://i.imgur.com/eY0HcUB.jpg)
+
+### Demo 
+Run `prog15` in the http://bit.ly/replUnit5 in conjunction with `prog15.txt`
+
 
 # Random access file 
 
@@ -1785,11 +1788,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODc3NDkxOTgsLTU1MDI2MDMwNCwtMT
-k5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgx
-NzI0MiwxNjcxNzExNjE4LDE2MzgxNjUyODgsNjA2Njc2MjEsNT
-I1NDg0NjI3LDI2MzY1ODc3LC01NzUxMDkzNjgsMTk1ODczNDA2
-OSwtMTYyODMxMDAxMCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMT
-Y3NTkzNDk0NiwtMjExNTQ1NjgyOSwtNTg5MDIzODMxLDM0NDYx
-NTk0MV19
+eyJoaXN0b3J5IjpbLTI3ODQ1NDk0OCwtNTUwMjYwMzA0LC0xOT
+kxODczNzA5LC0xODM4NTg0MTg1LDIwNDY0MjY3NSwxMTY4ODE3
+MjQyLDE2NzE3MTE2MTgsMTYzODE2NTI4OCw2MDY2NzYyMSw1Mj
+U0ODQ2MjcsMjYzNjU4NzcsLTU3NTEwOTM2OCwxOTU4NzM0MDY5
+LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIyNywxNj
+c1OTM0OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1
+OTQxXX0=
 -->
