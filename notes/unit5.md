@@ -4,7 +4,7 @@
 # UNIT V FILE PROCESSING  
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
-http://j.mp/memUnit5  -50 flashcards to review the contents of this unit.
+http://j.mp/memUnit5  -50+ flashcards to review the contents of this unit.
 http://j.mp/replUnit5 - list of illustrative C programs provided in this unit.
 
 **Table of Contents**
@@ -1801,11 +1801,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTEwOTM2OCwxOTU4NzM0MDY5LC0xNj
-I4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIyNywxNjc1OTM0
-OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQxLD
-IxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNzg1
-NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkwNT
-YwNTY4LDE2MDM3MjExMjQsMTkwMTY4MjY0MywzMDMxMzEyNywt
-MTQ4ODM3OTIyNV19
+eyJoaXN0b3J5IjpbMjYzNjU4NzcsLTU3NTEwOTM2OCwxOTU4Nz
+M0MDY5LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIy
+NywxNjc1OTM0OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMz
+Q0NjE1OTQxLDIxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUz
+NDA3LC0xNzg1NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2Nj
+gwLC0xMDkwNTYwNTY4LDE2MDM3MjExMjQsMTkwMTY4MjY0Mywz
+MDMxMzEyN119
 -->
