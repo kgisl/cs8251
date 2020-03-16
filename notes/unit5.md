@@ -1165,8 +1165,12 @@ int main(int argc, char *argv[]) {
 
 ```
 
+### Sample Output
+![mycopy](https://i.imgur.com/YkzSrb9.jpg)
 
+### Demo
 
+Run `mycopy` in http://j.mp/replUnit5
 
 _Also refer to the test case `file_copy` in [solution.test.cpp](#solution.tests.cpp)_ 
 
@@ -1785,11 +1789,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNj
-E3NDk1NiwyMDU0OTA0OTA5LC01MDk1NTM0MDcsLTE3ODU0ODY2
-NDgsLTEyNjk2MjE4NTIsLTE3MjI0OTY2ODAsLTEwOTA1NjA1Nj
-gsMTYwMzcyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMTI3LC0xNDg4
-Mzc5MjI1LDkzNDAxNTM2MywtNzIwMDg3Mjc2LC0xNjIwODA5Nj
-QzLDgwMDI3NzIxMCwxNDQ3MjUxNjE4LC0xNTk2Njc2NjM4LC02
-OTkwMTYxNjBdfQ==
+eyJoaXN0b3J5IjpbMTcyNTkxMDUxNCwtNTg5MDIzODMxLDM0ND
+YxNTk0MSwyMTI2MTc0OTU2LDIwNTQ5MDQ5MDksLTUwOTU1MzQw
+NywtMTc4NTQ4NjY0OCwtMTI2OTYyMTg1MiwtMTcyMjQ5NjY4MC
+wtMTA5MDU2MDU2OCwxNjAzNzIxMTI0LDE5MDE2ODI2NDMsMzAz
+MTMxMjcsLTE0ODgzNzkyMjUsOTM0MDE1MzYzLC03MjAwODcyNz
+YsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2MTgsLTE1
+OTY2NzY2MzhdfQ==
 -->
