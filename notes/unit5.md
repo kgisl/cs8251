@@ -1140,7 +1140,7 @@ Run `prog32` in http://j.mp/replUnit5
 int main(int argc, char *argv[]) {
   FILE *inFilePtr;   // input file pointer
   FILE *outFilePtr;  // output file pointer
-  int c;             // define c to hold characters read from the source file
+  int c;             // to hold characters read from the source file
 
   // check number of command-line arguments
   if (argc != 3) {
@@ -1149,14 +1149,12 @@ int main(int argc, char *argv[]) {
   }
   // if input file cannot be opened
   if ((inFilePtr = fopen(argv[1], "r")) == NULL) {
-    printf("File \"%s\" could not be opened\n", 
-      argv[1]);
+    printf("File \"%s\" could not be opened\n", argv[1]);
     exit(-1);
   }
   // if output file can be opened
   if ((outFilePtr = fopen(argv[2], "w")) == NULL) {
-    printf("File \"%s\" could not be opened\n", 
-      argv[2]);
+    printf("File \"%s\" could not be opened\n", argv[2]);
     exit(-1);
   }
       // read and output characters
@@ -1793,7 +1791,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MzYyNDc2OSwxNjc1OTM0OTQ2LC0yMT
+eyJoaXN0b3J5IjpbMTUwMDY2NDc0OSwxNjc1OTM0OTQ2LC0yMT
 E1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQxLDIxMjYxNzQ5
 NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNzg1NDg2NjQ4LC
 0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkwNTYwNTY4LDE2
