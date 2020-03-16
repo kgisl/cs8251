@@ -1169,10 +1169,10 @@ int main(int argc, char *argv[]) {
 ![mycopy](https://i.imgur.com/YkzSrb9.jpg)
 
 ### Demo
-
 Run `mycopy` in http://j.mp/replUnit5
 
-_Also refer to the test case `file_copy` in [solution.c](#solution.c)_ 
+- For a functional version of **mycopy**, refer to the function `file_copy` in [solution.c](#solution.c).
+
 
 ### Count bytes in a file 
 
@@ -1789,7 +1789,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3OTUwNzM0OCwtNTg5MDIzODMxLDM0ND
+eyJoaXN0b3J5IjpbLTg4NDkxNjg1MywtNTg5MDIzODMxLDM0ND
 YxNTk0MSwyMTI2MTc0OTU2LDIwNTQ5MDQ5MDksLTUwOTU1MzQw
 NywtMTc4NTQ4NjY0OCwtMTI2OTYyMTg1MiwtMTcyMjQ5NjY4MC
 wtMTA5MDU2MDU2OCwxNjAzNzIxMTI0LDE5MDE2ODI2NDMsMzAz
