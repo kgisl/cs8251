@@ -1172,7 +1172,7 @@ int main(int argc, char *argv[]) {
 
 Run `mycopy` in http://j.mp/replUnit5
 
-_Also refer to the test case `file_copy` in [solution.test.cpp](#solution.tests.cpp)_ 
+_Also refer to the test case `file_copy` in [solution.c](#solution.c)_ 
 
 ### Count bytes in a file 
 
@@ -1180,7 +1180,7 @@ Version 1 (using command line args)
 	 -  https://github.com/kgashok/filesOCR/blob/master/hand.c  
 
 Version 2  
-	 - test case `count_number_of_bytes_in_text_file` in [solution.test.cpp](#solution.tests.cpp)
+	 - test case `count_number_of_bytes_in_text_file` in [solution.c](#solution.c)
 
 
 
@@ -1789,7 +1789,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyNTkxMDUxNCwtNTg5MDIzODMxLDM0ND
+eyJoaXN0b3J5IjpbMTg3OTUwNzM0OCwtNTg5MDIzODMxLDM0ND
 YxNTk0MSwyMTI2MTc0OTU2LDIwNTQ5MDQ5MDksLTUwOTU1MzQw
 NywtMTc4NTQ4NjY0OCwtMTI2OTYyMTg1MiwtMTcyMjQ5NjY4MC
 wtMTA5MDU2MDU2OCwxNjAzNzIxMTI0LDE5MDE2ODI2NDMsMzAz
