@@ -730,6 +730,10 @@ The function prototype for **fseek** is where offset is the number of bytes to s
  - Function **fseek** returns a nonzero value if the seek operation cannot be performed.
  - Function **fwrite** returns the number of items it successfully output. If this number is less than the third argument in the function call, then a write error occurred.
 
+### Sample Output 
+![seqRand](https://i.imgur.com/UX7bpnJ.jpg)
+
+
 
 ## Reading Random Access Data 
 
@@ -798,7 +802,7 @@ int main(void) {
 	  88 Smith     Dave       258.34
 	  96 Stone     Sam         34.98
 	
-**Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2.)**
+**Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2)**
 
 
 ## Transaction processing using random access files 
@@ -1791,11 +1795,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjgzMTAwMTAsMTA1NjAwMTkwOCwxMj
-M1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0NTY4MjksLTU4OTAy
-MzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC
-01MDk1NTM0MDcsLTE3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLTE3
-MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAxNj
-gyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2Mywt
-NzIwMDg3Mjc2XX0=
+eyJoaXN0b3J5IjpbLTE0MDIzODE1NzMsLTE2MjgzMTAwMTAsMT
+A1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYsLTIxMTU0
+NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNjE3NDk1Ni
+wyMDU0OTA0OTA5LC01MDk1NTM0MDcsLTE3ODU0ODY2NDgsLTEy
+Njk2MjE4NTIsLTE3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYwMz
+cyMTEyNCwxOTAxNjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1
+LDkzNDAxNTM2M119
 -->
