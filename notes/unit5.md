@@ -879,31 +879,30 @@ int main(int argc, char *argv[]) {
     exit(-1);
   }
 
-  // enable user to specify action
   while ((choice = enterChoice()) != 5) {
     switch (choice) {
-    // create text file from record file
-    case 1:
-      textFile(cfPtr);
-      break;
-    // update record
-    case 2:
-      updateRecord(cfPtr);
-      break;
-    // create record
-    case 3:
-      newRecord(cfPtr);
-      break;
-    // delete existing record
-    case 4:
-      deleteRecord(cfPtr);
-      break;
-    // display message if user does not select valid choice
-    default:
-      puts("Incorrect choice");
-      break;
-    } // end switch
-  }   // end while
+      // create text file from record file
+      case 1:
+        textFile(cfPtr);
+        break;
+      // update record
+      case 2:
+        updateRecord(cfPtr);
+        break;
+      // create record
+      case 3:
+        newRecord(cfPtr);
+        break;
+      // delete existing record
+      case 4:
+        deleteRecord(cfPtr);
+        break;
+      // display message if user does not select valid choice
+      default:
+        puts("Incorrect choice");
+        break;
+     } // end switch
+  } // end while
 
   fclose(cfPtr); // fclose closes the file
 } // end main
@@ -1806,11 +1805,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MT
-cxMTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywy
-NjM2NTg3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2MjgzMT
-AwMTAsMTA1NjAwMTkwOCwxMjM1MDY3MjI3LDE2NzU5MzQ5NDYs
-LTIxMTU0NTY4MjksLTU4OTAyMzgzMSwzNDQ2MTU5NDEsMjEyNj
-E3NDk1NiwyMDU0OTA0OTA5LC01MDk1NTM0MDcsLTE3ODU0ODY2
-NDhdfQ==
+eyJoaXN0b3J5IjpbODc1OTgxNTc3LDIwNDY0MjY3NSwxMTY4OD
+E3MjQyLDE2NzE3MTE2MTgsMTYzODE2NTI4OCw2MDY2NzYyMSw1
+MjU0ODQ2MjcsMjYzNjU4NzcsLTU3NTEwOTM2OCwxOTU4NzM0MD
+Y5LC0xNjI4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIyNywx
+Njc1OTM0OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMzQ0Nj
+E1OTQxLDIxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3
+XX0=
 -->
