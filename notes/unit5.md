@@ -917,7 +917,8 @@ void textFile(FILE *readPtr) {
   } // end if
   else {
     rewind(readPtr); // sets pointer to beginning of file
-    fprintf(writePtr, "%-6s%-16s%-11s%10s\n", "Acct", "Last Name", "First Name","Balance");
+    fprintf(writePtr, "%-6s%-16s%-11s%10s\n", "Acct", "Last Name",
+		    "First Name", "Balance");
 
     // copy all records from random-access file into text file
     while (!feof(readPtr)) {
@@ -993,7 +994,6 @@ void deleteRecord(FILE *fPtr) {
   else { // delete record
     // move file pointer to correct record in file
     fseek(fPtr, (accountNum - 1) * sizeof(struct clientData), SEEK_SET);
-
     // replace existing record with blank record
     fwrite(&blankClient, sizeof(struct clientData), 1, fPtr);
   } // end else
@@ -1786,7 +1786,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjE1NzcwMDEsLTE4Mzg1ODQxODUsMj
+eyJoaXN0b3J5IjpbLTE4MDI5OTUzNDcsLTE4Mzg1ODQxODUsMj
 A0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwxNjM4MTY1
 Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNywyNjM2NTg3NywtNTc1MT
 A5MzY4LDE5NTg3MzQwNjksLTE2MjgzMTAwMTAsMTA1NjAwMTkw
