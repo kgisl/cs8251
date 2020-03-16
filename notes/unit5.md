@@ -1179,9 +1179,8 @@ Run `mycopy` in http://j.mp/replUnit5
 Version 1 (using command line args)
 	 -  https://github.com/kgashok/filesOCR/blob/master/hand.c  
 
-Version 2  
+Version 2 (functional version)  
 	 - test case `count_number_of_bytes_in_text_file` in [solution.c](#solution.c)
-
 
 
 
@@ -1789,11 +1788,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NDkxNjg1MywtNTg5MDIzODMxLDM0ND
-YxNTk0MSwyMTI2MTc0OTU2LDIwNTQ5MDQ5MDksLTUwOTU1MzQw
-NywtMTc4NTQ4NjY0OCwtMTI2OTYyMTg1MiwtMTcyMjQ5NjY4MC
-wtMTA5MDU2MDU2OCwxNjAzNzIxMTI0LDE5MDE2ODI2NDMsMzAz
-MTMxMjcsLTE0ODgzNzkyMjUsOTM0MDE1MzYzLC03MjAwODcyNz
-YsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcyNTE2MTgsLTE1
-OTY2NzY2MzhdfQ==
+eyJoaXN0b3J5IjpbNDY4MzkxNTgzLC01ODkwMjM4MzEsMzQ0Nj
+E1OTQxLDIxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3
+LC0xNzg1NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC
+0xMDkwNTYwNTY4LDE2MDM3MjExMjQsMTkwMTY4MjY0MywzMDMx
+MzEyNywtMTQ4ODM3OTIyNSw5MzQwMTUzNjMsLTcyMDA4NzI3Ni
+wtMTYyMDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5
+NjY3NjYzOF19
 -->
