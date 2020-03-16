@@ -1096,7 +1096,7 @@ int main(int argc, char *argv[]) {
 Note that `argv[0]` is the name of the program invoked, which means that `argv[1]` is a pointer to the first argument supplied, and `argv[argc]` is a pointer to the last argument. If no arguments are supplied, `argc` will be `1`. Thus for `n` arguments, `argc` will be equal to `n + 1`. 
 
 ### Sample Output
-
+![cargs](https://i.imgur.com/FNss2oE.jpg)
 
 ### Demo 
 Compile and run `prog31` in http://j.mp/replUnit5 
@@ -1773,11 +1773,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNDA5Nzg2NywtMTI2OTYyMTg1MiwtMT
-cyMjQ5NjY4MCwtMTA5MDU2MDU2OCwxNjAzNzIxMTI0LDE5MDE2
-ODI2NDMsMzAzMTMxMjcsLTE0ODgzNzkyMjUsOTM0MDE1MzYzLC
-03MjAwODcyNzYsLTE2MjA4MDk2NDMsODAwMjc3MjEwLDE0NDcy
-NTE2MTgsLTE1OTY2NzY2MzgsLTY5OTAxNjE2MCw5MzM1NDcyNj
-UsODEzNTg2NjIxLC02MzEwMDE3NzcsODQ5MzU4MTc3LC0xNTY1
-NzQyMzc2XX0=
+eyJoaXN0b3J5IjpbLTE3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLT
+E3MjI0OTY2ODAsLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAx
+NjgyNjQzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2My
+wtNzIwMDg3Mjc2LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3
+MjUxNjE4LC0xNTk2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3Mj
+Y1LDgxMzU4NjYyMSwtNjMxMDAxNzc3LDg0OTM1ODE3NywtMTU2
+NTc0MjM3Nl19
 -->
