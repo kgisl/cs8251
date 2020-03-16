@@ -1123,7 +1123,7 @@ Review the [argument sorting program](https://github.com/kgisl/cs8251/blob/maste
 - The second and third arguments on the command line are used as file names by the program. The files are opened using function **fopen**. If both files are opened successfully, characters are read from file **input** and written to file **output** until the **end-of-file indicator** for file input is set.   
 - Then the program terminates. The result is an exact copy of file input (if no errors occur during processing).  
 
-```
+```c
 // Using command-line arguments
 #include <stdio.h>
 
@@ -1159,7 +1159,7 @@ int main(int argc, char *argv[]) {
     }  // end else
   }    // end else
 }  // end main
- 
+
 ```
 
 _Also refer to the test case `file_copy` in [solution.test.cpp](#solution.tests.cpp)_ 
@@ -1779,11 +1779,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNz
-g1NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkw
-NTYwNTY4LDE2MDM3MjExMjQsMTkwMTY4MjY0MywzMDMxMzEyNy
-wtMTQ4ODM3OTIyNSw5MzQwMTUzNjMsLTcyMDA4NzI3NiwtMTYy
-MDgwOTY0Myw4MDAyNzcyMTAsMTQ0NzI1MTYxOCwtMTU5NjY3Nj
-YzOCwtNjk5MDE2MTYwLDkzMzU0NzI2NSw4MTM1ODY2MjEsLTYz
-MTAwMTc3N119
+eyJoaXN0b3J5IjpbMjEyNjE3NDk1NiwyMDU0OTA0OTA5LC01MD
+k1NTM0MDcsLTE3ODU0ODY2NDgsLTEyNjk2MjE4NTIsLTE3MjI0
+OTY2ODAsLTEwOTA1NjA1NjgsMTYwMzcyMTEyNCwxOTAxNjgyNj
+QzLDMwMzEzMTI3LC0xNDg4Mzc5MjI1LDkzNDAxNTM2MywtNzIw
+MDg3Mjc2LC0xNjIwODA5NjQzLDgwMDI3NzIxMCwxNDQ3MjUxNj
+E4LC0xNTk2Njc2NjM4LC02OTkwMTYxNjAsOTMzNTQ3MjY1LDgx
+MzU4NjYyMV19
 -->
