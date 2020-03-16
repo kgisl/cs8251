@@ -797,6 +797,8 @@ int main(void) {
 
 **Sample Output**
 
+![prog22](https://i.imgur.com/UbhkekT.jpg)
+
 	Acct Last Name First Name Balance
 	  29 Brown     Nancy      -24.54
 	  33 Dunn      Stacey     314.33
@@ -807,10 +809,7 @@ int main(void) {
 **Fig. 11.14 | Reading a random-access file sequentially. (Part 2 of 2)**
 
 ### Demo 
-
 Run `prog22` on http://j.mp/replUnit5 
-
-![prog22](https://i.imgur.com/UbhkekT.jpg)
 
 ## Transaction processing using random access files 
 
@@ -1802,11 +1801,11 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODE3NTIxOTIsMTk1ODczNDA2OSwtMT
-YyODMxMDAxMCwxMDU2MDAxOTA4LDEyMzUwNjcyMjcsMTY3NTkz
-NDk0NiwtMjExNTQ1NjgyOSwtNTg5MDIzODMxLDM0NDYxNTk0MS
-wyMTI2MTc0OTU2LDIwNTQ5MDQ5MDksLTUwOTU1MzQwNywtMTc4
-NTQ4NjY0OCwtMTI2OTYyMTg1MiwtMTcyMjQ5NjY4MCwtMTA5MD
-U2MDU2OCwxNjAzNzIxMTI0LDE5MDE2ODI2NDMsMzAzMTMxMjcs
-LTE0ODgzNzkyMjVdfQ==
+eyJoaXN0b3J5IjpbLTU3NTEwOTM2OCwxOTU4NzM0MDY5LC0xNj
+I4MzEwMDEwLDEwNTYwMDE5MDgsMTIzNTA2NzIyNywxNjc1OTM0
+OTQ2LC0yMTE1NDU2ODI5LC01ODkwMjM4MzEsMzQ0NjE1OTQxLD
+IxMjYxNzQ5NTYsMjA1NDkwNDkwOSwtNTA5NTUzNDA3LC0xNzg1
+NDg2NjQ4LC0xMjY5NjIxODUyLC0xNzIyNDk2NjgwLC0xMDkwNT
+YwNTY4LDE2MDM3MjExMjQsMTkwMTY4MjY0MywzMDMxMzEyNywt
+MTQ4ODM3OTIyNV19
 -->
