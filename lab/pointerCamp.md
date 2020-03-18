@@ -1,8 +1,8 @@
 # Pointer Camp
 
-**tl;dr**  ...that they are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.
+**tl;dr**   Pointers are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.
 
-Send your feedback using http://j.mp/ThanksKG 
+Send your feedback using [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/lifebalance@gmail.com)
 
 
 ## _...but why?_ 
