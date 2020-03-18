@@ -2,7 +2,7 @@
 
 **tl;dr**  ...that they are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.
 
-Send your feedback using http://j.mp/thanksKG 
+Send your feedback using http://j.mp/ThanksKG 
 
 
 ## _...but why?_ 
