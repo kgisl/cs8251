@@ -11,6 +11,9 @@ http://j.mp/pointKITE  - the problem set that can be used for a 20-hour workshop
 
 ## _...but why?_ 
 
+- Know ***what*** to practice
+	- to get better at execution, practice the same problems repeatedly over time.
+
 - _For some reason most people seem to be born without the part of the brain that understands pointers. This is an aptitude thing, not a skill thing – it requires a complex form of doubly-indirected **thinking** that some people just can't do._ - **Joel Spolsky** (Founder, Stackoverflow.com)
 
 - Hot and trending languages (since 2018) like Golang and Rust are becoming popular for various reasons. Both use and implement pointer concepts. 
