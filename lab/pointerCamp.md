@@ -4,20 +4,22 @@
 
 Send your feedback using [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/lifebalance@gmail.com)
 
-
-## _...but why?_ 
-
-Golang and Rust are two new languages that are becoming popular for various reasons. Both use and implement pointer concepts. 
-
-“For beginners, this may slightly be difficult to learn because Go relies heavily on pointers which may not be easy to grasp as a new programmer.” — @timcodestoo https://medium.com/p/3-programming-languages-to-learn-in-2019-2eb035936f65
-
 http://j.mp/pointKITE  - the problem set that can be used for a 20-hour workshop for Quick, Deep, Immersive and Perceptual Learning of **Indirection** (aka Pointers) - the most important **Threshold Concept** in programming. Arguably, this is the largest and progressively challenging problem set (PC-P) that is relevant for learning, teaching and assessment of knowledge/competency in pointers. 
 
   - Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
-  - Review http://j.mp/fileChallenge - can you quickly write up a C code for the challenge? 
-    - Three concepts - Functions from Unit_3(`fread`, `fwrite`, etc), structures from Unit_4 ([opaque][opaque] `FILE` typedef for`struct iobuf`) and pointers from Unit_3 (FILE *)  come together to accomplish file processing ([Unit_5](http://j.mp/unit5Easy))
-    - One of the most practical use cases for pointers 
+
+## _...but why?_ 
+
+- _For some reason most people seem to be born without the part of the brain that understands pointers. This is an aptitude thing, not a skill thing – it requires a complex form of doubly-indirected **thinking** that some people just can't do._ - **Joel Spolsky** (Founder, Stackoverflow.com)
+
+- Hot and trending languages (since 2018) like Golang and Rust are becoming popular for various reasons. Both use and implement pointer concepts. 
+	- “For beginners, this may slightly be difficult to learn because Go relies heavily on pointers which may not be easy to grasp as a new programmer.” — @timcodestoo https://medium.com/p/3-programming-languages-to-learn-in-2019-2eb035936f65
+
+- One of the most practical use cases for pointers 
+    - Three concepts - Functions from Unit_3(`fread`, `fwrite`, etc), structures from Unit_4 ([opaque][opaque] `FILE` typedef for`struct _iobuf`) and pointers from Unit_3 (FILE *)  come together to accomplish file processing ([Unit_5](http://j.mp/unit5Easy))
+	- Review http://j.mp/fileChallenge - can you quickly write up a C code for the challenge? 
+
 
 [opaque]: http://j.mp/opaqueC 
 
