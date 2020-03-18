@@ -1,17 +1,17 @@
 # Pointer Camp
 
-## But why? 
+**tl;dr**  ...that they are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.
+
+Send your feedback using http://j.mp/thanksKG 
+
+
+## _...but why?_ 
 
 Golang and Rust are two new languages that are becoming popular for various reasons. Both use and implement pointer concepts. 
 
 “For beginners, this may slightly be difficult to learn because Go relies heavily on pointers which may not be easy to grasp as a new programmer.” — @timcodestoo https://medium.com/p/3-programming-languages-to-learn-in-2019-2eb035936f65
 
-
-**tl;dr**  That they are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.
-
-Send your feedback using http://j.mp/thanksKG 
-
-http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for Immersive Perceptual Learning of Indirection (aka Pointers) - the most important **Threshold Concept** in programming. Arguably, this is the largest and progressively challenging problem set (PC-P) that is relevant for learning, teaching and assessment of knowledge/competency in pointers. 
+http://j.mp/pointKITE  - the problem set that can be used for a 20-hour workshop for Quick, Deep, Immersive and Perceptual Learning of **Indirection** (aka Pointers) - the most important **Threshold Concept** in programming. Arguably, this is the largest and progressively challenging problem set (PC-P) that is relevant for learning, teaching and assessment of knowledge/competency in pointers. 
 
   - Totally new to Pointers? First go update yourself at http://j.mp/pointerGlossary
 
@@ -19,7 +19,7 @@ http://j.mp/pointKITE  - the problem set that is used for a 20-hour workshop for
     - Three concepts - Functions from Unit_3(`fread`, `fwrite`, etc), structures from Unit_4 ([opaque][opaque] `FILE` typedef for`struct iobuf`) and pointers from Unit_3 (FILE *)  come together to accomplish file processing ([Unit_5](http://j.mp/unit5Easy))
     - One of the most practical use cases for pointers 
 
-[opaque]: j.mp/opaqueC 
+[opaque]: http://j.mp/opaqueC 
 
 # - String based (42)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
