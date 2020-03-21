@@ -1779,21 +1779,21 @@ _files in http://j.mp/replUnit5)_
 |prog21.c | random access - sequential binary file creation |
 |prog22.c | random access - sequential read from binary file |
 |trans.c  | random access of binary file - transaction processing program |
-|**COMMAND LINE** | |
-|prog31.c | command line arguments - example 1 |
-|prog32.c | command line arguments - argument sorter |
-|mycopy.c | command line arguments - UNIX's [cp][cp] command |
 | **DATA FILES** | 
 | clients.dat | client data text file |
 | accounts.txt | credit data text file |
 | credit.dat| credit data binary file | 
+|**COMMAND LINE** | |
+|prog31.c | command line arguments - example 1 |
+|prog32.c | command line arguments - argument sorter |
+|mycopy.c | command line arguments - UNIX's [cp][cp] command |
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMzA3MjkzNCwtMTYzMDUwOTM1OCwtMj
-gyMzM1NTk4LDE0MTAxMDI2ODcsLTExMjI5NjE5NjIsMTE4OTkw
-NTY5NSwtMTUxMjk1NzA1LC0xMzcwMDcwNTQxLDE0NDU2ODIyMj
-MsLTc3Nzc4MTQxMSwtMjc4NDU0OTQ4LC01NTAyNjAzMDQsLTE5
-OTE4NzM3MDksLTE4Mzg1ODQxODUsMjA0NjQyNjc1LDExNjg4MT
-cyNDIsMTY3MTcxMTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUy
-NTQ4NDYyN119
+eyJoaXN0b3J5IjpbMjA2NDE2NjI0MiwxOTIzMDcyOTM0LC0xNj
+MwNTA5MzU4LC0yODIzMzU1OTgsMTQxMDEwMjY4NywtMTEyMjk2
+MTk2MiwxMTg5OTA1Njk1LC0xNTEyOTU3MDUsLTEzNzAwNzA1ND
+EsMTQ0NTY4MjIyMywtNzc3NzgxNDExLC0yNzg0NTQ5NDgsLTU1
+MDI2MDMwNCwtMTk5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2ND
+I2NzUsMTE2ODgxNzI0MiwxNjcxNzExNjE4LDE2MzgxNjUyODgs
+NjA2Njc2MjFdfQ==
 -->
