@@ -1766,7 +1766,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 ```
 
 ## Files Legend 
-_files in http://j.mp/replUnit5)_
+_files in http://j.mp/replUnit5_
 |FILENAME  | REMARKS |
 |:--------- |:--------|
 |**TEXT** | | 
@@ -1789,11 +1789,11 @@ _files in http://j.mp/replUnit5)_
 |mycopy.c | command line arguments - UNIX's [cp][cp] command |
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NDE2NjI0MiwxOTIzMDcyOTM0LC0xNj
-MwNTA5MzU4LC0yODIzMzU1OTgsMTQxMDEwMjY4NywtMTEyMjk2
-MTk2MiwxMTg5OTA1Njk1LC0xNTEyOTU3MDUsLTEzNzAwNzA1ND
-EsMTQ0NTY4MjIyMywtNzc3NzgxNDExLC0yNzg0NTQ5NDgsLTU1
-MDI2MDMwNCwtMTk5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2ND
-I2NzUsMTE2ODgxNzI0MiwxNjcxNzExNjE4LDE2MzgxNjUyODgs
-NjA2Njc2MjFdfQ==
+eyJoaXN0b3J5IjpbLTIzNjk2Mjg1LDIwNjQxNjYyNDIsMTkyMz
+A3MjkzNCwtMTYzMDUwOTM1OCwtMjgyMzM1NTk4LDE0MTAxMDI2
+ODcsLTExMjI5NjE5NjIsMTE4OTkwNTY5NSwtMTUxMjk1NzA1LC
+0xMzcwMDcwNTQxLDE0NDU2ODIyMjMsLTc3Nzc4MTQxMSwtMjc4
+NDU0OTQ4LC01NTAyNjAzMDQsLTE5OTE4NzM3MDksLTE4Mzg1OD
+QxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwx
+NjM4MTY1Mjg4XX0=
 -->
