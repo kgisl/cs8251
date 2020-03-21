@@ -1764,12 +1764,40 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 
 ```
+
+## Files Legend 
+Files in http://j.mp/replUni5
+
+|FILENAME  | REMARKS |
+|:--------- |:--------|
+|TEXT | | 
+|prog11.c | sequential read and write - simple |
+|prog12.c | sequential write and read - struct obj |
+|prog13.c | sequential write to file - compound |
+|prog14.c | sequential read from file - compound |
+|prog15.c | sequential read - average of numbers |
+|BINARY | |
+|prog21.c | seqential write - binary file creation |
+|prog22.c | sequential read - from binary file |
+|trans.c  | transaction processing program |
+|COMMAND LINE | |
+|prog31.c | command line arguments - example 1 |
+|prog32.c | command line arguments - argument sorter |
+|mycopy.c | command line arguments - UNIX's [cp][cp] command | 
+|FUNCTION POINTERS | |
+|prog71.c | function pointers - example 1
+|prog72.c | function pointers - example 2
+|prog73.c | function pointers - example 3
+
+
+
+[cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjI5NjE5NjIsMTE4OTkwNTY5NSwtMT
-UxMjk1NzA1LC0xMzcwMDcwNTQxLDE0NDU2ODIyMjMsLTc3Nzc4
-MTQxMSwtMjc4NDU0OTQ4LC01NTAyNjAzMDQsLTE5OTE4NzM3MD
-ksLTE4Mzg1ODQxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3
-MTcxMTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUyNTQ4NDYyNy
-wyNjM2NTg3NywtNTc1MTA5MzY4LDE5NTg3MzQwNjksLTE2Mjgz
-MTAwMTBdfQ==
+eyJoaXN0b3J5IjpbLTM3NzYyODMyNiwtMTEyMjk2MTk2MiwxMT
+g5OTA1Njk1LC0xNTEyOTU3MDUsLTEzNzAwNzA1NDEsMTQ0NTY4
+MjIyMywtNzc3NzgxNDExLC0yNzg0NTQ5NDgsLTU1MDI2MDMwNC
+wtMTk5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2
+ODgxNzI0MiwxNjcxNzExNjE4LDE2MzgxNjUyODgsNjA2Njc2Mj
+EsNTI1NDg0NjI3LDI2MzY1ODc3LC01NzUxMDkzNjgsMTk1ODcz
+NDA2OV19
 -->
