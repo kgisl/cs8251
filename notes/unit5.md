@@ -1776,8 +1776,8 @@ _files in http://j.mp/replUnit5)_
 |prog14.c | sequential read from file - compound |
 |prog15.c | sequential read - average of numbers |
 |BINARY | |
-|prog21.c | seqential write - binary file creation |
-|prog22.c | sequential read from binary file |
+|prog21.c | random access - sequential binary file creation |
+|prog22.c | random access - sequential read from binary file |
 |trans.c  | random access of binary file -transaction processing program |
 |COMMAND LINE | |
 |prog31.c | command line arguments - example 1 |
@@ -1786,11 +1786,11 @@ _files in http://j.mp/replUnit5)_
 
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMDEwMjY4NywtMTEyMjk2MTk2MiwxMT
-g5OTA1Njk1LC0xNTEyOTU3MDUsLTEzNzAwNzA1NDEsMTQ0NTY4
-MjIyMywtNzc3NzgxNDExLC0yNzg0NTQ5NDgsLTU1MDI2MDMwNC
-wtMTk5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2
-ODgxNzI0MiwxNjcxNzExNjE4LDE2MzgxNjUyODgsNjA2Njc2Mj
-EsNTI1NDg0NjI3LDI2MzY1ODc3LC01NzUxMDkzNjgsMTk1ODcz
-NDA2OV19
+eyJoaXN0b3J5IjpbLTgyMTYyMzM2MCwxNDEwMTAyNjg3LC0xMT
+IyOTYxOTYyLDExODk5MDU2OTUsLTE1MTI5NTcwNSwtMTM3MDA3
+MDU0MSwxNDQ1NjgyMjIzLC03Nzc3ODE0MTEsLTI3ODQ1NDk0OC
+wtNTUwMjYwMzA0LC0xOTkxODczNzA5LC0xODM4NTg0MTg1LDIw
+NDY0MjY3NSwxMTY4ODE3MjQyLDE2NzE3MTE2MTgsMTYzODE2NT
+I4OCw2MDY2NzYyMSw1MjU0ODQ2MjcsMjYzNjU4NzcsLTU3NTEw
+OTM2OF19
 -->
