@@ -1769,28 +1769,28 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 _files in http://j.mp/replUnit5)_
 |FILENAME  | REMARKS |
 |:--------- |:--------|
-|TEXT | | 
+|**TEXT** | | 
 |prog11.c | sequential read and write - simple |
 |prog12.c | sequential write and read - struct obj |
 |prog13.c | sequential write to file - compound |
 |prog14.c | sequential read from file - compound |
 |prog15.c | sequential read - average of numbers |
-|BINARY | |
+|**BINARY** | |
 |prog21.c | random access - sequential binary file creation |
 |prog22.c | random access - sequential read from binary file |
 |trans.c  | random access of binary file - transaction processing program |
-|COMMAND LINE | |
+|**COMMAND LINE** | |
 |prog31.c | command line arguments - example 1 |
 |prog32.c | command line arguments - argument sorter |
 |mycopy.c | command line arguments - UNIX's [cp][cp] command |
 
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MjMzNTU5OCwxNDEwMTAyNjg3LC0xMT
-IyOTYxOTYyLDExODk5MDU2OTUsLTE1MTI5NTcwNSwtMTM3MDA3
-MDU0MSwxNDQ1NjgyMjIzLC03Nzc3ODE0MTEsLTI3ODQ1NDk0OC
-wtNTUwMjYwMzA0LC0xOTkxODczNzA5LC0xODM4NTg0MTg1LDIw
-NDY0MjY3NSwxMTY4ODE3MjQyLDE2NzE3MTE2MTgsMTYzODE2NT
-I4OCw2MDY2NzYyMSw1MjU0ODQ2MjcsMjYzNjU4NzcsLTU3NTEw
-OTM2OF19
+eyJoaXN0b3J5IjpbLTE2MzA1MDkzNTgsLTI4MjMzNTU5OCwxND
+EwMTAyNjg3LC0xMTIyOTYxOTYyLDExODk5MDU2OTUsLTE1MTI5
+NTcwNSwtMTM3MDA3MDU0MSwxNDQ1NjgyMjIzLC03Nzc3ODE0MT
+EsLTI3ODQ1NDk0OCwtNTUwMjYwMzA0LC0xOTkxODczNzA5LC0x
+ODM4NTg0MTg1LDIwNDY0MjY3NSwxMTY4ODE3MjQyLDE2NzE3MT
+E2MTgsMTYzODE2NTI4OCw2MDY2NzYyMSw1MjU0ODQ2MjcsMjYz
+NjU4NzddfQ==
 -->
