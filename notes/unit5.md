@@ -1778,7 +1778,7 @@ _files in http://j.mp/replUnit5)_
 |BINARY | |
 |prog21.c | random access - sequential binary file creation |
 |prog22.c | random access - sequential read from binary file |
-|trans.c  | random access of binary file -transaction processing program |
+|trans.c  | random access of binary file - transaction processing program |
 |COMMAND LINE | |
 |prog31.c | command line arguments - example 1 |
 |prog32.c | command line arguments - argument sorter |
@@ -1786,7 +1786,7 @@ _files in http://j.mp/replUnit5)_
 
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MDM5OTY2MiwxNDEwMTAyNjg3LC0xMT
+eyJoaXN0b3J5IjpbLTI4MjMzNTU5OCwxNDEwMTAyNjg3LC0xMT
 IyOTYxOTYyLDExODk5MDU2OTUsLTE1MTI5NTcwNSwtMTM3MDA3
 MDU0MSwxNDQ1NjgyMjIzLC03Nzc3ODE0MTEsLTI3ODQ1NDk0OC
 wtNTUwMjYwMzA0LC0xOTkxODczNzA5LC0xODM4NTg0MTg1LDIw
