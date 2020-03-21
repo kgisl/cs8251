@@ -1783,14 +1783,17 @@ _files in http://j.mp/replUnit5)_
 |prog31.c | command line arguments - example 1 |
 |prog32.c | command line arguments - argument sorter |
 |mycopy.c | command line arguments - UNIX's [cp][cp] command |
-
+| **DATA FILES** | 
+| clients.dat | client data text file |
+| accounts.txt | credit data text file |
+| credit.dat| credit data binary file | 
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzA1MDkzNTgsLTI4MjMzNTU5OCwxND
-EwMTAyNjg3LC0xMTIyOTYxOTYyLDExODk5MDU2OTUsLTE1MTI5
-NTcwNSwtMTM3MDA3MDU0MSwxNDQ1NjgyMjIzLC03Nzc3ODE0MT
-EsLTI3ODQ1NDk0OCwtNTUwMjYwMzA0LC0xOTkxODczNzA5LC0x
-ODM4NTg0MTg1LDIwNDY0MjY3NSwxMTY4ODE3MjQyLDE2NzE3MT
-E2MTgsMTYzODE2NTI4OCw2MDY2NzYyMSw1MjU0ODQ2MjcsMjYz
-NjU4NzddfQ==
+eyJoaXN0b3J5IjpbMTkyMzA3MjkzNCwtMTYzMDUwOTM1OCwtMj
+gyMzM1NTk4LDE0MTAxMDI2ODcsLTExMjI5NjE5NjIsMTE4OTkw
+NTY5NSwtMTUxMjk1NzA1LC0xMzcwMDcwNTQxLDE0NDU2ODIyMj
+MsLTc3Nzc4MTQxMSwtMjc4NDU0OTQ4LC01NTAyNjAzMDQsLTE5
+OTE4NzM3MDksLTE4Mzg1ODQxODUsMjA0NjQyNjc1LDExNjg4MT
+cyNDIsMTY3MTcxMTYxOCwxNjM4MTY1Mjg4LDYwNjY3NjIxLDUy
+NTQ4NDYyN119
 -->
