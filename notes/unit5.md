@@ -5,7 +5,7 @@
 *Files – Types of file processing: Sequential access, Random access – Sequential access file - Example Program: Finding average of numbers stored in sequential access file - Random access file - Example Program: Transaction processing using random access files – Command line arguments*
 
 http://j.mp/memUnit5  -50+ flashcards to review the contents of this unit.
-http://j.mp/replUnit5 - list of illustrative C programs provided in this unit.
+http://j.mp/replUnit5 - list of illustrative C programs provided in this unit (see [below](#FilesLegend))
 
 **Table of Contents**
 
@@ -1765,8 +1765,8 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 ```
 
-## Files Legend 
-Files in http://j.mp/replUni5
+## FilesLegend 
+Files in http://j.mp/replUnit5
 
 |FILENAME  | REMARKS |
 |:--------- |:--------|
@@ -1793,7 +1793,7 @@ Files in http://j.mp/replUni5
 
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NzYyODMyNiwtMTEyMjk2MTk2MiwxMT
+eyJoaXN0b3J5IjpbLTUwMTk0OTcwOSwtMTEyMjk2MTk2MiwxMT
 g5OTA1Njk1LC0xNTEyOTU3MDUsLTEzNzAwNzA1NDEsMTQ0NTY4
 MjIyMywtNzc3NzgxNDExLC0yNzg0NTQ5NDgsLTU1MDI2MDMwNC
 wtMTk5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2
