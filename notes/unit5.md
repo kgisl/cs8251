@@ -1777,8 +1777,8 @@ _files in http://j.mp/replUnit5)_
 |prog15.c | sequential read - average of numbers |
 |BINARY | |
 |prog21.c | seqential write - binary file creation |
-|prog22.c | sequential read - from binary file |
-|trans.c  | transaction processing program |
+|prog22.c | sequential read from binary file |
+|trans.c  | random access of binary file -transaction processing program |
 |COMMAND LINE | |
 |prog31.c | command line arguments - example 1 |
 |prog32.c | command line arguments - argument sorter |
@@ -1786,7 +1786,7 @@ _files in http://j.mp/replUnit5)_
 
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NTUyMjE4NiwtMTEyMjk2MTk2MiwxMT
+eyJoaXN0b3J5IjpbMTQxMDEwMjY4NywtMTEyMjk2MTk2MiwxMT
 g5OTA1Njk1LC0xNTEyOTU3MDUsLTEzNzAwNzA1NDEsMTQ0NTY4
 MjIyMywtNzc3NzgxNDExLC0yNzg0NTQ5NDgsLTU1MDI2MDMwNC
 wtMTk5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2
