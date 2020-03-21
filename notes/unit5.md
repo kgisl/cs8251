@@ -1766,7 +1766,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 ```
 
 ## Files Legend 
-
+_files in http://j.mp/replUnit5)_
 |FILENAME  | REMARKS |
 |:--------- |:--------|
 |TEXT | | 
@@ -1786,7 +1786,7 @@ TEST(FileTest, calculate_average_of_numbers_stored_in_file)
 
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MDg2NjExNSwtMTEyMjk2MTk2MiwxMT
+eyJoaXN0b3J5IjpbMjA4NTUyMjE4NiwtMTEyMjk2MTk2MiwxMT
 g5OTA1Njk1LC0xNTEyOTU3MDUsLTEzNzAwNzA1NDEsMTQ0NTY4
 MjIyMywtNzc3NzgxNDExLC0yNzg0NTQ5NDgsLTU1MDI2MDMwNC
 wtMTk5MTg3MzcwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2
