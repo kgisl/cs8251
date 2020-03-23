@@ -81,7 +81,7 @@ In C language, we use a structure **pointer of file type** to declare a file.
 
 C provides a number of functions that helps to perform basic file operations. Following are the functions:
 
-|Function 	 |description    | Prototype |
+|Function 	 |Description    | Prototype |
 |:-----------|:--------------|:--------|
 | fopen()	| create a new file or open a existing file | FILE *fp =**fopen** (“filename”, ”‘mode”); |
 | fclose() 	| closes a file	| int **fclose**(FILE *fp); |
@@ -1789,11 +1789,11 @@ _files in http://j.mp/replUnit5_
 |mycopy.c | command line arguments - UNIX's [cp][cp] command |
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjk2Mjg1LDIwNjQxNjYyNDIsMTkyMz
-A3MjkzNCwtMTYzMDUwOTM1OCwtMjgyMzM1NTk4LDE0MTAxMDI2
-ODcsLTExMjI5NjE5NjIsMTE4OTkwNTY5NSwtMTUxMjk1NzA1LC
-0xMzcwMDcwNTQxLDE0NDU2ODIyMjMsLTc3Nzc4MTQxMSwtMjc4
-NDU0OTQ4LC01NTAyNjAzMDQsLTE5OTE4NzM3MDksLTE4Mzg1OD
-QxODUsMjA0NjQyNjc1LDExNjg4MTcyNDIsMTY3MTcxMTYxOCwx
-NjM4MTY1Mjg4XX0=
+eyJoaXN0b3J5IjpbMjA3NDE2MDE5NSwtMjM2OTYyODUsMjA2ND
+E2NjI0MiwxOTIzMDcyOTM0LC0xNjMwNTA5MzU4LC0yODIzMzU1
+OTgsMTQxMDEwMjY4NywtMTEyMjk2MTk2MiwxMTg5OTA1Njk1LC
+0xNTEyOTU3MDUsLTEzNzAwNzA1NDEsMTQ0NTY4MjIyMywtNzc3
+NzgxNDExLC0yNzg0NTQ5NDgsLTU1MDI2MDMwNCwtMTk5MTg3Mz
+cwOSwtMTgzODU4NDE4NSwyMDQ2NDI2NzUsMTE2ODgxNzI0Miwx
+NjcxNzExNjE4XX0=
 -->
