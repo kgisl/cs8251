@@ -39,7 +39,7 @@ http://j.mp/replUnit5 - list of illustrative C programs provided in this unit (s
 - Understand [file functions][1] 
 - Quick reference on [file handling][2]
 - All about [EOF](https://latedev.wordpress.com/2012/12/04/all-about-eof/) 
-- Listen to {How I program C](https://www.youtube.com/watch?v=443UNeGrFoM)
+- Listen to [How I program C](https://www.youtube.com/watch?v=443UNeGrFoM)
 
 [1]: https://www.go4expert.com/articles/understanding-c-file-handling-functions-t29966/
 [2]: http://iiti.ac.in/people/~tanimad/FileHandlinginCLanguage.pdf 
@@ -1790,7 +1790,7 @@ _files in http://j.mp/replUnit5_
 |mycopy.c | command line arguments - UNIX's [cp][cp] command |
 [cp]: http://man7.org/linux/man-pages/man1/cp.1.html
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0ODI2NjU1NywyMDc0MTYwMTk1LC0yMz
+eyJoaXN0b3J5IjpbLTU1OTY3NjE4OSwyMDc0MTYwMTk1LC0yMz
 Y5NjI4NSwyMDY0MTY2MjQyLDE5MjMwNzI5MzQsLTE2MzA1MDkz
 NTgsLTI4MjMzNTU5OCwxNDEwMTAyNjg3LC0xMTIyOTYxOTYyLD
 ExODk5MDU2OTUsLTE1MTI5NTcwNSwtMTM3MDA3MDU0MSwxNDQ1
