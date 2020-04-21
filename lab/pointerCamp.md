@@ -95,16 +95,16 @@ _How do I generate new strings from existing ones?_
 
 # - PDS-1 Practice (5)
   - Lab 3
-	 - [connect](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1191), [traverse](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1190), [getnode](http://j.mp/tailCC) and 
-[insertBefore](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1193)
-	 - [Doubly-Linked List](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1189)
+	 - [connect](http://bit.ly/connectDLL), [traverse](http://j.mp/traverseDLL), [getnode](http://j.mp/tailCC) and 
+[insertBefore](https://bit.ly/insertLinkCC)
+	 - [Doubly-Linked List](http://j.mp/doublyLinkedCC)
        - Processing strings as linked lists [TBD]
   - Lab 6 
     - [Fixed Array based Stack](https://bit.ly/arrayStack)
       - [PostFix Eval](bit.ly/postfixCC),  [PostFix to Infix](http://j.mp/infixPostfix)
       - [Bracket Matching](http://j.mp/bracketKG)
     - [Linked List based Stack](http://bit.ly/linkedStack)
-    - [Linked List based Queue](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
+    - [Linked List based Queue](https://bit.ly/linkedQueue)
 
 
 
