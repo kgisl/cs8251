@@ -100,10 +100,10 @@ _How do I generate new strings from existing ones?_
 	 - [Doubly-Linked List](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1189)
        - Processing strings as linked lists [TBD]
   - Lab 6 
-    - [Fixed Array based Stack](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1115)
-      - [PostFix Eval](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1120),  [PostFix to Infix](http://j.mp/infixPostfix)
-      - [Bracket Matching](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1126)
-    - [Linked List based Stack](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1162)
+    - [Fixed Array based Stack](https://bit.ly/arrayStack)
+      - [PostFix Eval](bit.ly/postfixCC),  [PostFix to Infix](http://j.mp/infixPostfix)
+      - [Bracket Matching](http://j.mp/bracketKG)
+    - [Linked List based Stack](http://bit.ly/linkedStack)
     - [Linked List based Queue](http://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=7,p=1188)
 
 
