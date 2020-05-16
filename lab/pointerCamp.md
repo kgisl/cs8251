@@ -93,7 +93,7 @@ _How do I generate new strings from existing ones?_
   - http://j.mp/funcPointerCC
 
 
-# - PDS-1 Practice (6)
+# - PDS-1 Practice (7)
   - cs8251 - C Programming 
 	  - [insert_after](https://j.mp/singleLL)
 	  - [selection_sort](https://j.mp/selectSortCC)
