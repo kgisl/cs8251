@@ -96,7 +96,7 @@ _How do I generate new strings from existing ones?_
 # - PDS-1 Practice (7)
   - cs8251 - C Programming 
 	  - [insert_after](https://j.mp/singleLL)
-	  - [selection_sort](https://j.mp/selectSortCC)
+	  - [selection_sort](https://j.mp/selectSortLL)
 	  
   - Lab 3
 	 - [connect](http://bit.ly/connectDLL), [traverse](http://j.mp/traverseDLL), [getnode](http://j.mp/tailCC) and 
