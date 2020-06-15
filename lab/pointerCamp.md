@@ -90,9 +90,9 @@ _How do I generate new strings from existing ones?_
 - [doubleSwap](http://j.mp/doubleSwap)
 - [palindrome](http://j.mp/dPalindromeKG) using double pointers
 
-# - Function Pointer (1)
-  - [case selector](http://j.mp/funcPointerCC)
+# - Function Pointer (2)
   - [string sorter](https://j.mp/stringSortCC)
+  - [case selector](http://j.mp/funcPointerCC)
 
 
 # - PDS-1 Practice (7)
