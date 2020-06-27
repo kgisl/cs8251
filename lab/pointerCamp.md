@@ -10,6 +10,8 @@ http://j.mp/pointKITE  - the problem set that can be used for a 20-hour workshop
 
 
 ## _...but why?_ 
+_"...and flight software itself... is written in C/C++" - take a look at [this](http://j.mp/linuxFalcon)!_
+
 
 - Know ***what*** to practice
 	- to get better at execution, practice the same problems repeatedly over time.
@@ -113,9 +115,7 @@ _How do I generate new strings from existing ones?_
     - [Linked List based Queue](https://bit.ly/linkedQueue)
 
 
-## ..but why care about C/C++ and Linux? 
 
-For one, "...and flight software itself... is written in C/C++" - take a look at [this](http://j.mp/linuxFalcon)
 
 
 <!---
