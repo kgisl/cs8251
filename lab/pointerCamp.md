@@ -35,7 +35,7 @@ _What is inside the string? Is the needle present in the haystack?_
 - [strlen](http://j.mp/stringLenCC), [mystrlen](http://j.mp/strlenCC) and [vowel counting](https://j.mp/vowelsCC)
 - [have_no_fives](http://j.mp/haveNoFive)  and 
 - [count_occurrences](http://j.mp/countCC), [has_duplicates](http://j.mp/countDuplicates) and
-- [find_earliest](https://bit.ly/findEarlyCC)
+- [find_earliest](https://bit.ly/findEarlyCC), [unique_chars](http://j.mp/uniqueCC)
 
 --- BREAK  _here_ (try **strlower**)  
 - [subset](http://j.mp/subSetCC),  
