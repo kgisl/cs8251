@@ -113,6 +113,10 @@ _How do I generate new strings from existing ones?_
     - [Linked List based Queue](https://bit.ly/linkedQueue)
 
 
+## ..but why care about C/C++ and Linux? 
+
+For one, "...and flight software itself... is written in C/C++" - take a look at [this](http://j.mp/linuxFalcon)
+
 
 <!---
 ## Another Pointer Problem Set 
