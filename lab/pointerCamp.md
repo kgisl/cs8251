@@ -10,7 +10,7 @@ http://j.mp/pointKITE  - the problem set that can be used for a 20-hour workshop
 
 
 ## _...but why?_ 
-_"...and flight software itself... is written in C/C++" - take a look at [this](http://j.mp/linuxFalcon)!_
+_"...and flight software itself... is written in C/C++" - take a look at [j.mp/linuxFalcon](http://j.mp/linuxFalcon)!_
 
 
 - Know ***what*** to practice
