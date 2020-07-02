@@ -97,7 +97,7 @@ _How do I generate new strings from existing ones?_
   - [case selector](http://j.mp/funcPointerCC)
 
 
-# - PDS-1 Practice (7)
+# - PDS-1 Practice (8)
   - cs8251 - C Programming 
 	  - [insert_after](https://j.mp/singleLL)
 	  - [selection_sort](https://j.mp/selectSortLL)
@@ -105,6 +105,7 @@ _How do I generate new strings from existing ones?_
   - Lab 3
 	 - [connect](http://bit.ly/connectDLL), [traverse](http://j.mp/traverseDLL), [getnode](http://j.mp/tailCC) and 
 [insertBefore](https://bit.ly/insertLinkCC)
+     - [Rotate List](http://j.mp/airbnbCC)
 	 - [Doubly-Linked List](http://j.mp/doublyLinkedCC)
        - Processing strings as linked lists [TBD]
   - Lab 6 
