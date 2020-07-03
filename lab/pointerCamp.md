@@ -101,11 +101,12 @@ _How do I generate new strings from existing ones?_
   - cs8251 - C Programming 
 	  - [insert_after](https://j.mp/singleLL)
 	  - [selection_sort](https://j.mp/selectSortLL)
+	  - [rotate list](http://j.mp/airbnbCC)
+
 	  
   - Lab 3
 	 - [connect](http://bit.ly/connectDLL), [traverse](http://j.mp/traverseDLL), [getnode](http://j.mp/tailCC) and 
 [insertBefore](https://bit.ly/insertLinkCC)
-     - [Rotate List](http://j.mp/airbnbCC)
 	 - [Doubly-Linked List](http://j.mp/doublyLinkedCC)
        - Processing strings as linked lists [TBD]
   - Lab 6 
