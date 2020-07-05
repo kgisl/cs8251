@@ -97,13 +97,14 @@ _How do I generate new strings from existing ones?_
   - [case selector](http://j.mp/funcPointerCC)
 
 
-# - PDS-1 Practice (15)
+# - PDS-1 Practice (16)
   - cs8251 - C Programming 
 	  - [insert_after](https://j.mp/singleLL)
 	  - [selection_sort](https://j.mp/selectSortLL)
 	  - [rotate list](http://j.mp/airbnbCC)
 	  - [rotate_list, either way](http://j.mp/airbnb2CC)
 	  - [reverse list](http://j.mp/reverseLL)
+	  - [range_reverse](https://bit.ly/reverseRangeLL)
 
 	  
   - Lab 3
