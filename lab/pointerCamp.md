@@ -103,6 +103,7 @@ _How do I generate new strings from existing ones?_
 	  - [selection_sort](https://j.mp/selectSortLL)
 	  - [rotate list](http://j.mp/airbnbCC)
 	  - [rotate_list, either way](http://j.mp/airbnb2CC)
+	  - [reverse list](http://j.mp/reverseLL)
 
 	  
   - Lab 3
