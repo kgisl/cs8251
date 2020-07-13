@@ -98,27 +98,27 @@ _How do I generate new strings from existing ones?_
 
 
 # - PDS-1 Practice (17)
-  - _CS\_8251_ - C Programming 
-	  - [insert_after](https://j.mp/singleLL)
-	  - [selection_sort](https://j.mp/selectSortLL)
-	  - [rotate list](http://j.mp/airbnbCC)
-	  - [rotate_list, either way](http://j.mp/airbnb2CC)
-	  - [reverse list](http://j.mp/reverseLL)
-	  - [range_reverse](https://bit.ly/reverseRangeLL)
+ 
+## _CS\_8251_ - C Programming 
+  - [insert_after](https://j.mp/singleLL)
+  - [selection_sort](https://j.mp/selectSortLL)
+  - [rotate list](http://j.mp/airbnbCC)
+  - [rotate_list, either way](http://j.mp/airbnb2CC)
+  - [reverse list](http://j.mp/reverseLL)
+  - [range_reverse](https://bit.ly/reverseRangeLL)
 
 	  
-  - _CS\_8391_ (Lab 3) 
-	 - [connect](http://bit.ly/connectDLL), [traverse](http://j.mp/traverseDLL), [getnode](http://j.mp/tailCC) and 
+## _CS\_8391_ (Lab 3) 
+ - [connect](http://bit.ly/connectDLL), [traverse](http://j.mp/traverseDLL), [getnode](http://j.mp/tailCC) and 
 [insertBefore](https://bit.ly/insertLinkCC)
-	 - [Doubly-Linked List](http://j.mp/doublyLinkedCC)
-       - Processing strings as linked lists [TBD]
-  - Lab 6 
-    - [Fixed Array based Stack](https://bit.ly/arrayStack)
-      - [PostFix Eval](bit.ly/postfixCC),  [PostFix to Infix](http://j.mp/infixPostfix)
-      - [Bracket Matching](http://j.mp/bracketKG)
-    - [Linked List based Stack](http://bit.ly/linkedStack)
-    - [Linked List based Queue](https://bit.ly/linkedQueue)
-
+ - [Doubly-Linked List](http://j.mp/doublyLinkedCC)
+      - Processing strings as linked lists [TBD]
+ - Lab 6 
+   - [Fixed Array based Stack](https://bit.ly/arrayStack)
+     - [PostFix Eval](bit.ly/postfixCC),  [PostFix to Infix](http://j.mp/infixPostfix)
+     - [Bracket Matching](http://j.mp/bracketKG)
+   - [Linked List based Stack](http://bit.ly/linkedStack)
+   - [Linked List based Queue](https://bit.ly/linkedQueue)
 
 
 
