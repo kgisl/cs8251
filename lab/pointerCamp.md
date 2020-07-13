@@ -97,8 +97,8 @@ _How do I generate new strings from existing ones?_
   - [case selector](http://j.mp/funcPointerCC)
 
 
-# - PDS-1 Practice (16)
-  - cs8251 - C Programming 
+# - PDS-1 Practice (17)
+  - _CS\_8251_ - C Programming 
 	  - [insert_after](https://j.mp/singleLL)
 	  - [selection_sort](https://j.mp/selectSortLL)
 	  - [rotate list](http://j.mp/airbnbCC)
@@ -107,7 +107,7 @@ _How do I generate new strings from existing ones?_
 	  - [range_reverse](https://bit.ly/reverseRangeLL)
 
 	  
-  - Lab 3
+  - Lab 3 (_CS\_8391_)
 	 - [connect](http://bit.ly/connectDLL), [traverse](http://j.mp/traverseDLL), [getnode](http://j.mp/tailCC) and 
 [insertBefore](https://bit.ly/insertLinkCC)
 	 - [Doubly-Linked List](http://j.mp/doublyLinkedCC)
