@@ -107,7 +107,7 @@ _How do I generate new strings from existing ones?_
 	  - [range_reverse](https://bit.ly/reverseRangeLL)
 
 	  
-  - Lab 3 (_CS\_8391_)
+  - _CS\_8391_ (Lab 3) 
 	 - [connect](http://bit.ly/connectDLL), [traverse](http://j.mp/traverseDLL), [getnode](http://j.mp/tailCC) and 
 [insertBefore](https://bit.ly/insertLinkCC)
 	 - [Doubly-Linked List](http://j.mp/doublyLinkedCC)
