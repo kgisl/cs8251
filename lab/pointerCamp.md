@@ -72,13 +72,15 @@ _How can I change the contents inside a string?_
 - [strrev](http://j.mp/reverseCC)
 - [memorymove](http://j.mp/memmoveCC)
 
-## String allocation (dynamic memory) (6)
+## String allocation (dynamic memory) (7)
 _How do I generate new strings from existing ones?_
 - [subString](http://j.mp/substringCC), 
 - [indexOf](http://j.mp/indexCC),
 - [abbreviate](http://j.mp/acronymCC) (exercism and CapGemini), 
 - [replaceString](http://j.mp/replaceCC),
 - [binaryAdd](http://j.mp/binaryaddCC) (CapGemini), 
+- [is_in_middle](http://j.mp/centreCC) 
+
   
 # - Array Manipulation  (3)
 - [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
