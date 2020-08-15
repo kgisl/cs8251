@@ -80,6 +80,7 @@ _How do I generate new strings from existing ones?_
 - [replaceString](http://j.mp/replaceCC),
 - [binaryAdd](http://j.mp/binaryaddCC) (CapGemini), 
 - [is_in_middle](http://j.mp/centreCC) 
+- [centre of insertion](http://j.mp/insertCC)
 
   
 # - Array Manipulation  (3)
