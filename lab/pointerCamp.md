@@ -28,7 +28,7 @@ _"...and flight software itself... is written in C/C++" - take a look at [j.mp/l
 
 [opaque]: http://j.mp/opaqueC 
 
-# - String based (44)
+# - String based (45)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
 ## String examination  (29)
@@ -72,7 +72,7 @@ _How can I change the contents inside a string?_
 - [strrev](http://j.mp/reverseCC)
 - [memorymove](http://j.mp/memmoveCC)
 
-## String allocation (dynamic memory) (7)
+## String allocation (dynamic memory) (8)
 _How do I generate new strings from existing ones?_
 - [subString](http://j.mp/substringCC), 
 - [indexOf](http://j.mp/indexCC),
