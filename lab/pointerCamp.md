@@ -28,10 +28,10 @@ _"...and flight software itself... is written in C/C++" - take a look at [j.mp/l
 
 [opaque]: http://j.mp/opaqueC 
 
-# - String based (45)
+# - String based (48)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
-## String examination  (29)
+## String examination  (30)
 _What is inside the string? Is the needle present in the haystack?_
 - [strchar](http://j.mp/stringCharCC) and [strrchar](http://j.mp/stringrcharCC),  [strichr](http://j.mp/stringicharCC) and [strrichar](http://j.mp/stringiRcharCC),
 - [strlen](http://j.mp/stringLenCC), [mystrlen](http://j.mp/strlenCC) and [vowel counting](https://j.mp/vowelsCC)
@@ -47,6 +47,7 @@ _What is inside the string? Is the needle present in the haystack?_
 - [strend](http://j.mp/stringEndCC), 
 - [strcmp](http://j.mp/strcmpCC) and [strncmp](http://j.mp/stringncompareCC)
 - strend (_take  2_)
+- [strnstr](http://j.mp/strnstrCC)
 
 --- BREAK  _here_
 
@@ -72,7 +73,7 @@ _How can I change the contents inside a string?_
 - [strrev](http://j.mp/reverseCC)
 - [memorymove](http://j.mp/memmoveCC)
 
-## String allocation (dynamic memory) (8)
+## String allocation (dynamic memory) (9)
 _How do I generate new strings from existing ones?_
 - [subString](http://j.mp/substringCC), 
 - [indexOf](http://j.mp/indexCC),
@@ -81,7 +82,7 @@ _How do I generate new strings from existing ones?_
 - [binaryAdd](http://j.mp/binaryaddCC) (CapGemini), 
 - [is_in_middle](http://j.mp/centreCC) 
 - [centre of insertion](http://j.mp/insertCC)
-
+- [is_float](http://j.mp/floatCC)
   
 # - Array Manipulation  (3)
 - [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
