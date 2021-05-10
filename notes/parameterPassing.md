@@ -27,23 +27,23 @@ While **studying call by value** and **call by reference** in C it is important 
 
  
 ## Example using Call by Value  
-The classic example of wanting to modify the caller's memory is a `swapByValue()` function which exchanges two values. Since C language uses call by value, the following version of swap **`swapByValue()`** will not work...
+The classic example of wanting to modify the caller's memory is a `swap_by_value()` function which exchanges two values. Since C language uses call by value, the following version of swap **`swap_by_value()`** will not work...
 
 ```c
 #include <stdio.h>
  
-void swapByValue(int, int); /* Prototype */
+void swap_by_value(int, int); /* Prototype */
  
 int main() /* Main function */
 {
   int n1 = 10, n2 = 20;
  
   /* actual arguments will be as it is */
-  swapByValue(n1, n2);
+  swap_by_value(n1, n2);
   printf("n1: %d, n2: %d\n", n1, n2);
 }
  
-void swapByValue(int a, int b)
+void swap_by_value(int a, int b)
 {
   int t;
   t = a; a = b; b = t;
@@ -54,27 +54,27 @@ void swapByValue(int a, int b)
 ```
 n1: 10, n2: 20
 ```
-The **`swapByValue()`** does not affect the arguments `n1` and `n2` in the calling function it only operates on `a` and `b` local to **`swapByValue()`** itself. This is a good example of how local variables behave.
+The **`swap_by_value()`** does not affect the arguments `n1` and `n2` in the calling function it only operates on `a` and `b` local to **`swap_by_value()`** itself. This is a good example of how local variables behave.
 
 ## Example using Call by Reference
-In call by reference, to pass a variable n as a reference parameter, the programmer must pass a pointer to n instead of n itself. The formal parameter will be a pointer to the value of interest. The calling function will need to use `&` to compute the pointer of actual parameter. The called function will need to dereference the pointer with `*` where appropriate to access the value of interest. Here is an example of a correct swap **`swapByReference()`** function. So, now you got the difference between call by value and call by reference!
+In call by reference, to pass a variable n as a reference parameter, the programmer must pass a pointer to n instead of n itself. The formal parameter will be a pointer to the value of interest. The calling function will need to use `&` to compute the pointer of actual parameter. The called function will need to dereference the pointer with `*` where appropriate to access the value of interest. Here is an example of a correct swap **`swap_by_reference()`** function. So, now you got the difference between call by value and call by reference!
 
 ```c
 
 #include <stdio.h>
  
-void swapByReference(int*, int*); /* Prototype */
+void swap_by_reference(int*, int*); /* Prototype */
  
 int main() /* Main function */
 {
   int n1 = 10, n2 = 20;
  
   /* actual arguments will be altered */
-  swapByReference(&n1, &n2);
+  swap_by_reference(&n1, &n2);
   printf("n1: %d, n2: %d\n", n1, n2);
 }
  
-void swapByReference(int *a, int *b)
+void swap_by_reference(int *a, int *b)
 {
   int t;
   t = *a; *a = *b; *b = t;
