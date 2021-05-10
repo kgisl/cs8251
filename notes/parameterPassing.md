@@ -14,7 +14,7 @@ In C, all function arguments are passed "by value" because C does not support re
 The call by value scheme is an asset, however, not a liability. It usually leads to more compact programs with fewer extraneous variables, because parameters can be treated as conveniently initialized local variables in the called routine. Yet, there are some cases where we need call by reference:
  
 1. The called function communicates to the calling function only through return statement and return statement can only send only one value back to the calling function. If there are more than one value we want to alter, call by reference is required. 
-2. If the size of data is large , copying actual arguments to formal arguments could be a time consuming operation and occupies more memory.
+2. If the size of data is large, copying actual arguments to formal arguments could be a time consuming operation and occupies more memory.
 
 The **call by value** does not address above cases, hence we need **call by reference**. To achieve call by reference functionality in C language the calling function provides the address of the variable to be set (technically a pointer to the variable), and the called function declares the parameter to be a pointer and access the variable indirectly through it. Since the address of the argument is passed to the function, code within the called function can change the value of the actual arguments.
 
