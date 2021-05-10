@@ -22,12 +22,12 @@ While **studying call by value** and **call by reference** in C it is important 
 
 | call by value     | call by reference|
 |:------------------|:-----------------|
-|In call by value, a copy of actual arguments is passed to formal arguments of the called function and any change made to the formal arguments in the called function have no effect on the values of actual arguments in the calling function.|                            In call by reference, the location (address) of actual arguments is passed to formal arguments of the called function. This means by accessing the addresses of actual arguments we can alter them within from the called function.|
-|In call by value, actual arguments will remain safe, they cannot be modified accidentally.|                                               In call by reference, alteration to actual arguments is possible within from called function; therefore the code must handle arguments carefully else you get unexpected results.|
+|In call by value, a copy of actual arguments is passed to formal arguments of the called function and any change made to the formal arguments in the called function have no effect on the values of actual arguments in the calling function.| In call by reference, the location (address) of actual arguments is passed to formal arguments of the called function. This means by accessing the addresses of actual arguments we can alter them within from the called function.|
+|In call by value, actual arguments will remain safe, they cannot be modified accidentally.| In call by reference, alteration to actual arguments is possible within from called function; therefore the code must handle arguments carefully else you get unexpected results.|
 
  
 ## Example using Call by Value  
-The classic example of wanting to modify the caller's memory is a `swap_by_value()` function which exchanges two values. Since C language uses call by value, the following version of swap **`swap_by_value()`** will not work...
+The classic example of wanting to modify the caller's memory is a **`swap_by_value()`** function which exchanges two values. Since C language uses call by value, the following version of swap **`swap_by_value()`** will not work...
 
 ```c
 #include <stdio.h>
