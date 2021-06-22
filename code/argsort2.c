@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 	if (argc > 2) {
 		list = &argv[1];
 		element_count = argc - 1;
-		size_of_element = sizeof(void *);
+		size_of_element = sizeof(char *);
 		sortfunc = compare_strings;
 	}
 
