@@ -1,6 +1,11 @@
 # Pointer Camp
 
-**tl;dr**   Pointers are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.
+**tl;dr**   Pointers are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.  
+
+[**tl;dr 2**][pdecl] Pointer is a type of an object that refers to a function or an object of another type, possibly adding qualifiers. Pointer may also refer to nothing, which is indicated by the **special null pointer value** (i.e. 0, zero).  
+
+[pdecl]: https://en.cppreference.com/w/c/language/pointer  
+
 
 Send your feedback using [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/lifebalance@gmail.com)
 
