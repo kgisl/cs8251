@@ -1,5 +1,7 @@
 # CS8251 PROGRAMMING OBJECTIVES
 
+[Try it online!](https://tio.run/##VY7NCsIwEITvfYqhIqTSihW8WFuvvoN4iGlrAzEpMdWD@OwxW8WfhYSdycxHRCYU1yfvJ1ILNdQNNhdXSzPvKkR/npLHYEZSO5y51GC0cXsSKUTHLWZhv@4PCe6IAHqUuh/clSuUWBTktWBUQIU8CZrmJ8OdkWyE5IekeDOEGcJdfnLbb2ONFaVunVQNG3PJ/U3tbei2LN41ShncjFU1pjXi9MUb6TSjyjKSj3Bs4war6bPRw3ufL58 "C (clang) – Try It Online")
+
  - To develop C Programs using basic programming constructs
  - To develop C programs using arrays and strings  
  - To develop applications in C using functions , pointers and structures
