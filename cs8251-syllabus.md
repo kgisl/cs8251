@@ -71,7 +71,7 @@ Programming with C",McGraw-Hill Education, 1996.
 
 [v1]: http://j.mp/selectionSortVideo 
 
-[0]: http://j.mp/clangKITE 
+[0]: http://j.mp/pc1KITE
 [0keys]: http://j.mp/clangKeys 
 [1]: http://bit.ly/selectionSortC
 [2]: http://j.mp/swapNumbers
@@ -101,7 +101,7 @@ Programming with C",McGraw-Hill Education, 1996.
 [i1]: https://github.com/kgisl/cs8251/blob/master/notes/PointerAndArrays.md#array-and-pointers  
 [i2]: https://github.com/kgisl/cs8251/blob/master/notes/PointerAndArrays.md#array-of-pointers  
 [i3]: https://github.com/kgisl/cs8251/blob/master/notes/linearSearchAndBinarySearch.md#linear-search  
-[recursion]: https://github.com/kgisl/cs8251/blob/master/notes/linearSearchAndBinarySearch.md#recusion-code-for-binary-search  
+[recursion]: http://bit.ly/binsearchC  
 
 [i4]: https://github.com/kgisl/cs8251/blob/master/notes/parameterPassing.md#parameter-passing
 
