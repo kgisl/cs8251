@@ -1,13 +1,11 @@
 # Pointer Camp
 
 **tl;dr**   Pointers are _nothing more than memory addresses_, or that they allow you to point to _arbitrary locations_.  
+[**tl;dr 2**][pdecl] Pointer is a type of an object that refers to a function or an object of another type, possibly adding qualifiers. Pointer may also refer to nothing, which is indicated by the **special null pointer value** (i.e. 0, zero).
 
-[**tl;dr 2**][pdecl] Pointer is a type of an object that refers to a function or an object of another type, possibly adding qualifiers. Pointer may also refer to nothing, which is indicated by the **special null pointer value** (i.e. 0, zero).  
+[pdecl]: https://en.cppreference.com/w/c/language/pointer
 
-[pdecl]: https://en.cppreference.com/w/c/language/pointer  
-
-
-Send your feedback using [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/lifebalance@gmail.com)
+Send your feedback using [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/lifebalance)
 
 http://j.mp/pointKITE  - the problem set that can be used for a 20-hour workshop for Quick, Deep, Immersive and Perceptual Learning of **Indirection** (aka Pointers) - the most important **Threshold Concept** in programming. Arguably, this is the largest and progressively challenging problem set (PC-P) that is relevant for learning, teaching and assessment of knowledge/competency in pointers. 
 
@@ -33,7 +31,7 @@ _"...and flight software itself... is written in C/C++" - take a look at [j.mp/l
 
 [opaque]: http://j.mp/opaqueC 
 
-# - String based (48)
+# - String based (49)
 A null-terminated byte string (NTBS) is a sequence of nonzero bytes followed by a byte with value **`zero`** (the terminating null character). Each byte in a byte string encodes one character of some character set. For example, the character array `{'\x63','\x61','\x74','\0'}` is an **NTBS** holding the string **"cat"** in ASCII encoding.
 
 ## String examination  (30)
@@ -68,15 +66,17 @@ _What is inside the string? Is the needle present in the haystack?_
 - [word count](http://j.mp/wordcountCC)
 
 
-## String manipulation (9)
+## String manipulation (10)
 _How can I change the contents inside a string?_ 
 - [strlower](http://j.mp/strToLowerCC) and [strupper](http://j.mp/strToUpperCC)
 - [strflipcase](http://j.mp/stringflipcaseCC)
 -- BREAK _here_ 
 - [strcpy](http://j.mp/stringcopyCC) and [strncpy](http://j.mp/stringNcopyCC),
 - [strcat](http://j.mp/stringCatCC) and [strncat](http://j.mp/strncatCC),
-- [strrev](http://j.mp/reverseCC)
-- [memorymove](http://j.mp/memmoveCC)
+- [strrev](http://j.mp/reverseCC),
+- [memorymove](http://j.mp/memmoveCC),
+- [strerase](http://bit.ly/streraseCC)
+
 
 ## String allocation (dynamic memory) (9)
 _How do I generate new strings from existing ones?_
@@ -89,9 +89,10 @@ _How do I generate new strings from existing ones?_
 - [centre of insertion](http://j.mp/insertCC)
 - [is_float](http://j.mp/floatCC)
   
-# - Array Manipulation  (3)
+# - Array Manipulation  (4)
 - [alphabets](https://cloudcoder.kgkite.ac.in/cloudcoder/#exercise?c=33,p=1208) 
 - [day_of_year](http://j.mp/dayYearCC)  - multidimensional array 1
+- [matrixAllocate](http://bit.ly/dynamicCC) - multidimensional arary 2
 - [matrixUpdate](http://j.mp/arrayPointer) - multidimensional array 2
 
 # - Function Parameters (5)
