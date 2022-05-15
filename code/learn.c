@@ -31,7 +31,7 @@ enum days0
 enum days
 {
     SUNDAY = 1,
-    MONDAT,
+    MONDAY,
     TUESDAY,
     WEDNESDAY = 99,
     THURSDAY,
