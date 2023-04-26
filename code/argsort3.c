@@ -36,6 +36,21 @@ int compTokens(const void* a, const void* b) {
   //return pa[0] - pb[0];
 }
 
+int compare_strings(const void *a, const void *b)
+{
+    const char *pa = *(const char **)a;
+    const char *pb = *(const char **)b;
+    printf("%p %p %p %p\n", &pa, &pb, pa, pb);
+    printf("%s %s\n", pa, pb);
+    return strcmp(pa, pb);
+
+    // Cast 'a' to a pointer to a constant pointer
+    // to a character and dereference that
+    // Credits:
+    // https://bewuethr.github.io/2015-03-07-sorting-strings-in-c-with-qsort.html
+    // return strcmp(*(char* const*) a, *(char* const*) b);
+}
+
 void qsort( void *ptr, size_t count, size_t size,
             int (*comp)(const void *, const void *) );
 
@@ -51,13 +66,14 @@ char *order_words (char *ordered, const char *words)
   char *token = strtok(ordered, " ");
   int i = 1; 
   while (token) {
-    puts(token);
     tokens[i] = token;
+    printf("%d %p %p\n", i, &tokens[i-1], tokens[i-1]);
     qsort(tokens[i-1], strlen(tokens[i-1]), sizeof(char), compChars);
+    puts(tokens[i-1]);
     i++;
     token = strtok(NULL, " ");
   }
-  qsort(&tokens, i-1, sizeof(char *), compTokens);
+  qsort(&tokens[0], i, sizeof(char *), compare_strings);
   
   for(size_t n = 0; n < strlen(words); ++n)
         if(!ordered[n])
@@ -75,16 +91,8 @@ int main(int argc, char *argv[])
     }
     void *list = argv[1];
     int element_count = strlen(argv[1]);
-    int size_of_element = sizeof(char);
-    int (*sortfunc)() = (int (*)(const void *, const void *))strcmp;
-
-    if (argc > 2)
-    {
-        list = &argv[1];
-        element_count = argc - 1;
-        size_of_element = sizeof(char *);
-        sortfunc = compare_strings;
-    }
+    int size_of_element = sizeof(char *);
+    //int (*sortfunc)() = (int (*)(const void *, const void *))strcmp;
 
     char *ordered = malloc(strlen(argv[1])+1); 
     order_words(ordered, argv[1]);
