@@ -13,11 +13,11 @@ From https://en.wikipedia.org/wiki/C_dynamic_memory_allocation
 ### Function Overview 
 The C language provides for 
 |Function| Description|No of Arguments | Example |
-|----------|-----------|-----|
+|----------|-----------|-----|----|
 | malloc| allocates the specified number of bytes | **1** - size required | `malloc (30); int* p = malloc( sizeof(int));` 
 | realloc |increases or decreases the size of the specified block of memory. Reallocates it if needed| **1** - size required|
 | calloc| allocates the specified number of bytes and initializes them to zero| **2** - size and value to initialize it to| `calloc (30, 4);`
-| free| releases the specified block of memory back to the system | **1** - the pointer variable which points to memory previously allocated to| `free(p);` // p is valid pointer variable
+| free| releases the specified block of memory back to the system | **1** - the pointer variable which points to memory previously allocated to| `free(p);` // p has to be a valid pointer variable
 
 ### Usage Example 
 Creating an array of ten integers with automatic scope is straightforward in C:
@@ -45,7 +45,7 @@ When the program no longer needs the dynamic array, it should call free to retur
 
     free(array);
 
-The memory set aside by malloc is not initialized and may contain **cruft** ***(garbage value**, the remnants of previously used and discarded data)***. After allocation with **malloc,** elements of the array are uninitialized variables. The command calloc will allocate and clear the memory in one step:
+The memory set aside by malloc is not initialized and may contain **cruft** _(**garbage value**, the remnants of previously used and discarded data)_. After allocation with **malloc,** elements of the array are uninitialized variables. The command calloc will allocate and clear the memory in one step:
 
     int * array = calloc(10, sizeof (int));
 
