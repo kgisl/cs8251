@@ -1,7 +1,7 @@
 
-![dma](http://bit.ly/dynamicMemory)
 Also see http://j.mp/cs2851-dynamicMemory 
 
+![dma](http://bit.ly/dynamicMemory)
 
 #### Why Dynamic Allocation
 From https://en.wikipedia.org/wiki/C_dynamic_memory_allocation
