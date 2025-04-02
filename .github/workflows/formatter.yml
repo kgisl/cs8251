@@ -10,6 +10,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     
+    - name: Debug current user and directory ownership
+      run: |
+        whoami
+        ls -ld /github/workspace
+
     - name: Configure Git to allow dubious ownership
       run: git config --global --add safe.directory /github/workspace
       
