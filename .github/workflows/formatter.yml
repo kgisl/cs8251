@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2.5.0 # Pin the version of actions/checkout
+        uses: actions/checkout@v2 # Pin the version of actions/checkout
 
       - name: Set up Clang
         uses: llvm/llvm-project@v1 # Use the setup-clang action to install clang-format
