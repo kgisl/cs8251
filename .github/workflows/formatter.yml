@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.5.0 # Pin the version of actions/checkout
 
-      - name: Set up dependencies
-        run: sudo apt-get install -y clang-format
+      - name: Set up Clang
+        uses: llvm/llvm-project@v1 # Use the setup-clang action to install clang-format
 
       - name: Create workspace directory
         run: mkdir -p /github/workspace/your-directory
 
       - name: Format code
-        run: clang-format -i src/*.cpp
+        run: find . -name '*.cpp' -exec clang-format -i {} \; # Ensure all .cpp files are formatted
