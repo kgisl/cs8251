@@ -10,6 +10,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     
+    - name: Create and set permissions for workspace directory
+      run: |
+        mkdir -p /github/workspace
+        sudo chown $USER:$USER /github/workspace
+
     - name: Debug current user and directory ownership
       run: |
         whoami
